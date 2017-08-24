@@ -3,7 +3,7 @@
 import UIKit
 
 private let CellIdentifier = "MenuCell"
-private let DefaultContentHeight: CGFloat = 112.0
+private let DefaultContentHeight: CGFloat = 100.0
 
 open class MenuView: StickyHeaderView {
     
@@ -12,9 +12,10 @@ open class MenuView: StickyHeaderView {
         super.commonInit()
         
         if backgroundColor == nil {
-            backgroundColor = UIColor(red: 51 / 255, green: 51 / 255, blue: 76 / 255, alpha: 1)
+            backgroundColor = .black
+            //            backgroundColor = UIColor(red: 128/255, green: 131/255, blue: 154/255, alpha: 1)
         }
-
+        
         contentHeight = DefaultContentHeight
         
         updateContentLayout()
@@ -26,7 +27,7 @@ open class MenuView: StickyHeaderView {
         layout.scrollDirection = .horizontal
         
         return layout
-    }()
+        }()
     
     // MARK: - CollectionView
     fileprivate lazy var collectionView: UICollectionView = { [unowned self] in
@@ -35,18 +36,18 @@ open class MenuView: StickyHeaderView {
         view.backgroundColor = .clear
         view.showsHorizontalScrollIndicator = false
         view.register(MenuCell.self, forCellWithReuseIdentifier: CellIdentifier)
-
+        
         view.delegate = self
         view.dataSource = self
         
         self.contentView = view
         
         return view
-    }()
+        }()
     
     // MARK: - Delegate
     @IBOutlet open weak var delegate: MenuViewDelegate?
-
+    
     // TODO: remove explicit type declaration when compiler error will be fixed
     open var items: [MenuItem] = [] {
         didSet {
@@ -54,7 +55,7 @@ open class MenuView: StickyHeaderView {
             selectedIndex = items.count > 0 ? 0 : nil
         }
     }
-
+    
     open var selectedIndex: Int? = 0 {
         didSet {
             var indexPath: IndexPath?
@@ -63,8 +64,8 @@ open class MenuView: StickyHeaderView {
             }
             
             self.collectionView.selectItem(at: indexPath,
-                animated: revealed,
-                scrollPosition: .centeredHorizontally
+                                           animated: revealed,
+                                           scrollPosition: .centeredHorizontally
             )
         }
     }
@@ -77,13 +78,13 @@ open class MenuView: StickyHeaderView {
     }
     
     fileprivate func updateContentLayout() {
-        let inset = ceil(contentHeight / 6.0)
+        let inset = ceil(contentHeight / 14.0)
         let spacing = floor(inset / 2.0)
-    
+        
         collectionLayout.minimumLineSpacing = spacing
         collectionLayout.minimumInteritemSpacing = spacing
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: inset, bottom: 0.0, right: inset)
-
+        
         collectionLayout.itemSize = CGSize(width: contentHeight - inset * 2, height: contentHeight - inset * 2)
     }
 }

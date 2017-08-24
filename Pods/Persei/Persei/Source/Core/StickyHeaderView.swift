@@ -11,18 +11,18 @@ open class StickyHeaderView: UIView {
     func commonInit() {
         addSubview(backgroundImageView)
         addSubview(contentContainer)
-
-        contentContainer.addSubview(shadowView)
+        
+        //        contentContainer.addSubview(shadowView)
         
         clipsToBounds = true
     }
-
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
         commonInit()
     }
-
+    
     public convenience init() {
         self.init(frame: CGRect(x: 0, y: 0, width: 320, height: DefaultContentHeight))
     }
@@ -52,12 +52,12 @@ open class StickyHeaderView: UIView {
             view.sendSubview(toBack: self)
         }
     }
-
+    
     fileprivate let contentContainer: UIView = {
         let view = UIView()
         view.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
         view.backgroundColor = .clear
-
+        
         return view
     }()
     
@@ -80,19 +80,19 @@ open class StickyHeaderView: UIView {
     }
     
     /**
-    Affects on `contentView` sticking position during view stretching: 
-    
-    - Top: `contentView` sticked to the top position of the view
-    - Center: `contentView` is aligned to the middle of the streched view
-    - Bottom: `contentView` sticked to the bottom
-    
-    Default value is `Center`
-    **/
+     Affects on `contentView` sticking position during view stretching:
+     
+     - Top: `contentView` sticked to the top position of the view
+     - Center: `contentView` is aligned to the middle of the streched view
+     - Bottom: `contentView` sticked to the bottom
+     
+     Default value is `Center`
+     **/
     open var contentViewGravity: ContentViewGravity = .center
     
     // MARK: - Background Image
     fileprivate let backgroundImageView = UIImageView()
-
+    
     @IBInspectable
     open var backgroundImage: UIImage? {
         didSet {
@@ -134,7 +134,7 @@ open class StickyHeaderView: UIView {
                 if adjust {
                     UIView.animate(withDuration: 0.2, animations: {
                         self.scrollView.contentOffset.y = -self.scrollView.contentInset.top
-                    }) 
+                    })
                 }
             })
         } else {
@@ -149,21 +149,21 @@ open class StickyHeaderView: UIView {
     open func setRevealed(_ revealed: Bool, animated: Bool) {
         setRevealed(revealed, animated: animated, adjustContentOffset: true)
     }
-
+    
     fileprivate func fractionRevealed() -> CGFloat {
         return min(bounds.height / contentHeight, 1)
     }
-
+    
     // MARK: - Applyied Insets
     fileprivate var appliedInsets: UIEdgeInsets = .zero
     fileprivate var insetsApplied: Bool {
         return appliedInsets != .zero
     }
-
+    
     fileprivate func applyInsets(_ insets: UIEdgeInsets) {
         let originalInset = scrollView.contentInset - appliedInsets
         let targetInset = originalInset + insets
-
+        
         appliedInsets = insets
         scrollView.contentInset = targetInset
     }
@@ -172,7 +172,7 @@ open class StickyHeaderView: UIView {
         assert(!insetsApplied, "Internal inconsistency")
         applyInsets(UIEdgeInsets(top: contentHeight, left: 0, bottom: 0, right: 0))
     }
-
+    
     fileprivate func removeInsets() {
         assert(insetsApplied, "Internal inconsistency")
         applyInsets(.zero)
@@ -206,7 +206,7 @@ open class StickyHeaderView: UIView {
         
         let progress = fractionRevealed()
         shadowView.alpha = 1 - progress
-
+        
         applyContentContainerTransform(progress)
     }
     
@@ -222,7 +222,7 @@ open class StickyHeaderView: UIView {
             } else if 0 < bounds.height && bounds.height < contentHeight {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.scrollView.contentOffset.y = -self.scrollView.contentInset.top
-                }) 
+                })
             }
         }
     }
@@ -230,14 +230,14 @@ open class StickyHeaderView: UIView {
     // MARK: - Layout
     open override func layoutSubviews() {
         super.layoutSubviews()
-
+        
         backgroundImageView.frame = bounds
         
         let containerY: CGFloat
         switch contentViewGravity {
         case .top:
             containerY = min(bounds.height - contentHeight, bounds.minY)
-
+            
         case .center:
             containerY = min(bounds.height - contentHeight, bounds.midY - contentHeight / 2)
             
@@ -249,7 +249,7 @@ open class StickyHeaderView: UIView {
         // shadow should be visible outside of bounds during rotation
         shadowView.frame = contentContainer.bounds.insetBy(dx: -round(contentContainer.bounds.width / 16), dy: 0)
     }
-
+    
     fileprivate func layoutToFit() {
         let origin = scrollView.contentOffset.y + scrollView.contentInset.top - appliedInsets.top
         frame.origin.y = origin
@@ -264,7 +264,7 @@ open class StickyHeaderView: UIView {
         } else {
             height = scrollView.normalizedContentOffset.y * -1
         }
-
+        
         let output = CGSize(width: scrollView.bounds.width, height: max(height, 0))
         
         return output

@@ -8,14 +8,28 @@ class MenuCell: UICollectionViewCell {
     fileprivate func commonInit() {
         backgroundView = UIView()
         
-        let views = ["imageView": imageView, "shadowView": shadowView]
+        let views = ["titleLabel": titleLabel ,"imageView": imageView, "shadowView": shadowView]
         
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(imageView)
         contentView.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "|-[imageView]-|",
+                withVisualFormat: "|[imageView]|",
+                options: [],
+                metrics: nil,
+                views: views
+            )
+        )
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = UIFont(name: "TrendSansOne", size: 8)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .white
+        contentView.addSubview(titleLabel)
+        contentView.addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "|[titleLabel]|",
                 options: [],
                 metrics: nil,
                 views: views
@@ -24,31 +38,32 @@ class MenuCell: UICollectionViewCell {
         
         contentView.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-[imageView]-|",
-                options: [],
+                withVisualFormat: "V:|-[imageView]-14-[titleLabel]-|",
+                options: [.alignAllCenterX],
                 metrics: nil,
                 views: views
             )
         )
         
-        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(shadowView)
-        contentView.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "|[shadowView]|",
-                options: [],
-                metrics: nil,
-                views: views
-            )
-        )
-        contentView.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:[shadowView(2)]|",
-                options: [],
-                metrics: nil,
-                views: views
-            )
-        )
+        //        shadowView.translatesAutoresizingMaskIntoConstraints = false
+        //        contentView.addSubview(shadowView)
+        //        contentView.addConstraints(
+        //            NSLayoutConstraint.constraints(
+        //                withVisualFormat: "|[shadowView]|",
+        //                options: [],
+        //                metrics: nil,
+        //                views: views
+        //            )
+        //        )
+        //        contentView.addConstraints(
+        //            NSLayoutConstraint.constraints(
+        //                withVisualFormat: "V:[shadowView(2)]|",
+        //                options: [],
+        //                metrics: nil,
+        //                views: views
+        //            )
+        //        )
+        
     }
     
     override init(frame: CGRect) {
@@ -74,12 +89,16 @@ class MenuCell: UICollectionViewCell {
     // MARK: - ImageView
     fileprivate let imageView = UIImageView()
     
+    // MARK: - Title
+    fileprivate var titleLabel = UILabel()
+    
     // MARK: - Object
     var object: MenuItem? {
         didSet {
+            titleLabel.text = object?.titleName
             imageView.image = object?.image
             imageView.highlightedImage = object?.highlightedImage
-            shadowView.backgroundColor = object?.shadowColor
+            //            shadowView.backgroundColor = object?.shadowColor
             
             updateSelectionVisibility()
         }
@@ -88,6 +107,7 @@ class MenuCell: UICollectionViewCell {
     // MARK: - Selection
     fileprivate func updateSelectionVisibility() {
         imageView.isHighlighted = isSelected
+        //        backgroundView?.backgroundColor = isSelected ? UIColor.red
         backgroundView?.backgroundColor = isSelected ? object?.highlightedBackgroundColor : object?.backgroundColor
     }
     
