@@ -23,14 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="375" id="XOX-DJ-vGS"/>
-                            <constraint firstAttribute="height" constant="121.5" id="dI1-gr-kOU"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservaciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaA-bt-d3L">
                         <rect key="frame" x="107" y="49" width="160" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="22" id="oL2-OP-a2z"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -38,8 +34,6 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="LaA-bt-d3L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="99" id="5r4-SK-whf"/>
-                    <constraint firstItem="LaA-bt-d3L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7zg-wx-u98"/>
-                    <constraint firstItem="nA2-Ur-EKc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8TT-7j-gI5"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LaA-bt-d3L" secondAttribute="trailing" constant="100" id="J5h-xL-1aE"/>
                     <constraint firstItem="nA2-Ur-EKc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Q28-kt-3vC"/>
                     <constraint firstAttribute="trailing" secondItem="nA2-Ur-EKc" secondAttribute="trailing" id="ROY-3t-4UW"/>
