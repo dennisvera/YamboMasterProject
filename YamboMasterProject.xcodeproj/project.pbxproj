@@ -33,6 +33,9 @@
 		E1224AF61F4F28A3002A183D /* reservaciones4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AF11F4F28A3002A183D /* reservaciones4.jpg */; };
 		E1224AF71F4F28A3002A183D /* reservaciones5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AF21F4F28A3002A183D /* reservaciones5.jpg */; };
 		E1224AF81F4F2DFF002A183D /* TrendSansOne.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1224AD81F4F280E002A183D /* TrendSansOne.otf */; };
+		E1224AFA1F4F3576002A183D /* ReservacionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */; };
+		E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AFF1F4F4636002A183D /* ReservacionesTableViewCell.swift */; };
+		E1224B021F4F4636002A183D /* ReservacionesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1224B001F4F4636002A183D /* ReservacionesTableViewCell.xib */; };
 		EC2F73B7A553C5A289B1660F /* Pods_YamboMasterProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3787F674D1C6F5C174C99258 /* Pods_YamboMasterProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +96,9 @@
 		E1224AF01F4F28A3002A183D /* reservaciones3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones3.jpg; sourceTree = "<group>"; };
 		E1224AF11F4F28A3002A183D /* reservaciones4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones4.jpg; sourceTree = "<group>"; };
 		E1224AF21F4F28A3002A183D /* reservaciones5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones5.jpg; sourceTree = "<group>"; };
+		E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservacionesTableViewController.swift; sourceTree = "<group>"; };
+		E1224AFF1F4F4636002A183D /* ReservacionesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservacionesTableViewCell.swift; sourceTree = "<group>"; };
+		E1224B001F4F4636002A183D /* ReservacionesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReservacionesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				E1224ACF1F4F23C8002A183D /* MenuTableViewController.swift */,
+				E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */,
+				E1224AFF1F4F4636002A183D /* ReservacionesTableViewCell.swift */,
+				E1224B001F4F4636002A183D /* ReservacionesTableViewCell.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -413,6 +422,7 @@
 				E1224AE91F4F2871002A183D /* solicitudes.png in Resources */,
 				E1224AF71F4F28A3002A183D /* reservaciones5.jpg in Resources */,
 				E1224AEB1F4F2871002A183D /* heart.png in Resources */,
+				E1224B021F4F4636002A183D /* ReservacionesTableViewCell.xib in Resources */,
 				E1224AF81F4F2DFF002A183D /* TrendSansOne.otf in Resources */,
 				E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */,
 				E1224AE71F4F2871002A183D /* acciones.png in Resources */,
@@ -590,7 +600,9 @@
 			files = (
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,
+				E1224AFA1F4F3576002A183D /* ReservacionesTableViewController.swift in Sources */,
 				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
+				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
 				E1224AD01F4F23C8002A183D /* MenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

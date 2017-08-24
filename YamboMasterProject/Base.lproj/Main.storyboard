@@ -60,17 +60,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="itj-pm-5jl" id="htW-ZA-tEd"/>
-                        <segue destination="b4v-2d-CXC" kind="presentation" id="ua4-i6-YBP"/>
+                        <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacionesSegue" id="ua4-i6-YBP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-YD-OLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="509.5" y="205.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Reservaciones-->
         <scene sceneID="tff-pS-97h">
             <objects>
-                <tableViewController id="b4v-2d-CXC" sceneMemberID="viewController">
+                <tableViewController id="b4v-2d-CXC" customClass="ReservacionesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vaA-6e-Qzm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,10 +90,11 @@
                             <outlet property="delegate" destination="b4v-2d-CXC" id="qAr-uK-idI"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Reservaciones" id="820-Ea-c3c"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="204"/>
+            <point key="canvasLocation" x="1231" y="205"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
@@ -111,7 +112,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="206"/>
+            <point key="canvasLocation" x="-228" y="205"/>
         </scene>
     </scenes>
     <resources>

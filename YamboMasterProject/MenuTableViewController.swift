@@ -86,9 +86,9 @@ extension MenuTableViewController: MenuViewDelegate {
         imageView.image = UIImage(named: photoNameArray[index])
         title = titleNameArray[index]
         
-//        if menu.selectedIndex == 2 {
-//            self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
-//            navigationItem.title = ""
-//        }
+        if menu.selectedIndex == 2 {
+            self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
+            navigationItem.title = ""
+        }
     }
 }
