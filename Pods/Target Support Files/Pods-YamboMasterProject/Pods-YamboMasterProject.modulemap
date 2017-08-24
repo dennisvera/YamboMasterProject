@@ -1,0 +1,6 @@
+framework module Pods_YamboMasterProject {
+  umbrella header "Pods-YamboMasterProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

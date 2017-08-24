@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F8D87CA5F5FF4E0BC2EE1A6 /* Pods_YamboMasterProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C905CEF61132CDE2BDADC6E /* Pods_YamboMasterProject.framework */; };
+		8B9D7CF8E259F43C054F2A77 /* Pods_YamboMasterProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C02E4D415876634AF1F1A82 /* Pods_YamboMasterProjectTests.framework */; };
+		E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9D1F4F117C002A183D /* AppDelegate.swift */; };
+		E1224AA01F4F117C002A183D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9F1F4F117C002A183D /* ViewController.swift */; };
+		E1224AA31F4F117C002A183D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA11F4F117C002A183D /* Main.storyboard */; };
+		E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */; };
+		E1224AA81F4F117D002A183D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA71F4F117D002A183D /* Assets.xcassets */; };
+		E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA91F4F117D002A183D /* LaunchScreen.storyboard */; };
+		E1224AB61F4F117D002A183D /* YamboMasterProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AB51F4F117D002A183D /* YamboMasterProjectTests.swift */; };
+		E1224AC11F4F117D002A183D /* YamboMasterProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */; };
+		EC2F73B7A553C5A289B1660F /* Pods_YamboMasterProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3787F674D1C6F5C174C99258 /* Pods_YamboMasterProjectUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1224AB21F4F117D002A183D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1224A921F4F117C002A183D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1224A991F4F117C002A183D;
+			remoteInfo = YamboMasterProject;
+		};
+		E1224ABD1F4F117D002A183D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1224A921F4F117C002A183D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1224A991F4F117C002A183D;
+			remoteInfo = YamboMasterProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C02E4D415876634AF1F1A82 /* Pods_YamboMasterProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YamboMasterProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3787F674D1C6F5C174C99258 /* Pods_YamboMasterProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YamboMasterProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A31C8F298AFC13D94C50273 /* Pods-YamboMasterProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProject/Pods-YamboMasterProject.release.xcconfig"; sourceTree = "<group>"; };
+		3AC9FD406B95F2879583480F /* Pods-YamboMasterProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectUITests/Pods-YamboMasterProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FB9FD4609A89C21A784EA6E /* Pods-YamboMasterProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProject/Pods-YamboMasterProject.debug.xcconfig"; sourceTree = "<group>"; };
+		7C905CEF61132CDE2BDADC6E /* Pods_YamboMasterProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YamboMasterProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B48BA6AC7622F17A5F236 /* Pods-YamboMasterProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectTests/Pods-YamboMasterProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		86C931C33D223C123E15877E /* Pods-YamboMasterProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectTests/Pods-YamboMasterProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9237376A30E99C539FCE58CC /* Pods-YamboMasterProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectUITests/Pods-YamboMasterProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1224A9A1F4F117C002A183D /* YamboMasterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamboMasterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1224A9D1F4F117C002A183D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1224A9F1F4F117C002A183D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1224AA21F4F117C002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1224AA51F4F117C002A183D /* YamboMasterProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YamboMasterProject.xcdatamodel; sourceTree = "<group>"; };
+		E1224AA71F4F117D002A183D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1224AAA1F4F117D002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1224AAC1F4F117D002A183D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1224AB11F4F117D002A183D /* YamboMasterProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamboMasterProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1224AB51F4F117D002A183D /* YamboMasterProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamboMasterProjectTests.swift; sourceTree = "<group>"; };
+		E1224AB71F4F117D002A183D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1224ABC1F4F117D002A183D /* YamboMasterProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamboMasterProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamboMasterProjectUITests.swift; sourceTree = "<group>"; };
+		E1224AC21F4F117D002A183D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1224A971F4F117C002A183D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F8D87CA5F5FF4E0BC2EE1A6 /* Pods_YamboMasterProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1224AAE1F4F117D002A183D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B9D7CF8E259F43C054F2A77 /* Pods_YamboMasterProjectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1224AB91F4F117D002A183D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2F73B7A553C5A289B1660F /* Pods_YamboMasterProjectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11D8257F90C316C0E650D4FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FB9FD4609A89C21A784EA6E /* Pods-YamboMasterProject.debug.xcconfig */,
+				3A31C8F298AFC13D94C50273 /* Pods-YamboMasterProject.release.xcconfig */,
+				86C931C33D223C123E15877E /* Pods-YamboMasterProjectTests.debug.xcconfig */,
+				858B48BA6AC7622F17A5F236 /* Pods-YamboMasterProjectTests.release.xcconfig */,
+				9237376A30E99C539FCE58CC /* Pods-YamboMasterProjectUITests.debug.xcconfig */,
+				3AC9FD406B95F2879583480F /* Pods-YamboMasterProjectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		645863C9450C82B8845F7FBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C905CEF61132CDE2BDADC6E /* Pods_YamboMasterProject.framework */,
+				1C02E4D415876634AF1F1A82 /* Pods_YamboMasterProjectTests.framework */,
+				3787F674D1C6F5C174C99258 /* Pods_YamboMasterProjectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1224A911F4F117C002A183D = {
+			isa = PBXGroup;
+			children = (
+				E1224A9C1F4F117C002A183D /* YamboMasterProject */,
+				E1224AB41F4F117D002A183D /* YamboMasterProjectTests */,
+				E1224ABF1F4F117D002A183D /* YamboMasterProjectUITests */,
+				E1224A9B1F4F117C002A183D /* Products */,
+				11D8257F90C316C0E650D4FB /* Pods */,
+				645863C9450C82B8845F7FBA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E1224A9B1F4F117C002A183D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1224A9A1F4F117C002A183D /* YamboMasterProject.app */,
+				E1224AB11F4F117D002A183D /* YamboMasterProjectTests.xctest */,
+				E1224ABC1F4F117D002A183D /* YamboMasterProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1224A9C1F4F117C002A183D /* YamboMasterProject */ = {
+			isa = PBXGroup;
+			children = (
+				E1224A9D1F4F117C002A183D /* AppDelegate.swift */,
+				E1224A9F1F4F117C002A183D /* ViewController.swift */,
+				E1224AA11F4F117C002A183D /* Main.storyboard */,
+				E1224AA71F4F117D002A183D /* Assets.xcassets */,
+				E1224AA91F4F117D002A183D /* LaunchScreen.storyboard */,
+				E1224AAC1F4F117D002A183D /* Info.plist */,
+				E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */,
+			);
+			path = YamboMasterProject;
+			sourceTree = "<group>";
+		};
+		E1224AB41F4F117D002A183D /* YamboMasterProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1224AB51F4F117D002A183D /* YamboMasterProjectTests.swift */,
+				E1224AB71F4F117D002A183D /* Info.plist */,
+			);
+			path = YamboMasterProjectTests;
+			sourceTree = "<group>";
+		};
+		E1224ABF1F4F117D002A183D /* YamboMasterProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */,
+				E1224AC21F4F117D002A183D /* Info.plist */,
+			);
+			path = YamboMasterProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1224A991F4F117C002A183D /* YamboMasterProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1224AC51F4F117D002A183D /* Build configuration list for PBXNativeTarget "YamboMasterProject" */;
+			buildPhases = (
+				0C48512A7FA5CE4036768873 /* [CP] Check Pods Manifest.lock */,
+				E1224A961F4F117C002A183D /* Sources */,
+				E1224A971F4F117C002A183D /* Frameworks */,
+				E1224A981F4F117C002A183D /* Resources */,
+				D38286DF225AD922310B82B4 /* [CP] Embed Pods Frameworks */,
+				82C9809CC672FA0A5B295B25 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YamboMasterProject;
+			productName = YamboMasterProject;
+			productReference = E1224A9A1F4F117C002A183D /* YamboMasterProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1224AB01F4F117D002A183D /* YamboMasterProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1224AC81F4F117D002A183D /* Build configuration list for PBXNativeTarget "YamboMasterProjectTests" */;
+			buildPhases = (
+				9DC27D42F05AC5B3C6B4992B /* [CP] Check Pods Manifest.lock */,
+				E1224AAD1F4F117D002A183D /* Sources */,
+				E1224AAE1F4F117D002A183D /* Frameworks */,
+				E1224AAF1F4F117D002A183D /* Resources */,
+				2CC42A0322EAF76D323F8C02 /* [CP] Embed Pods Frameworks */,
+				0BE8A27A1F6F32D819CB5FC1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1224AB31F4F117D002A183D /* PBXTargetDependency */,
+			);
+			name = YamboMasterProjectTests;
+			productName = YamboMasterProjectTests;
+			productReference = E1224AB11F4F117D002A183D /* YamboMasterProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E1224ABB1F4F117D002A183D /* YamboMasterProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1224ACB1F4F117D002A183D /* Build configuration list for PBXNativeTarget "YamboMasterProjectUITests" */;
+			buildPhases = (
+				1E05B90CACF91152BDB90149 /* [CP] Check Pods Manifest.lock */,
+				E1224AB81F4F117D002A183D /* Sources */,
+				E1224AB91F4F117D002A183D /* Frameworks */,
+				E1224ABA1F4F117D002A183D /* Resources */,
+				7D5AD94394F8AC3BF5731B1A /* [CP] Embed Pods Frameworks */,
+				34E861C89A7DE448FFD60611 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1224ABE1F4F117D002A183D /* PBXTargetDependency */,
+			);
+			name = YamboMasterProjectUITests;
+			productName = YamboMasterProjectUITests;
+			productReference = E1224ABC1F4F117D002A183D /* YamboMasterProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1224A921F4F117C002A183D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Dennis Vera";
+				TargetAttributes = {
+					E1224A991F4F117C002A183D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K24N6NL7FA;
+						ProvisioningStyle = Automatic;
+					};
+					E1224AB01F4F117D002A183D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K24N6NL7FA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E1224A991F4F117C002A183D;
+					};
+					E1224ABB1F4F117D002A183D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K24N6NL7FA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E1224A991F4F117C002A183D;
+					};
+				};
+			};
+			buildConfigurationList = E1224A951F4F117C002A183D /* Build configuration list for PBXProject "YamboMasterProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1224A911F4F117C002A183D;
+			productRefGroup = E1224A9B1F4F117C002A183D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1224A991F4F117C002A183D /* YamboMasterProject */,
+				E1224AB01F4F117D002A183D /* YamboMasterProjectTests */,
+				E1224ABB1F4F117D002A183D /* YamboMasterProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1224A981F4F117C002A183D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */,
+				E1224AA81F4F117D002A183D /* Assets.xcassets in Resources */,
+				E1224AA31F4F117C002A183D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1224AAF1F4F117D002A183D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1224ABA1F4F117D002A183D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BE8A27A1F6F32D819CB5FC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProjectTests/Pods-YamboMasterProjectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C48512A7FA5CE4036768873 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1E05B90CACF91152BDB90149 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2CC42A0322EAF76D323F8C02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProjectTests/Pods-YamboMasterProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34E861C89A7DE448FFD60611 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProjectUITests/Pods-YamboMasterProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D5AD94394F8AC3BF5731B1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProjectUITests/Pods-YamboMasterProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82C9809CC672FA0A5B295B25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProject/Pods-YamboMasterProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC27D42F05AC5B3C6B4992B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D38286DF225AD922310B82B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProject/Pods-YamboMasterProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1224A961F4F117C002A183D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,
+				E1224AA01F4F117C002A183D /* ViewController.swift in Sources */,
+				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1224AAD1F4F117D002A183D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1224AB61F4F117D002A183D /* YamboMasterProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1224AB81F4F117D002A183D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1224AC11F4F117D002A183D /* YamboMasterProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1224AB31F4F117D002A183D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1224A991F4F117C002A183D /* YamboMasterProject */;
+			targetProxy = E1224AB21F4F117D002A183D /* PBXContainerItemProxy */;
+		};
+		E1224ABE1F4F117D002A183D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1224A991F4F117C002A183D /* YamboMasterProject */;
+			targetProxy = E1224ABD1F4F117D002A183D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1224AA11F4F117C002A183D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1224AA21F4F117C002A183D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E1224AA91F4F117D002A183D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1224AAA1F4F117D002A183D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1224AC31F4F117D002A183D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1224AC41F4F117D002A183D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1224AC61F4F117D002A183D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB9FD4609A89C21A784EA6E /* Pods-YamboMasterProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K24N6NL7FA;
+				INFOPLIST_FILE = YamboMasterProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dennisv.YamboMasterProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E1224AC71F4F117D002A183D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A31C8F298AFC13D94C50273 /* Pods-YamboMasterProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K24N6NL7FA;
+				INFOPLIST_FILE = YamboMasterProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dennisv.YamboMasterProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E1224AC91F4F117D002A183D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C931C33D223C123E15877E /* Pods-YamboMasterProjectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K24N6NL7FA;
+				INFOPLIST_FILE = YamboMasterProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dennisv.YamboMasterProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YamboMasterProject.app/YamboMasterProject";
+			};
+			name = Debug;
+		};
+		E1224ACA1F4F117D002A183D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 858B48BA6AC7622F17A5F236 /* Pods-YamboMasterProjectTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K24N6NL7FA;
+				INFOPLIST_FILE = YamboMasterProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dennisv.YamboMasterProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YamboMasterProject.app/YamboMasterProject";
+			};
+			name = Release;
+		};
+		E1224ACC1F4F117D002A183D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9237376A30E99C539FCE58CC /* Pods-YamboMasterProjectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				DEVELOPMENT_TEAM = K24N6NL7FA;
+				INFOPLIST_FILE = YamboMasterProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dennisv.YamboMasterProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YamboMasterProject;
+			};
+			name = Debug;
+		};
+		E1224ACD1F4F117D002A183D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC9FD406B95F2879583480F /* Pods-YamboMasterProjectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				DEVELOPMENT_TEAM = K24N6NL7FA;
+				INFOPLIST_FILE = YamboMasterProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dennisv.YamboMasterProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YamboMasterProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1224A951F4F117C002A183D /* Build configuration list for PBXProject "YamboMasterProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1224AC31F4F117D002A183D /* Debug */,
+				E1224AC41F4F117D002A183D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1224AC51F4F117D002A183D /* Build configuration list for PBXNativeTarget "YamboMasterProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1224AC61F4F117D002A183D /* Debug */,
+				E1224AC71F4F117D002A183D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1224AC81F4F117D002A183D /* Build configuration list for PBXNativeTarget "YamboMasterProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1224AC91F4F117D002A183D /* Debug */,
+				E1224ACA1F4F117D002A183D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1224ACB1F4F117D002A183D /* Build configuration list for PBXNativeTarget "YamboMasterProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1224ACC1F4F117D002A183D /* Debug */,
+				E1224ACD1F4F117D002A183D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1224AA51F4F117C002A183D /* YamboMasterProject.xcdatamodel */,
+			);
+			currentVersion = E1224AA51F4F117C002A183D /* YamboMasterProject.xcdatamodel */;
+			path = YamboMasterProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E1224A921F4F117C002A183D /* Project object */;
+}

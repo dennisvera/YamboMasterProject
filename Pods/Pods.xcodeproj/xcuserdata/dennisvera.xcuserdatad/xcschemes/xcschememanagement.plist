@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Persei.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-YamboMasterProject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-YamboMasterProjectTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-YamboMasterProjectUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0F1769F07E5BBAAA0A603EA7B112CA90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D2AB58226202B8C4C7DDEB09B356989</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37E9DC11DD5930F61F39665A9E2A0B08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53B091AD71EB3F10634148750558DDDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
