@@ -88,6 +88,9 @@ extension MenuTableViewController: MenuViewDelegate {
         if menu.selectedIndex == 0 {
             self.performSegue(withIdentifier: "MensajesSegue", sender: self)
             navigationItem.title = ""
+        } else if menu.selectedIndex == 1 {
+            self.performSegue(withIdentifier: "ComunicadosSegue", sender: self)
+            navigationItem.title = ""
         } else if menu.selectedIndex == 2 {
             self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
             navigationItem.title = ""

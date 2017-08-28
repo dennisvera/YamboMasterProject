@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFp-hE-5Pv" id="YEi-o4-bBH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="itj-pm-5jl">
@@ -62,6 +62,7 @@
                         <outlet property="imageView" destination="itj-pm-5jl" id="htW-ZA-tEd"/>
                         <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacionesSegue" id="ua4-i6-YBP"/>
                         <segue destination="glg-Hj-LYK" kind="show" identifier="MensajesSegue" id="kGf-9o-54E"/>
+                        <segue destination="OOQ-iv-8Fc" kind="show" identifier="ComunicadosSegue" id="qIT-bQ-3V9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-YD-OLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -81,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ChQ-nJ-0Ct" id="Rfv-U7-7dc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -95,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="944"/>
+            <point key="canvasLocation" x="1292" y="956"/>
         </scene>
         <!--Mensajes-->
         <scene sceneID="WE2-i4-cAV">
@@ -124,7 +125,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqj-tM-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215.19999999999999" y="942.27886056971522"/>
+            <point key="canvasLocation" x="-110" y="956"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
@@ -142,7 +143,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="138"/>
+            <point key="canvasLocation" x="-111" y="136"/>
+        </scene>
+        <!--Comunicados-->
+        <scene sceneID="jaC-dH-ltN">
+            <objects>
+                <tableViewController id="OOQ-iv-8Fc" customClass="ComunicadoTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" id="6py-0w-w4e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommunicadosTableViewCell" rowHeight="140" id="Eu8-0R-2fk" userLabel="MensajesTableViewCell" customClass="MensajesTableViewCell" customModule="YamboMasterProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eu8-0R-2fk" id="yrJ-gF-jfu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OOQ-iv-8Fc" id="ycI-A1-O3k"/>
+                            <outlet property="delegate" destination="OOQ-iv-8Fc" id="llr-u5-yni"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Comunicados" id="3a2-lW-B1k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6F-F1-LBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="956"/>
         </scene>
     </scenes>
     <resources>
