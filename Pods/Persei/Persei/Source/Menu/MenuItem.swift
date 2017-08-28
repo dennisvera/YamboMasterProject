@@ -19,5 +19,7 @@ public struct MenuItem {
         self.image = image
         self.highlightedImage = highlightedImage
     }
+    
 }
+
 

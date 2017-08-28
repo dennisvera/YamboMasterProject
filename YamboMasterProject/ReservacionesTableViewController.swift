@@ -10,7 +10,7 @@ import UIKit
 
 class ReservacionesTableViewController: UITableViewController {
 
-    let images = ["reservaciones1.jpg", "reservaciones2.jpg", "reservaciones3.jpg", "reservaciones4.jpg", "reservaciones5.jpg"]
+    let backgroundImages = ["reservaciones1.jpg", "reservaciones2.jpg", "reservaciones3.jpg", "reservaciones4.jpg", "reservaciones5.jpg"]
     let titles = ["BOLICHE", "TENIS", "ALBERCA", "CINE", "ASADORES"]
     
     override func viewDidLoad() {
@@ -25,13 +25,13 @@ class ReservacionesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return images.count
+        return backgroundImages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
-        let image = UIImage(named: images[indexPath.row])
+        let image = UIImage(named: backgroundImages[indexPath.row])
         cell.bkgImageView.image = image
         cell.titleLabel.text = titles[indexPath.row]
         

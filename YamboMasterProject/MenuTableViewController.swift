@@ -15,7 +15,6 @@ class MenuTableViewController: UITableViewController {
     
     var titleNameArray: [String] = ["Mensajes", "Calendario", "Reservaciones", "Acciones", "Cobros Y Pagos", "Solicitudes"]
     var photoNameArray: [String] = ["mensajes.png", "calendario.png", "acciones.png", "acciones.png", "yamboLogo.png", "heart.png"]
-    var menuName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,9 +85,27 @@ extension MenuTableViewController: MenuViewDelegate {
         imageView.image = UIImage(named: photoNameArray[index])
         title = titleNameArray[index]
         
-        if menu.selectedIndex == 2 {
+        if menu.selectedIndex == 0 {
+            self.performSegue(withIdentifier: "MensajesSegue", sender: self)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 2 {
             self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
             navigationItem.title = ""
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
