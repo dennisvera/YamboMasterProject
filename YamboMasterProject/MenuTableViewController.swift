@@ -10,7 +10,6 @@ import UIKit
 import Persei
 
 class MenuTableViewController: UITableViewController {
-    @IBOutlet var imageView: UIImageView!
     fileprivate var menu: MenuView!
     
     var titleNameArray: [String] = ["Mensajes", "Calendario", "Reservaciones", "Acciones", "Cobros Y Pagos", "Solicitudes"]
@@ -22,7 +21,7 @@ class MenuTableViewController: UITableViewController {
         loadMenu()
         
         title = titleNameArray[0]
-        imageView.image = UIImage(named: photoNameArray[0])
+        //        imageView.image = UIImage(named: photoNameArray[0])
         
         //        title = model.description
         //        imageView.image = model.image
@@ -45,24 +44,24 @@ class MenuTableViewController: UITableViewController {
     }
     
     // MARK: - Model
-//    fileprivate var model: ContentType = .mensajes {
-//        didSet {
-//            title = model.description
-//            
-//            if isViewLoaded {
-//                let _: CGPoint = {
-//                    let itemFrame = menu.frameOfItem(at: menu.selectedIndex!)
-//                    let itemCenter = CGPoint(x: itemFrame.midX, y: itemFrame.midY)
-//                    var convertedCenter = imageView.convert(itemCenter, from: menu)
-//                    convertedCenter.y = 0
-//                    
-//                    return convertedCenter
-//                }()
-//                
-//                imageView.image = model.image
-//            }
-//        }
-//    }
+    //    fileprivate var model: ContentType = .mensajes {
+    //        didSet {
+    //            title = model.description
+    //
+    //            if isViewLoaded {
+    //                let _: CGPoint = {
+    //                    let itemFrame = menu.frameOfItem(at: menu.selectedIndex!)
+    //                    let itemCenter = CGPoint(x: itemFrame.midX, y: itemFrame.midY)
+    //                    var convertedCenter = imageView.convert(itemCenter, from: menu)
+    //                    convertedCenter.y = 0
+    //
+    //                    return convertedCenter
+    //                }()
+    //
+    //                imageView.image = model.image
+    //            }
+    //        }
+    //    }
     
     // MARK: - Actions
     @IBAction fileprivate func switchMenu() {
@@ -82,7 +81,7 @@ class MenuTableViewController: UITableViewController {
 extension MenuTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
-        imageView.image = UIImage(named: photoNameArray[index])
+        //        imageView.image = UIImage(named: photoNameArray[index])
         title = titleNameArray[index]
         
         if menu.selectedIndex == 0 {
@@ -93,6 +92,9 @@ extension MenuTableViewController: MenuViewDelegate {
             navigationItem.title = ""
         } else if menu.selectedIndex == 2 {
             self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 3 {
+            self.performSegue(withIdentifier: "MarketPlaceSegue", sender: self)
             navigationItem.title = ""
         }
     }

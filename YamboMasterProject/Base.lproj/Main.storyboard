@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu Table View Controller-->
+        <!--HomePage-->
         <scene sceneID="xJj-Lg-1DV">
             <objects>
-                <tableViewController id="JW1-uc-Ijt" customClass="MenuTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="JW1-uc-Ijt" customClass="MasterMenuTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3mL-JS-YUg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,15 +27,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="itj-pm-5jl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-bh-uL6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                                                </containerView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yamboLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xgG-ks-W0Y">
+                                                    <rect key="frame" x="37" y="149" width="300" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="fnm-BF-9Dg"/>
+                                                        <constraint firstAttribute="width" constant="300" id="hgL-Mc-WaX"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="itj-pm-5jl" secondAttribute="bottom" id="8oN-gl-9BL"/>
-                                                <constraint firstItem="itj-pm-5jl" firstAttribute="top" secondItem="YEi-o4-bBH" secondAttribute="top" id="N5H-Pk-ncI"/>
-                                                <constraint firstAttribute="trailing" secondItem="itj-pm-5jl" secondAttribute="trailing" id="vKE-gj-v8t"/>
-                                                <constraint firstItem="itj-pm-5jl" firstAttribute="leading" secondItem="YEi-o4-bBH" secondAttribute="leading" id="wSA-QD-9GK"/>
+                                                <constraint firstAttribute="trailing" secondItem="FBg-bh-uL6" secondAttribute="trailing" id="G7p-8e-bd1"/>
+                                                <constraint firstItem="xgG-ks-W0Y" firstAttribute="centerY" secondItem="YEi-o4-bBH" secondAttribute="centerY" id="aHW-8G-F3w"/>
+                                                <constraint firstItem="xgG-ks-W0Y" firstAttribute="centerX" secondItem="YEi-o4-bBH" secondAttribute="centerX" id="grF-Kt-uqb"/>
+                                                <constraint firstItem="FBg-bh-uL6" firstAttribute="leading" secondItem="YEi-o4-bBH" secondAttribute="leading" id="m66-1m-hxn"/>
+                                                <constraint firstAttribute="bottom" secondItem="FBg-bh-uL6" secondAttribute="bottom" id="oAG-vo-MWA"/>
+                                                <constraint firstItem="FBg-bh-uL6" firstAttribute="top" secondItem="YEi-o4-bBH" secondAttribute="top" id="xBn-bl-rvT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -47,7 +56,7 @@
                             <outlet property="delegate" destination="JW1-uc-Ijt" id="PTr-la-0Sl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xxZ-ro-lNQ">
+                    <navigationItem key="navigationItem" title="HomePage" id="xxZ-ro-lNQ">
                         <barButtonItem key="leftBarButtonItem" image="icon_menu" id="LMG-Cu-bwZ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -59,14 +68,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="itj-pm-5jl" id="htW-ZA-tEd"/>
+                        <segue destination="glg-Hj-LYK" kind="show" identifier="MensajesSegue" id="rao-q9-iRf"/>
+                        <segue destination="OOQ-iv-8Fc" kind="show" identifier="ComunicadosSegue" id="Kdl-zA-N4F"/>
+                        <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacionesSegue" id="1c5-sH-wok"/>
+                        <segue destination="QdA-nL-6I1" kind="show" identifier="MarketPlaceSegue" id="VTq-Po-wzd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-YD-OLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="-185"/>
+            <point key="canvasLocation" x="593" y="-3"/>
         </scene>
-        <!--Reservaciones-->
+        <!--RESERVACIONES-->
         <scene sceneID="tff-pS-97h">
             <objects>
                 <tableViewController id="b4v-2d-CXC" customClass="ReservacionesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,26 +101,55 @@
                             <outlet property="delegate" destination="b4v-2d-CXC" id="qAr-uK-idI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reservaciones" id="820-Ea-c3c"/>
+                    <navigationItem key="navigationItem" title="RESERVACIONES" id="820-Ea-c3c"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="1069"/>
+            <point key="canvasLocation" x="593" y="1009"/>
         </scene>
-        <!--Mensajes-->
-        <scene sceneID="WE2-i4-cAV">
+        <!--MARKETPLACE-->
+        <scene sceneID="djl-kf-hov">
             <objects>
-                <tableViewController id="glg-Hj-LYK" customClass="MensajesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" id="6LE-zh-b1C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                <tableViewController id="QdA-nL-6I1" customClass="MarketplaceTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eOn-TC-D1T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MensajesTableViewCell" rowHeight="140" id="x7Z-PJ-i1Z" userLabel="MensajesTableViewCell" customClass="MensajesTableViewCell" customModule="YamboMasterProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MKx-l3-QaK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MKx-l3-QaK" id="7tz-16-AuU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QdA-nL-6I1" id="FJG-36-ahC"/>
+                            <outlet property="delegate" destination="QdA-nL-6I1" id="dsg-pZ-F7n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MARKETPLACE" id="n0h-ao-jvK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bko-y9-Glh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040" y="1009"/>
+        </scene>
+        <!--MENSAJES-->
+        <scene sceneID="WE2-i4-cAV">
+            <objects>
+                <tableViewController id="glg-Hj-LYK" customClass="MensajesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6LE-zh-b1C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MensajesTableViewCell" id="x7Z-PJ-i1Z" userLabel="MensajesTableViewCell" customClass="MensajesTableViewCell" customModule="YamboMasterProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x7Z-PJ-i1Z" id="6hZ-rt-gIM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -118,44 +159,44 @@
                             <outlet property="delegate" destination="glg-Hj-LYK" id="pCR-tO-Xhq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mensajes" id="LMk-dJ-wY2"/>
+                    <navigationItem key="navigationItem" title="MENSAJES" id="LMk-dJ-wY2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqj-tM-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="1039"/>
+            <point key="canvasLocation" x="-332" y="1009"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGb-cv-Um5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lha-mz-U3P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lha-mz-U3P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5nu-O7-GJY" kind="relationship" relationship="rootViewController" id="WwD-n7-Kp3"/>
+                        <segue destination="JW1-uc-Ijt" kind="relationship" relationship="rootViewController" id="7xZ-e5-zQa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="136"/>
+            <point key="canvasLocation" x="119" y="-4"/>
         </scene>
-        <!--Comunicados-->
+        <!--COMUNICADOS-->
         <scene sceneID="jaC-dH-ltN">
             <objects>
                 <tableViewController id="OOQ-iv-8Fc" customClass="ComunicadoTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" id="6py-0w-w4e">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="43" sectionHeaderHeight="28" sectionFooterHeight="28" id="6py-0w-w4e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommunicadosTableViewCell" rowHeight="140" id="Eu8-0R-2fk" userLabel="MensajesTableViewCell" customClass="MensajesTableViewCell" customModule="YamboMasterProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommunicadosTableViewCell" id="Eu8-0R-2fk" userLabel="MensajesTableViewCell" customClass="MensajesTableViewCell" customModule="YamboMasterProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eu8-0R-2fk" id="yrJ-gF-jfu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -165,81 +206,16 @@
                             <outlet property="delegate" destination="OOQ-iv-8Fc" id="llr-u5-yni"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Comunicados" id="3a2-lW-B1k"/>
+                    <navigationItem key="navigationItem" title="COMUNICADOS" id="3a2-lW-B1k"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6F-F1-LBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="1069"/>
-        </scene>
-        <!--Master Menu Table View Controller-->
-        <scene sceneID="TUz-gg-8pA">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dp2-xE-4gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="5nu-O7-GJY" customClass="MasterMenuTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WTY-e1-1pi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="eCu-Pl-XhN">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="600" id="uu8-Tn-cyv">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uu8-Tn-cyv" id="un6-to-gnf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VT-Uo-Fbn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
-                                                    <connections>
-                                                        <segue destination="glg-Hj-LYK" kind="embed" identifier="" id="4zh-P5-3Pn"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="6VT-Uo-Fbn" secondAttribute="bottom" id="04v-2b-B6x"/>
-                                                <constraint firstItem="6VT-Uo-Fbn" firstAttribute="top" secondItem="un6-to-gnf" secondAttribute="top" id="1BC-2l-fuS"/>
-                                                <constraint firstAttribute="trailing" secondItem="6VT-Uo-Fbn" secondAttribute="trailing" id="5PE-wB-jFW"/>
-                                                <constraint firstItem="6VT-Uo-Fbn" firstAttribute="leading" secondItem="un6-to-gnf" secondAttribute="leading" id="LtN-LZ-aWR"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="5nu-O7-GJY" id="Erf-MI-fuz"/>
-                            <outlet property="delegate" destination="5nu-O7-GJY" id="Kw3-NE-fDO"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="voK-PO-d2m">
-                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="5j4-eT-azL">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="switchMenu" destination="5nu-O7-GJY" id="6Ok-f5-kCc"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icon_search" id="QZs-fS-TLb">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="masterView" destination="6VT-Uo-Fbn" id="MAa-4E-cdy"/>
-                        <segue destination="OOQ-iv-8Fc" kind="show" identifier="ComunicadosSegue" id="hp4-CJ-65L"/>
-                        <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacionesSegue" id="Y7x-ZF-mxd"/>
-                        <segue destination="glg-Hj-LYK" kind="show" identifier="MensajesSegue" id="ohH-Ov-P0w"/>
-                    </connections>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="617" y="135"/>
+            <point key="canvasLocation" x="119" y="1009"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon_menu" width="18" height="12"/>
         <image name="icon_search" width="17" height="17"/>
+        <image name="yamboLogo.png" width="782" height="600"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4zh-P5-3Pn"/>
-    </inferredMetricsTieBreakers>
 </document>

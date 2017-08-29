@@ -10,7 +10,6 @@ import UIKit
 import Persei
 
 class MasterMenuTableViewController: UITableViewController {
-    @IBOutlet var masterView: UIView!
     fileprivate var menu: MenuView!
     
     var titleNameArray: [String] = ["Mensajes", "Calendario", "Reservaciones", "Acciones", "Cobros Y Pagos", "Solicitudes"]
@@ -45,7 +44,6 @@ class MasterMenuTableViewController: UITableViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    
 }
 
 // MARK: - MenuViewDelegate
@@ -63,6 +61,9 @@ extension MasterMenuTableViewController: MenuViewDelegate {
             navigationItem.title = ""
         } else if menu.selectedIndex == 2 {
             self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 3 {
+            self.performSegue(withIdentifier: "MarketPlaceSegue", sender: self)
             navigationItem.title = ""
         }
     }

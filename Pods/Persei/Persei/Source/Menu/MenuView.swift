@@ -12,7 +12,8 @@ open class MenuView: StickyHeaderView {
         super.commonInit()
         
         if backgroundColor == nil {
-            backgroundColor = .black
+            backgroundColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+            
             //            backgroundColor = UIColor(red: 128/255, green: 131/255, blue: 154/255, alpha: 1)
         }
         
