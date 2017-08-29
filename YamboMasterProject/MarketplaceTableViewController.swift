@@ -44,7 +44,7 @@ class MarketplaceTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 220
     }
 
 
