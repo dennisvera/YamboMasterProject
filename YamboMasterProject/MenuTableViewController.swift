@@ -45,24 +45,24 @@ class MenuTableViewController: UITableViewController {
     }
     
     // MARK: - Model
-    fileprivate var model: ContentType = .mensajes {
-        didSet {
-            title = model.description
-            
-            if isViewLoaded {
-                let _: CGPoint = {
-                    let itemFrame = menu.frameOfItem(at: menu.selectedIndex!)
-                    let itemCenter = CGPoint(x: itemFrame.midX, y: itemFrame.midY)
-                    var convertedCenter = imageView.convert(itemCenter, from: menu)
-                    convertedCenter.y = 0
-                    
-                    return convertedCenter
-                }()
-                
-                imageView.image = model.image
-            }
-        }
-    }
+//    fileprivate var model: ContentType = .mensajes {
+//        didSet {
+//            title = model.description
+//            
+//            if isViewLoaded {
+//                let _: CGPoint = {
+//                    let itemFrame = menu.frameOfItem(at: menu.selectedIndex!)
+//                    let itemCenter = CGPoint(x: itemFrame.midX, y: itemFrame.midY)
+//                    var convertedCenter = imageView.convert(itemCenter, from: menu)
+//                    convertedCenter.y = 0
+//                    
+//                    return convertedCenter
+//                }()
+//                
+//                imageView.image = model.image
+//            }
+//        }
+//    }
     
     // MARK: - Actions
     @IBAction fileprivate func switchMenu() {
