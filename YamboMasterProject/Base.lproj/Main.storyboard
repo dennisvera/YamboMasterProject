@@ -55,21 +55,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="glg-Hj-LYK" kind="show" identifier="MensajeSegue" id="rao-q9-iRf"/>
-                        <segue destination="OOQ-iv-8Fc" kind="show" identifier="ComunicadoSegue" id="Kdl-zA-N4F"/>
-                        <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacioneSegue" id="1c5-sH-wok"/>
-                        <segue destination="QdA-nL-6I1" kind="show" identifier="MarketPlaceSegue" id="VTq-Po-wzd"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-YD-OLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="133"/>
+            <point key="canvasLocation" x="433" y="170"/>
         </scene>
         <!--RESERVACIONES-->
         <scene sceneID="tff-pS-97h">
             <objects>
-                <tableViewController id="b4v-2d-CXC" customClass="ReservacionesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ReservacionesID" id="b4v-2d-CXC" customClass="ReservacionesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vaA-6e-Qzm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,12 +94,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="1009"/>
+            <point key="canvasLocation" x="433" y="840"/>
         </scene>
         <!--MARKETPLACE-->
         <scene sceneID="djl-kf-hov">
             <objects>
-                <tableViewController id="QdA-nL-6I1" customClass="MarketplaceTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MarketplaceID" id="QdA-nL-6I1" customClass="MarketplaceTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eOn-TC-D1T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,12 +130,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bko-y9-Glh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="1009"/>
+            <point key="canvasLocation" x="1129" y="840"/>
         </scene>
         <!--MENSAJES-->
         <scene sceneID="WE2-i4-cAV">
             <objects>
-                <tableViewController id="glg-Hj-LYK" customClass="MensajesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MensajeID" id="glg-Hj-LYK" customClass="MensajesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6LE-zh-b1C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,14 +166,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqj-tM-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="1009"/>
+            <point key="canvasLocation" x="-1046" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGb-cv-Um5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lha-mz-U3P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lha-mz-U3P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -190,7 +184,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="133"/>
+            <point key="canvasLocation" x="-332" y="171"/>
         </scene>
         <!--COMUNICADOS-->
         <scene sceneID="jaC-dH-ltN">
@@ -226,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6F-F1-LBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="1009"/>
+            <point key="canvasLocation" x="-332" y="840"/>
         </scene>
     </scenes>
     <resources>

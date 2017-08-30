@@ -47,17 +47,32 @@ extension MasterMenuTableViewController: MenuViewDelegate {
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
         if menu.selectedIndex == 0 {
-            self.performSegue(withIdentifier: "MensajeSegue", sender: self)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
             navigationItem.title = ""
         } else if menu.selectedIndex == 1 {
-            self.performSegue(withIdentifier: "ComunicadoSegue", sender: self)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
             navigationItem.title = ""
         } else if menu.selectedIndex == 2 {
-            self.performSegue(withIdentifier: "ReservacioneSegue", sender: self)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacionesID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
             navigationItem.title = ""
         } else if menu.selectedIndex == 3 {
-            self.performSegue(withIdentifier: "MarketPlaceSegue", sender: self)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
             navigationItem.title = ""
         }
     }
 }
+
+
+
+
+
+
+
