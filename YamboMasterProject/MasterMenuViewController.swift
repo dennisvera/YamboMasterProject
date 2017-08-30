@@ -12,15 +12,11 @@ import Persei
 class MasterMenuTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     
-    var titleNameArray: [String] = ["Mensajes", "Calendario", "Reservaciones", "Acciones", "Cobros Y Pagos", "Solicitudes"]
-    var photoNameArray: [String] = ["mensajes.png", "calendario.png", "acciones.png", "acciones.png", "yamboLogo.png", "heart.png"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadMenu()
         
-        title = titleNameArray[0]
     }
     
     fileprivate func loadMenu() {
@@ -35,7 +31,7 @@ class MasterMenuTableViewController: UITableViewController {
     }
     
     // MARK: - Items
-    fileprivate let items = (0..<6).map {
+    fileprivate let items = (0..<8).map {
         MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
@@ -50,8 +46,6 @@ class MasterMenuTableViewController: UITableViewController {
 extension MasterMenuTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
-//        imageView.image = UIImage(named: photoNameArray[index])
-        title = titleNameArray[index]
         
         if menu.selectedIndex == 0 {
             self.performSegue(withIdentifier: "MensajesSegue", sender: self)
