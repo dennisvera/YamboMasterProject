@@ -16,7 +16,6 @@ class MasterMenuTableViewController: UITableViewController {
         super.viewDidLoad()
         
         loadMenu()
-        
     }
     
     fileprivate func loadMenu() {
@@ -48,13 +47,13 @@ extension MasterMenuTableViewController: MenuViewDelegate {
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
         if menu.selectedIndex == 0 {
-            self.performSegue(withIdentifier: "MensajesSegue", sender: self)
+            self.performSegue(withIdentifier: "MensajeSegue", sender: self)
             navigationItem.title = ""
         } else if menu.selectedIndex == 1 {
-            self.performSegue(withIdentifier: "ComunicadosSegue", sender: self)
+            self.performSegue(withIdentifier: "ComunicadoSegue", sender: self)
             navigationItem.title = ""
         } else if menu.selectedIndex == 2 {
-            self.performSegue(withIdentifier: "ReservacionesSegue", sender: self)
+            self.performSegue(withIdentifier: "ReservacioneSegue", sender: self)
             navigationItem.title = ""
         } else if menu.selectedIndex == 3 {
             self.performSegue(withIdentifier: "MarketPlaceSegue", sender: self)

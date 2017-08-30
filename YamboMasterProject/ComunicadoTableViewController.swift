@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Persei
 
 class ComunicadoTableViewController: UITableViewController {
+    fileprivate var menu: MenuView!
     
     var subjects = ["Reparaciones en el piso 17 de la torre D", "Curso gratuito para todo los niños", "Se cerrarán las canchas de tenis por dos dias", "Inauguracion de la nueva torre en el Salón De Fiestas", "Classes de spinning por impartirseen el residential"]
     var userName = ["Luis Alberto Ortega — hace dos dias", "Luis Alberto Ortega — hace dos dias", "Luis Alberto Ortega – hace dos dias", "Luis Alberto Ortega – hace dos dias", "Luis Alberto Ortega – hace dos dias"]
@@ -17,8 +19,28 @@ class ComunicadoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.reloadData()
-
+        loadMenu()
+    }
+    
+    fileprivate func loadMenu() {
+        menu = {
+            let menu = MenuView()
+            menu.delegate = self as? MenuViewDelegate
+            menu.items = items
+            return menu
+        }()
+        
+        tableView.addSubview(menu)
+    }
+    
+    // MARK: - Items
+    fileprivate let items = (0..<8).map {
+        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
+    }
+    
+    // MARK: - Actions
+    @IBAction fileprivate func switchMenu() {
+        menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source

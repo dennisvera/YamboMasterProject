@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Persei
 
 class ReservacionesTableViewController: UITableViewController {
+    fileprivate var menu: MenuView!
 
     let backgroundImages = ["reservaciones1.jpg", "reservaciones2.jpg", "reservaciones3.jpg", "reservaciones4.jpg", "reservaciones5.jpg"]
     let titles = ["BOLICHE", "TENIS", "ALBERCA", "CINE", "ASADORES"]
@@ -16,6 +18,28 @@ class ReservacionesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadMenu()
+    }
+    
+    fileprivate func loadMenu() {
+        menu = {
+            let menu = MenuView()
+            menu.delegate = self as? MenuViewDelegate
+            menu.items = items
+            return menu
+        }()
+        
+        tableView.addSubview(menu)
+    }
+    
+    // MARK: - Items
+    fileprivate let items = (0..<8).map {
+        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
+    }
+    
+    // MARK: - Actions
+    @IBAction fileprivate func switchMenu() {
+        menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
@@ -41,6 +65,5 @@ class ReservacionesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 122
     }
-    
-    
+
 }

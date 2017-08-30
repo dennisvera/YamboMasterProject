@@ -27,24 +27,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-bh-uL6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
-                                                </containerView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yamboLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xgG-ks-W0Y">
-                                                    <rect key="frame" x="37" y="149" width="300" height="300"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="fnm-BF-9Dg"/>
-                                                        <constraint firstAttribute="width" constant="300" id="hgL-Mc-WaX"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yamboLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-k2-X04">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="FBg-bh-uL6" secondAttribute="trailing" id="G7p-8e-bd1"/>
-                                                <constraint firstItem="xgG-ks-W0Y" firstAttribute="centerY" secondItem="YEi-o4-bBH" secondAttribute="centerY" id="aHW-8G-F3w"/>
-                                                <constraint firstItem="xgG-ks-W0Y" firstAttribute="centerX" secondItem="YEi-o4-bBH" secondAttribute="centerX" id="grF-Kt-uqb"/>
-                                                <constraint firstItem="FBg-bh-uL6" firstAttribute="leading" secondItem="YEi-o4-bBH" secondAttribute="leading" id="m66-1m-hxn"/>
-                                                <constraint firstAttribute="bottom" secondItem="FBg-bh-uL6" secondAttribute="bottom" id="oAG-vo-MWA"/>
-                                                <constraint firstItem="FBg-bh-uL6" firstAttribute="top" secondItem="YEi-o4-bBH" secondAttribute="top" id="xBn-bl-rvT"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Ek-k2-X04" secondAttribute="trailing" id="4yb-wD-qvg"/>
+                                                <constraint firstItem="0Ek-k2-X04" firstAttribute="top" secondItem="YEi-o4-bBH" secondAttribute="top" id="X2z-id-gPr"/>
+                                                <constraint firstItem="0Ek-k2-X04" firstAttribute="leading" secondItem="YEi-o4-bBH" secondAttribute="leading" id="fij-06-czd"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Ek-k2-X04" secondAttribute="bottom" id="uj2-gG-fxW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -63,20 +54,17 @@
                                 <action selector="switchMenu" destination="JW1-uc-Ijt" id="tPE-OU-aGG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icon_search" id="oEH-yD-4Op">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="glg-Hj-LYK" kind="show" identifier="MensajesSegue" id="rao-q9-iRf"/>
-                        <segue destination="OOQ-iv-8Fc" kind="show" identifier="ComunicadosSegue" id="Kdl-zA-N4F"/>
-                        <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacionesSegue" id="1c5-sH-wok"/>
+                        <segue destination="glg-Hj-LYK" kind="show" identifier="MensajeSegue" id="rao-q9-iRf"/>
+                        <segue destination="OOQ-iv-8Fc" kind="show" identifier="ComunicadoSegue" id="Kdl-zA-N4F"/>
+                        <segue destination="b4v-2d-CXC" kind="show" identifier="ReservacioneSegue" id="1c5-sH-wok"/>
                         <segue destination="QdA-nL-6I1" kind="show" identifier="MarketPlaceSegue" id="VTq-Po-wzd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-YD-OLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="10"/>
+            <point key="canvasLocation" x="433" y="133"/>
         </scene>
         <!--RESERVACIONES-->
         <scene sceneID="tff-pS-97h">
@@ -101,11 +89,18 @@
                             <outlet property="delegate" destination="b4v-2d-CXC" id="qAr-uK-idI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="RESERVACIONES" id="820-Ea-c3c"/>
+                    <navigationItem key="navigationItem" title="RESERVACIONES" id="820-Ea-c3c">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="1N2-vR-oc5">
+                            <color key="tintColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchMenu" destination="b4v-2d-CXC" id="aX5-be-wIu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="1009"/>
+            <point key="canvasLocation" x="433" y="1009"/>
         </scene>
         <!--MARKETPLACE-->
         <scene sceneID="djl-kf-hov">
@@ -130,11 +125,18 @@
                             <outlet property="delegate" destination="QdA-nL-6I1" id="dsg-pZ-F7n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MARKETPLACE" id="n0h-ao-jvK"/>
+                    <navigationItem key="navigationItem" title="MARKETPLACE" id="n0h-ao-jvK">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="R6n-6w-fn2">
+                            <color key="tintColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchMenu" destination="QdA-nL-6I1" id="ni3-6y-td7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bko-y9-Glh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="1009"/>
+            <point key="canvasLocation" x="1142" y="1009"/>
         </scene>
         <!--MENSAJES-->
         <scene sceneID="WE2-i4-cAV">
@@ -159,18 +161,25 @@
                             <outlet property="delegate" destination="glg-Hj-LYK" id="pCR-tO-Xhq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MENSAJES" id="LMk-dJ-wY2"/>
+                    <navigationItem key="navigationItem" title="MENSAJES" id="LMk-dJ-wY2">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="5nj-Wh-ngn">
+                            <color key="tintColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchMenu" destination="glg-Hj-LYK" id="MDK-Rd-D8Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqj-tM-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="1009"/>
+            <point key="canvasLocation" x="-1046" y="1009"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGb-cv-Um5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lha-mz-U3P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lha-mz-U3P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -181,12 +190,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="0.0"/>
+            <point key="canvasLocation" x="-332" y="133"/>
         </scene>
         <!--COMUNICADOS-->
         <scene sceneID="jaC-dH-ltN">
             <objects>
-                <tableViewController id="OOQ-iv-8Fc" customClass="ComunicadoTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ComunicadoID" id="OOQ-iv-8Fc" customClass="ComunicadoTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="43" sectionHeaderHeight="28" sectionFooterHeight="28" id="6py-0w-w4e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,16 +215,22 @@
                             <outlet property="delegate" destination="OOQ-iv-8Fc" id="llr-u5-yni"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="COMUNICADOS" id="3a2-lW-B1k"/>
+                    <navigationItem key="navigationItem" title="COMUNICADOS" id="3a2-lW-B1k">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="fFQ-q0-Ru8">
+                            <color key="tintColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchMenu" destination="OOQ-iv-8Fc" id="J79-t9-Dzz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6F-F1-LBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="1009"/>
+            <point key="canvasLocation" x="-332" y="1009"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon_menu" width="18" height="12"/>
-        <image name="icon_search" width="17" height="17"/>
         <image name="yamboLogo.png" width="782" height="600"/>
     </resources>
 </document>

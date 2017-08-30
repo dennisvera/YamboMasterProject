@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import Persei
 
 class MensajesTableViewController: UITableViewController {
-    
-    //    var mensajes = Mensaje()
+    fileprivate var menu: MenuView!
     
     let profileImages = ["cara.jpg", "patola.jpg", "cara.jpg", "patola.jpg", "cara.jpg"]
     let names = ["Luis Alberto Ortega", "Genaro Perez", "Janis Dueñas", "Enerique Triverio", "Carlos Gama"]
@@ -21,6 +21,28 @@ class MensajesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadMenu()
+    }
+    
+    fileprivate func loadMenu() {
+        menu = {
+            let menu = MenuView()
+            menu.delegate = self
+            menu.items = items
+            return menu
+        }()
+        
+        tableView.addSubview(menu)
+    }
+    
+    // MARK: - Items
+    fileprivate let items = (0..<8).map {
+        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
+    }
+    
+    // MARK: - Actions
+    @IBAction fileprivate func switchMenu() {
+        menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
@@ -52,8 +74,31 @@ class MensajesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+    }
 }
 
+extension MensajesTableViewController: MenuViewDelegate {
+    
+    func menu(_ menu: MenuView, didSelectItemAt index: Int) {
+        
+        if menu.selectedIndex == 0 {
+            self.performSegue(withIdentifier: "MensajeSegue", sender: self)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 1 {
+            
+//            self.performSegue(withIdentifier: "ComunicadoSegue", sender: self)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 2 {
+            self.performSegue(withIdentifier: "ReservacioneSegue", sender: self)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 3 {
+            self.performSegue(withIdentifier: "MarketPlaceSegue", sender: self)
+            navigationItem.title = ""
+        }
+    }
+}
 
 
 

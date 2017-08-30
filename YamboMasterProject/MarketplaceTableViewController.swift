@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Persei
 
 class MarketplaceTableViewController: UITableViewController {
+    fileprivate var menu: MenuView!
     
     let itemImages = ["marketplace1.jpg", "marketplace2.jpg", "marketplace3.jpg", "marketplace4.jpg", "marketplace5.jpg"]
     let itemDetail = ["Vendo bici GIANT en buenas condiciones", "Se vende BMW X3 2012", "Renta de cajón de estacionamiento, Torre D", "Mensaje", "Mensaje"]
@@ -17,7 +19,29 @@ class MarketplaceTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadMenu()
+    }
+    
+    fileprivate func loadMenu() {
+        menu = {
+            let menu = MenuView()
+            menu.delegate = self as? MenuViewDelegate
+            menu.items = items
+            return menu
+        }()
+        
+        tableView.addSubview(menu)
+    }
+    
+    // MARK: - Items
+    fileprivate let items = (0..<8).map {
+        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
+    }
+    
+    // MARK: - Actions
+    @IBAction fileprivate func switchMenu() {
+        menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
