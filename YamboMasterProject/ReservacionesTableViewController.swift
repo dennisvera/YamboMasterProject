@@ -67,3 +67,33 @@ class ReservacionesTableViewController: UITableViewController {
     }
 
 }
+
+
+// MARK: - MenuViewDelegate
+extension ReservacionesTableViewController: MenuViewDelegate {
+    
+    func menu(_ menu: MenuView, didSelectItemAt index: Int) {
+        
+        if menu.selectedIndex == 0 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 1 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 2 {
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 3 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        }
+    }
+}
+
+
+

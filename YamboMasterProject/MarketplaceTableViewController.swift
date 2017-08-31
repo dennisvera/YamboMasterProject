@@ -70,6 +70,34 @@ class MarketplaceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
-
-
 }
+
+
+// MARK: - MenuViewDelegate
+extension MarketplaceTableViewController: MenuViewDelegate {
+    
+    func menu(_ menu: MenuView, didSelectItemAt index: Int) {
+        
+        if menu.selectedIndex == 0 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 1 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 2 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacionesID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 3 {
+            navigationItem.title = ""
+        }
+    }
+}
+
+
+

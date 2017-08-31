@@ -15,7 +15,7 @@ class ComunicadoTableViewController: UITableViewController {
     var subjects = ["Reparaciones en el piso 17 de la torre D", "Curso gratuito para todo los niños", "Se cerrarán las canchas de tenis por dos dias", "Inauguracion de la nueva torre en el Salón De Fiestas", "Classes de spinning por impartirseen el residential"]
     var userName = ["Luis Alberto Ortega — hace dos dias", "Luis Alberto Ortega — hace dos dias", "Luis Alberto Ortega – hace dos dias", "Luis Alberto Ortega – hace dos dias", "Luis Alberto Ortega – hace dos dias"]
     var images = ["comunicado1.jpg", "comunicado2.jpg", "comunicado3.jpg", "comunicado4.png", "comunicado4.png"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,15 +44,15 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subjects.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("CommunicadosTableViewCell", owner: self, options: nil)?.first as! CommunicadosTableViewCell
@@ -69,3 +69,35 @@ class ComunicadoTableViewController: UITableViewController {
         return 140
     }
 }
+
+// MARK: - MenuViewDelegate
+extension ComunicadoTableViewController: MenuViewDelegate {
+    
+    func menu(_ menu: MenuView, didSelectItemAt index: Int) {
+        
+        if menu.selectedIndex == 0 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 1 {
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 2 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacionesID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        } else if menu.selectedIndex == 3 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            navigationItem.title = ""
+        }
+    }
+}
+
+
+
+
+
+
