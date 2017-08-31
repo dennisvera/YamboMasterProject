@@ -84,23 +84,17 @@ extension MensajesTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
-        if menu.selectedIndex == 0 {
-            navigationItem.title = ""
-        } else if menu.selectedIndex == 1 {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        if menu.selectedIndex == 1 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
-            navigationItem.title = ""
         } else if menu.selectedIndex == 2 {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacionesID") as! ReservacionesTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
-            navigationItem.title = ""
         } else if menu.selectedIndex == 3 {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
-            navigationItem.title = ""
         }
     }
 }

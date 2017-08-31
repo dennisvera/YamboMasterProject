@@ -38,7 +38,7 @@ class MenuCell: UICollectionViewCell {
         
         contentView.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-[imageView]-14-[titleLabel]-|",
+                withVisualFormat: "V:|-[imageView(38)]-14-[titleLabel]-|",
                 options: [.alignAllCenterX],
                 metrics: nil,
                 views: views
