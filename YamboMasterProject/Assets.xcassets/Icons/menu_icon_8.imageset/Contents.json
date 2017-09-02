@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ASolicitudes@1x.png",
+      "filename" : "ADirectorio@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ASolicitudes@2x.png",
+      "filename" : "ADirectorio@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ASolicitudes@3x.png",
+      "filename" : "ADirectorio@3x.png",
       "scale" : "3x"
     }
   ],

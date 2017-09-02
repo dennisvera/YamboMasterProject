@@ -34,7 +34,7 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     // MARK: - Items
-    fileprivate let items = (0..<8).map {
+    fileprivate let items = (0..<9).map {
         MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
@@ -78,18 +78,22 @@ extension ComunicadoTableViewController: MenuViewDelegate {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         if menu.selectedIndex == 0 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 1 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 2 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacionesID") as! ReservacionesTableViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
+            print("current controller, no segue needed")
         } else if menu.selectedIndex == 3 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }
-
 
 
 

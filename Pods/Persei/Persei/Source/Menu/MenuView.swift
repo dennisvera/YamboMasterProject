@@ -13,8 +13,6 @@ open class MenuView: StickyHeaderView {
         
         if backgroundColor == nil {
             backgroundColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
-            
-            //            backgroundColor = UIColor(red: 128/255, green: 131/255, blue: 154/255, alpha: 1)
         }
         
         contentHeight = DefaultContentHeight

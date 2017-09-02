@@ -1,23 +1,29 @@
 //
-//  ReservacionesTableViewController.swift
+//  HomePageCollectionViewController.swift
 //  YamboMasterProject
 //
-//  Created by Dennis Vera on 8/24/17.
+//  Created by Dennis Vera on 9/1/17.
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
 import UIKit
 import Persei
 
-class ReservacionesTableViewController: UITableViewController {
+class HomeCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
-
-    let backgroundImages = ["reservaciones1.jpg", "reservaciones2.jpg", "reservaciones3.jpg", "reservaciones4.jpg", "reservaciones5.jpg"]
-    let titles = ["BOLICHE", "TENIS", "ALBERCA", "CINE", "ASADORES"]
     
+    let menuNames = ["MENSAJES", "COMUNICADOS", "RESERVACIONES", "MARKETPLACE", "INVITADOS", "SOLICITUDES", "PAGOS", "DIRECTORIO"]
+    let menuIcons = ["menu_icon_1", "menu_icon_2", "menu_icon_3", "menu_icon_4", "menu_icon_5", "menu_icon_6", "menu_icon_7", "menu_icon_8"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let width = collectionView!.frame.width / 2
+//        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.itemSize = CGSize(width: width, height: width)
+                
+        collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
+
         loadMenu()
     }
     
@@ -29,8 +35,9 @@ class ReservacionesTableViewController: UITableViewController {
             return menu
         }()
         
-        tableView.addSubview(menu)
+        collectionView?.addSubview(menu)
     }
+    
     
     // MARK: - Items
     fileprivate let items = (0..<9).map {
@@ -42,43 +49,41 @@ class ReservacionesTableViewController: UITableViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
+
+    // MARK: UICollectionViewDataSource
+
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return backgroundImages.count
+
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menuNames.count
     }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+        
+        let image = UIImage(named: menuIcons[indexPath.row])
+        cell.menuIconImageView.image = image
+        cell.menuTitleLabel.text = menuNames[indexPath.row]
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
-        let image = UIImage(named: backgroundImages[indexPath.row])
-        cell.bkgImageView.image = image
-        cell.titleLabel.text = titles[indexPath.row]
-        
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 122
-    }
 
 }
 
-
 // MARK: - MenuViewDelegate
-extension ReservacionesTableViewController: MenuViewDelegate {
+extension HomeCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         if menu.selectedIndex == 0 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
+            print("")
         } else if menu.selectedIndex == 1 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -86,13 +91,11 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
-            print("current controller, no segue needed")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }
-
-
-

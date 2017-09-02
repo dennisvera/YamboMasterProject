@@ -44,26 +44,6 @@ class MenuCell: UICollectionViewCell {
                 views: views
             )
         )
-        
-        //        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        //        contentView.addSubview(shadowView)
-        //        contentView.addConstraints(
-        //            NSLayoutConstraint.constraints(
-        //                withVisualFormat: "|[shadowView]|",
-        //                options: [],
-        //                metrics: nil,
-        //                views: views
-        //            )
-        //        )
-        //        contentView.addConstraints(
-        //            NSLayoutConstraint.constraints(
-        //                withVisualFormat: "V:[shadowView(2)]|",
-        //                options: [],
-        //                metrics: nil,
-        //                views: views
-        //            )
-        //        )
-        
     }
     
     override init(frame: CGRect) {
@@ -95,10 +75,10 @@ class MenuCell: UICollectionViewCell {
     // MARK: - Object
     var object: MenuItem? {
         didSet {
-            titleLabel.text = object?.titleName
+            titleLabel.text = object?.title
             imageView.image = object?.image
             imageView.highlightedImage = object?.highlightedImage
-            //            shadowView.backgroundColor = object?.shadowColor
+//          shadowView.backgroundColor = object?.shadowColor
             
             updateSelectionVisibility()
         }
@@ -107,7 +87,6 @@ class MenuCell: UICollectionViewCell {
     // MARK: - Selection
     fileprivate func updateSelectionVisibility() {
         imageView.isHighlighted = isSelected
-        //        backgroundView?.backgroundColor = isSelected ? UIColor.red
         backgroundView?.backgroundColor = isSelected ? object?.highlightedBackgroundColor : object?.backgroundColor
     }
     

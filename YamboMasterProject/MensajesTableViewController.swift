@@ -12,6 +12,7 @@ import Persei
 class MensajesTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     
+    
     let profileImages = ["cara.jpg", "patola.jpg", "cara.jpg", "patola.jpg", "cara.jpg"]
     let names = ["Luis Alberto Ortega", "Genaro Perez", "Janis Dueñas", "Enerique Triverio", "Carlos Gama"]
     let messages = ["Puede estar listo hoy?", "Puede estar listo hoy?", "Puede estar listo hoy?", "Puede estar listo hoy?", "Puede estar listo hoy?"]
@@ -36,7 +37,7 @@ class MensajesTableViewController: UITableViewController {
     }
     
     // MARK: - Items
-    fileprivate let items = (0..<8).map {
+    fileprivate let items = (0..<9).map {
         MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
@@ -86,13 +87,18 @@ extension MensajesTableViewController: MenuViewDelegate {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        if menu.selectedIndex == 1 {
+        if menu.selectedIndex == 0 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 1 {
+            print("current controller, no segue needed")
+        } else if menu.selectedIndex == 2 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
-        } else if menu.selectedIndex == 2 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacionesID") as! ReservacionesTableViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }

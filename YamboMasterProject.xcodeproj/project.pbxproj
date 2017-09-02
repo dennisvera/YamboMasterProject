@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2F8D87CA5F5FF4E0BC2EE1A6 /* Pods_YamboMasterProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C905CEF61132CDE2BDADC6E /* Pods_YamboMasterProject.framework */; };
 		8B9D7CF8E259F43C054F2A77 /* Pods_YamboMasterProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C02E4D415876634AF1F1A82 /* Pods_YamboMasterProjectTests.framework */; };
+		E111E2BF1F59A56C005B4EBD /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */; };
+		E111E2C21F59A59D005B4EBD /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */; };
+		E111E2C31F59A59D005B4EBD /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */; };
 		E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9D1F4F117C002A183D /* AppDelegate.swift */; };
 		E1224AA31F4F117C002A183D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA11F4F117C002A183D /* Main.storyboard */; };
 		E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */; };
@@ -16,7 +19,6 @@
 		E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA91F4F117D002A183D /* LaunchScreen.storyboard */; };
 		E1224AB61F4F117D002A183D /* YamboMasterProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AB51F4F117D002A183D /* YamboMasterProjectTests.swift */; };
 		E1224AC11F4F117D002A183D /* YamboMasterProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */; };
-		E1224AD01F4F23C8002A183D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224ACF1F4F23C8002A183D /* MenuTableViewController.swift */; };
 		E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AD41F4F2783002A183D /* MenuModel.swift */; };
 		E1224AE41F4F2871002A183D /* mensajes.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADB1F4F2871002A183D /* mensajes.png */; };
 		E1224AE51F4F2871002A183D /* calendario.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADC1F4F2871002A183D /* calendario.png */; };
@@ -49,7 +51,6 @@
 		E1A7C6D41F54C0E200E4FC32 /* comunicado2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6D31F54C0E200E4FC32 /* comunicado2.jpg */; };
 		E1A7C6D61F54C0E700E4FC32 /* comunicado3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6D51F54C0E700E4FC32 /* comunicado3.jpg */; };
 		E1A7C6D81F54C0EE00E4FC32 /* comunicado4.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6D71F54C0EE00E4FC32 /* comunicado4.png */; };
-		E1A7C6DA1F55021000E4FC32 /* MasterMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6D91F55021000E4FC32 /* MasterMenuViewController.swift */; };
 		E1A7C6DC1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */; };
 		E1A7C6DF1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift */; };
 		E1A7C6E01F55C5FB00E4FC32 /* MarketplaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceTableViewCell.xib */; };
@@ -88,6 +89,9 @@
 		858B48BA6AC7622F17A5F236 /* Pods-YamboMasterProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectTests/Pods-YamboMasterProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		86C931C33D223C123E15877E /* Pods-YamboMasterProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectTests/Pods-YamboMasterProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9237376A30E99C539FCE58CC /* Pods-YamboMasterProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YamboMasterProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YamboMasterProjectUITests/Pods-YamboMasterProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		E1224A9A1F4F117C002A183D /* YamboMasterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamboMasterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224A9D1F4F117C002A183D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1224AA21F4F117C002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 		E1224ABC1F4F117D002A183D /* YamboMasterProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamboMasterProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamboMasterProjectUITests.swift; sourceTree = "<group>"; };
 		E1224AC21F4F117D002A183D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1224ACF1F4F23C8002A183D /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		E1224AD41F4F2783002A183D /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		E1224AD81F4F280E002A183D /* TrendSansOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrendSansOne.otf; sourceTree = "<group>"; };
 		E1224ADB1F4F2871002A183D /* mensajes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mensajes.png; sourceTree = "<group>"; };
@@ -134,7 +137,6 @@
 		E1A7C6D31F54C0E200E4FC32 /* comunicado2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comunicado2.jpg; sourceTree = "<group>"; };
 		E1A7C6D51F54C0E700E4FC32 /* comunicado3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comunicado3.jpg; sourceTree = "<group>"; };
 		E1A7C6D71F54C0EE00E4FC32 /* comunicado4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comunicado4.png; sourceTree = "<group>"; };
-		E1A7C6D91F55021000E4FC32 /* MasterMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterMenuViewController.swift; sourceTree = "<group>"; };
 		E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceTableViewController.swift; sourceTree = "<group>"; };
 		E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceTableViewCell.swift; sourceTree = "<group>"; };
 		E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketplaceTableViewCell.xib; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		11D8257F90C316C0E650D4FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E1224ABF1F4F117D002A183D /* YamboMasterProjectUITests */,
 				5FB9FD4609A89C21A784EA6E /* Pods-YamboMasterProject.debug.xcconfig */,
 				3A31C8F298AFC13D94C50273 /* Pods-YamboMasterProject.release.xcconfig */,
 				86C931C33D223C123E15877E /* Pods-YamboMasterProjectTests.debug.xcconfig */,
@@ -202,7 +205,6 @@
 				E1224A9C1F4F117C002A183D /* YamboMasterProject */,
 				E1224AD61F4F27B4002A183D /* Core Data */,
 				E1224AB41F4F117D002A183D /* YamboMasterProjectTests */,
-				E1224ABF1F4F117D002A183D /* YamboMasterProjectUITests */,
 				E1224A9B1F4F117C002A183D /* Products */,
 				11D8257F90C316C0E650D4FB /* Pods */,
 				645863C9450C82B8845F7FBA /* Frameworks */,
@@ -254,8 +256,9 @@
 		E1224ACE1F4F2398002A183D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E1224ACF1F4F23C8002A183D /* MenuTableViewController.swift */,
-				E1A7C6D91F55021000E4FC32 /* MasterMenuViewController.swift */,
+				E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */,
+				E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */,
+				E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */,
 				E1224B031F5074E2002A183D /* MensajesTableViewController.swift */,
 				E1224B071F5075BB002A183D /* MensajesTableViewCell.swift */,
 				E1224B081F5075BB002A183D /* MensajesTableViewCell.xib */,
@@ -517,6 +520,7 @@
 				E1224AF71F4F28A3002A183D /* reservaciones5.jpg in Resources */,
 				E1224AEB1F4F2871002A183D /* heart.png in Resources */,
 				E1224B021F4F4636002A183D /* ReservacionesTableViewCell.xib in Resources */,
+				E111E2C31F59A59D005B4EBD /* HomeCollectionViewCell.xib in Resources */,
 				E1224AF81F4F2DFF002A183D /* TrendSansOne.otf in Resources */,
 				E1224B0A1F5075BB002A183D /* MensajesTableViewCell.xib in Resources */,
 				E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */,
@@ -702,9 +706,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E111E2C21F59A59D005B4EBD /* HomeCollectionViewCell.swift in Sources */,
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift in Sources */,
 				E1224B191F535FDF002A183D /* Extensions.swift in Sources */,
+				E111E2BF1F59A56C005B4EBD /* HomeCollectionViewController.swift in Sources */,
 				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,
 				E1224B041F5074E2002A183D /* MensajesTableViewController.swift in Sources */,
 				E1224AFA1F4F3576002A183D /* ReservacionesTableViewController.swift in Sources */,
@@ -712,8 +718,6 @@
 				E1A7C6BB1F54AA4300E4FC32 /* ComunicadoTableViewController.swift in Sources */,
 				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
 				E1A7C6DF1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift in Sources */,
-				E1224AD01F4F23C8002A183D /* MenuTableViewController.swift in Sources */,
-				E1A7C6DA1F55021000E4FC32 /* MasterMenuViewController.swift in Sources */,
 				E1224B091F5075BB002A183D /* MensajesTableViewCell.swift in Sources */,
 				E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */,
 			);
