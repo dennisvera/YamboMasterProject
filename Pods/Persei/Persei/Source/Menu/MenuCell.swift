@@ -23,7 +23,7 @@ class MenuCell: UICollectionViewCell {
         )
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.font = UIFont(name: "TrendSansOne", size: 9)
+        titleLabel.font = UIFont(name: "TrendSansOne", size: 8)
         titleLabel.textAlignment = .center
         titleLabel.textColor = .white
         contentView.addSubview(titleLabel)

@@ -12,8 +12,6 @@ open class StickyHeaderView: UIView {
         addSubview(backgroundImageView)
         addSubview(contentContainer)
         
-        //        contentContainer.addSubview(shadowView)
-        
         clipsToBounds = true
     }
     
