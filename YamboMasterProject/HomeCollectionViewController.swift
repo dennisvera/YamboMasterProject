@@ -52,15 +52,15 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuModel.menuNames.count
+        return menuModel.homepageMenuNames.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         
-        let image = UIImage(named: menuModel.menuIcons[indexPath.row])
+        let image = UIImage(named: menuModel.homepageMenuIcons[indexPath.row])
         cell.menuIconImageView.image = image
-        cell.menuTitleLabel.text = menuModel.menuNames[indexPath.row]
+        cell.menuTitleLabel.text = menuModel.homepageMenuNames[indexPath.row]
         
         return cell
     }
