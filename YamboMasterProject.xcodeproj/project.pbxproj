@@ -12,6 +12,10 @@
 		E111E2BF1F59A56C005B4EBD /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */; };
 		E111E2C21F59A59D005B4EBD /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */; };
 		E111E2C31F59A59D005B4EBD /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */; };
+		E111E2C51F5B8C01005B4EBD /* MensajeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2C41F5B8C01005B4EBD /* MensajeModel.swift */; };
+		E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2C61F5B8ECD005B4EBD /* ComunicadoModel.swift */; };
+		E111E2C91F5B91B2005B4EBD /* ReservacioneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2C81F5B91B2005B4EBD /* ReservacioneModel.swift */; };
+		E111E2CB1F5B92D3005B4EBD /* MarketplaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111E2CA1F5B92D3005B4EBD /* MarketplaceModel.swift */; };
 		E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9D1F4F117C002A183D /* AppDelegate.swift */; };
 		E1224AA31F4F117C002A183D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA11F4F117C002A183D /* Main.storyboard */; };
 		E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */; };
@@ -92,6 +96,10 @@
 		E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		E111E2C41F5B8C01005B4EBD /* MensajeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensajeModel.swift; sourceTree = "<group>"; };
+		E111E2C61F5B8ECD005B4EBD /* ComunicadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComunicadoModel.swift; sourceTree = "<group>"; };
+		E111E2C81F5B91B2005B4EBD /* ReservacioneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservacioneModel.swift; sourceTree = "<group>"; };
+		E111E2CA1F5B92D3005B4EBD /* MarketplaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceModel.swift; sourceTree = "<group>"; };
 		E1224A9A1F4F117C002A183D /* YamboMasterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamboMasterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224A9D1F4F117C002A183D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1224AA21F4F117C002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -297,6 +305,10 @@
 			isa = PBXGroup;
 			children = (
 				E1224AD41F4F2783002A183D /* MenuModel.swift */,
+				E111E2C41F5B8C01005B4EBD /* MensajeModel.swift */,
+				E111E2C61F5B8ECD005B4EBD /* ComunicadoModel.swift */,
+				E111E2C81F5B91B2005B4EBD /* ReservacioneModel.swift */,
+				E111E2CA1F5B92D3005B4EBD /* MarketplaceModel.swift */,
 				E1224B181F535FDF002A183D /* Extensions.swift */,
 			);
 			name = Model;
@@ -709,6 +721,7 @@
 				E111E2C21F59A59D005B4EBD /* HomeCollectionViewCell.swift in Sources */,
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift in Sources */,
+				E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */,
 				E1224B191F535FDF002A183D /* Extensions.swift in Sources */,
 				E111E2BF1F59A56C005B4EBD /* HomeCollectionViewController.swift in Sources */,
 				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,
@@ -716,9 +729,12 @@
 				E1224AFA1F4F3576002A183D /* ReservacionesTableViewController.swift in Sources */,
 				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
 				E1A7C6BB1F54AA4300E4FC32 /* ComunicadoTableViewController.swift in Sources */,
+				E111E2CB1F5B92D3005B4EBD /* MarketplaceModel.swift in Sources */,
 				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
+				E111E2C91F5B91B2005B4EBD /* ReservacioneModel.swift in Sources */,
 				E1A7C6DF1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift in Sources */,
 				E1224B091F5075BB002A183D /* MensajesTableViewCell.swift in Sources */,
+				E111E2C51F5B8C01005B4EBD /* MensajeModel.swift in Sources */,
 				E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

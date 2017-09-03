@@ -11,16 +11,16 @@ import Persei
 
 class MensajesTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
-    
-    
-    let profileImages = ["cara.jpg", "patola.jpg", "cara.jpg", "patola.jpg", "cara.jpg"]
-    let names = ["Luis Alberto Ortega", "Genaro Perez", "Janis Dueñas", "Enerique Triverio", "Carlos Gama"]
-    let messages = ["Puede estar listo hoy?", "Puede estar listo hoy?", "Puede estar listo hoy?", "Puede estar listo hoy?", "Puede estar listo hoy?"]
-    let dates = ["hace 2hr", "ayer", "27/08/17", "05/07/187", "06/07/17"]
-    
+    var menuItems = [MenuItem]()
+    var menuModel = MenuType()
+    var mensajeModel = MensajeType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+            menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
+        }
         
         loadMenu()
     }
@@ -29,16 +29,11 @@ class MensajesTableViewController: UITableViewController {
         menu = {
             let menu = MenuView()
             menu.delegate = self
-            menu.items = items
+            menu.items = menuItems
             return menu
         }()
         
         tableView.addSubview(menu)
-    }
-    
-    // MARK: - Items
-    fileprivate let items = (0..<9).map {
-        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
     // MARK: - Actions
@@ -47,27 +42,26 @@ class MensajesTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return mensajeModel.names.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("MensajesTableViewCell", owner: self, options: nil)?.first as! MensajesTableViewCell
         
-        let image = UIImage(named: profileImages[indexPath.row])
+        let image = UIImage(named: mensajeModel.profileImages[indexPath.row])
         cell.imageView?.image = image
         cell.imageView?.layer.cornerRadius = (image?.size.width)!/2
         cell.imageView?.layer.masksToBounds = true
         
-        cell.nameLabel.text = names[indexPath.row]
-        cell.messageLabel.text = messages[indexPath.row]
-        cell.dateLabel.text = dates[indexPath.row]
+        cell.nameLabel.text = mensajeModel.names[indexPath.row]
+        cell.messageLabel.text = mensajeModel.messages[indexPath.row]
+        cell.dateLabel.text = mensajeModel.dates[indexPath.row]
         
         return cell
     }
@@ -102,6 +96,8 @@ extension MensajesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
+        
+        tableView.reloadData()
     }
 }
 

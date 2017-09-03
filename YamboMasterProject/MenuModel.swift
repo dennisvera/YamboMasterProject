@@ -8,69 +8,11 @@
 
 import UIKit
 
-enum ContentType: String, CustomStringConvertible {
+public struct MenuType {
     
-    case mensajes = "mensajes.png"
-    case calendario = "calendario.png"
-    case reservaciones = "reservaciones.png"
-    case acciones = "acciones.png"
-    case cobrosYPagos = "yamboLogo.png"
-    case solicitudes = "heart.png"
+    let homepageMenuNames = ["MENSAJES", "COMUNICADOS", "RESERVACIONES", "MARKETPLACE", "INVITADOS", "SOLICITUDES", "PAGOS", "DIRECTORIO"]
+    let homepageMenuIcons = ["menu_icon_1", "menu_icon_2", "menu_icon_3", "menu_icon_4", "menu_icon_5", "menu_icon_6", "menu_icon_7", "menu_icon_8"]
     
-    var menuPhotoName: ContentType {
-        switch self {
-        case .mensajes:
-            return .mensajes
-        case .calendario:
-            return .calendario
-        case .reservaciones:
-            return .reservaciones
-        case .acciones:
-            return  .acciones
-        case .cobrosYPagos:
-            return .cobrosYPagos
-        case .solicitudes:
-            return .solicitudes
-        }
-    }
-    
-    func next(itemAt: Int) -> ContentType {
-        switch menuPhotoName {
-        case .mensajes:
-            return .mensajes
-        case .calendario:
-            return .calendario
-        case .reservaciones:
-            return .reservaciones
-        case .acciones:
-            return .acciones
-        case .cobrosYPagos:
-            return .cobrosYPagos
-        case .solicitudes:
-            return .solicitudes
-            
-        }
-    }
-    
-    var image: UIImage {
-        let image =  UIImage(named: rawValue)!
-        return image
-    }
-    
-    var description: String {
-        switch self {
-        case .mensajes:
-            return "Mensajes"
-        case .calendario:
-            return "Calendario"
-        case .reservaciones:
-            return "Reservaciones"
-        case .acciones:
-            return "Acciones"
-        case .cobrosYPagos:
-            return "Cobros Y Pagos"
-        case .solicitudes:
-            return "Solicitudes"
-        }
-    }
+    let menuNames = ["HOME", "MENSAJES", "COMUNICADOS", "RESERVACIONES", "MARKETPLACE", "INVITADOS", "SOLICITUDES", "PAGOS", "DIRECTORIO"]
+    let menuIcons = ["menu_icon_0", "menu_icon_1", "menu_icon_2", "menu_icon_3", "menu_icon_4", "menu_icon_5", "menu_icon_6", "menu_icon_7", "menu_icon_8"]
 }

@@ -11,12 +11,16 @@ import Persei
 
 class ReservacionesTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
-
-    let backgroundImages = ["reservaciones1.jpg", "reservaciones2.jpg", "reservaciones3.jpg", "reservaciones4.jpg", "reservaciones5.jpg"]
-    let titles = ["BOLICHE", "TENIS", "ALBERCA", "CINE", "ASADORES"]
+    var menuItems = [MenuItem]()
+    var menuModel = MenuType()
+    var reservacioneModel = ReservacioneType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+            menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
+        }
         
         loadMenu()
     }
@@ -25,16 +29,11 @@ class ReservacionesTableViewController: UITableViewController {
         menu = {
             let menu = MenuView()
             menu.delegate = self
-            menu.items = items
+            menu.items = menuItems
             return menu
         }()
         
         tableView.addSubview(menu)
-    }
-    
-    // MARK: - Items
-    fileprivate let items = (0..<9).map {
-        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
     // MARK: - Actions
@@ -49,15 +48,15 @@ class ReservacionesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return backgroundImages.count
+        return reservacioneModel.backgroundImages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
-        let image = UIImage(named: backgroundImages[indexPath.row])
+        let image = UIImage(named: reservacioneModel.backgroundImages[indexPath.row])
         cell.bkgImageView.image = image
-        cell.titleLabel.text = titles[indexPath.row]
+        cell.titleLabel.text = reservacioneModel.titles[indexPath.row]
         
         return cell
     }
@@ -65,7 +64,6 @@ class ReservacionesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 122
     }
-
 }
 
 
@@ -91,6 +89,8 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
+        
+        tableView.reloadData()
     }
 }
 

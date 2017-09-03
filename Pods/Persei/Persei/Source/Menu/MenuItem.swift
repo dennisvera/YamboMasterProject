@@ -5,7 +5,7 @@ import Foundation
 
 public struct MenuItem {
     
-    public var title: String?
+    public var name: String?
     public var image: UIImage?
     public var highlightedImage: UIImage?
     
@@ -16,8 +16,8 @@ public struct MenuItem {
     
     // MARK: - Init
     
-    public init(title: String? = nil, image: UIImage? = nil, highlightedImage: UIImage? = nil) {
-        self.title = title
+    public init(name: String? = nil, image: UIImage? = nil, highlightedImage: UIImage? = nil) {
+        self.name = name
         self.image = image
         self.highlightedImage = highlightedImage
     }

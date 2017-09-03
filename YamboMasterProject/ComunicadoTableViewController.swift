@@ -11,13 +11,16 @@ import Persei
 
 class ComunicadoTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
-    
-    var subjects = ["Reparaciones en el piso 17 de la torre D", "Curso gratuito para todo los niños", "Se cerrarán las canchas de tenis por dos dias", "Inauguracion de la nueva torre en el Salón De Fiestas", "Classes de spinning por impartirseen el residential"]
-    var userName = ["Luis Alberto Ortega — hace dos dias", "Luis Alberto Ortega — hace dos dias", "Luis Alberto Ortega – hace dos dias", "Luis Alberto Ortega – hace dos dias", "Luis Alberto Ortega – hace dos dias"]
-    var images = ["comunicado1.jpg", "comunicado2.jpg", "comunicado3.jpg", "comunicado4.png", "comunicado4.png"]
+    var menuItems = [MenuItem]()
+    var menuModel = MenuType()
+    var comunicadoModel = ComunicadoType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+            menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
+        }
         
         loadMenu()
     }
@@ -26,16 +29,11 @@ class ComunicadoTableViewController: UITableViewController {
         menu = {
             let menu = MenuView()
             menu.delegate = self
-            menu.items = items
+            menu.items = menuItems
             return menu
         }()
         
         tableView.addSubview(menu)
-    }
-    
-    // MARK: - Items
-    fileprivate let items = (0..<9).map {
-        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
     // MARK: - Actions
@@ -44,23 +42,22 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subjects.count
+        return comunicadoModel.subjects.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("CommunicadosTableViewCell", owner: self, options: nil)?.first as! CommunicadosTableViewCell
         
-        let image = UIImage(named: images[indexPath.row])
+        let image = UIImage(named: comunicadoModel.images[indexPath.row])
         cell.comunicadoImage.image = image
-        cell.subjectLabel.text = subjects[indexPath.row]
-        cell.userNameLabel.text = userName[indexPath.row]
+        cell.subjectLabel.text = comunicadoModel.subjects[indexPath.row]
+        cell.userNameLabel.text = comunicadoModel.userName[indexPath.row]
         
         return cell
     }
@@ -92,6 +89,8 @@ extension ComunicadoTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
+        
+        tableView.reloadData()
     }
 }
 

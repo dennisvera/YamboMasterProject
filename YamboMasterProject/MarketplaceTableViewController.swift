@@ -11,14 +11,16 @@ import Persei
 
 class MarketplaceTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
-    
-    let itemImages = ["marketplace1.jpg", "marketplace2.jpg", "marketplace3.jpg", "marketplace4.jpg", "marketplace5.jpg"]
-    let itemDetail = ["Vendo bici GIANT en buenas condiciones", "Se vende BMW X3 2012", "Renta de cajón de estacionamiento, Torre D", "Mensaje", "Mensaje"]
-    let resident = ["Alberto Ramirez A-401", "Carlos Sanz F-801", "Alberto Ramirez A-401", "Carlos Sanz F-801", "Alberto Ramirez A-401"]
-    let itemPrice = ["$8,500", "$329,000", "precio a negociar", "$7,200", "$500"]
+    var menuItems = [MenuItem]()
+    var menuModel = MenuType()
+    var marketplaceModel = MarketplaceType()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+            menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
+        }
         
         loadMenu()
     }
@@ -27,16 +29,11 @@ class MarketplaceTableViewController: UITableViewController {
         menu = {
             let menu = MenuView()
             menu.delegate = self
-            menu.items = items
+            menu.items = menuItems
             return menu
         }()
         
         tableView.addSubview(menu)
-    }
-    
-    // MARK: - Items
-    fileprivate let items = (0..<9).map {
-        MenuItem(title: "Reservaciones", image: UIImage(named: "menu_icon_\($0)")!)
     }
     
     // MARK: - Actions
@@ -45,24 +42,23 @@ class MarketplaceTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemImages.count
+        return marketplaceModel.itemImages.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("MarketplaceTableViewCell", owner: self, options: nil)?.first as! MarketplaceTableViewCell
         
-        let image = UIImage(named: itemImages[indexPath.row])
+        let image = UIImage(named: marketplaceModel.itemImages[indexPath.row])
         cell.itemImageView.image = image
-        cell.itemDetailLabel.text = itemDetail[indexPath.row]
-        cell.residentNameLabel.text = resident[indexPath.row]
-        cell.itemPriceLabel.text = itemPrice[indexPath.row]
+        cell.itemDetailLabel.text = marketplaceModel.itemDetail[indexPath.row]
+        cell.residentNameLabel.text = marketplaceModel.resident[indexPath.row]
+        cell.itemPriceLabel.text = marketplaceModel.itemPrice[indexPath.row]
         
         return cell
     }
@@ -95,6 +91,8 @@ extension MarketplaceTableViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 4 {
             print("current controller, no segue needed")
         }
+        
+        tableView.reloadData()
     }
 }
 

@@ -75,7 +75,7 @@ class MenuCell: UICollectionViewCell {
     // MARK: - Object
     var object: MenuItem? {
         didSet {
-            titleLabel.text = object?.title
+            titleLabel.text = object?.name
             imageView.image = object?.image
             imageView.highlightedImage = object?.highlightedImage
 //          shadowView.backgroundColor = object?.shadowColor
