@@ -9,11 +9,13 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var backgroundCellView: UIView!
     @IBOutlet var menuIconImageView: UIImageView!
     @IBOutlet var menuTitleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundCellView.layer.cornerRadius = 10
     }
 
 }

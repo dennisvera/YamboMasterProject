@@ -19,6 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zov-AZ-It2">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MenuNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxm-73-cgz">
                         <rect key="frame" x="20" y="92" width="120" height="14.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
@@ -33,19 +37,23 @@
                     </imageView>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Lxm-73-cgz" firstAttribute="top" secondItem="ssC-Fq-vEc" secondAttribute="bottom" constant="4" id="0Sg-Or-7q4"/>
                 <constraint firstItem="Lxm-73-cgz" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="8k5-km-XrW"/>
                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Lxm-73-cgz" secondAttribute="trailing" constant="20" id="DJK-Li-1UA"/>
+                <constraint firstItem="Zov-AZ-It2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HV7-5Z-b97"/>
+                <constraint firstItem="Zov-AZ-It2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QCF-o7-HwC"/>
+                <constraint firstAttribute="trailing" secondItem="Zov-AZ-It2" secondAttribute="trailing" id="ZrA-2T-bMs"/>
                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Lxm-73-cgz" secondAttribute="bottom" constant="20" id="hF0-oe-Owe"/>
                 <constraint firstItem="Lxm-73-cgz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="isA-KL-8dh"/>
+                <constraint firstAttribute="bottom" secondItem="Zov-AZ-It2" secondAttribute="bottom" id="ljX-zC-ryb"/>
                 <constraint firstItem="ssC-Fq-vEc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="opa-vV-AeT"/>
                 <constraint firstAttribute="trailing" secondItem="ssC-Fq-vEc" secondAttribute="trailing" constant="50" id="qGK-Nc-GXw"/>
                 <constraint firstItem="ssC-Fq-vEc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="t74-eC-GVL"/>
                 <constraint firstItem="ssC-Fq-vEc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="28" id="yyp-2B-rQi"/>
             </constraints>
             <connections>
+                <outlet property="backgroundCellView" destination="Zov-AZ-It2" id="CEP-T3-XMM"/>
                 <outlet property="menuIconImageView" destination="ssC-Fq-vEc" id="YvL-Tn-C3L"/>
                 <outlet property="menuTitleLabel" destination="Lxm-73-cgz" id="F2m-pb-VEh"/>
             </connections>

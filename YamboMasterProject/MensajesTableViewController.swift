@@ -56,8 +56,9 @@ class MensajesTableViewController: UITableViewController {
         
         let image = UIImage(named: mensajeModel.profileImages[indexPath.row])
         cell.imageView?.image = image
-        cell.imageView?.layer.cornerRadius = (image?.size.width)!/2
+        cell.imageView?.layer.cornerRadius = (image?.size.width)! / 2
         cell.imageView?.layer.masksToBounds = true
+        cell.imageView?.clipsToBounds = true
         
         cell.nameLabel.text = mensajeModel.names[indexPath.row]
         cell.messageLabel.text = mensajeModel.messages[indexPath.row]
@@ -67,7 +68,7 @@ class MensajesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 110
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {

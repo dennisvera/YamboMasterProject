@@ -66,6 +66,29 @@ class HomeCollectionViewController: UICollectionViewController {
     }
 }
 
+// MARK: UICollectionViewDelegate
+extension HomeCollectionViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        if indexPath.row == 0 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if indexPath.row == 1 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if indexPath.row == 2 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if indexPath.row == 3 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        }
+    }
+}
+
 // MARK: - MenuViewDelegate
 extension HomeCollectionViewController: MenuViewDelegate {
     
@@ -74,7 +97,7 @@ extension HomeCollectionViewController: MenuViewDelegate {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         if menu.selectedIndex == 0 {
-             print("current controller, no segue needed")
+            print("current controller, no segue needed")
         } else if menu.selectedIndex == 1 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
