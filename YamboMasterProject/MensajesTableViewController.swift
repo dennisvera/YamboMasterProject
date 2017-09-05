@@ -67,7 +67,7 @@ class MensajesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 120
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
