@@ -18,7 +18,8 @@ class HomeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.register(HomeHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HomeHeaderID")
+        let headerNib = UINib(nibName: "HomeHeaderCollectionReusableView", bundle: nil)
+        collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HomeHeaderID")
         collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
@@ -60,8 +61,8 @@ class HomeCollectionViewController: UICollectionViewController {
         
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeaderID", for: indexPath) as! HomeHeaderCollectionReusableView
         
-        headerView.backgroundColor = .red
         headerView.dateLabel?.text = menuModel.headerDate[indexPath.row]
+        headerView.dayLabel?.text = menuModel.headerDay[indexPath.row]
         return headerView
         
     }
