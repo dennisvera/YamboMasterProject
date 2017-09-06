@@ -9,6 +9,10 @@
 import UIKit
 import Persei
 
+private let reuseIdentifier = "HomeCollectionViewCell"
+private let headerReuseIdentifier = "HomeHeaderID"
+
+
 class HomeCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
@@ -18,9 +22,10 @@ class HomeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Register cell classes
         let headerNib = UINib(nibName: "HomeHeaderCollectionReusableView", bundle: nil)
-        collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HomeHeaderID")
-        collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
+        collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
+        collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
@@ -47,7 +52,6 @@ class HomeCollectionViewController: UICollectionViewController {
     
     
     // MARK: UICollectionViewDataSource
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -59,7 +63,7 @@ class HomeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeaderID", for: indexPath) as! HomeHeaderCollectionReusableView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! HomeHeaderCollectionReusableView
         
         headerView.dateLabel?.text = menuModel.headerDate[indexPath.row]
         headerView.dayLabel?.text = menuModel.headerDay[indexPath.row]
@@ -68,7 +72,7 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomeCollectionViewCell
         
         let image = UIImage(named: menuModel.homepageMenuIcons[indexPath.row])
         cell.menuIconImageView.image = image
@@ -78,7 +82,7 @@ class HomeCollectionViewController: UICollectionViewController {
     }
 }
 
-// MARK: UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 extension HomeCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -96,6 +100,9 @@ extension HomeCollectionViewController {
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if indexPath.row == 3 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if indexPath.row == 5 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
@@ -121,6 +128,9 @@ extension HomeCollectionViewController: MenuViewDelegate {
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 6 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         

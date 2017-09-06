@@ -90,6 +90,9 @@ extension MarketplaceTableViewController: MenuViewDelegate {
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             print("current controller, no segue needed")
+        } else if menu.selectedIndex == 6 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         
         tableView.reloadData()
