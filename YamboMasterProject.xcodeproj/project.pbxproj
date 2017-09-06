@@ -30,15 +30,6 @@
 		E1224AB61F4F117D002A183D /* YamboMasterProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AB51F4F117D002A183D /* YamboMasterProjectTests.swift */; };
 		E1224AC11F4F117D002A183D /* YamboMasterProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */; };
 		E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AD41F4F2783002A183D /* MenuModel.swift */; };
-		E1224AE41F4F2871002A183D /* mensajes.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADB1F4F2871002A183D /* mensajes.png */; };
-		E1224AE51F4F2871002A183D /* calendario.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADC1F4F2871002A183D /* calendario.png */; };
-		E1224AE61F4F2871002A183D /* reservaciones.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADD1F4F2871002A183D /* reservaciones.png */; };
-		E1224AE71F4F2871002A183D /* acciones.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADE1F4F2871002A183D /* acciones.png */; };
-		E1224AE81F4F2871002A183D /* servicios.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224ADF1F4F2871002A183D /* servicios.png */; };
-		E1224AE91F4F2871002A183D /* solicitudes.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224AE01F4F2871002A183D /* solicitudes.png */; };
-		E1224AEA1F4F2871002A183D /* yamboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224AE11F4F2871002A183D /* yamboLogo.png */; };
-		E1224AEB1F4F2871002A183D /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224AE21F4F2871002A183D /* heart.png */; };
-		E1224AEC1F4F2871002A183D /* yamboLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = E1224AE31F4F2871002A183D /* yamboLogo2.png */; };
 		E1224AF31F4F28A3002A183D /* reservaciones1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AEE1F4F28A3002A183D /* reservaciones1.jpg */; };
 		E1224AF41F4F28A3002A183D /* reservaciones2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AEF1F4F28A3002A183D /* reservaciones2.jpg */; };
 		E1224AF51F4F28A3002A183D /* reservaciones3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AF01F4F28A3002A183D /* reservaciones3.jpg */; };
@@ -54,6 +45,10 @@
 		E1224B191F535FDF002A183D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224B181F535FDF002A183D /* Extensions.swift */; };
 		E1879F771F5F08C100AF63AA /* mensaje1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1879F761F5F08C100AF63AA /* mensaje1.jpg */; };
 		E1879F791F5F14E700AF63AA /* mensaje6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1879F781F5F14E700AF63AA /* mensaje6.jpg */; };
+		E1879F7B1F5F26A700AF63AA /* mensajeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879F7A1F5F26A700AF63AA /* mensajeIcon.png */; };
+		E1879F7D1F5F27B800AF63AA /* comunicadoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879F7C1F5F27B800AF63AA /* comunicadoIcon.png */; };
+		E1879F801F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879F7E1F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift */; };
+		E1879F811F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1879F7F1F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.xib */; };
 		E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */; };
 		E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */; };
 		E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */; };
@@ -127,15 +122,6 @@
 		E1224AC21F4F117D002A183D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1224AD41F4F2783002A183D /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		E1224AD81F4F280E002A183D /* TrendSansOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrendSansOne.otf; sourceTree = "<group>"; };
-		E1224ADB1F4F2871002A183D /* mensajes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mensajes.png; sourceTree = "<group>"; };
-		E1224ADC1F4F2871002A183D /* calendario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendario.png; sourceTree = "<group>"; };
-		E1224ADD1F4F2871002A183D /* reservaciones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reservaciones.png; sourceTree = "<group>"; };
-		E1224ADE1F4F2871002A183D /* acciones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acciones.png; sourceTree = "<group>"; };
-		E1224ADF1F4F2871002A183D /* servicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servicios.png; sourceTree = "<group>"; };
-		E1224AE01F4F2871002A183D /* solicitudes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = solicitudes.png; sourceTree = "<group>"; };
-		E1224AE11F4F2871002A183D /* yamboLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yamboLogo.png; sourceTree = "<group>"; };
-		E1224AE21F4F2871002A183D /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		E1224AE31F4F2871002A183D /* yamboLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yamboLogo2.png; sourceTree = "<group>"; };
 		E1224AEE1F4F28A3002A183D /* reservaciones1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones1.jpg; sourceTree = "<group>"; };
 		E1224AEF1F4F28A3002A183D /* reservaciones2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones2.jpg; sourceTree = "<group>"; };
 		E1224AF01F4F28A3002A183D /* reservaciones3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones3.jpg; sourceTree = "<group>"; };
@@ -150,6 +136,10 @@
 		E1224B181F535FDF002A183D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E1879F761F5F08C100AF63AA /* mensaje1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje1.jpg; sourceTree = "<group>"; };
 		E1879F781F5F14E700AF63AA /* mensaje6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje6.jpg; sourceTree = "<group>"; };
+		E1879F7A1F5F26A700AF63AA /* mensajeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mensajeIcon.png; sourceTree = "<group>"; };
+		E1879F7C1F5F27B800AF63AA /* comunicadoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comunicadoIcon.png; sourceTree = "<group>"; };
+		E1879F7E1F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		E1879F7F1F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje4.jpg; sourceTree = "<group>"; };
 		E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje5.jpg; sourceTree = "<group>"; };
 		E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicadosTableViewCell.swift; sourceTree = "<group>"; };
@@ -246,6 +236,7 @@
 			children = (
 				E1224A9D1F4F117C002A183D /* AppDelegate.swift */,
 				E1224AD31F4F271A002A183D /* Model */,
+				E1879F821F60409600AF63AA /* Views */,
 				E1224ACE1F4F2398002A183D /* Controllers */,
 				E1224AD11F4F2692002A183D /* UI */,
 				E1224AD91F4F2834002A183D /* Resources */,
@@ -277,20 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */,
-				E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */,
-				E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */,
 				E1224B031F5074E2002A183D /* MensajesTableViewController.swift */,
-				E1224B071F5075BB002A183D /* MensajesTableViewCell.swift */,
-				E1224B081F5075BB002A183D /* MensajesTableViewCell.xib */,
 				E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */,
-				E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */,
-				E1A7C6B71F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib */,
 				E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */,
-				E1224AFF1F4F4636002A183D /* ReservacionesTableViewCell.swift */,
-				E1224B001F4F4636002A183D /* ReservacionesTableViewCell.xib */,
 				E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */,
-				E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift */,
-				E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceTableViewCell.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -358,15 +339,8 @@
 		E1224ADA1F4F284F002A183D /* Menu Images */ = {
 			isa = PBXGroup;
 			children = (
-				E1224ADB1F4F2871002A183D /* mensajes.png */,
-				E1224ADC1F4F2871002A183D /* calendario.png */,
-				E1224ADD1F4F2871002A183D /* reservaciones.png */,
-				E1224ADE1F4F2871002A183D /* acciones.png */,
-				E1224ADF1F4F2871002A183D /* servicios.png */,
-				E1224AE01F4F2871002A183D /* solicitudes.png */,
-				E1224AE11F4F2871002A183D /* yamboLogo.png */,
-				E1224AE21F4F2871002A183D /* heart.png */,
-				E1224AE31F4F2871002A183D /* yamboLogo2.png */,
+				E1879F7A1F5F26A700AF63AA /* mensajeIcon.png */,
+				E1879F7C1F5F27B800AF63AA /* comunicadoIcon.png */,
 			);
 			name = "Menu Images";
 			sourceTree = "<group>";
@@ -394,6 +368,25 @@
 				E1879F781F5F14E700AF63AA /* mensaje6.jpg */,
 			);
 			name = "Mensaje Images";
+			sourceTree = "<group>";
+		};
+		E1879F821F60409600AF63AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E111E2C01F59A59D005B4EBD /* HomeCollectionViewCell.swift */,
+				E111E2C11F59A59D005B4EBD /* HomeCollectionViewCell.xib */,
+				E1879F7E1F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift */,
+				E1879F7F1F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.xib */,
+				E1224B071F5075BB002A183D /* MensajesTableViewCell.swift */,
+				E1224B081F5075BB002A183D /* MensajesTableViewCell.xib */,
+				E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */,
+				E1A7C6B71F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib */,
+				E1224AFF1F4F4636002A183D /* ReservacionesTableViewCell.swift */,
+				E1224B001F4F4636002A183D /* ReservacionesTableViewCell.xib */,
+				E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift */,
+				E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E1A7C6BC1F54AD9600E4FC32 /* Comunicado Images */ = {
@@ -541,28 +534,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1224AF41F4F28A3002A183D /* reservaciones2.jpg in Resources */,
-				E1224AEC1F4F2871002A183D /* yamboLogo2.png in Resources */,
 				E1A7C6B91F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib in Resources */,
 				E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */,
 				E111E2D11F5EEDC3005B4EBD /* comunicado2.jpg in Resources */,
 				E1A7C6EB1F55D16100E4FC32 /* marketplace5.jpg in Resources */,
-				E1224AE91F4F2871002A183D /* solicitudes.png in Resources */,
+				E1879F811F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.xib in Resources */,
 				E1224AF71F4F28A3002A183D /* reservaciones5.jpg in Resources */,
-				E1224AEB1F4F2871002A183D /* heart.png in Resources */,
 				E1224B021F4F4636002A183D /* ReservacionesTableViewCell.xib in Resources */,
 				E111E2C31F59A59D005B4EBD /* HomeCollectionViewCell.xib in Resources */,
 				E1FE0E6C1F5F04050040F68E /* mensaje3.jpg in Resources */,
 				E1224AF81F4F2DFF002A183D /* TrendSansOne.otf in Resources */,
 				E1224B0A1F5075BB002A183D /* MensajesTableViewCell.xib in Resources */,
 				E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */,
-				E1224AE71F4F2871002A183D /* acciones.png in Resources */,
 				E1224AF31F4F28A3002A183D /* reservaciones1.jpg in Resources */,
 				E111E2D51F5EF0F6005B4EBD /* comunicado3.jpg in Resources */,
-				E1224AE41F4F2871002A183D /* mensajes.png in Resources */,
+				E1879F7B1F5F26A700AF63AA /* mensajeIcon.png in Resources */,
 				E1224AA81F4F117D002A183D /* Assets.xcassets in Resources */,
 				E1879F771F5F08C100AF63AA /* mensaje1.jpg in Resources */,
-				E1224AE61F4F2871002A183D /* reservaciones.png in Resources */,
-				E1224AE51F4F2871002A183D /* calendario.png in Resources */,
+				E1879F7D1F5F27B800AF63AA /* comunicadoIcon.png in Resources */,
 				E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */,
 				E1224AF51F4F28A3002A183D /* reservaciones3.jpg in Resources */,
 				E1A7C6E81F55D16100E4FC32 /* marketplace2.jpg in Resources */,
@@ -573,13 +562,11 @@
 				E111E2CF1F5EEA36005B4EBD /* comunicado5.png in Resources */,
 				E111E2CD1F5EE7EA005B4EBD /* comunicado1.jpg in Resources */,
 				E1A7C6E91F55D16100E4FC32 /* marketplace3.jpg in Resources */,
-				E1224AE81F4F2871002A183D /* servicios.png in Resources */,
 				E1224AF61F4F28A3002A183D /* reservaciones4.jpg in Resources */,
 				E1A7C6E71F55D16100E4FC32 /* marketplace1.jpg in Resources */,
 				E1FE0E681F5F02CD0040F68E /* mensaje2.jpg in Resources */,
 				E1A7C6EA1F55D16100E4FC32 /* marketplace4.jpg in Resources */,
 				E111E2D71F5EF3FE005B4EBD /* comunicado6.jpg in Resources */,
-				E1224AEA1F4F2871002A183D /* yamboLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +741,7 @@
 				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
 				E1A7C6BB1F54AA4300E4FC32 /* ComunicadoTableViewController.swift in Sources */,
 				E111E2CB1F5B92D3005B4EBD /* MarketplaceModel.swift in Sources */,
+				E1879F801F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift in Sources */,
 				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
 				E111E2C91F5B91B2005B4EBD /* ReservacioneModel.swift in Sources */,
 				E1A7C6DF1F55C5FB00E4FC32 /* MarketplaceTableViewCell.swift in Sources */,

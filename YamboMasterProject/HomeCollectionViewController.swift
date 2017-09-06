@@ -13,11 +13,12 @@ class HomeCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    
+    @IBOutlet var dayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView?.register(HomeHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HomeHeaderID")
         collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
@@ -53,6 +54,16 @@ class HomeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuModel.homepageMenuNames.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeaderID", for: indexPath) as! HomeHeaderCollectionReusableView
+        
+        headerView.backgroundColor = .red
+        headerView.dateLabel?.text = menuModel.headerDate[indexPath.row]
+        return headerView
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
