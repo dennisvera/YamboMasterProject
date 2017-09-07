@@ -17,7 +17,6 @@ class HomeCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    @IBOutlet var dayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +24,7 @@ class HomeCollectionViewController: UICollectionViewController {
         // Register cell classes
         let headerNib = UINib(nibName: "HomeHeaderCollectionReusableView", bundle: nil)
         collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
+        
         collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
@@ -53,7 +53,6 @@ class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SolicitudesCollectionViewCell2" customModule="YamboMasterProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrl-3h-bPk">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUl-Se-uEZ">
+                                <rect key="frame" x="0.0" y="10" width="340" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fYm-vv-ZdT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wfg-ga-xVy" userLabel="SolicitudStackView">
+                                <rect key="frame" x="10" y="47" width="320" height="133"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-IM-T1d" userLabel="Solicitud">
+                                        <rect key="frame" x="59.5" y="0.0" width="201.5" height="16.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SolicitudLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-qt-985" userLabel="SolicitudLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SolicitudNoteLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shA-R2-4WM" userLabel="SolicitudNoteLabel">
+                                                <rect key="frame" x="82.5" y="0.0" width="119" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-Jn-g33" userLabel="Mensaje">
+                                        <rect key="frame" x="61" y="39" width="198" height="16.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MensajeLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-gO-7p1">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MensajeNoteLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-PO-HM8">
+                                                <rect key="frame" x="81" y="0.0" width="117" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8FI-qP-Mi4" userLabel="Fecha">
+                                        <rect key="frame" x="73.5" y="77.5" width="173" height="16.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FechaLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veH-k0-eJA">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FechaNoteLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G54-Sp-cy0">
+                                                <rect key="frame" x="70" y="0.0" width="103" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-lS-KnE" userLabel="Atendio">
+                                        <rect key="frame" x="64.5" y="116.5" width="191" height="16.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AtendioLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd9-fh-KZz">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AtendioNoteLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdQ-7P-EZT">
+                                                <rect key="frame" x="78" y="0.0" width="113" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JUl-Se-uEZ" firstAttribute="top" secondItem="Lrl-3h-bPk" secondAttribute="top" constant="10" id="3op-uB-LdS"/>
+                            <constraint firstItem="JUl-Se-uEZ" firstAttribute="leading" secondItem="Lrl-3h-bPk" secondAttribute="leading" id="5eT-0U-nPs"/>
+                            <constraint firstAttribute="trailing" secondItem="wfg-ga-xVy" secondAttribute="trailing" constant="10" id="5hz-x1-SpR"/>
+                            <constraint firstAttribute="bottom" secondItem="wfg-ga-xVy" secondAttribute="bottom" constant="20" id="CCr-nH-M9g"/>
+                            <constraint firstAttribute="height" constant="200" id="Fck-Vj-9K8"/>
+                            <constraint firstItem="wfg-ga-xVy" firstAttribute="leading" secondItem="Lrl-3h-bPk" secondAttribute="leading" constant="10" id="Irn-N6-1if"/>
+                            <constraint firstAttribute="trailing" secondItem="JUl-Se-uEZ" secondAttribute="trailing" id="cZS-gJ-MHE"/>
+                            <constraint firstAttribute="width" constant="340" id="fnV-bm-3Uh"/>
+                            <constraint firstItem="wfg-ga-xVy" firstAttribute="top" secondItem="JUl-Se-uEZ" secondAttribute="bottom" constant="16" id="q2B-vz-5sT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Lrl-3h-bPk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="S0Y-Ar-Gp1"/>
+                <constraint firstItem="Lrl-3h-bPk" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="vuB-RX-3oX"/>
+            </constraints>
+            <connections>
+                <outlet property="atendidaLabel" destination="JUl-Se-uEZ" id="0mB-Bn-raX"/>
+                <outlet property="atendidoLabel" destination="fd9-fh-KZz" id="bpY-tm-njW"/>
+                <outlet property="atendidoNoteLabel" destination="vdQ-7P-EZT" id="Mq4-Ac-D9o"/>
+                <outlet property="backgroundCellView" destination="Lrl-3h-bPk" id="2hA-K1-ew2"/>
+                <outlet property="backgroundView" destination="Lrl-3h-bPk" id="9or-Bl-l8d"/>
+                <outlet property="fechaLabel" destination="veH-k0-eJA" id="fDU-vq-Big"/>
+                <outlet property="fechaNoteLabel" destination="G54-Sp-cy0" id="aI0-EA-o46"/>
+                <outlet property="mensajeLabel" destination="fbe-gO-7p1" id="U8V-W4-Btj"/>
+                <outlet property="mensajeNoteLabel" destination="qYJ-PO-HM8" id="6An-Zl-u4Z"/>
+                <outlet property="solicitudLabel" destination="KVS-qt-985" id="mAV-zq-OBJ"/>
+                <outlet property="solicitudNoteLabel" destination="shA-R2-4WM" id="7CH-S1-DbT"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

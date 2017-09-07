@@ -9,18 +9,19 @@
 import UIKit
 import Persei
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier2 = "SolicitudeCollectionViewCell2"
 
 class SolicitudesCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
+    var solicitudeModel = SolicitudeType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView?.register(UINib(nibName: "SolicitudesCollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier2)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
@@ -46,19 +47,19 @@ class SolicitudesCollectionViewController: UICollectionViewController {
     }
     
     // MARK: UICollectionViewDataSource
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
+        return 1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier2, for: indexPath) as! SolicitudesCollectionViewCell2
         
+        cell.atendidaLabel.text = solicitudeModel.atendida
         return cell
     }
 }
