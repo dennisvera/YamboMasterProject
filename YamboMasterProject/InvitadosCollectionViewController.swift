@@ -61,7 +61,6 @@ class InvitadosCollectionViewController: UICollectionViewController {
         
         return cell
     }
-    
 }
 
 // MARK: - MenuViewDelegate
