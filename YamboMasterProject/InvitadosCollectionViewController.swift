@@ -9,17 +9,19 @@
 import UIKit
 import Persei
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "InvitadoCollectionViewCell"
 
 class InvitadosCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
+    var dataSource = InvitadoType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        // Register cell classes
+        collectionView?.register(UINib(nibName: "InvitadoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
@@ -51,14 +53,15 @@ class InvitadosCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return dataSource.names.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InvitadoCollectionViewCell", for: indexPath) as! InvitadoCollectionViewCell
         
-        // Configure the cell
-        
+        let image = UIImage(named: dataSource.images[indexPath.row])
+        cell.profileImageView.image = image
+        cell.nameLabel.text = dataSource.names[indexPath.row]
         return cell
     }
 }
