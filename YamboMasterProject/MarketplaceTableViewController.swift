@@ -13,7 +13,7 @@ class MarketplaceTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var marketplaceModel = MarketplaceType()
+    var dataSource = MarketplaceType()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,18 +47,18 @@ class MarketplaceTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return marketplaceModel.itemImages.count
+        return dataSource.itemImages.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("MarketplaceTableViewCell", owner: self, options: nil)?.first as! MarketplaceTableViewCell
         
-        let image = UIImage(named: marketplaceModel.itemImages[indexPath.row])
+        let image = UIImage(named: dataSource.itemImages[indexPath.row])
         cell.itemImageView.image = image
-        cell.itemDetailLabel.text = marketplaceModel.itemDetail[indexPath.row]
-        cell.residentNameLabel.text = marketplaceModel.resident[indexPath.row]
-        cell.itemPriceLabel.text = marketplaceModel.itemPrice[indexPath.row]
+        cell.itemDetailLabel.text = dataSource.itemDetail[indexPath.row]
+        cell.residentNameLabel.text = dataSource.resident[indexPath.row]
+        cell.itemPriceLabel.text = dataSource.itemPrice[indexPath.row]
         
         return cell
     }

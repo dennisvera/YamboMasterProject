@@ -13,7 +13,7 @@ class MensajesTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var mensajeModel = MensajeType()
+    var dataSource = MensajeType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,22 +47,22 @@ class MensajesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mensajeModel.names.count
+        return dataSource.names.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("MensajesTableViewCell", owner: self, options: nil)?.first as! MensajesTableViewCell
         
-        let image = UIImage(named: mensajeModel.profileImages[indexPath.row])
+        let image = UIImage(named: dataSource.profileImages[indexPath.row])
         cell.imageView?.image = image
         cell.imageView?.layer.cornerRadius = (image?.size.width)! / 2
         cell.imageView?.layer.masksToBounds = true
         cell.imageView?.clipsToBounds = true
         
-        cell.nameLabel.text = mensajeModel.names[indexPath.row]
-        cell.messageLabel.text = mensajeModel.messages[indexPath.row]
-        cell.dateLabel.text = mensajeModel.dates[indexPath.row]
+        cell.nameLabel.text = dataSource.names[indexPath.row]
+        cell.messageLabel.text = dataSource.messages[indexPath.row]
+        cell.dateLabel.text = dataSource.dates[indexPath.row]
         
         return cell
     }

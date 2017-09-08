@@ -13,7 +13,7 @@ class ReservacionesTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var reservacioneModel = ReservacioneType()
+    var dataSource = ReservacioneType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,15 +48,15 @@ class ReservacionesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reservacioneModel.backgroundImages.count
+        return dataSource.backgroundImages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
-        let image = UIImage(named: reservacioneModel.backgroundImages[indexPath.row])
+        let image = UIImage(named: dataSource.backgroundImages[indexPath.row])
         cell.bkgImageView.image = image
-        cell.titleLabel.text = reservacioneModel.titles[indexPath.row]
+        cell.titleLabel.text = dataSource.titles[indexPath.row]
         
         return cell
     }

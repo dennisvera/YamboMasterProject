@@ -15,7 +15,7 @@ class SolicitudesCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var solicitudeModel = SolicitudeType()
+    var dataSource = SolicitudeType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +53,21 @@ class SolicitudesCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return dataSource.atendida.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier2, for: indexPath) as! SolicitudesCollectionViewCell2
         
-        cell.atendidaLabel.text = solicitudeModel.atendida
+        cell.atendidaLabel.text = dataSource.atendida[indexPath.row]
+        cell.solicitudLabel.text = dataSource.solicitud[indexPath.row]
+        cell.solicitudNoteLabel.text = dataSource.solicitudNote[indexPath.row]
+        cell.mensajeLabel.text = dataSource.mensaje[indexPath.row]
+        cell.mensajeNoteLabel.text = dataSource.mensajeNote[indexPath.row]
+        cell.fechaLabel.text = dataSource.fecha[indexPath.row]
+        cell.fechaNoteLabel.text = dataSource.FechaNote[indexPath.row]
+        cell.atendidoLabel.text = dataSource.atendio[indexPath.row]
+        cell.atendidoNoteLabel.text = dataSource.atendioNote[indexPath.row]
         return cell
     }
 }

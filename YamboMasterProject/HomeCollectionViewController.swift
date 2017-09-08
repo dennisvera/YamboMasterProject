@@ -16,7 +16,7 @@ private let headerReuseIdentifier = "HomeHeaderID"
 class HomeCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
+    var dataSource = MenuType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class HomeCollectionViewController: UICollectionViewController {
         
         collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
-        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+        for (IconName, name) in zip(dataSource.menuIcons, dataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
         
@@ -57,15 +57,15 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuModel.homepageMenuNames.count
+        return dataSource.homepageMenuNames.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! HomeHeaderCollectionReusableView
         
-        headerView.dateLabel?.text = menuModel.headerDate[indexPath.row]
-        headerView.dayLabel?.text = menuModel.headerDay[indexPath.row]
+        headerView.dateLabel?.text = dataSource.headerDate[indexPath.row]
+        headerView.dayLabel?.text = dataSource.headerDay[indexPath.row]
         return headerView
         
     }
@@ -73,9 +73,9 @@ class HomeCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomeCollectionViewCell
         
-        let image = UIImage(named: menuModel.homepageMenuIcons[indexPath.row])
+        let image = UIImage(named: dataSource.homepageMenuIcons[indexPath.row])
         cell.menuIconImageView.image = image
-        cell.menuTitleLabel.text = menuModel.homepageMenuNames[indexPath.row]
+        cell.menuTitleLabel.text = dataSource.homepageMenuNames[indexPath.row]
         
         return cell
     }

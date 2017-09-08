@@ -13,7 +13,7 @@ class ComunicadoTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var comunicadoModel = ComunicadoType()
+    var dataSource = ComunicadoType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +47,17 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comunicadoModel.subjects.count
+        return dataSource.subjects.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("CommunicadosTableViewCell", owner: self, options: nil)?.first as! CommunicadosTableViewCell
         
-        let image = UIImage(named: comunicadoModel.images[indexPath.row])
+        let image = UIImage(named: dataSource.images[indexPath.row])
         cell.comunicadoImage.image = image
-        cell.subjectLabel.text = comunicadoModel.subjects[indexPath.row]
-        cell.userNameLabel.text = comunicadoModel.userName[indexPath.row]
+        cell.subjectLabel.text = dataSource.subjects[indexPath.row]
+        cell.userNameLabel.text = dataSource.userName[indexPath.row]
         
         return cell
     }
