@@ -100,6 +100,9 @@ extension HomeCollectionViewController {
         } else if indexPath.row == 3 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if indexPath.row == 4 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadosCollectionViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if indexPath.row == 5 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -128,6 +131,9 @@ extension HomeCollectionViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 5 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadosCollectionViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -136,3 +142,7 @@ extension HomeCollectionViewController: MenuViewDelegate {
         collectionView?.reloadData()
     }
 }
+
+
+
+

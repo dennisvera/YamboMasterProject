@@ -1,22 +1,25 @@
 //
-//  ReservacionesTableViewController.swift
+//  InvitadosCollectionViewController.swift
 //  YamboMasterProject
 //
-//  Created by Dennis Vera on 8/24/17.
+//  Created by Dennis Vera on 9/8/17.
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
 import UIKit
 import Persei
 
-class ReservacionesTableViewController: UITableViewController {
+private let reuseIdentifier = "Cell"
+
+class InvitadosCollectionViewController: UICollectionViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var dataSource = ReservacioneType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
@@ -33,7 +36,7 @@ class ReservacionesTableViewController: UITableViewController {
             return menu
         }()
         
-        tableView.addSubview(menu)
+        collectionView?.addSubview(menu)
     }
     
     // MARK: - Actions
@@ -41,34 +44,28 @@ class ReservacionesTableViewController: UITableViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    // MARK: UICollectionViewDataSource
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.backgroundImages.count
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
-        let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
-        let image = UIImage(named: dataSource.backgroundImages[indexPath.row])
-        cell.bkgImageView.image = image
-        cell.titleLabel.text = dataSource.titles[indexPath.row]
+        // Configure the cell
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 122
-    }
 }
 
-
 // MARK: - MenuViewDelegate
-extension ReservacionesTableViewController: MenuViewDelegate {
+extension InvitadosCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
@@ -84,21 +81,25 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
-            print("current controller, no segue needed")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 5 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadosCollectionViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
+            print("current controller, no segue needed")
         } else if menu.selectedIndex == 6 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         
-        tableView.reloadData()
+        collectionView?.reloadData()
     }
 }
+
+
+
+
 
 
 

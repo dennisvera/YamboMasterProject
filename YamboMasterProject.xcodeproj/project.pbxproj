@@ -53,6 +53,7 @@
 		E1879F891F60679700AF63AA /* SolicitudesCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879F871F60679700AF63AA /* SolicitudesCollectionViewCell2.swift */; };
 		E1879F8A1F60679700AF63AA /* SolicitudesCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1879F881F60679700AF63AA /* SolicitudesCollectionViewCell2.xib */; };
 		E1879F8C1F606AC600AF63AA /* SolicitudesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879F8B1F606AC600AF63AA /* SolicitudesModel.swift */; };
+		E1879F921F62D9B200AF63AA /* InvitadosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879F911F62D9B200AF63AA /* InvitadosCollectionViewController.swift */; };
 		E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */; };
 		E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */; };
 		E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */; };
@@ -148,6 +149,7 @@
 		E1879F871F60679700AF63AA /* SolicitudesCollectionViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudesCollectionViewCell2.swift; sourceTree = "<group>"; };
 		E1879F881F60679700AF63AA /* SolicitudesCollectionViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SolicitudesCollectionViewCell2.xib; sourceTree = "<group>"; };
 		E1879F8B1F606AC600AF63AA /* SolicitudesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudesModel.swift; sourceTree = "<group>"; };
+		E1879F911F62D9B200AF63AA /* InvitadosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitadosCollectionViewController.swift; sourceTree = "<group>"; };
 		E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje4.jpg; sourceTree = "<group>"; };
 		E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje5.jpg; sourceTree = "<group>"; };
 		E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicadosTableViewCell.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */,
 				E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */,
 				E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */,
+				E1879F911F62D9B200AF63AA /* InvitadosCollectionViewController.swift */,
 				E1879F831F60538600AF63AA /* SolicitudesCollectionViewController.swift */,
 			);
 			name = Controllers;
@@ -746,6 +749,7 @@
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift in Sources */,
 				E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */,
+				E1879F921F62D9B200AF63AA /* InvitadosCollectionViewController.swift in Sources */,
 				E1224B191F535FDF002A183D /* Extensions.swift in Sources */,
 				E111E2BF1F59A56C005B4EBD /* HomeCollectionViewController.swift in Sources */,
 				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,

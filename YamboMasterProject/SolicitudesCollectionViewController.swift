@@ -95,6 +95,9 @@ extension SolicitudesCollectionViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketplaceID") as! MarketplaceTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 5 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadosCollectionViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
             print("current controller, no segue needed")
         }
@@ -102,3 +105,9 @@ extension SolicitudesCollectionViewController: MenuViewDelegate {
         collectionView?.reloadData()
     }
 }
+
+
+
+
+
+
