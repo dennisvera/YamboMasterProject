@@ -133,7 +133,6 @@
                 <outlet property="atendidoLabel" destination="fd9-fh-KZz" id="bpY-tm-njW"/>
                 <outlet property="atendidoNoteLabel" destination="vdQ-7P-EZT" id="Mq4-Ac-D9o"/>
                 <outlet property="backgroundCellView" destination="Lrl-3h-bPk" id="2hA-K1-ew2"/>
-                <outlet property="backgroundView" destination="Lrl-3h-bPk" id="9or-Bl-l8d"/>
                 <outlet property="fechaLabel" destination="veH-k0-eJA" id="fDU-vq-Big"/>
                 <outlet property="fechaNoteLabel" destination="G54-Sp-cy0" id="aI0-EA-o46"/>
                 <outlet property="mensajeLabel" destination="fbe-gO-7p1" id="U8V-W4-Btj"/>

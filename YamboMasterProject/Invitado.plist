@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Jaime</string>
+		<key>photo</key>
+		<string>invitado1.png</string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Laura</string>
+		<key>photo</key>
+		<string>invitado2.png</string>
+		<key>index</key>
+		<integer>1</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Emilio</string>
+		<key>photo</key>
+		<string>invitado3.png</string>
+		<key>index</key>
+		<integer>2</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Carla</string>
+		<key>photo</key>
+		<string>invitado4.png</string>
+		<key>index</key>
+		<integer>3</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ros</string>
+		<key>photo</key>
+		<string>invitado5.png</string>
+		<key>index</key>
+		<integer>4</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rodrigo</string>
+		<key>photo</key>
+		<string>invitado6.png</string>
+		<key>index</key>
+		<integer>5</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+</array>
+</plist>

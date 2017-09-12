@@ -9,13 +9,16 @@
 import UIKit
 import Persei
 
-private let reuseIdentifier = "InvitadoCollectionViewCell"
+private let reuseIdentifier = "InvitadoCell"
 
-class InvitadosCollectionViewController: UICollectionViewController {
+class InvitadoCollectionViewController: UICollectionViewController {
+    fileprivate var invitadosDataSource = InvitadosDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var dataSource = InvitadoType()
+    
+    //    var dataSource = InvitadoType()
+    //    var newInvitados = [InvitadoType]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,28 +49,32 @@ class InvitadosCollectionViewController: UICollectionViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
+        @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+            // for adding new invitados
+        }
+    
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.names.count
+        return invitadosDataSource.count
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! InvitadoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! InvitadoCell
         
-        let image = UIImage(named: dataSource.images[indexPath.row])
-        cell.profileImageView.image = image
-        cell.nameLabel.text = dataSource.names[indexPath.row]
+        if let invitado = invitadosDataSource.invitadoForItemAtIndexPath(indexPath) {
+            cell.invitado = invitado
+        }
         return cell
     }
 }
 
 // MARK: - MenuViewDelegate
-extension InvitadosCollectionViewController: MenuViewDelegate {
+extension InvitadoCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
