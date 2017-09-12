@@ -28,6 +28,10 @@ class InvitadoCollectionViewController: UICollectionViewController {
         }
         
         loadMenu()
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(InvitadoCollectionViewController.refreshControlDidFire), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
     }
     
     fileprivate func loadMenu() {
@@ -46,11 +50,22 @@ class InvitadoCollectionViewController: UICollectionViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+    func refreshControlDidFire() {
+        addButtonTapped(nil)
+        collectionView?.refreshControl?.endRefreshing()
+    }
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
         let indexPath = invitadosDataSource.indexPathForNewRandomPark()
+        
+        let layout = collectionViewLayout as! InvitadosViewFlowLayout
+        layout.appearingIndexPath = indexPath
+        
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
             
             self.collectionView!.insertItems(at: [indexPath as IndexPath])
+        }, completion: { (finished: Bool) -> Void in
+            layout.appearingIndexPath = nil
         })
     }
     
