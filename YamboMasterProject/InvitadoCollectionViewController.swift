@@ -17,9 +17,6 @@ class InvitadoCollectionViewController: UICollectionViewController {
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
     
-    //    var dataSource = InvitadoType()
-    //    var newInvitados = [InvitadoType]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,9 +46,13 @@ class InvitadoCollectionViewController: UICollectionViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-        @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-            // for adding new invitados
-        }
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        let indexPath = invitadosDataSource.indexPathForNewRandomPark()
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
+            
+            self.collectionView!.insertItems(at: [indexPath as IndexPath])
+        })
+    }
     
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -60,7 +61,6 @@ class InvitadoCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return invitadosDataSource.count
-        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

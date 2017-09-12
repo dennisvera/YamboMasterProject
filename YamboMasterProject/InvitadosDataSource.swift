@@ -42,6 +42,15 @@ class InvitadosDataSource {
         invitados = newInvitado
     }
     
+    func indexPathForNewRandomPark() -> IndexPath {
+        let index = Int(arc4random_uniform(UInt32(immutableInvitados.count)))
+        let parkToCopy = immutableInvitados[index]
+        let newPark = Invitado(copying: parkToCopy)
+        invitados.append(newPark)
+        invitados.sort { $0.index < $1.index }
+        return indexPathForInvitado(newPark)
+    }
+    
     func indexPathForInvitado(_ invitado: Invitado) -> IndexPath {
         let section = sections.index(of: invitado.section)!
         var item = 0

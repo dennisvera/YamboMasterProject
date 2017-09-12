@@ -354,8 +354,8 @@
 				E111E2C61F5B8ECD005B4EBD /* ComunicadoModel.swift */,
 				E111E2C81F5B91B2005B4EBD /* ReservacioneModel.swift */,
 				E111E2CA1F5B92D3005B4EBD /* MarketplaceModel.swift */,
-				E1879F8B1F606AC600AF63AA /* SolicitudesModel.swift */,
 				E10091641F6834D900B46E2A /* Invitado.swift */,
+				E1879F8B1F606AC600AF63AA /* SolicitudesModel.swift */,
 				E1224B181F535FDF002A183D /* Extensions.swift */,
 			);
 			name = Models;
