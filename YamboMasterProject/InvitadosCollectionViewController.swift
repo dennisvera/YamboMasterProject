@@ -21,7 +21,7 @@ class InvitadosCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         // Register cell classes
-        collectionView?.register(UINib(nibName: "InvitadoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView?.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
@@ -57,7 +57,7 @@ class InvitadosCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InvitadoCollectionViewCell", for: indexPath) as! InvitadoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! InvitadoCollectionViewCell
         
         let image = UIImage(named: dataSource.images[indexPath.row])
         cell.profileImageView.image = image

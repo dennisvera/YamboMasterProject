@@ -17,5 +17,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         backgroundCellView.layer.cornerRadius = 10
     }
-
+    
+    override func prepareForReuse() {
+        menuIconImageView.image = nil
+        menuTitleLabel.text = ""
+    }
 }
