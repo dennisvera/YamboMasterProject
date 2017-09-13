@@ -28,10 +28,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
         }
         
         loadMenu()
-        
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(InvitadoCollectionViewController.refreshControlDidFire), for: .valueChanged)
-        collectionView?.refreshControl = refreshControl
+        refreshController()
     }
     
     fileprivate func loadMenu() {
@@ -50,10 +47,29 @@ class InvitadoCollectionViewController: UICollectionViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
+    func refreshController() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(InvitadoCollectionViewController.refreshControlDidFire), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
+    }
+    
     func refreshControlDidFire() {
-        addButtonTapped(nil)
+//        addButtonTapped(nil)
         collectionView?.refreshControl?.endRefreshing()
     }
+    
+    
+//    fileprivate func addButton(){
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setTitle("Button", for: UIControlState.normal)
+//        button.setTitleColor(UIColor.black, for: UIControlState.normal)
+//        view.addSubview(button)
+//        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//    }
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
         let indexPath = invitadosDataSource.indexPathForNewRandomPark()

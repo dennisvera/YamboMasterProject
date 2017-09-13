@@ -28,6 +28,7 @@ class SolicitudesCollectionViewController: UICollectionViewController {
         }
         
         loadMenu()
+        refreshController()
     }
     
     fileprivate func loadMenu() {
@@ -44,6 +45,16 @@ class SolicitudesCollectionViewController: UICollectionViewController {
     // MARK: - Actions
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
+    }
+    
+    func refreshController() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(SolicitudesCollectionViewController.refreshControlDidFire), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
+    }
+    
+    func refreshControlDidFire() {
+        collectionView?.refreshControl?.endRefreshing()
     }
     
     // MARK: UICollectionViewDataSource
