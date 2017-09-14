@@ -25,5 +25,5 @@ class InvitadosViewFlowLayout: UICollectionViewFlowLayout {
         
         return attributes
     }
-
+    
 }

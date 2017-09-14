@@ -6,7 +6,7 @@
 		<key>name</key>
 		<string>Jaime</string>
 		<key>photo</key>
-		<string>invitado1.png</string>
+		<string>invitado1</string>
 		<key>index</key>
 		<integer>0</integer>
 		<key>section</key>
@@ -16,7 +16,7 @@
 		<key>name</key>
 		<string>Laura</string>
 		<key>photo</key>
-		<string>invitado2.png</string>
+		<string>invitado2</string>
 		<key>index</key>
 		<integer>1</integer>
 		<key>section</key>
@@ -26,7 +26,7 @@
 		<key>name</key>
 		<string>Emilio</string>
 		<key>photo</key>
-		<string>invitado3.png</string>
+		<string>invitado3</string>
 		<key>index</key>
 		<integer>2</integer>
 		<key>section</key>
@@ -36,7 +36,7 @@
 		<key>name</key>
 		<string>Carla</string>
 		<key>photo</key>
-		<string>invitado4.png</string>
+		<string>invitado4</string>
 		<key>index</key>
 		<integer>3</integer>
 		<key>section</key>
@@ -46,7 +46,7 @@
 		<key>name</key>
 		<string>Ros</string>
 		<key>photo</key>
-		<string>invitado5.png</string>
+		<string>invitado5</string>
 		<key>index</key>
 		<integer>4</integer>
 		<key>section</key>
@@ -56,7 +56,7 @@
 		<key>name</key>
 		<string>Rodrigo</string>
 		<key>photo</key>
-		<string>invitado6.png</string>
+		<string>invitado6</string>
 		<key>index</key>
 		<integer>5</integer>
 		<key>section</key>

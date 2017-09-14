@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>resident</key>
+		<string>Alberto Ramirez A-401</string>
+		<key>itemPhoto</key>
+		<string>marketplace1.jpg</string>
+		<key>itemDetail</key>
+		<string>Vendo tacos Tiempo Legend VII FG</string>
+		<key>itemPrice</key>
+		<string>$2,100</string>
+	</dict>
+	<dict>
+		<key>resident</key>
+		<string>Carlos Sanz F-801</string>
+		<key>itemPhoto</key>
+		<string>marketplace2.jpg</string>
+		<key>itemDetail</key>
+		<string>Vendo bici GIANT en buenas condiciones</string>
+		<key>itemPrice</key>
+		<string>$8,500</string>
+	</dict>
+	<dict>
+		<key>resident</key>
+		<string>Alberto Ramirez A-401</string>
+		<key>itemPhoto</key>
+		<string>marketplace3.jpg</string>
+		<key>itemDetail</key>
+		<string>Se vende BMW X3 2012</string>
+		<key>itemPrice</key>
+		<string>$329,000</string>
+	</dict>
+	<dict>
+		<key>resident</key>
+		<string>Alberto Ramirez A-401</string>
+		<key>itemPhoto</key>
+		<string>marketplace4.jpg</string>
+		<key>itemDetail</key>
+		<string>Renta de cajón de estacionamiento, Torre D</string>
+		<key>itemPrice</key>
+		<string>precio a negociar</string>
+	</dict>
+	<dict>
+		<key>resident</key>
+		<string>Carlos Sanz F-801</string>
+		<key>itemPhoto</key>
+		<string>marketplace5.jpg</string>
+		<key>itemDetail</key>
+		<string>Mensaje</string>
+		<key>itemPrice</key>
+		<string>$7,200</string>
+	</dict>
+	<dict>
+		<key>resident</key>
+		<string>Alberto Ramirez A-401</string>
+		<key>itemPhoto</key>
+		<string>marketplace6.jpg</string>
+		<key>itemDetail</key>
+		<string>Mensaje</string>
+		<key>itemPrice</key>
+		<string>$500</string>
+	</dict>
+</array>
+</plist>

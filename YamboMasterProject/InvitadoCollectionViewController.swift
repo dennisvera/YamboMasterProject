@@ -29,6 +29,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
         
         loadMenu()
         refreshController()
+        addButton()
     }
     
     fileprivate func loadMenu() {
@@ -58,20 +59,17 @@ class InvitadoCollectionViewController: UICollectionViewController {
         collectionView?.refreshControl?.endRefreshing()
     }
     
+    fileprivate func addButton(){
+        let button = UIButton(type: .custom) as UIButton
+        button.backgroundColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+        button.setImage(#imageLiteral(resourceName: "plusIcon"), for: .normal)
+        button.frame = CGRect(x: 147, y: 340, width: 80, height: 80)
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(addButtonTappedAction), for: .touchUpInside)
+        self.view.addSubview(button)
+    }
     
-//    fileprivate func addButton(){
-//        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.setTitle("Button", for: UIControlState.normal)
-//        button.setTitleColor(UIColor.black, for: UIControlState.normal)
-//        view.addSubview(button)
-//        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//    }
-    
-    @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
+    func addButtonTappedAction(sender: UIButton!) {
         let indexPath = invitadosDataSource.indexPathForNewRandomPark()
         
         let layout = collectionViewLayout as! InvitadosViewFlowLayout
@@ -83,6 +81,11 @@ class InvitadoCollectionViewController: UICollectionViewController {
         }, completion: { (finished: Bool) -> Void in
             layout.appearingIndexPath = nil
         })
+        
+        print("Button Clicked")
+    }
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
     }
     
     // MARK: UICollectionViewDataSource

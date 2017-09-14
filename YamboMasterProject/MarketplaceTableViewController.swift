@@ -9,12 +9,15 @@
 import UIKit
 import Persei
 
+private let reuseIdentifier = "MarketplaceCell"
+
 class MarketplaceTableViewController: UITableViewController {
+    fileprivate var marketplaceDataSource = MarketplaceDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var dataSource = MarketplaceType()
-
+    //    var dataSource = MarketplaceType()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,21 +48,17 @@ class MarketplaceTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.itemImages.count
+        return marketplaceDataSource.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = Bundle.main.loadNibNamed(reuseIdentifier, owner: self, options: nil)?.first as! MarketplaceCell
         
-        let cell = Bundle.main.loadNibNamed("MarketplaceTableViewCell", owner: self, options: nil)?.first as! MarketplaceTableViewCell
-        
-        let image = UIImage(named: dataSource.itemImages[indexPath.row])
-        cell.itemImageView.image = image
-        cell.itemDetailLabel.text = dataSource.itemDetail[indexPath.row]
-        cell.residentNameLabel.text = dataSource.resident[indexPath.row]
-        cell.itemPriceLabel.text = dataSource.itemPrice[indexPath.row]
-        
+        if let marketplace = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
+            cell.marketplace = marketplace
+        }
         return cell
     }
     
