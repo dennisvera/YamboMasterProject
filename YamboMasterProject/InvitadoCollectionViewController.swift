@@ -12,7 +12,7 @@ import Persei
 private let reuseIdentifier = "InvitadoCell"
 
 class InvitadoCollectionViewController: UICollectionViewController {
-    fileprivate var invitadosDataSource = InvitadosDataSource()
+    fileprivate var invitadoDataSource = InvitadoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
@@ -70,7 +70,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
     }
     
     func addButtonTappedAction(sender: UIButton!) {
-        let indexPath = invitadosDataSource.indexPathForNewRandomPark()
+        let indexPath = invitadoDataSource.indexPathForNewRandomPark()
         
         let layout = collectionViewLayout as! InvitadosViewFlowLayout
         layout.appearingIndexPath = indexPath
@@ -94,13 +94,13 @@ class InvitadoCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return invitadosDataSource.count
+        return invitadoDataSource.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! InvitadoCell
         
-        if let invitado = invitadosDataSource.invitadoForItemAtIndexPath(indexPath) {
+        if let invitado = invitadoDataSource.invitadoForItemAtIndexPath(indexPath) {
             cell.invitado = invitado
         }
         return cell
@@ -118,7 +118,7 @@ extension InvitadoCollectionViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 1 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajeTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 2 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
@@ -132,7 +132,7 @@ extension InvitadoCollectionViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 5 {
             print("current controller, no segue needed")
         } else if menu.selectedIndex == 6 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         

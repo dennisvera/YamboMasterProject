@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="840"/>
+            <point key="canvasLocation" x="433" y="840"/>
         </scene>
         <!--MARKETPLACE-->
         <scene sceneID="djl-kf-hov">
@@ -76,16 +76,53 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="edd-9S-1M8" kind="show" identifier="MarketDetailSegue" id="bKU-Nq-hw3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bko-y9-Glh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="840"/>
+            <point key="canvasLocation" x="-332" y="161"/>
+        </scene>
+        <!--MARKETPLACE-->
+        <scene sceneID="biy-2r-yVA">
+            <objects>
+                <viewController storyboardIdentifier="MarketplaceDetailID" id="edd-9S-1M8" customClass="MarketplaceDetailViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y5e-E1-nXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbO-3l-cUJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mja-Kj-hIR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrJ-XO-usp" customClass="MarketplaceDetailView" customModule="YamboMasterProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zrJ-XO-usp" firstAttribute="leading" secondItem="Mja-Kj-hIR" secondAttribute="leading" id="7do-Zy-xN3"/>
+                            <constraint firstItem="xbO-3l-cUJ" firstAttribute="top" secondItem="zrJ-XO-usp" secondAttribute="bottom" id="B2u-rO-VCB"/>
+                            <constraint firstAttribute="trailing" secondItem="zrJ-XO-usp" secondAttribute="trailing" id="Nyx-ui-u6q"/>
+                            <constraint firstItem="zrJ-XO-usp" firstAttribute="top" secondItem="y5e-E1-nXh" secondAttribute="bottom" id="f48-CX-r32"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MARKETPLACE" id="BUr-0O-1L1"/>
+                    <connections>
+                        <outlet property="marketDetailView" destination="zrJ-XO-usp" id="ylA-oa-ejv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3IT-bh-BqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432.80000000000001" y="160.56971514242881"/>
         </scene>
         <!--SOLICITUDES-->
         <scene sceneID="dzc-qa-cck">
             <objects>
-                <collectionViewController storyboardIdentifier="SolicitudesID" id="aM3-n9-C5f" customClass="SolicitudesCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="wSd-Ey-kFF">
+                <collectionViewController storyboardIdentifier="SolicitudeID" id="aM3-n9-C5f" customClass="SolicitudeCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wSd-Ey-kFF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,7 +133,7 @@
                             <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SolicitudeCollectionViewCell2" id="Z7l-RT-a1k">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SolicitudeCell" id="Z7l-RT-a1k">
                                 <rect key="frame" x="20" y="20" width="335" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -128,7 +165,7 @@
         <scene sceneID="lgi-6a-q69">
             <objects>
                 <collectionViewController storyboardIdentifier="InvitadoID" id="hbR-6q-STl" customClass="InvitadoCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="JMo-qU-Tup">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JMo-qU-Tup">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,7 +212,7 @@
         <!--MENSAJES-->
         <scene sceneID="WE2-i4-cAV">
             <objects>
-                <tableViewController storyboardIdentifier="MensajeID" id="glg-Hj-LYK" customClass="MensajesTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MensajeID" id="glg-Hj-LYK" customClass="MensajeTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6LE-zh-b1C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,13 +243,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqj-tM-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1850" y="840"/>
+            <point key="canvasLocation" x="-1007" y="840"/>
         </scene>
         <!--HOME-->
         <scene sceneID="GMP-HY-onv">
             <objects>
                 <collectionViewController storyboardIdentifier="HomeID" id="APS-cB-hWw" customClass="HomeCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="zn2-MP-Q1a">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zn2-MP-Q1a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,14 +290,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4e-Lh-Ihl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432.80000000000001" y="162.3688155922039"/>
+            <point key="canvasLocation" x="433" y="-530"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGb-cv-Um5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lha-mz-U3P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lha-mz-U3P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,7 +309,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="162"/>
+            <point key="canvasLocation" x="-332" y="-530"/>
         </scene>
         <!--COMUNICADOS-->
         <scene sceneID="jaC-dH-ltN">
@@ -308,7 +345,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6F-F1-LBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1078" y="840"/>
+            <point key="canvasLocation" x="-332" y="840"/>
         </scene>
     </scenes>
     <resources>

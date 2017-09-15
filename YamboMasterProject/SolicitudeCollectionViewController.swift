@@ -1,28 +1,34 @@
 //
-//  MensajesTableViewController.swift
+//  SolicitudesCollectionViewController.swift
 //  YamboMasterProject
 //
-//  Created by Dennis Vera on 8/25/17.
+//  Created by Dennis Vera on 9/6/17.
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
 import UIKit
 import Persei
 
-class MensajesTableViewController: UITableViewController {
+private let reuseIdentifier = "SolicitudeCell"
+
+class SolicitudeCollectionViewController: UICollectionViewController {
+    fileprivate var solicitudedoDataSource = SolicitudeDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var dataSource = MensajeType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Register cell classes
+        collectionView?.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
         
         loadMenu()
+        refreshController()
     }
     
     fileprivate func loadMenu() {
@@ -33,7 +39,7 @@ class MensajesTableViewController: UITableViewController {
             return menu
         }()
         
-        tableView.addSubview(menu)
+        collectionView?.addSubview(menu)
     }
     
     // MARK: - Actions
@@ -41,42 +47,39 @@ class MensajesTableViewController: UITableViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func refreshController() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(SolicitudeCollectionViewController.refreshControlDidFire), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
+    }
+    
+    func refreshControlDidFire() {
+        collectionView?.refreshControl?.endRefreshing()
+    }
+    
+    // MARK: UICollectionViewDataSource
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.names.count
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return solicitudedoDataSource.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SolicitudeCell
         
-        let cell = Bundle.main.loadNibNamed("MensajesTableViewCell", owner: self, options: nil)?.first as! MensajesTableViewCell
-        
-        let image = UIImage(named: dataSource.profileImages[indexPath.row])
-        cell.imageView?.image = image
-        cell.imageView?.layer.cornerRadius = (image?.size.width)! / 2
-        cell.imageView?.layer.masksToBounds = true
-        cell.imageView?.clipsToBounds = true
-        
-        cell.nameLabel.text = dataSource.names[indexPath.row]
-        cell.messageLabel.text = dataSource.messages[indexPath.row]
-        cell.dateLabel.text = dataSource.dates[indexPath.row]
+        if let solicitude = solicitudedoDataSource.solicitudeForItemAtIndexPath(indexPath) {
+            cell.solicitude = solicitude
+        }
         
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
-    }
-    
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-    }
 }
 
+
 // MARK: - MenuViewDelegate
-extension MensajesTableViewController: MenuViewDelegate {
+extension SolicitudeCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
@@ -86,7 +89,8 @@ extension MensajesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 1 {
-            print("current controller, no segue needed")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajeTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 2 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -100,18 +104,12 @@ extension MensajesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadoCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
+            print("current controller, no segue needed")
         }
         
-        tableView.reloadData()
+        collectionView?.reloadData()
     }
 }
-
-
-
-
-
 
 
 

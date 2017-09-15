@@ -16,7 +16,6 @@ class MarketplaceTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    //    var dataSource = MarketplaceType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,11 +58,27 @@ class MarketplaceTableViewController: UITableViewController {
         if let marketplace = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
             cell.marketplace = marketplace
         }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let marketplaceItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
+            performSegue(withIdentifier: "MarketDetailSegue", sender: marketplaceItem)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MarketDetailSegue",
+            let detailViewController = segue.destination as? MarketplaceDetailViewController,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let marketItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath)
+            detailViewController.marketPlace = marketItem
+        }
     }
 }
 
@@ -79,7 +94,7 @@ extension MarketplaceTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 1 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajeTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 2 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
@@ -93,7 +108,7 @@ extension MarketplaceTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadoCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         

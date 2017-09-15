@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InvitadosDataSource {
+class InvitadoDataSource {
     fileprivate var invitados: [Invitado] = []
     fileprivate var immutableInvitados: [Invitado] = []
     fileprivate var sections: [String] = []

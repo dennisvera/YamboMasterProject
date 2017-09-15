@@ -78,7 +78,7 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 1 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajesTableViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MensajeID") as! MensajeTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 2 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
@@ -92,7 +92,7 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadoCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudesID") as! SolicitudesCollectionViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         
