@@ -35,7 +35,8 @@ class MarketplaceDataSource {
                         let itemPhoto = dict["itemPhoto"] as! String
                         let itemDetail = dict["itemDetail"] as! String
                         let itemPrice = dict ["itemPrice"] as! String
-                        let marketplace = MarketPlace(resident: resident, itemPhoto: itemPhoto, itemDetail: itemDetail, itemPrice: itemPrice)
+                        let itemDescription = dict["itemDescription"] as! String
+                        let marketplace = MarketPlace(resident: resident, itemPhoto: itemPhoto, itemDetail: itemDetail, itemPrice: itemPrice, itemDescription: itemDescription)
                         
                         marketplaceArray.append(marketplace)
                     }

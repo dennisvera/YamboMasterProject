@@ -15,6 +15,7 @@ class MarketplaceDetailView: UIView {
     @IBOutlet var itemDetailLabel: UILabel!
     @IBOutlet var residentNameLabel: UILabel!
     @IBOutlet var itemPriceLabel: UILabel!
+    @IBOutlet var itemDescriptionLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,13 +34,14 @@ class MarketplaceDetailView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
-    var marketplaceDetail: MarketPlace? {
+    var marketplace: MarketPlace? {
         didSet {
-            if let marketplaceDetail = marketplaceDetail {
+            if let marketplaceDetail = marketplace {
                 itemImageView.image = UIImage(named: marketplaceDetail.itemPhoto)
                 itemDetailLabel.text = marketplaceDetail.itemDetail
                 itemPriceLabel.text = marketplaceDetail.itemPrice
                 residentNameLabel.text = marketplaceDetail.resident
+                itemDescriptionLabel.text = marketplaceDetail.itemDescription
             }
         }
     }

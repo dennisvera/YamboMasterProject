@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarketplaceDetailView" customModule="YamboMasterProject" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="i5M-Pr-FkT" id="2ge-4D-pck"/>
+                <outlet property="itemDescriptionLabel" destination="DEh-fe-7a9" id="AuX-Xa-Jou"/>
                 <outlet property="itemDetailLabel" destination="e2e-ep-FHs" id="lQK-IN-m7e"/>
                 <outlet property="itemImageView" destination="AXI-ZB-ghx" id="qAH-Tj-o9B"/>
                 <outlet property="itemPriceLabel" destination="891-sY-5Sh" id="ZdM-la-0fq"/>
@@ -43,36 +44,42 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOd-dH-mVL" userLabel="ItemDetailView">
-                    <rect key="frame" x="16" y="346" width="343" height="301"/>
+                    <rect key="frame" x="16" y="340" width="343" height="307"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wz9-de-BO0">
-                            <rect key="frame" x="8" y="14" width="327" height="65.5"/>
+                            <rect key="frame" x="8" y="14" width="327" height="80"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemDetailLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2e-ep-FHs">
-                                    <rect key="frame" x="0.0" y="0.0" width="327" height="16.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="19"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResidentNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNB-Ez-o71">
-                                    <rect key="frame" x="0.0" y="26.5" width="327" height="14.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                    <rect key="frame" x="0.0" y="29" width="327" height="17"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                     <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemPriceLabel" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="891-sY-5Sh">
-                                    <rect key="frame" x="0.0" y="51" width="327" height="14.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemPriceLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="891-sY-5Sh">
+                                    <rect key="frame" x="0.0" y="56" width="327" height="24"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                     <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itemDescriptionLabel" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEh-fe-7a9">
+                            <rect key="frame" x="8" y="104" width="327" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afS-CH-7OX">
-                            <rect key="frame" x="101" y="251" width="140" height="30"/>
+                            <rect key="frame" x="71" y="257" width="200" height="30"/>
                             <color key="backgroundColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="140" id="GdQ-57-zXN"/>
+                                <constraint firstAttribute="width" constant="200" id="GdQ-57-zXN"/>
                             </constraints>
                             <state key="normal" title="CONTACTAR">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,8 +90,12 @@
                     <constraints>
                         <constraint firstItem="wz9-de-BO0" firstAttribute="top" secondItem="GOd-dH-mVL" secondAttribute="top" constant="14" id="6fh-U8-1XB"/>
                         <constraint firstAttribute="bottom" secondItem="afS-CH-7OX" secondAttribute="bottom" constant="20" id="6j5-NN-nf7"/>
-                        <constraint firstItem="afS-CH-7OX" firstAttribute="leading" secondItem="GOd-dH-mVL" secondAttribute="leading" constant="101" id="EUa-P4-8Ys"/>
-                        <constraint firstAttribute="trailing" secondItem="afS-CH-7OX" secondAttribute="trailing" constant="102" id="bHK-tf-ce9"/>
+                        <constraint firstItem="afS-CH-7OX" firstAttribute="leading" secondItem="GOd-dH-mVL" secondAttribute="leading" constant="71" id="9kc-pa-d3q"/>
+                        <constraint firstItem="afS-CH-7OX" firstAttribute="top" relation="lessThanOrEqual" secondItem="DEh-fe-7a9" secondAttribute="bottom" priority="999" constant="150.5" id="Dwo-km-vGe"/>
+                        <constraint firstAttribute="trailing" secondItem="afS-CH-7OX" secondAttribute="trailing" constant="72" id="FxH-gf-R5a"/>
+                        <constraint firstItem="DEh-fe-7a9" firstAttribute="leading" secondItem="GOd-dH-mVL" secondAttribute="leading" constant="8" id="Nzd-6m-MGN"/>
+                        <constraint firstAttribute="trailing" secondItem="DEh-fe-7a9" secondAttribute="trailing" constant="8" id="aXE-mb-AOU"/>
+                        <constraint firstItem="DEh-fe-7a9" firstAttribute="top" secondItem="wz9-de-BO0" secondAttribute="bottom" constant="10" id="iwr-MG-0Vb"/>
                         <constraint firstItem="wz9-de-BO0" firstAttribute="leading" secondItem="GOd-dH-mVL" secondAttribute="leading" constant="8" id="pqf-nT-nsC"/>
                         <constraint firstAttribute="trailing" secondItem="wz9-de-BO0" secondAttribute="trailing" constant="8" id="q0J-2n-Rwt"/>
                         <constraint firstItem="afS-CH-7OX" firstAttribute="centerX" secondItem="GOd-dH-mVL" secondAttribute="centerX" id="sA4-3N-528"/>
@@ -98,7 +109,7 @@
                 <constraint firstAttribute="bottom" secondItem="GOd-dH-mVL" secondAttribute="bottom" constant="20" id="hcw-0q-ea1"/>
                 <constraint firstAttribute="trailing" secondItem="yI4-d6-iYP" secondAttribute="trailing" constant="16" id="iNn-2T-3pE"/>
                 <constraint firstAttribute="trailing" secondItem="GOd-dH-mVL" secondAttribute="trailing" constant="16" id="om8-db-N9B"/>
-                <constraint firstItem="GOd-dH-mVL" firstAttribute="top" secondItem="yI4-d6-iYP" secondAttribute="bottom" constant="20" id="ueQ-Pk-dQ6"/>
+                <constraint firstItem="GOd-dH-mVL" firstAttribute="top" secondItem="yI4-d6-iYP" secondAttribute="bottom" constant="14" id="ueQ-Pk-dQ6"/>
                 <constraint firstItem="yI4-d6-iYP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="xIs-LK-rIq"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="54.5"/>

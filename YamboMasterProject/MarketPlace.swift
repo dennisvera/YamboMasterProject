@@ -14,16 +14,18 @@ class MarketPlace {
     var itemPhoto: String
     var itemDetail: String
     var itemPrice: String
+    var itemDescription: String
     
-    init(resident: String, itemPhoto: String, itemDetail: String, itemPrice: String) {
+    init(resident: String, itemPhoto: String, itemDetail: String, itemPrice: String, itemDescription: String) {
         self.resident = resident
         self.itemPhoto = itemPhoto
         self.itemDetail = itemDetail
         self.itemPrice = itemPrice
+        self.itemDescription = itemDescription
     }
     
     convenience init(copying marketplace: MarketPlace) {
-        self.init(resident: marketplace.resident, itemPhoto: marketplace.itemPhoto, itemDetail: marketplace.itemDetail, itemPrice: marketplace.itemPrice)
+        self.init(resident: marketplace.resident, itemPhoto: marketplace.itemPhoto, itemDetail: marketplace.itemDetail, itemPrice: marketplace.itemPrice, itemDescription: marketplace.itemDescription)
     }
 }
 

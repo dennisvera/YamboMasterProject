@@ -11,6 +11,8 @@
 		<string>Vendo tacos Tiempo Legend VII FG</string>
 		<key>itemPrice</key>
 		<string>$2,100</string>
+		<key>itemDescription</key>
+		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
 	</dict>
 	<dict>
 		<key>resident</key>
@@ -21,6 +23,8 @@
 		<string>Vendo bici GIANT en buenas condiciones</string>
 		<key>itemPrice</key>
 		<string>$8,500</string>
+		<key>itemDescription</key>
+		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
 	</dict>
 	<dict>
 		<key>resident</key>
@@ -31,6 +35,8 @@
 		<string>Se vende BMW X3 2012</string>
 		<key>itemPrice</key>
 		<string>$329,000</string>
+		<key>itemDescription</key>
+		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
 	</dict>
 	<dict>
 		<key>resident</key>
@@ -41,6 +47,8 @@
 		<string>Renta de cajón de estacionamiento, Torre D</string>
 		<key>itemPrice</key>
 		<string>precio a negociar</string>
+		<key>itemDescription</key>
+		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
 	</dict>
 	<dict>
 		<key>resident</key>
@@ -51,6 +59,8 @@
 		<string>Mensaje</string>
 		<key>itemPrice</key>
 		<string>$7,200</string>
+		<key>itemDescription</key>
+		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
 	</dict>
 	<dict>
 		<key>resident</key>
@@ -61,6 +71,8 @@
 		<string>Mensaje</string>
 		<key>itemPrice</key>
 		<string>$500</string>
+		<key>itemDescription</key>
+		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
 	</dict>
 </array>
 </plist>

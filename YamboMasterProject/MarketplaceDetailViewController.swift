@@ -15,14 +15,16 @@ class MarketplaceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let marketItemPhoto = marketPlace?.itemPhoto else {return}
-        marketDetailView.itemImageView.image = UIImage(named: marketItemPhoto)
-        guard let marketItemDetail = marketPlace?.itemDetail else {return}
-        marketDetailView.itemDetailLabel.text = marketItemDetail
+        guard let itemImage = marketPlace?.itemPhoto else {return}
+        marketDetailView.itemImageView.image = UIImage(named: itemImage)
+        guard let itemDetail = marketPlace?.itemDetail else {return}
+        marketDetailView.itemDetailLabel.text = itemDetail
         guard let resident = marketPlace?.resident else {return}
         marketDetailView.residentNameLabel.text = resident
-        guard let marketItemPrice = marketPlace?.itemPrice else {return}
-        marketDetailView.itemPriceLabel.text = marketItemPrice
+        guard let itemPrice = marketPlace?.itemPrice else {return}
+        marketDetailView.itemPriceLabel.text = itemPrice
+        guard let itemDescription = marketPlace?.itemDescription else {return}
+        marketDetailView.itemDescriptionLabel.text = itemDescription
     }
 
 }
