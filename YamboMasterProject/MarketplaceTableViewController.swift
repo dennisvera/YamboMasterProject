@@ -20,6 +20,9 @@ class MarketplaceTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+        
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
