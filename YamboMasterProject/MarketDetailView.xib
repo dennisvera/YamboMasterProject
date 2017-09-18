@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarketplaceDetailView" customModule="YamboMasterProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarketDetailView" customModule="YamboMasterProject" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="i5M-Pr-FkT" id="2ge-4D-pck"/>
                 <outlet property="itemDescriptionLabel" destination="DEh-fe-7a9" id="AuX-Xa-Jou"/>
@@ -17,6 +17,8 @@
                 <outlet property="itemImageView" destination="AXI-ZB-ghx" id="qAH-Tj-o9B"/>
                 <outlet property="itemPriceLabel" destination="891-sY-5Sh" id="ZdM-la-0fq"/>
                 <outlet property="residentNameLabel" destination="uNB-Ez-o71" id="Upp-WL-toU"/>
+                <outlet property="thumbnailImageView1" destination="wnh-3w-H8S" id="5qc-Lg-PuK"/>
+                <outlet property="thumbnailImageView2" destination="Zf2-c1-7FC" id="slq-79-zOW"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,9 +42,11 @@
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wnh-3w-H8S">
                                     <rect key="frame" x="0.0" y="0.0" width="55.5" height="57"/>
+                                    <gestureRecognizers/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Zf2-c1-7FC">
                                     <rect key="frame" x="57.5" y="0.0" width="55.5" height="57"/>
+                                    <gestureRecognizers/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UOt-WK-VFa">
                                     <rect key="frame" x="115" y="0.0" width="55.5" height="57"/>
@@ -77,7 +81,7 @@
                     <rect key="frame" x="16" y="340" width="343" height="307"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wz9-de-BO0">
-                            <rect key="frame" x="8" y="14" width="327" height="80"/>
+                            <rect key="frame" x="8" y="14" width="327" height="82.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemDetailLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2e-ep-FHs">
                                     <rect key="frame" x="0.0" y="0.0" width="327" height="19"/>
@@ -92,15 +96,15 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemPriceLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="891-sY-5Sh">
-                                    <rect key="frame" x="0.0" y="56" width="327" height="24"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                    <rect key="frame" x="0.0" y="56" width="327" height="26.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                     <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itemDescriptionLabel" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEh-fe-7a9">
-                            <rect key="frame" x="8" y="104" width="327" height="17"/>
+                            <rect key="frame" x="8" y="106.5" width="327" height="17"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MarketplaceDetailViewController: UIViewController {
-    @IBOutlet var marketDetailView: MarketplaceDetailView!
+class MarketDetailViewController: UIViewController {
+    @IBOutlet var marketDetailView: MarketDetailView!
     var marketPlace: MarketPlace?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guard let itemImage = marketPlace?.itemPhoto else {return}
         marketDetailView.itemImageView.image = UIImage(named: itemImage)
         guard let itemDetail = marketPlace?.itemDetail else {return}
@@ -26,5 +26,8 @@ class MarketplaceDetailViewController: UIViewController {
         guard let itemDescription = marketPlace?.itemDescription else {return}
         marketDetailView.itemDescriptionLabel.text = itemDescription
     }
-
+    
+    
+    
+    
 }
