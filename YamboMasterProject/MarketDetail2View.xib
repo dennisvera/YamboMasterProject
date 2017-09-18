@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarketDetail2View" customModule="YamboMasterProject" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="JWu-mm-Cff" id="lAR-Uw-7tx"/>
+                <outlet property="itemImageView" destination="Zk6-Le-PUG" id="lOD-6f-ga4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JWu-mm-Cff" userLabel="ContentView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0a-ts-x4I" userLabel="ItemImageView">
+                    <rect key="frame" x="16" y="20" width="343" height="306"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zk6-Le-PUG">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="248"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="248" id="Bvf-Wr-3o0"/>
+                                <constraint firstAttribute="width" constant="343" id="ufg-Au-5qs"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bO2-p6-rgs">
+                            <rect key="frame" x="0.0" y="252" width="343" height="54"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="31r-eT-Ozv">
+                                    <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                    <gestureRecognizers/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Afu-Pk-Ry6">
+                                    <rect key="frame" x="58" y="0.0" width="53.5" height="54"/>
+                                    <gestureRecognizers/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EHK-Kk-AoP">
+                                    <rect key="frame" x="115.5" y="0.0" width="54" height="54"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1rB-fm-uxo">
+                                    <rect key="frame" x="173.5" y="0.0" width="54" height="54"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HBt-Tq-zzJ">
+                                    <rect key="frame" x="231.5" y="0.0" width="53.5" height="54"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-Sj-dA5">
+                                    <rect key="frame" x="289" y="0.0" width="54" height="54"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="hZh-OR-wK5"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Zk6-Le-PUG" secondAttribute="trailing" id="4co-2B-Moz"/>
+                        <constraint firstAttribute="bottom" secondItem="bO2-p6-rgs" secondAttribute="bottom" id="5vf-Uh-VGZ"/>
+                        <constraint firstItem="Zk6-Le-PUG" firstAttribute="top" secondItem="F0a-ts-x4I" secondAttribute="top" id="BY1-f3-SvR"/>
+                        <constraint firstItem="Zk6-Le-PUG" firstAttribute="leading" secondItem="F0a-ts-x4I" secondAttribute="leading" id="d91-hf-AEI"/>
+                        <constraint firstAttribute="height" constant="306" id="edD-TX-MlL"/>
+                        <constraint firstAttribute="trailing" secondItem="bO2-p6-rgs" secondAttribute="trailing" id="eln-vo-ddt"/>
+                        <constraint firstItem="bO2-p6-rgs" firstAttribute="leading" secondItem="F0a-ts-x4I" secondAttribute="leading" id="gx1-ig-wof"/>
+                        <constraint firstItem="bO2-p6-rgs" firstAttribute="top" secondItem="Zk6-Le-PUG" secondAttribute="bottom" constant="4" id="rM4-eh-M8t"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8X-Q9-6oV" userLabel="ItemDetailView">
+                    <rect key="frame" x="16" y="340" width="343" height="307"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="n8X-Q9-6oV" firstAttribute="top" secondItem="F0a-ts-x4I" secondAttribute="bottom" constant="14" id="7ei-PJ-uXj"/>
+                <constraint firstItem="F0a-ts-x4I" firstAttribute="leading" secondItem="JWu-mm-Cff" secondAttribute="leading" constant="16" id="FAa-0v-LaF"/>
+                <constraint firstItem="F0a-ts-x4I" firstAttribute="top" secondItem="JWu-mm-Cff" secondAttribute="top" constant="20" id="NLP-4k-gXQ"/>
+                <constraint firstAttribute="trailing" secondItem="n8X-Q9-6oV" secondAttribute="trailing" constant="16" id="UTO-tz-pFA"/>
+                <constraint firstAttribute="trailing" secondItem="F0a-ts-x4I" secondAttribute="trailing" constant="16" id="dH1-D9-Pxe"/>
+                <constraint firstItem="n8X-Q9-6oV" firstAttribute="leading" secondItem="JWu-mm-Cff" secondAttribute="leading" constant="16" id="fWk-cc-Eve"/>
+                <constraint firstAttribute="bottom" secondItem="n8X-Q9-6oV" secondAttribute="bottom" constant="20" id="pa2-sY-hpt"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="marketplace1-2.jpg" width="300" height="300"/>
+        <image name="marketplace1-3.jpg" width="300" height="300"/>
+        <image name="marketplace1-4.jpg" width="300" height="300"/>
+        <image name="marketplace1-5.jpg" width="300" height="300"/>
+        <image name="marketplace1.jpg" width="300" height="300"/>
+    </resources>
+</document>

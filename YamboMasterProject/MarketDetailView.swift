@@ -1,3 +1,4 @@
+
 //
 //  MarketplaceDetailCell.swift
 //  YamboMasterProject
@@ -9,6 +10,7 @@
 import UIKit
 
 private let nibName = "MarketDetailView"
+private let reuseIdentifierSegue = "MarketDetail2Segue"
 
 class MarketDetailView: UIView {
     
@@ -57,9 +59,29 @@ class MarketDetailView: UIView {
         }
     }
     
-    func imageTapped (recognizer: UITapGestureRecognizer) -> Bool{
-        itemImageView.image = UIImage(named: "\(thumbnailImageView2))")
+    func imageTapped (recognizer: UITapGestureRecognizer) {
         print("image tapped")
-        return true
+    }
+    
+    @IBAction func contactarButtonTapped(_ sender: Any) {
+            print("contactar button tapped")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

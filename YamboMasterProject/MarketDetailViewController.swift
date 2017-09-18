@@ -15,6 +15,9 @@ class MarketDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+        
         guard let itemImage = marketPlace?.itemPhoto else {return}
         marketDetailView.itemImageView.image = UIImage(named: itemImage)
         guard let itemDetail = marketPlace?.itemDetail else {return}
@@ -25,9 +28,15 @@ class MarketDetailViewController: UIViewController {
         marketDetailView.itemPriceLabel.text = itemPrice
         guard let itemDescription = marketPlace?.itemDescription else {return}
         marketDetailView.itemDescriptionLabel.text = itemDescription
+        
+        marketDetailView.contactarButtonTapped(segue())
     }
     
-    
+    func segue() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketDetail2Segue") as! MarketDetail2ViewViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
     
     
 }
