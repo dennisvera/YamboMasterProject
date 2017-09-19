@@ -26,7 +26,7 @@ class MarketDataSource {
     // MARK: - Private
     
     fileprivate func loadMarketplaceFromDisk() -> [Market] {
-        if let path = Bundle.main.path(forResource: "Marketplace", ofType: "plist") {
+        if let path = Bundle.main.path(forResource: "Market", ofType: "plist") {
             if let dictArray = NSArray(contentsOfFile: path) {
                 var marketArray: [Market] = []
                 for item in dictArray {

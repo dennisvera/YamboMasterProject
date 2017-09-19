@@ -20,18 +20,22 @@ class HomeCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register cell classes
+        
+        loadNibs()
+        loadMenuIcons()
+        loadMenu()
+    }
+    
+    func loadNibs() {
         let headerNib = UINib(nibName: "HomeHeaderCollectionReusableView", bundle: nil)
         collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
-        
         collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        
+    }
+    
+    func loadMenuIcons() {
         for (IconName, name) in zip(dataSource.menuIcons, dataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
-        
-        loadMenu()
     }
     
     fileprivate func loadMenu() {
@@ -49,7 +53,7 @@ class HomeCollectionViewController: UICollectionViewController {
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
-
+    
     
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

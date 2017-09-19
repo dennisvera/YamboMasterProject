@@ -18,11 +18,14 @@ class ReservacionesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadMenuIcons()
+        loadMenu()
+    }
+    
+    func loadMenuIcons() {
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
-        
-        loadMenu()
     }
     
     fileprivate func loadMenu() {

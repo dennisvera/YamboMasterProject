@@ -13,7 +13,7 @@
 		E10091651F6834D900B46E2A /* Invitado.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091641F6834D900B46E2A /* Invitado.swift */; };
 		E10091681F68359500B46E2A /* InvitadoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091671F68359500B46E2A /* InvitadoDataSource.swift */; };
 		E100916D1F68A46900B46E2A /* InvitadosViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E100916C1F68A46900B46E2A /* InvitadosViewFlowLayout.swift */; };
-		E100916F1F6AC67C00B46E2A /* Marketplace.plist in Resources */ = {isa = PBXBuildFile; fileRef = E100916E1F6AC67B00B46E2A /* Marketplace.plist */; };
+		E100916F1F6AC67C00B46E2A /* Market.plist in Resources */ = {isa = PBXBuildFile; fileRef = E100916E1F6AC67B00B46E2A /* Market.plist */; };
 		E10091871F6ACADE00B46E2A /* marketplace1-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E100917C1F6ACADE00B46E2A /* marketplace1-6.jpg */; };
 		E10091881F6ACADE00B46E2A /* marketplace1-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E100917D1F6ACADE00B46E2A /* marketplace1-5.jpg */; };
 		E10091891F6ACADE00B46E2A /* marketplace1-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E100917E1F6ACADE00B46E2A /* marketplace1-4.jpg */; };
@@ -85,7 +85,6 @@
 		E1879FA51F62F0A900AF63AA /* invitado4.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879FA41F62F0A900AF63AA /* invitado4.png */; };
 		E1879FA71F62F0AD00AF63AA /* invitado5.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879FA61F62F0AD00AF63AA /* invitado5.png */; };
 		E1879FA91F62F0C000AF63AA /* invitado6.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879FA81F62F0C000AF63AA /* invitado6.png */; };
-		E1A5A9331F704F48003A9E0C /* MarketDetail2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A5A9321F704F48003A9E0C /* MarketDetail2View.xib */; };
 		E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */; };
 		E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */; };
 		E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */; };
@@ -132,7 +131,7 @@
 		E10091641F6834D900B46E2A /* Invitado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitado.swift; sourceTree = "<group>"; };
 		E10091671F68359500B46E2A /* InvitadoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitadoDataSource.swift; sourceTree = "<group>"; };
 		E100916C1F68A46900B46E2A /* InvitadosViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitadosViewFlowLayout.swift; sourceTree = "<group>"; };
-		E100916E1F6AC67B00B46E2A /* Marketplace.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Marketplace.plist; sourceTree = "<group>"; };
+		E100916E1F6AC67B00B46E2A /* Market.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Market.plist; sourceTree = "<group>"; };
 		E100917C1F6ACADE00B46E2A /* marketplace1-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "marketplace1-6.jpg"; sourceTree = "<group>"; };
 		E100917D1F6ACADE00B46E2A /* marketplace1-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "marketplace1-5.jpg"; sourceTree = "<group>"; };
 		E100917E1F6ACADE00B46E2A /* marketplace1-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "marketplace1-4.jpg"; sourceTree = "<group>"; };
@@ -210,7 +209,6 @@
 		E1879FA41F62F0A900AF63AA /* invitado4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitado4.png; sourceTree = "<group>"; };
 		E1879FA61F62F0AD00AF63AA /* invitado5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitado5.png; sourceTree = "<group>"; };
 		E1879FA81F62F0C000AF63AA /* invitado6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitado6.png; sourceTree = "<group>"; };
-		E1A5A9321F704F48003A9E0C /* MarketDetail2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketDetail2View.xib; sourceTree = "<group>"; };
 		E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje4.jpg; sourceTree = "<group>"; };
 		E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje5.jpg; sourceTree = "<group>"; };
 		E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicadosTableViewCell.swift; sourceTree = "<group>"; };
@@ -281,7 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				E10091621F68334600B46E2A /* Invitado.plist */,
-				E100916E1F6AC67B00B46E2A /* Marketplace.plist */,
+				E100916E1F6AC67B00B46E2A /* Market.plist */,
 				E10091A41F6C15D000B46E2A /* Solicitude.plist */,
 			);
 			name = Data;
@@ -493,7 +491,6 @@
 				E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */,
 				E10091A21F6B1AC100B46E2A /* MarketDetailView.swift */,
 				E1C2DEE31F701A8B0085374E /* MarketDetail2View.swift */,
-				E1A5A9321F704F48003A9E0C /* MarketDetail2View.xib */,
 				E1879F951F62E25500AF63AA /* InvitadoCell.swift */,
 				E1879F961F62E25500AF63AA /* InvitadoCell.xib */,
 				E129B0721F6DBCA600809F1E /* InvitadoAddCell.swift */,
@@ -667,7 +664,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A5A9331F704F48003A9E0C /* MarketDetail2View.xib in Resources */,
 				E1879FA11F62EFD600AF63AA /* invitado2.png in Resources */,
 				E100918A1F6ACADE00B46E2A /* marketplace1-3.jpg in Resources */,
 				E10091631F68334600B46E2A /* Invitado.plist in Resources */,
@@ -678,7 +674,7 @@
 				E10091871F6ACADE00B46E2A /* marketplace1-6.jpg in Resources */,
 				E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */,
 				E111E2D11F5EEDC3005B4EBD /* comunicado2.jpg in Resources */,
-				E100916F1F6AC67C00B46E2A /* Marketplace.plist in Resources */,
+				E100916F1F6AC67C00B46E2A /* Market.plist in Resources */,
 				E1879F811F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.xib in Resources */,
 				E1879F9D1F62EBFE00AF63AA /* invitado1.png in Resources */,
 				E1224AF71F4F28A3002A183D /* reservaciones5.jpg in Resources */,

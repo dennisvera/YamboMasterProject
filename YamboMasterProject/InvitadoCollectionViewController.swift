@@ -21,18 +21,22 @@ class InvitadoCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register cell classes
+        loadNibs()
+        loadMenuIcons()
+        loadMenu()
+        refreshController()
+        //        addButton()
+    }
+    
+    func loadNibs() {
         collectionView?.register(UINib(nibName: reuseIdentifierA, bundle: nil), forCellWithReuseIdentifier: reuseIdentifierA)
         collectionView?.register(UINib(nibName: reuseIdentifierB, bundle: nil), forCellWithReuseIdentifier: reuseIdentifierB)
-        
-        // Menu data
+    }
+    
+    func loadMenuIcons() {
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
-        
-        loadMenu()
-        refreshController()
-//        addButton()
     }
     
     fileprivate func loadMenu() {
@@ -73,19 +77,19 @@ class InvitadoCollectionViewController: UICollectionViewController {
     //    }
     
     func addButtonTappedAction(sender: UIButton!) {
-//        let indexPath = invitadoDataSource.indexPathForNewRandomPark()
-//        
-//        let layout = collectionViewLayout as! InvitadosViewFlowLayout
-//        layout.appearingIndexPath = indexPath
-//        
-//        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
-//            
-//            self.collectionView!.insertItems(at: [indexPath as IndexPath])
-//        }, completion: { (finished: Bool) -> Void in
-//            layout.appearingIndexPath = nil
-//        })
+        //        let indexPath = invitadoDataSource.indexPathForNewRandomPark()
+        //
+        //        let layout = collectionViewLayout as! InvitadosViewFlowLayout
+        //        layout.appearingIndexPath = indexPath
+        //
+        //        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
+        //
+        //            self.collectionView!.insertItems(at: [indexPath as IndexPath])
+        //        }, completion: { (finished: Bool) -> Void in
+        //            layout.appearingIndexPath = nil
+        //        })
         
-//        print("Button Clicked")
+        //        print("Button Clicked")
     }
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {

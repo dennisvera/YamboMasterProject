@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let marketDetail2Segue = "MarketDetail2Segue"
+
 class MarketDetailViewController: UIViewController {
     @IBOutlet var marketDetailView: MarketDetailView!
     var market: Market?
@@ -84,7 +86,15 @@ class MarketDetailViewController: UIViewController {
         performSegue(withIdentifier: "MarketDetail2Segue", sender: sender)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == marketDetail2Segue {
+            let detailViewController = segue.destination as? MarketDetail2ViewViewController
+            detailViewController?.market = market
+        }
+    }
+    
 }
+
 
 
 

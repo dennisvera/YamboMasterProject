@@ -8,27 +8,37 @@
 
 import UIKit
 
-private let nibName = "MarketDetail2View"
-
 class MarketDetail2View: UIView {
-    @IBOutlet var contentView: UIView!
+    
     @IBOutlet var itemImageView: UIImageView!
-
+    @IBOutlet var thumbImageView1: UIImageView!
+    @IBOutlet var thumbImageView2: UIImageView!
+    @IBOutlet var thumbImageView3: UIImageView!
+    @IBOutlet var thumbImageView4: UIImageView!
+    @IBOutlet var thumbImageView5: UIImageView!
+    @IBOutlet var thumbImageView6: UIImageView!
+    @IBOutlet var mensajeSegmentController: UISegmentedControl!
+ 
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
     }
     
-    private func commonInit() {
-        Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    var market: Market? {
+        didSet {
+            if let market = market {
+                itemImageView.image = UIImage(named: market.itemImage)
+                thumbImageView1.image = UIImage(named: market.thumbnailImage1)
+                thumbImageView2.image = UIImage(named: market.thumbnailImage2)
+                thumbImageView3.image = UIImage(named: market.thumbnailImage3)
+                thumbImageView4.image = UIImage(named: market.thumbnailImage4)
+                thumbImageView5.image = UIImage(named: market.thumbnailImage5)
+                thumbImageView6.image = UIImage(named: market.thumbnailImage6)
+            }
+        }
     }
-
 }

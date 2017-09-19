@@ -20,15 +20,20 @@ class SolicitudeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register cell classes
+        loadNibs()
+        loadMenuIcons()
+        loadMenu()
+        refreshController()
+    }
+    
+    func loadNibs() {
         collectionView?.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        
+    }
+    
+    func loadMenuIcons() {
         for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
-        
-        loadMenu()
-        refreshController()
     }
     
     fileprivate func loadMenu() {
