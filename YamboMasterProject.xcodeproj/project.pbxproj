@@ -25,7 +25,7 @@
 		E100918F1F6ACADF00B46E2A /* marketplace4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E10091841F6ACADE00B46E2A /* marketplace4.jpg */; };
 		E10091901F6ACADF00B46E2A /* marketplace5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E10091851F6ACADE00B46E2A /* marketplace5.jpg */; };
 		E10091911F6ACADF00B46E2A /* marketplace6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E10091861F6ACADE00B46E2A /* marketplace6.jpg */; };
-		E10091931F6ACC9E00B46E2A /* MarketPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091921F6ACC9E00B46E2A /* MarketPlace.swift */; };
+		E10091931F6ACC9E00B46E2A /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091921F6ACC9E00B46E2A /* Market.swift */; };
 		E10091951F6ADF4800B46E2A /* MarketplaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091941F6ADF4800B46E2A /* MarketplaceDataSource.swift */; };
 		E10091971F6AED1800B46E2A /* MarketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091961F6AED1800B46E2A /* MarketDetailViewController.swift */; };
 		E10091A31F6B1AC100B46E2A /* MarketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10091A21F6B1AC100B46E2A /* MarketDetailView.swift */; };
@@ -86,15 +86,14 @@
 		E1879FA71F62F0AD00AF63AA /* invitado5.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879FA61F62F0AD00AF63AA /* invitado5.png */; };
 		E1879FA91F62F0C000AF63AA /* invitado6.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879FA81F62F0C000AF63AA /* invitado6.png */; };
 		E1A5A9331F704F48003A9E0C /* MarketDetail2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A5A9321F704F48003A9E0C /* MarketDetail2View.xib */; };
-		E1A5A9351F70745B003A9E0C /* MarketTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5A9341F70745B003A9E0C /* MarketTestView.swift */; };
 		E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */; };
 		E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */; };
 		E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */; };
 		E1A7C6B91F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B71F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib */; };
 		E1A7C6BB1F54AA4300E4FC32 /* ComunicadoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */; };
-		E1A7C6DC1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */; };
-		E1A7C6DF1F55C5FB00E4FC32 /* MarketplaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceCell.swift */; };
-		E1A7C6E01F55C5FB00E4FC32 /* MarketplaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceCell.xib */; };
+		E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */; };
+		E1A7C6DF1F55C5FB00E4FC32 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DD1F55C5FB00E4FC32 /* MarketCell.swift */; };
+		E1A7C6E01F55C5FB00E4FC32 /* MarketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */; };
 		E1C2DEE41F701A8B0085374E /* MarketDetail2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2DEE31F701A8B0085374E /* MarketDetail2View.swift */; };
 		E1C2DEE81F701B5D0085374E /* MarketDetail2ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */; };
 		E1FE0E681F5F02CD0040F68E /* mensaje2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1FE0E671F5F02CD0040F68E /* mensaje2.jpg */; };
@@ -145,7 +144,7 @@
 		E10091841F6ACADE00B46E2A /* marketplace4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marketplace4.jpg; sourceTree = "<group>"; };
 		E10091851F6ACADE00B46E2A /* marketplace5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marketplace5.jpg; sourceTree = "<group>"; };
 		E10091861F6ACADE00B46E2A /* marketplace6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marketplace6.jpg; sourceTree = "<group>"; };
-		E10091921F6ACC9E00B46E2A /* MarketPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPlace.swift; sourceTree = "<group>"; };
+		E10091921F6ACC9E00B46E2A /* Market.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		E10091941F6ADF4800B46E2A /* MarketplaceDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceDataSource.swift; sourceTree = "<group>"; };
 		E10091961F6AED1800B46E2A /* MarketDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetailViewController.swift; sourceTree = "<group>"; };
 		E10091A21F6B1AC100B46E2A /* MarketDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetailView.swift; sourceTree = "<group>"; };
@@ -212,15 +211,14 @@
 		E1879FA61F62F0AD00AF63AA /* invitado5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitado5.png; sourceTree = "<group>"; };
 		E1879FA81F62F0C000AF63AA /* invitado6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitado6.png; sourceTree = "<group>"; };
 		E1A5A9321F704F48003A9E0C /* MarketDetail2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketDetail2View.xib; sourceTree = "<group>"; };
-		E1A5A9341F70745B003A9E0C /* MarketTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTestView.swift; sourceTree = "<group>"; };
 		E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje4.jpg; sourceTree = "<group>"; };
 		E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje5.jpg; sourceTree = "<group>"; };
 		E1A7C6B61F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicadosTableViewCell.swift; sourceTree = "<group>"; };
 		E1A7C6B71F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunicadosTableViewCell.xib; sourceTree = "<group>"; };
 		E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComunicadoTableViewController.swift; sourceTree = "<group>"; };
-		E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceTableViewController.swift; sourceTree = "<group>"; };
-		E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceCell.swift; sourceTree = "<group>"; };
-		E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketplaceCell.xib; sourceTree = "<group>"; };
+		E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
+		E1A7C6DD1F55C5FB00E4FC32 /* MarketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketCell.xib; sourceTree = "<group>"; };
 		E1C2DEE31F701A8B0085374E /* MarketDetail2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetail2View.swift; sourceTree = "<group>"; };
 		E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetail2ViewViewController.swift; sourceTree = "<group>"; };
 		E1FE0E671F5F02CD0040F68E /* mensaje2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje2.jpg; sourceTree = "<group>"; };
@@ -372,7 +370,7 @@
 				E1224B031F5074E2002A183D /* MensajeTableViewController.swift */,
 				E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */,
 				E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */,
-				E1A7C6DB1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift */,
+				E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */,
 				E10091961F6AED1800B46E2A /* MarketDetailViewController.swift */,
 				E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */,
 				E1879F911F62D9B200AF63AA /* InvitadoCollectionViewController.swift */,
@@ -406,7 +404,7 @@
 				E111E2C41F5B8C01005B4EBD /* MensajeModel.swift */,
 				E111E2C61F5B8ECD005B4EBD /* ComunicadoModel.swift */,
 				E111E2C81F5B91B2005B4EBD /* ReservacioneModel.swift */,
-				E10091921F6ACC9E00B46E2A /* MarketPlace.swift */,
+				E10091921F6ACC9E00B46E2A /* Market.swift */,
 				E10091641F6834D900B46E2A /* Invitado.swift */,
 				E10091A61F6C177B00B46E2A /* Solicitude.swift */,
 				E1224B181F535FDF002A183D /* Extensions.swift */,
@@ -491,10 +489,9 @@
 				E1A7C6B71F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib */,
 				E1224AFF1F4F4636002A183D /* ReservacionesTableViewCell.swift */,
 				E1224B001F4F4636002A183D /* ReservacionesTableViewCell.xib */,
-				E1A7C6DD1F55C5FB00E4FC32 /* MarketplaceCell.swift */,
-				E1A7C6DE1F55C5FB00E4FC32 /* MarketplaceCell.xib */,
+				E1A7C6DD1F55C5FB00E4FC32 /* MarketCell.swift */,
+				E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */,
 				E10091A21F6B1AC100B46E2A /* MarketDetailView.swift */,
-				E1A5A9341F70745B003A9E0C /* MarketTestView.swift */,
 				E1C2DEE31F701A8B0085374E /* MarketDetail2View.swift */,
 				E1A5A9321F704F48003A9E0C /* MarketDetail2View.xib */,
 				E1879F951F62E25500AF63AA /* InvitadoCell.swift */,
@@ -715,7 +712,7 @@
 				E1879F791F5F14E700AF63AA /* mensaje6.jpg in Resources */,
 				E1879FA91F62F0C000AF63AA /* invitado6.png in Resources */,
 				E100918E1F6ACADE00B46E2A /* marketplace3.jpg in Resources */,
-				E1A7C6E01F55C5FB00E4FC32 /* MarketplaceCell.xib in Resources */,
+				E1A7C6E01F55C5FB00E4FC32 /* MarketCell.xib in Resources */,
 				E111E2CF1F5EEA36005B4EBD /* comunicado5.png in Resources */,
 				E111E2CD1F5EE7EA005B4EBD /* comunicado1.jpg in Resources */,
 				E1224AF61F4F28A3002A183D /* reservaciones4.jpg in Resources */,
@@ -890,9 +887,9 @@
 				E10091A31F6B1AC100B46E2A /* MarketDetailView.swift in Sources */,
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E10091651F6834D900B46E2A /* Invitado.swift in Sources */,
-				E1A7C6DC1F55BE5B00E4FC32 /* MarketplaceTableViewController.swift in Sources */,
+				E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */,
 				E1C2DEE41F701A8B0085374E /* MarketDetail2View.swift in Sources */,
-				E10091931F6ACC9E00B46E2A /* MarketPlace.swift in Sources */,
+				E10091931F6ACC9E00B46E2A /* Market.swift in Sources */,
 				E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */,
 				E1879F921F62D9B200AF63AA /* InvitadoCollectionViewController.swift in Sources */,
 				E1224B191F535FDF002A183D /* Extensions.swift in Sources */,
@@ -909,12 +906,11 @@
 				E1879F801F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift in Sources */,
 				E10091A91F6C1C6A00B46E2A /* SolicitudeDataSource.swift in Sources */,
 				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
-				E1A5A9351F70745B003A9E0C /* MarketTestView.swift in Sources */,
 				E129B0741F6DBCA600809F1E /* InvitadoAddCell.swift in Sources */,
 				E111E2C91F5B91B2005B4EBD /* ReservacioneModel.swift in Sources */,
 				E10091681F68359500B46E2A /* InvitadoDataSource.swift in Sources */,
 				E1C2DEE81F701B5D0085374E /* MarketDetail2ViewViewController.swift in Sources */,
-				E1A7C6DF1F55C5FB00E4FC32 /* MarketplaceCell.swift in Sources */,
+				E1A7C6DF1F55C5FB00E4FC32 /* MarketCell.swift in Sources */,
 				E10091A71F6C177B00B46E2A /* Solicitude.swift in Sources */,
 				E1224B091F5075BB002A183D /* MensajesTableViewCell.swift in Sources */,
 				E111E2C51F5B8C01005B4EBD /* MensajeModel.swift in Sources */,

@@ -5,7 +5,7 @@
 	<dict>
 		<key>resident</key>
 		<string>Alberto Ramirez A-401</string>
-		<key>itemPhoto</key>
+		<key>itemImage</key>
 		<string>marketplace1.jpg</string>
 		<key>itemDetail</key>
 		<string>Vendo tacos Tiempo Legend VII FG</string>
@@ -13,11 +13,23 @@
 		<string>$2,100</string>
 		<key>itemDescription</key>
 		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
+		<key>thumbnailImage1</key>
+		<string>marketplace1.jpg</string>
+		<key>thumbnailImage2</key>
+		<string>marketplace1-2.jpg</string>
+		<key>thumbnailImage3</key>
+		<string>marketplace1-3.jpg</string>
+		<key>thumbnailImage4</key>
+		<string>marketplace1-4.jpg</string>
+		<key>thumbnailImage5</key>
+		<string>marketplace1-5.jpg</string>
+		<key>thumbnailImage6</key>
+		<string>marketplace1-6.jpg</string>
 	</dict>
 	<dict>
 		<key>resident</key>
 		<string>Carlos Sanz F-801</string>
-		<key>itemPhoto</key>
+		<key>itemImage</key>
 		<string>marketplace2.jpg</string>
 		<key>itemDetail</key>
 		<string>Vendo bici GIANT en buenas condiciones</string>
@@ -25,11 +37,23 @@
 		<string>$8,500</string>
 		<key>itemDescription</key>
 		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
+		<key>thumbnailImage1</key>
+		<string>marketplace1.jpg</string>
+		<key>thumbnailImage2</key>
+		<string>marketplace1-2.jpg</string>
+		<key>thumbnailImage3</key>
+		<string>marketplace1-3.jpg</string>
+		<key>thumbnailImage4</key>
+		<string>marketplace1-4.jpg</string>
+		<key>thumbnailImage5</key>
+		<string>marketplace1-5.jpg</string>
+		<key>thumbnailImage6</key>
+		<string>marketplace1-6.jpg</string>
 	</dict>
 	<dict>
 		<key>resident</key>
 		<string>Alberto Ramirez A-401</string>
-		<key>itemPhoto</key>
+		<key>itemImage</key>
 		<string>marketplace3.jpg</string>
 		<key>itemDetail</key>
 		<string>Se vende BMW X3 2012</string>
@@ -37,11 +61,23 @@
 		<string>$329,000</string>
 		<key>itemDescription</key>
 		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
+		<key>thumbnailImage1</key>
+		<string>marketplace1.jpg</string>
+		<key>thumbnailImage2</key>
+		<string>marketplace1-2.jpg</string>
+		<key>thumbnailImage3</key>
+		<string>marketplace1-3.jpg</string>
+		<key>thumbnailImage4</key>
+		<string>marketplace1-4.jpg</string>
+		<key>thumbnailImage5</key>
+		<string>marketplace1-5.jpg</string>
+		<key>thumbnailImage6</key>
+		<string>marketplace1-6.jpg</string>
 	</dict>
 	<dict>
 		<key>resident</key>
 		<string>Alberto Ramirez A-401</string>
-		<key>itemPhoto</key>
+		<key>itemImage</key>
 		<string>marketplace4.jpg</string>
 		<key>itemDetail</key>
 		<string>Renta de cajón de estacionamiento, Torre D</string>
@@ -49,11 +85,23 @@
 		<string>precio a negociar</string>
 		<key>itemDescription</key>
 		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
+		<key>thumbnailImage1</key>
+		<string>marketplace1.jpg</string>
+		<key>thumbnailImage2</key>
+		<string>marketplace1-2.jpg</string>
+		<key>thumbnailImage3</key>
+		<string>marketplace1-3.jpg</string>
+		<key>thumbnailImage4</key>
+		<string>marketplace1-4.jpg</string>
+		<key>thumbnailImage5</key>
+		<string>marketplace1-5.jpg</string>
+		<key>thumbnailImage6</key>
+		<string>marketplace1-6.jpg</string>
 	</dict>
 	<dict>
 		<key>resident</key>
 		<string>Carlos Sanz F-801</string>
-		<key>itemPhoto</key>
+		<key>itemImage</key>
 		<string>marketplace5.jpg</string>
 		<key>itemDetail</key>
 		<string>Mensaje</string>
@@ -61,11 +109,23 @@
 		<string>$7,200</string>
 		<key>itemDescription</key>
 		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
+		<key>thumbnailImage1</key>
+		<string>marketplace1.jpg</string>
+		<key>thumbnailImage2</key>
+		<string>marketplace1-2.jpg</string>
+		<key>thumbnailImage3</key>
+		<string>marketplace1-3.jpg</string>
+		<key>thumbnailImage4</key>
+		<string>marketplace1-4.jpg</string>
+		<key>thumbnailImage5</key>
+		<string>marketplace1-5.jpg</string>
+		<key>thumbnailImage6</key>
+		<string>marketplace1-6.jpg</string>
 	</dict>
 	<dict>
 		<key>resident</key>
 		<string>Alberto Ramirez A-401</string>
-		<key>itemPhoto</key>
+		<key>itemImage</key>
 		<string>marketplace6.jpg</string>
 		<key>itemDetail</key>
 		<string>Mensaje</string>
@@ -73,6 +133,18 @@
 		<string>$500</string>
 		<key>itemDescription</key>
 		<string>Los tacos están practicamente nuevos, los use una sola vez, pero no erán adecuados para mi tipo de pie. Me costaron 2,500 así que están mas baratos que en cualquier tienda. Cel 5556784522 </string>
+		<key>thumbnailImage1</key>
+		<string>marketplace1.jpg</string>
+		<key>thumbnailImage2</key>
+		<string>marketplace1-2.jpg</string>
+		<key>thumbnailImage3</key>
+		<string>marketplace1-3.jpg</string>
+		<key>thumbnailImage4</key>
+		<string>marketplace1-4.jpg</string>
+		<key>thumbnailImage5</key>
+		<string>marketplace1-5.jpg</string>
+		<key>thumbnailImage6</key>
+		<string>marketplace1-6.jpg</string>
 	</dict>
 </array>
 </plist>

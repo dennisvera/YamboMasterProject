@@ -9,10 +9,10 @@
 import UIKit
 import Persei
 
-private let reuseIdentifier = "MarketplaceCell"
+private let marketCellID = "MarketCell"
 private let marketDetail1Segue = "MarketDetail1Segue"
 
-class MarketplaceTableViewController: UITableViewController {
+class MarketTableViewController: UITableViewController {
     fileprivate var marketplaceDataSource = MarketplaceDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
@@ -57,10 +57,10 @@ class MarketplaceTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed(reuseIdentifier, owner: self, options: nil)?.first as! MarketplaceCell
+        let cell = Bundle.main.loadNibNamed(marketCellID, owner: self, options: nil)?.first as! MarketCell
         
-        if let marketplace = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
-            cell.marketplace = marketplace
+        if let market = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
+            cell.market = market
         }
         
         return cell
@@ -81,14 +81,14 @@ class MarketplaceTableViewController: UITableViewController {
             let detailViewController = segue.destination as? MarketDetailViewController,
             let indexPath = self.tableView.indexPathForSelectedRow {
             let marketItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath)
-            detailViewController.marketPlace = marketItem
+            detailViewController.market = marketItem
         }
     }
 }
 
 
 // MARK: - MenuViewDelegate
-extension MarketplaceTableViewController: MenuViewDelegate {
+extension MarketTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         

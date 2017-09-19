@@ -9,39 +9,39 @@
 import UIKit
 
 class MarketplaceDataSource {
-    fileprivate var marketplace: [MarketPlace] = []
+    fileprivate var market: [Market] = []
     
     var count: Int {
-        return marketplace.count
+        return market.count
     }
     
     init() {
-        marketplace = loadMarketplaceFromDisk()
+        market = loadMarketplaceFromDisk()
     }
     
-    func marketplaceForItemAtIndexPath(_ indexPath: IndexPath) -> MarketPlace? {
-            return marketplace[(indexPath as NSIndexPath).item]
+    func marketplaceForItemAtIndexPath(_ indexPath: IndexPath) -> Market? {
+            return market[(indexPath as NSIndexPath).item]
     }
     
     // MARK: - Private
     
-    fileprivate func loadMarketplaceFromDisk() -> [MarketPlace] {
+    fileprivate func loadMarketplaceFromDisk() -> [Market] {
         if let path = Bundle.main.path(forResource: "Marketplace", ofType: "plist") {
             if let dictArray = NSArray(contentsOfFile: path) {
-                var marketplaceArray: [MarketPlace] = []
+                var marketArray: [Market] = []
                 for item in dictArray {
                     if let dict = item as? NSDictionary {
                         let resident = dict["resident"] as! String
-                        let itemPhoto = dict["itemPhoto"] as! String
+                        let itemImage = dict["itemImage"] as! String
                         let itemDetail = dict["itemDetail"] as! String
                         let itemPrice = dict ["itemPrice"] as! String
                         let itemDescription = dict["itemDescription"] as! String
-                        let marketplace = MarketPlace(resident: resident, itemPhoto: itemPhoto, itemDetail: itemDetail, itemPrice: itemPrice, itemDescription: itemDescription)
+                        let market = Market(resident: resident, itemImage: itemImage, itemDetail: itemDetail, itemPrice: itemPrice, itemDescription: itemDescription)
                         
-                        marketplaceArray.append(marketplace)
+                        marketArray.append(market)
                     }
                 }
-                return marketplaceArray
+                return marketArray
             }
         }
         return []

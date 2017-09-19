@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MarketplaceCell: UITableViewCell {
+class MarketCell: UITableViewCell {
     
     @IBOutlet var residentNameLabel: UILabel!
     @IBOutlet var itemImageView: UIImageView!
@@ -26,13 +26,13 @@ class MarketplaceCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    var marketplace: MarketPlace? {
+    var market: Market? {
         didSet {
-            if let marketplace = marketplace {
-                residentNameLabel.text = marketplace.resident
-                itemImageView.image = UIImage(named: marketplace.itemPhoto)
-                itemDetailLabel.text = marketplace.itemDetail
-                itemPriceLabel.text = marketplace.itemPrice
+            if let market = market {
+                residentNameLabel.text = market.resident
+                itemImageView.image = UIImage(named: market.itemImage)
+                itemDetailLabel.text = market.itemDetail
+                itemPriceLabel.text = market.itemPrice
             }
         }
     }

@@ -28,29 +28,19 @@ class MarketDetailView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MarketDetailView.imageTapped(recognizer:)))
-//        tapGestureRecognizer.numberOfTapsRequired = 1
-//        
-//        thumbnailImageView1.isUserInteractionEnabled = true
-//        thumbnailImageView1.addGestureRecognizer(tapGestureRecognizer)
     }
 
-    var marketplace: MarketPlace? {
+    var market: Market? {
         didSet {
-            if let marketplace = marketplace {
-                itemImageView.image = UIImage(named: marketplace.itemPhoto)
-                itemDetailLabel.text = marketplace.itemDetail
-                itemPriceLabel.text = marketplace.itemPrice
-                residentNameLabel.text = marketplace.resident
-                itemDescriptionLabel.text = marketplace.itemDescription
+            if let market = market {
+                itemImageView.image = UIImage(named: market.itemImage)
+                itemDetailLabel.text = market.itemDetail
+                itemPriceLabel.text = market.itemPrice
+                residentNameLabel.text = market.resident
+                itemDescriptionLabel.text = market.itemDescription
                 thumbnailImageView1.image = UIImage(named: "\(thumbnailImageView2)")
             }
         }
-    }
-    
-    func imageTapped (recognizer: UITapGestureRecognizer) {
-        print("image tapped")
     }
 
 }

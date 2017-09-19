@@ -48,7 +48,7 @@
         <!--MARKETPLACE-->
         <scene sceneID="djl-kf-hov">
             <objects>
-                <tableViewController storyboardIdentifier="MarketplaceID" id="QdA-nL-6I1" customClass="MarketplaceTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MarketID" id="QdA-nL-6I1" customClass="MarketTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eOn-TC-D1T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,34 +133,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUO-uZ-L99" customClass="MarketDetailView" customModule="YamboMasterProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="30" width="375" height="637"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g94-1S-7Jw">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g94-1S-7Jw">
                                         <rect key="frame" x="16" y="10" width="343" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="zy5-dp-328"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-g0-2Nf">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-g0-2Nf">
                                         <rect key="frame" x="16" y="254" width="343" height="54"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ezs-IC-m9y">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezs-IC-m9y">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="54"/>
                                                 <gestureRecognizers/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-ri-Svr">
-                                                <rect key="frame" x="58" y="0.0" width="53.5" height="54"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-ri-Svr">
+                                                <rect key="frame" x="58" y="0.0" width="53" height="54"/>
                                                 <gestureRecognizers/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="A3h-Dt-LB5">
-                                                <rect key="frame" x="115.5" y="0.0" width="54" height="54"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3h-Dt-LB5">
+                                                <rect key="frame" x="116" y="0.0" width="53" height="54"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-K1-gwU">
-                                                <rect key="frame" x="173.5" y="0.0" width="54" height="54"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-K1-gwU">
+                                                <rect key="frame" x="174" y="0.0" width="53" height="54"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1-5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OtJ-k5-STd">
-                                                <rect key="frame" x="231.5" y="0.0" width="53.5" height="54"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OtJ-k5-STd">
+                                                <rect key="frame" x="232" y="0.0" width="53" height="54"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketplace1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vlf-L7-DML">
-                                                <rect key="frame" x="289" y="0.0" width="54" height="54"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vlf-L7-DML">
+                                                <rect key="frame" x="290" y="0.0" width="53" height="54"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -276,7 +276,7 @@
         <scene sceneID="dzc-qa-cck">
             <objects>
                 <collectionViewController storyboardIdentifier="SolicitudeID" id="aM3-n9-C5f" customClass="SolicitudeCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="wSd-Ey-kFF">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wSd-Ey-kFF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -319,7 +319,7 @@
         <scene sceneID="lgi-6a-q69">
             <objects>
                 <collectionViewController storyboardIdentifier="InvitadoID" id="hbR-6q-STl" customClass="InvitadoCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="JMo-qU-Tup">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JMo-qU-Tup">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -412,7 +412,7 @@
         <scene sceneID="GMP-HY-onv">
             <objects>
                 <collectionViewController storyboardIdentifier="HomeID" id="APS-cB-hWw" customClass="HomeCollectionViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="zn2-MP-Q1a">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zn2-MP-Q1a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -460,7 +460,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGb-cv-Um5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lha-mz-U3P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lha-mz-U3P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -513,10 +513,5 @@
     </scenes>
     <resources>
         <image name="icon_menu" width="18" height="12"/>
-        <image name="marketplace1-2.jpg" width="300" height="300"/>
-        <image name="marketplace1-3.jpg" width="300" height="300"/>
-        <image name="marketplace1-4.jpg" width="300" height="300"/>
-        <image name="marketplace1-5.jpg" width="300" height="300"/>
-        <image name="marketplace1.jpg" width="300" height="300"/>
     </resources>
 </document>

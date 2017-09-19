@@ -8,24 +8,24 @@
 
 import UIKit
 
-class MarketPlace {
+class Market {
     
     var resident: String
-    var itemPhoto: String
+    var itemImage: String
     var itemDetail: String
     var itemPrice: String
     var itemDescription: String
     
-    init(resident: String, itemPhoto: String, itemDetail: String, itemPrice: String, itemDescription: String) {
+    init(resident: String, itemImage: String, itemDetail: String, itemPrice: String, itemDescription: String) {
         self.resident = resident
-        self.itemPhoto = itemPhoto
+        self.itemImage = itemImage
         self.itemDetail = itemDetail
         self.itemPrice = itemPrice
         self.itemDescription = itemDescription
     }
     
-    convenience init(copying marketplace: MarketPlace) {
-        self.init(resident: marketplace.resident, itemPhoto: marketplace.itemPhoto, itemDetail: marketplace.itemDetail, itemPrice: marketplace.itemPrice, itemDescription: marketplace.itemDescription)
+    convenience init(copying market: Market) {
+        self.init(resident: market.resident, itemImage: market.itemImage, itemDetail: market.itemDetail, itemPrice: market.itemPrice, itemDescription: market.itemDescription)
     }
 }
 

@@ -10,30 +10,52 @@ import UIKit
 
 class MarketDetailViewController: UIViewController {
     @IBOutlet var marketDetailView: MarketDetailView!
-    var marketPlace: MarketPlace?
+    var market: Market?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MarketDetailViewController.imageTapped(recognizer:)))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        
+        marketDetailView.thumbnailImageView1.isUserInteractionEnabled = true
+        marketDetailView.thumbnailImageView1.addGestureRecognizer(tapGestureRecognizer)
+        
+        loadMarketData()
+        loadNavigationBar()
+    }
+    
+    func loadNavigationBar() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.tintColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
-        
-        guard let itemImage = marketPlace?.itemPhoto else {return}
+    }
+    
+    func loadMarketData() {
+        guard let itemImage = market?.itemImage else {return}
         marketDetailView.itemImageView.image = UIImage(named: itemImage)
-        guard let itemDetail = marketPlace?.itemDetail else {return}
+        guard let itemDetail = market?.itemDetail else {return}
         marketDetailView.itemDetailLabel.text = itemDetail
-        guard let resident = marketPlace?.resident else {return}
+        guard let resident = market?.resident else {return}
         marketDetailView.residentNameLabel.text = resident
-        guard let itemPrice = marketPlace?.itemPrice else {return}
+        guard let itemPrice = market?.itemPrice else {return}
         marketDetailView.itemPriceLabel.text = itemPrice
-        guard let itemDescription = marketPlace?.itemDescription else {return}
+        guard let itemDescription = market?.itemDescription else {return}
         marketDetailView.itemDescriptionLabel.text = itemDescription
-        
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        print("contactar button tapped")
+        performSegue(withIdentifier: "MarketDetail2Segue", sender: sender)
     }
-
-
+    
+    func imageTapped (recognizer: UITapGestureRecognizer) {
+        marketDetailView.itemImageView.image = UIImage(named: "marketplace1.jpg")
+    }
+    
 }
+
+
+
+
+
+
+
