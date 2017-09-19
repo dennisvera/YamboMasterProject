@@ -9,9 +9,6 @@
 
 import UIKit
 
-private let nibName = "MarketDetailView"
-private let reuseIdentifierSegue = "MarketDetail2Segue"
-
 class MarketDetailView: UIView {
     
     @IBOutlet var itemImageView: UIImageView!
@@ -19,8 +16,7 @@ class MarketDetailView: UIView {
     @IBOutlet var residentNameLabel: UILabel!
     @IBOutlet var itemPriceLabel: UILabel!
     @IBOutlet var itemDescriptionLabel: UILabel!
-    @IBOutlet var thumbnailImageView1: UIImageView!
-    @IBOutlet var thumbnailImageView2: UIImageView!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +25,7 @@ class MarketDetailView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     var market: Market? {
         didSet {
             if let market = market {
@@ -38,11 +34,9 @@ class MarketDetailView: UIView {
                 itemPriceLabel.text = market.itemPrice
                 residentNameLabel.text = market.resident
                 itemDescriptionLabel.text = market.itemDescription
-                thumbnailImageView1.image = UIImage(named: "\(thumbnailImageView2)")
             }
         }
     }
-
 }
 
 

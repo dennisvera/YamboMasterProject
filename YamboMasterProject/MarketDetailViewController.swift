@@ -18,8 +18,8 @@ class MarketDetailViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MarketDetailViewController.imageTapped(recognizer:)))
         tapGestureRecognizer.numberOfTapsRequired = 1
         
-        marketDetailView.thumbnailImageView1.isUserInteractionEnabled = true
-        marketDetailView.thumbnailImageView1.addGestureRecognizer(tapGestureRecognizer)
+//        marketDetailView.thumbnailImageView1.isUserInteractionEnabled = true
+//        marketDetailView.thumbnailImageView1.addGestureRecognizer(tapGestureRecognizer)
         
         loadMarketData()
         loadNavigationBar()

@@ -13,7 +13,7 @@ private let marketCellID = "MarketCell"
 private let marketDetail1Segue = "MarketDetail1Segue"
 
 class MarketTableViewController: UITableViewController {
-    fileprivate var marketplaceDataSource = MarketplaceDataSource()
+    fileprivate var marketDataSource = MarketDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
@@ -53,13 +53,13 @@ class MarketTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return marketplaceDataSource.count
+        return marketDataSource.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed(marketCellID, owner: self, options: nil)?.first as! MarketCell
         
-        if let market = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
+        if let market = marketDataSource.marketplaceForItemAtIndexPath(indexPath) {
             cell.market = market
         }
         
@@ -71,7 +71,7 @@ class MarketTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let marketplaceItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
+        if let marketplaceItem = marketDataSource.marketplaceForItemAtIndexPath(indexPath) {
             performSegue(withIdentifier: marketDetail1Segue, sender: marketplaceItem)
         }
     }
@@ -80,7 +80,7 @@ class MarketTableViewController: UITableViewController {
         if segue.identifier == marketDetail1Segue,
             let detailViewController = segue.destination as? MarketDetailViewController,
             let indexPath = self.tableView.indexPathForSelectedRow {
-            let marketItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath)
+            let marketItem = marketDataSource.marketplaceForItemAtIndexPath(indexPath)
             detailViewController.market = marketItem
         }
     }
