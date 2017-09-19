@@ -29,14 +29,11 @@ class MarketDetailViewController: UIViewController {
         guard let itemDescription = marketPlace?.itemDescription else {return}
         marketDetailView.itemDescriptionLabel.text = itemDescription
         
-        marketDetailView.contactarButtonTapped(segue())
     }
     
-    func segue() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketDetail2Segue") as! MarketDetail2ViewViewController
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+    @IBAction func buttonTapped(_ sender: Any) {
+        print("contactar button tapped")
     }
-    
-    
+
+
 }

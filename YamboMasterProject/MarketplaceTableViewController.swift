@@ -10,7 +10,7 @@ import UIKit
 import Persei
 
 private let reuseIdentifier = "MarketplaceCell"
-private let reuseIdentifierSegue = "MarketDetail1Segue"
+private let marketDetail1Segue = "MarketDetail1Segue"
 
 class MarketplaceTableViewController: UITableViewController {
     fileprivate var marketplaceDataSource = MarketplaceDataSource()
@@ -72,12 +72,12 @@ class MarketplaceTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let marketplaceItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath) {
-            performSegue(withIdentifier: reuseIdentifierSegue, sender: marketplaceItem)
+            performSegue(withIdentifier: marketDetail1Segue, sender: marketplaceItem)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == reuseIdentifierSegue,
+        if segue.identifier == marketDetail1Segue,
             let detailViewController = segue.destination as? MarketDetailViewController,
             let indexPath = self.tableView.indexPathForSelectedRow {
             let marketItem = marketplaceDataSource.marketplaceForItemAtIndexPath(indexPath)
