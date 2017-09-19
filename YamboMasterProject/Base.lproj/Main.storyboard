@@ -142,25 +142,43 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-g0-2Nf">
                                         <rect key="frame" x="16" y="254" width="343" height="54"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezs-IC-m9y">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezs-IC-m9y">
                                                 <rect key="frame" x="0.0" y="0.0" width="53" height="54"/>
                                                 <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="jpz-76-mZD" appends="YES" id="u8B-Gh-uNf"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-ri-Svr">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-ri-Svr">
                                                 <rect key="frame" x="58" y="0.0" width="53" height="54"/>
                                                 <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ntj-ng-N8j" appends="YES" id="74E-WV-3gA"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3h-Dt-LB5">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3h-Dt-LB5">
                                                 <rect key="frame" x="116" y="0.0" width="53" height="54"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="anc-x1-Toz" appends="YES" id="kNl-Tk-WO0"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-K1-gwU">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-K1-gwU">
                                                 <rect key="frame" x="174" y="0.0" width="53" height="54"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="b61-U7-0zl" appends="YES" id="3Iw-dH-JWA"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OtJ-k5-STd">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OtJ-k5-STd">
                                                 <rect key="frame" x="232" y="0.0" width="53" height="54"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="wD8-SI-zFn" appends="YES" id="zeZ-mV-OEV"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vlf-L7-DML">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vlf-L7-DML">
                                                 <rect key="frame" x="290" y="0.0" width="53" height="54"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="1WW-kX-vy4" appends="YES" id="44p-4Q-sfn"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -183,6 +201,12 @@
                                     <outlet property="itemImageView" destination="g94-1S-7Jw" id="SoA-vJ-jv3"/>
                                     <outlet property="itemPriceLabel" destination="NZh-RU-U2S" id="AgH-Sa-aAg"/>
                                     <outlet property="residentNameLabel" destination="Fjj-Ev-inR" id="rd5-3k-0Ug"/>
+                                    <outlet property="thumbImageView1" destination="ezs-IC-m9y" id="kO8-sP-rYd"/>
+                                    <outlet property="thumbImageView2" destination="Uei-ri-Svr" id="ziU-yh-ylN"/>
+                                    <outlet property="thumbImageView3" destination="A3h-Dt-LB5" id="U57-fu-7wB"/>
+                                    <outlet property="thumbImageView4" destination="xpJ-K1-gwU" id="jeE-la-YoT"/>
+                                    <outlet property="thumbImageView5" destination="OtJ-k5-STd" id="4Vd-n3-plO"/>
+                                    <outlet property="thumbImageView6" destination="vlf-L7-DML" id="PmM-jM-0yg"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzc-si-l3N" userLabel="Item Detail View">
@@ -191,19 +215,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-dr-Ff2">
                                         <rect key="frame" x="8" y="12" width="327" height="96.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ItemDetailLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-RF-bbl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ItemDetailLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-RF-bbl">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="33"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ResidentNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-Ev-inR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResidentNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-Ev-inR">
                                                 <rect key="frame" x="0.0" y="43" width="327" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ItemPriceLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-RU-U2S">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemPriceLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-RU-U2S">
                                                 <rect key="frame" x="0.0" y="70" width="327" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,6 +291,36 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8k-Ye-nuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jpz-76-mZD" userLabel="Tap Gesture Recognizer 1">
+                    <connections>
+                        <action selector="thumbImageTApped:" destination="OCh-Kt-3h5" id="G89-HQ-qY1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ntj-ng-N8j" userLabel="Tap Gesture Recognizer 2">
+                    <connections>
+                        <action selector="thumbImage2Tapped:" destination="OCh-Kt-3h5" id="t3E-br-W6l"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="anc-x1-Toz" userLabel="Tap Gesture Recognizer 3">
+                    <connections>
+                        <action selector="thumbImage3Tapped:" destination="OCh-Kt-3h5" id="Urt-8l-5GS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="b61-U7-0zl" userLabel="Tap Gesture Recognizer 4">
+                    <connections>
+                        <action selector="thumbImage4Tapped:" destination="OCh-Kt-3h5" id="T5a-de-F1B"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wD8-SI-zFn" userLabel="Tap Gesture Recognizer 5">
+                    <connections>
+                        <action selector="thumbImage5Tapped:" destination="OCh-Kt-3h5" id="SCO-WE-FjO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1WW-kX-vy4" userLabel="Tap Gesture Recognizer 6">
+                    <connections>
+                        <action selector="thumbImage6Tapped:" destination="OCh-Kt-3h5" id="1Xa-9C-9RE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="432.80000000000001" y="160.56971514242881"/>
         </scene>

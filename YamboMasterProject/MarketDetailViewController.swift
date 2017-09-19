@@ -15,12 +15,6 @@ class MarketDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MarketDetailViewController.imageTapped(recognizer:)))
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        
-//        marketDetailView.thumbnailImageView1.isUserInteractionEnabled = true
-//        marketDetailView.thumbnailImageView1.addGestureRecognizer(tapGestureRecognizer)
-        
         loadMarketData()
         loadNavigationBar()
     }
@@ -41,14 +35,53 @@ class MarketDetailViewController: UIViewController {
         marketDetailView.itemPriceLabel.text = itemPrice
         guard let itemDescription = market?.itemDescription else {return}
         marketDetailView.itemDescriptionLabel.text = itemDescription
+        
+        guard let thumbImage1 = market?.thumbnailImage1 else {return}
+        marketDetailView.thumbImageView1.image = UIImage(named: thumbImage1)
+        guard let thumbImage2 = market?.thumbnailImage2 else {return}
+        marketDetailView.thumbImageView2.image = UIImage(named: thumbImage2)
+        guard let thumbImage3 = market?.thumbnailImage3 else {return}
+        marketDetailView.thumbImageView3.image = UIImage(named: thumbImage3)
+        guard let thumbImage4 = market?.thumbnailImage4 else {return}
+        marketDetailView.thumbImageView4.image = UIImage(named: thumbImage4)
+        guard let thumbImage5 = market?.thumbnailImage5 else {return}
+        marketDetailView.thumbImageView5.image = UIImage(named: thumbImage5)
+        guard let thumbImage6 = market?.thumbnailImage3 else {return}
+        marketDetailView.thumbImageView6.image = UIImage(named: thumbImage6)
+    }
+    
+    @IBAction func thumbImageTApped(_ sender: Any) {
+        guard let thumbImage1 = market?.thumbnailImage1 else {return}
+        marketDetailView.itemImageView.image = UIImage(named: thumbImage1)
+    }
+    
+    @IBAction func thumbImage2Tapped(_ sender: Any) {
+        guard let thumbImage2 = market?.thumbnailImage2 else {return}
+        marketDetailView.itemImageView.image = UIImage(named: thumbImage2)
+    }
+    
+    @IBAction func thumbImage3Tapped(_ sender: Any) {
+        guard let thumbImage3 = market?.thumbnailImage3 else {return}
+        marketDetailView.itemImageView.image = UIImage(named: thumbImage3)
+    }
+    
+    @IBAction func thumbImage4Tapped(_ sender: Any) {
+        guard let thumbImage4 = market?.thumbnailImage4 else {return}
+        marketDetailView.itemImageView.image = UIImage(named: thumbImage4)
+    }
+    
+    @IBAction func thumbImage5Tapped(_ sender: Any) {
+        guard let thumbImage5 = market?.thumbnailImage5 else {return}
+        marketDetailView.itemImageView.image = UIImage(named: thumbImage5)
+    }
+    
+    @IBAction func thumbImage6Tapped(_ sender: Any) {
+        guard let thumbImage3 = market?.thumbnailImage3 else {return}
+        marketDetailView.itemImageView.image = UIImage(named: thumbImage3)
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
         performSegue(withIdentifier: "MarketDetail2Segue", sender: sender)
-    }
-    
-    func imageTapped (recognizer: UITapGestureRecognizer) {
-        marketDetailView.itemImageView.image = UIImage(named: "marketplace1.jpg")
     }
     
 }
