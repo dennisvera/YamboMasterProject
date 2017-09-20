@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Solicitude {
+class Solicitud {
     
     var atendida: String
-    var solicitude: String
+    var solicitud: String
     var solicitudNote: String
     var mensaje: String
     var mensajeNote: String
@@ -22,9 +22,9 @@ class Solicitude {
     var index: Int
     var section: String
     
-    init(atendida: String, solicitude: String, solicitudNote: String, mensaje: String, mensajeNote: String, fecha: String, fechaNote: String, atendio: String, atendioNote: String, index: Int, section: String) {
+    init(atendida: String, solicitud: String, solicitudNote: String, mensaje: String, mensajeNote: String, fecha: String, fechaNote: String, atendio: String, atendioNote: String, index: Int, section: String) {
         self.atendida = atendida
-        self.solicitude = solicitude
+        self.solicitud = solicitud
         self.solicitudNote = solicitudNote
         self.mensaje = mensaje
         self.mensajeNote = mensajeNote
@@ -36,8 +36,8 @@ class Solicitude {
         self.section = section
     }
     
-    convenience init(copying solicitude: Solicitude) {
-        self.init(atendida: solicitude.atendida, solicitude: solicitude.solicitude, solicitudNote: solicitude.solicitudNote, mensaje: solicitude.mensaje, mensajeNote: solicitude.mensajeNote, fecha: solicitude.fecha, fechaNote: solicitude.fechaNote, atendio: solicitude.atendio, atendioNote: solicitude.atendioNote, index: solicitude.index, section: solicitude.section)
+    convenience init(copying solicitud: Solicitud) {
+        self.init(atendida: solicitud.atendida, solicitud: solicitud.solicitud, solicitudNote: solicitud.solicitudNote, mensaje: solicitud.mensaje, mensajeNote: solicitud.mensajeNote, fecha: solicitud.fecha, fechaNote: solicitud.fechaNote, atendio: solicitud.atendio, atendioNote: solicitud.atendioNote, index: solicitud.index, section: solicitud.section)
     }
 
 }

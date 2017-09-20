@@ -108,7 +108,7 @@ extension HomeCollectionViewController {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadoCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if indexPath.row == 5 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudeCollectionViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
@@ -139,7 +139,7 @@ extension HomeCollectionViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InvitadoID") as! InvitadoCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudeCollectionViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         

@@ -9,10 +9,11 @@
 import UIKit
 import Persei
 
-private let reuseIdentifier = "SolicitudeCell"
+private let solicitudCellID = "SolicitudCellID"
+private let solicitudSegmentCellID = "SolicitudSegmentCellID"
 
-class SolicitudeCollectionViewController: UICollectionViewController {
-    fileprivate var solicitudedoDataSource = SolicitudeDataSource()
+class SolicitudCollectionViewController: UICollectionViewController {
+    fileprivate var solicitudDataSource = SolicitudDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
@@ -20,14 +21,9 @@ class SolicitudeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadNibs()
         loadMenuIcons()
         loadMenu()
         refreshController()
-    }
-    
-    func loadNibs() {
-        collectionView?.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
     func loadMenuIcons() {
@@ -54,7 +50,7 @@ class SolicitudeCollectionViewController: UICollectionViewController {
     
     func refreshController() {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(SolicitudeCollectionViewController.refreshControlDidFire), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(SolicitudCollectionViewController.refreshControlDidFire), for: .valueChanged)
         collectionView?.refreshControl = refreshControl
     }
     
@@ -64,27 +60,38 @@ class SolicitudeCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return solicitudedoDataSource.count
+        if section == 0 {
+            return solicitudDataSource.count
+        } else if section == 1 {
+            return 1
+        }
+        return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SolicitudeCell
-        
-        if let solicitude = solicitudedoDataSource.solicitudeForItemAtIndexPath(indexPath) {
-            cell.solicitude = solicitude
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudCellID, for: indexPath) as! SolicitudCell
+            
+            if let solicitud = solicitudDataSource.solicitudeForItemAtIndexPath(indexPath) {
+                cell.solicitud = solicitud
+            }
+            return cell
+            
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudSegmentCellID, for: indexPath) as! SolicitudSegmentCell
+            cell.solicitudLabel.text = "DONUT"
+            return cell
         }
-        
-        return cell
     }
 }
 
 
 // MARK: - MenuViewDelegate
-extension SolicitudeCollectionViewController: MenuViewDelegate {
+extension SolicitudCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         

@@ -9,8 +9,8 @@
 import UIKit
 import Persei
 
-private let reuseIdentifierA = "InvitadoCell"
-private let reuseIdentifierB = "InvitadoAddCell"
+private let invitadoCell = "InvitadoCell"
+private let invitadoAddCell = "InvitadoAddCell"
 
 class InvitadoCollectionViewController: UICollectionViewController {
     fileprivate var invitadoDataSource = InvitadoDataSource()
@@ -29,8 +29,8 @@ class InvitadoCollectionViewController: UICollectionViewController {
     }
     
     func loadNibs() {
-        collectionView?.register(UINib(nibName: reuseIdentifierA, bundle: nil), forCellWithReuseIdentifier: reuseIdentifierA)
-        collectionView?.register(UINib(nibName: reuseIdentifierB, bundle: nil), forCellWithReuseIdentifier: reuseIdentifierB)
+        collectionView?.register(UINib(nibName: invitadoCell, bundle: nil), forCellWithReuseIdentifier: invitadoCell)
+        collectionView?.register(UINib(nibName: invitadoAddCell, bundle: nil), forCellWithReuseIdentifier: invitadoAddCell)
     }
     
     func loadMenuIcons() {
@@ -124,19 +124,18 @@ class InvitadoCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierA, for: indexPath) as! InvitadoCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: invitadoCell, for: indexPath) as! InvitadoCell
             
             if let invitado = invitadoDataSource.invitadoForItemAtIndexPath(indexPath) {
-                cellA.invitado = invitado
+                cell.invitado = invitado
             }
-            return cellA
+            return cell
             
         } else {
-            let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierB, for: indexPath) as! InvitadoAddCell
-            cellB.frame = CGRect(x: 135, y: 280, width: 90, height: 120)
-            cellB.newInvitadoLabel.text = "Nuevo Invitado"
-            
-            return cellB
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: invitadoAddCell, for: indexPath) as! InvitadoAddCell
+            cell.frame = CGRect(x: 135, y: 280, width: 90, height: 120)
+            cell.newInvitadoLabel.text = "Nuevo Invitado"
+            return cell
         }
     }
 }
@@ -166,7 +165,7 @@ extension InvitadoCollectionViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 5 {
             print("current controller, no segue needed")
         } else if menu.selectedIndex == 6 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudeCollectionViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         

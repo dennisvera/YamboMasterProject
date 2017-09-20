@@ -12,17 +12,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InvitadoAddCell" id="gTV-IL-0wX" customClass="InvitadoAddCell" customModule="YamboMasterProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="90" height="110"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="90" height="110"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyj-dk-uxb">
-                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="80"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-l0-a88">
-                                <rect key="frame" x="25" y="25" width="40" height="40"/>
+                                <rect key="frame" x="25" y="25" width="40" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" image="plusIcon"/>
                                 <connections>
@@ -33,14 +33,14 @@
                         <color key="backgroundColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Y7W-l0-a88" firstAttribute="leading" secondItem="Uyj-dk-uxb" secondAttribute="leading" constant="25" id="KeD-2W-UbA"/>
-                            <constraint firstAttribute="height" constant="90" id="LHg-8L-E82"/>
+                            <constraint firstAttribute="height" constant="80" id="LHg-8L-E82"/>
                             <constraint firstAttribute="trailing" secondItem="Y7W-l0-a88" secondAttribute="trailing" constant="25" id="asb-n8-862"/>
                             <constraint firstItem="Y7W-l0-a88" firstAttribute="top" secondItem="Uyj-dk-uxb" secondAttribute="top" constant="25" id="eRB-2A-eyJ"/>
                             <constraint firstAttribute="bottom" secondItem="Y7W-l0-a88" secondAttribute="bottom" constant="25" id="i6d-pB-Map"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuevo Invitado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfC-G0-g1a">
-                        <rect key="frame" x="0.0" y="96" width="90" height="17"/>
+                        <rect key="frame" x="0.0" y="86" width="90" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="h5I-Tx-r3y"/>
                         </constraints>

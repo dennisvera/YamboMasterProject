@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SolicitudeDataSource {
-    fileprivate var solicitude: [Solicitude] = []
+class SolicitudDataSource {
+    fileprivate var solicitud: [Solicitud] = []
     fileprivate var sections: [String] = []
     
     var count: Int {
-        return solicitude.count
+        return solicitud.count
     }
     
     var numberOfSections: Int {
@@ -23,7 +23,7 @@ class SolicitudeDataSource {
     // MARK: - Public
     
     init() {
-        solicitude = loadSolicitudeFromDisk()
+        solicitud = loadSolicitudeFromDisk()
     }
     
     func deleteItemsAtIndexPaths(_ indexPaths: [IndexPath]) {
@@ -31,20 +31,20 @@ class SolicitudeDataSource {
         for indexPath in indexPaths {
             indexes.append(absoluteIndexForIndexPath(indexPath))
         }
-        var newSolicitude: [Solicitude] = []
-        for (index, invitado) in solicitude.enumerated() {
+        var newSolicitude: [Solicitud] = []
+        for (index, invitado) in solicitud.enumerated() {
             if !indexes.contains(index) {
                 newSolicitude.append(invitado)
             }
         }
-        solicitude = newSolicitude
+        solicitud = newSolicitude
     }
     
-    func indexPathForSolicitude(_ solicitude: Solicitude) -> IndexPath {
-        let section = sections.index(of: solicitude.section)!
+    func indexPathForSolicitude(_ solicitud: Solicitud) -> IndexPath {
+        let section = sections.index(of: solicitud.section)!
         var item = 0
         for (index, currentInvitado) in solicitudeForSection(section).enumerated() {
-            if currentInvitado === solicitude {
+            if currentInvitado === solicitud {
                 item = index
                 break
             }
@@ -53,30 +53,30 @@ class SolicitudeDataSource {
     }
     
     func numberOfSolicitudesInSection(_ index: Int) -> Int {
-        let solicitude = solicitudeForSection(index)
-        return solicitude.count
+        let solicitud = solicitudeForSection(index)
+        return solicitud.count
     }
     
-    func solicitudeForItemAtIndexPath(_ indexPath: IndexPath) -> Solicitude? {
+    func solicitudeForItemAtIndexPath(_ indexPath: IndexPath) -> Solicitud? {
         if (indexPath as NSIndexPath).section > 0 {
-            let solicitude = solicitudeForSection((indexPath as NSIndexPath).section)
-            return solicitude[(indexPath as NSIndexPath).item]
+            let solicitud = solicitudeForSection((indexPath as NSIndexPath).section)
+            return solicitud[(indexPath as NSIndexPath).item]
         } else {
-            return solicitude[(indexPath as NSIndexPath).item]
+            return solicitud[(indexPath as NSIndexPath).item]
         }
     }
     
     // MARK: - Private
     
-    fileprivate func loadSolicitudeFromDisk() -> [Solicitude] {
+    fileprivate func loadSolicitudeFromDisk() -> [Solicitud] {
         sections.removeAll(keepingCapacity: false)
-        if let path = Bundle.main.path(forResource: "Solicitude", ofType: "plist") {
+        if let path = Bundle.main.path(forResource: "Solicitud", ofType: "plist") {
             if let dictArray = NSArray(contentsOfFile: path) {
-                var solicitudeArray: [Solicitude] = []
+                var solicitudesArray: [Solicitud] = []
                 for item in dictArray {
                     if let dict = item as? NSDictionary {
                         let atendida = dict["atendida"] as! String
-                        let solicitude = dict["solicitude"] as! String
+                        let solicitud = dict["solicitude"] as! String
                         let solicitudNote = dict["solicitudNote"] as! String
                         let mensaje = dict["mensaje"] as! String
                         let mensajeNote = dict["mensajeNote"] as! String
@@ -86,14 +86,14 @@ class SolicitudeDataSource {
                         let atendioNote = dict["atendioNote"] as! String
                         let index = dict["index"] as! Int
                         let section = dict["section"] as! String
-                        let solicitudeInit = Solicitude(atendida: atendida, solicitude: solicitude, solicitudNote: solicitudNote, mensaje: mensaje, mensajeNote: mensajeNote, fecha: fecha, fechaNote: fechaNote, atendio: atendio, atendioNote: atendioNote, index: index, section: section)
+                        let solicitudInit = Solicitud(atendida: atendida, solicitud: solicitud, solicitudNote: solicitudNote, mensaje: mensaje, mensajeNote: mensajeNote, fecha: fecha, fechaNote: fechaNote, atendio: atendio, atendioNote: atendioNote, index: index, section: section)
                         if !sections.contains(section) {
                             sections.append(section)
                         }
-                        solicitudeArray.append(solicitudeInit)
+                        solicitudesArray.append(solicitudInit)
                     }
                 }
-                return solicitudeArray
+                return solicitudesArray
             }
         }
         return []
@@ -108,9 +108,9 @@ class SolicitudeDataSource {
         return index
     }
     
-    fileprivate func solicitudeForSection(_ index: Int) -> [Solicitude] {
+    fileprivate func solicitudeForSection(_ index: Int) -> [Solicitud] {
         let section = sections[index]
-        let solicitudeInSection = solicitude.filter { (solicitude: Solicitude) -> Bool in
+        let solicitudeInSection = solicitud.filter { (solicitude: Solicitud) -> Bool in
             return solicitude.section == section
         }
         return solicitudeInSection
