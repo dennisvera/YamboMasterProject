@@ -110,6 +110,9 @@ extension HomeCollectionViewController {
         } else if indexPath.row == 5 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if indexPath.row == 6 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagoID") as! PagoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }
@@ -141,7 +144,11 @@ extension HomeCollectionViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 6 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else if menu.selectedIndex == 7 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagoID") as! PagoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         }
+        
         
         collectionView?.reloadData()
     }

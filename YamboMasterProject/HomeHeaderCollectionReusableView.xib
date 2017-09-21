@@ -12,33 +12,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HomeHeaderCollectionReusableView" customModule="YamboMasterProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miercoles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ie-4x-qah">
-                    <rect key="frame" x="10" y="14" width="355" height="33.5"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                    <rect key="frame" x="10" y="10" width="355" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Nll-aB-1Ky"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                     <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 de Agosto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxw-BJ-oMx">
-                    <rect key="frame" x="10" y="49.5" width="355" height="33.5"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                    <rect key="frame" x="10" y="44" width="355" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="laT-Ft-rov"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                     <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="oxw-BJ-oMx" secondAttribute="bottom" constant="4" id="3q8-pQ-jQ4"/>
                 <constraint firstAttribute="trailing" secondItem="oxw-BJ-oMx" secondAttribute="trailing" constant="10" id="93i-Yr-ydF"/>
                 <constraint firstItem="6Ie-4x-qah" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="Bh3-wg-sNg"/>
                 <constraint firstItem="oxw-BJ-oMx" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="Ihs-Bx-KVN"/>
-                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="oxw-BJ-oMx" secondAttribute="bottom" constant="32" id="KQv-pf-K1N"/>
-                <constraint firstItem="oxw-BJ-oMx" firstAttribute="top" secondItem="6Ie-4x-qah" secondAttribute="bottom" constant="2" id="SLn-qN-ZOb"/>
                 <constraint firstAttribute="trailing" secondItem="6Ie-4x-qah" secondAttribute="trailing" constant="10" id="U8s-uS-mCH"/>
                 <constraint firstItem="6Ie-4x-qah" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="Yyz-sp-06g"/>
+                <constraint firstItem="oxw-BJ-oMx" firstAttribute="top" secondItem="6Ie-4x-qah" secondAttribute="bottom" constant="2" id="bjR-xb-APx"/>
+                <constraint firstItem="6Ie-4x-qah" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="dOc-C9-dWr"/>
                 <constraint firstItem="oxw-BJ-oMx" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="irs-A4-vHV"/>
-                <constraint firstItem="6Ie-4x-qah" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="14" id="nt0-OQ-g8E"/>
             </constraints>
             <connections>
                 <outlet property="dateLabel" destination="oxw-BJ-oMx" id="FzG-gx-VIg"/>

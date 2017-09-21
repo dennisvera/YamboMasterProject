@@ -48,6 +48,7 @@
 		E1139DBE1F73227500E2AAE5 /* SolicitudPendiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DBD1F73227500E2AAE5 /* SolicitudPendiente.swift */; };
 		E1139DC01F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */; };
 		E1139DC41F73344E00E2AAE5 /* SolicitudReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */; };
+		E1139DC61F74223300E2AAE5 /* PagoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DC51F74223200E2AAE5 /* PagoTableViewController.swift */; };
 		E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9D1F4F117C002A183D /* AppDelegate.swift */; };
 		E1224AA31F4F117C002A183D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA11F4F117C002A183D /* Main.storyboard */; };
 		E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */; };
@@ -169,6 +170,7 @@
 		E1139DBD1F73227500E2AAE5 /* SolicitudPendiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudPendiente.swift; sourceTree = "<group>"; };
 		E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudPendienteDataSource.swift; sourceTree = "<group>"; };
 		E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudReusableView.swift; sourceTree = "<group>"; };
+		E1139DC51F74223200E2AAE5 /* PagoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagoTableViewController.swift; sourceTree = "<group>"; };
 		E1224A9A1F4F117C002A183D /* YamboMasterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamboMasterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224A9D1F4F117C002A183D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1224AA21F4F117C002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */,
 				E1879F911F62D9B200AF63AA /* InvitadoCollectionViewController.swift */,
 				E1879F831F60538600AF63AA /* SolicitudCollectionViewController.swift */,
+				E1139DC51F74223200E2AAE5 /* PagoTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -897,6 +900,7 @@
 				E1C2DEE41F701A8B0085374E /* MarketDetail2View.swift in Sources */,
 				E10091931F6ACC9E00B46E2A /* Market.swift in Sources */,
 				E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */,
+				E1139DC61F74223300E2AAE5 /* PagoTableViewController.swift in Sources */,
 				E1879F921F62D9B200AF63AA /* InvitadoCollectionViewController.swift in Sources */,
 				E1139DC01F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift in Sources */,
 				E1224B191F535FDF002A183D /* Extensions.swift in Sources */,

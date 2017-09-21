@@ -478,8 +478,8 @@
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="40k-ie-ng8">
-                                            <rect key="frame" x="16" y="47.5" width="303" height="105"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="40k-ie-ng8">
+                                            <rect key="frame" x="16" y="47.5" width="303" height="99"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JaZ-YI-h5B">
                                                     <rect key="frame" x="0.0" y="0.0" width="303" height="19.5"/>
@@ -505,7 +505,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kKL-vZ-txj">
-                                                    <rect key="frame" x="0.0" y="33.5" width="303" height="14.5"/>
+                                                    <rect key="frame" x="0.0" y="31.5" width="303" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MensajeLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsl-3p-ZQp">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="14"/>
@@ -525,7 +525,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="STJ-VB-sVw">
-                                                    <rect key="frame" x="0.0" y="62" width="303" height="14.5"/>
+                                                    <rect key="frame" x="0.0" y="58" width="303" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FechaLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMR-7C-N6g">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="14"/>
@@ -545,7 +545,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A4c-ok-LyK">
-                                                    <rect key="frame" x="0.0" y="90.5" width="303" height="14.5"/>
+                                                    <rect key="frame" x="0.0" y="84.5" width="303" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AtendioLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-dH-u94">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="14"/>
@@ -720,6 +720,42 @@
             </objects>
             <point key="canvasLocation" x="1836" y="840"/>
         </scene>
+        <!--PAGO-->
+        <scene sceneID="avR-DO-ckC">
+            <objects>
+                <tableViewController storyboardIdentifier="PagoID" id="NU7-wx-8oP" userLabel="PAGO" customClass="PagoTableViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8iD-Pb-Vlp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xUC-qz-V60">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUC-qz-V60" id="Bcx-Qb-xlx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NU7-wx-8oP" id="Kdj-oV-xGr"/>
+                            <outlet property="delegate" destination="NU7-wx-8oP" id="x3F-0w-mCB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PAGOS" id="X5E-DA-xMx">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="Umk-v1-NUX">
+                            <color key="tintColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchMenu" destination="NU7-wx-8oP" id="4rc-G9-zXN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8o-og-pJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2527" y="840"/>
+        </scene>
         <!--MENSAJE-->
         <scene sceneID="WE2-i4-cAV">
             <objects>
@@ -766,13 +802,13 @@
                         <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uXi-nu-8bE">
                             <size key="itemSize" width="160" height="120"/>
-                            <size key="headerReferenceSize" width="50" height="100"/>
+                            <size key="headerReferenceSize" width="50" height="80"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="20" minY="10" maxX="10" maxY="10"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="LXh-0r-Tmu">
-                                <rect key="frame" x="20" y="110" width="160" height="120"/>
+                                <rect key="frame" x="10" y="90" width="160" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
@@ -781,7 +817,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VvT-3V-QOU">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>

@@ -167,6 +167,9 @@ extension InvitadoCollectionViewController: MenuViewDelegate {
         } else if menu.selectedIndex == 6 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
+        }  else if menu.selectedIndex == 7 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagoID") as! PagoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         
         collectionView?.reloadData()

@@ -1,19 +1,18 @@
 //
-//  ReservacionesTableViewController.swift
+//  PagoTableViewController.swift
 //  YamboMasterProject
 //
-//  Created by Dennis Vera on 8/24/17.
+//  Created by Dennis Vera on 9/21/17.
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
 import UIKit
 import Persei
 
-class ReservacionesTableViewController: UITableViewController {
+class PagoTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
-    var dataSource = ReservacioneType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,33 +44,24 @@ class ReservacionesTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.backgroundImages.count
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
-        let image = UIImage(named: dataSource.backgroundImages[indexPath.row])
-        cell.bkgImageView.image = image
-        cell.titleLabel.text = dataSource.titles[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 122
-    }
 }
 
-
 // MARK: - MenuViewDelegate
-extension ReservacionesTableViewController: MenuViewDelegate {
+extension PagoTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
         
@@ -87,7 +77,8 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
-            print("current controller, no segue needed")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketID") as! MarketTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -98,13 +89,24 @@ extension ReservacionesTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SolicitudeID") as! SolicitudCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }  else if menu.selectedIndex == 7 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagoID") as! PagoTableViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
+            print("current controller, no segue needed")
         }
         
         tableView.reloadData()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -20,6 +20,8 @@ class SolicitudCollectionViewController: UICollectionViewController {
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
     
+    var selectedSegment = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,17 +64,14 @@ class SolicitudCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch solicitudReusableView.segmentedController.selectedSegmentIndex {
-        case 0:
+        if selectedSegment == 0 {
             return solicitudPendienteDataSource.count
-        case 1:
+        } else if selectedSegment == 1 {
             return solicitudDataSource.count
-        default:
-            break
         }
         
         return 0
@@ -86,25 +85,30 @@ class SolicitudCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudCellID, for: indexPath) as! SolicitudCell
         
-        switch solicitudReusableView.segmentedController.selectedSegmentIndex {
-        case 0:
+        if selectedSegment == 0 {
             if let solicitud = solicitudPendienteDataSource.solicitudeForItemAtIndexPath(indexPath) {
                 cell.solicitudPendiente = solicitud
             }
             return cell
-        case 1:
+            
+        } else if selectedSegment == 1 {
             if let solicitud = solicitudDataSource.solicitudeForItemAtIndexPath(indexPath) {
                 cell.solicitud = solicitud
             }
             return cell
-        default:
-            break
         }
         
         return cell
     }
     
-    @IBAction func solicitudSegmentedAction(_ sender: Any) {
+    @IBAction func solicitudSegmentedAction(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0 {
+            selectedSegment = 0
+        } else if sender.selectedSegmentIndex == 1 {
+            selectedSegment = 1
+        }
+        print("Semnted controller pressed")
         collectionView?.reloadData()
     }
 }
@@ -137,6 +141,9 @@ extension SolicitudCollectionViewController: MenuViewDelegate {
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 6 {
             print("current controller, no segue needed")
+        }  else if menu.selectedIndex == 7 {
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagoID") as! PagoTableViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
         }
         
         collectionView?.reloadData()
