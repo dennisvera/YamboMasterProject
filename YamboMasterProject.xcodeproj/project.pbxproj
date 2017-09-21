@@ -44,7 +44,10 @@
 		E111E2D31F5EEDD4005B4EBD /* comunicado4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E111E2D21F5EEDD4005B4EBD /* comunicado4.jpg */; };
 		E111E2D51F5EF0F6005B4EBD /* comunicado3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E111E2D41F5EF0F6005B4EBD /* comunicado3.jpg */; };
 		E111E2D71F5EF3FE005B4EBD /* comunicado6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E111E2D61F5EF3FE005B4EBD /* comunicado6.jpg */; };
-		E1139DBA1F72E1A700E2AAE5 /* SolicitudSegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DB91F72E1A700E2AAE5 /* SolicitudSegmentCell.swift */; };
+		E1139DBC1F73222400E2AAE5 /* SolicitudPendiente.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1139DBB1F73222400E2AAE5 /* SolicitudPendiente.plist */; };
+		E1139DBE1F73227500E2AAE5 /* SolicitudPendiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DBD1F73227500E2AAE5 /* SolicitudPendiente.swift */; };
+		E1139DC01F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */; };
+		E1139DC41F73344E00E2AAE5 /* SolicitudReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */; };
 		E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9D1F4F117C002A183D /* AppDelegate.swift */; };
 		E1224AA31F4F117C002A183D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA11F4F117C002A183D /* Main.storyboard */; };
 		E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */; };
@@ -162,7 +165,10 @@
 		E111E2D21F5EEDD4005B4EBD /* comunicado4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comunicado4.jpg; sourceTree = "<group>"; };
 		E111E2D41F5EF0F6005B4EBD /* comunicado3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comunicado3.jpg; sourceTree = "<group>"; };
 		E111E2D61F5EF3FE005B4EBD /* comunicado6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comunicado6.jpg; sourceTree = "<group>"; };
-		E1139DB91F72E1A700E2AAE5 /* SolicitudSegmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudSegmentCell.swift; sourceTree = "<group>"; };
+		E1139DBB1F73222400E2AAE5 /* SolicitudPendiente.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SolicitudPendiente.plist; sourceTree = "<group>"; };
+		E1139DBD1F73227500E2AAE5 /* SolicitudPendiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudPendiente.swift; sourceTree = "<group>"; };
+		E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudPendienteDataSource.swift; sourceTree = "<group>"; };
+		E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudReusableView.swift; sourceTree = "<group>"; };
 		E1224A9A1F4F117C002A183D /* YamboMasterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamboMasterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224A9D1F4F117C002A183D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1224AA21F4F117C002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 				E10091621F68334600B46E2A /* Invitado.plist */,
 				E100916E1F6AC67B00B46E2A /* Market.plist */,
 				E10091A41F6C15D000B46E2A /* Solicitud.plist */,
+				E1139DBB1F73222400E2AAE5 /* SolicitudPendiente.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -291,6 +298,7 @@
 				E10091941F6ADF4800B46E2A /* MarketDataSource.swift */,
 				E10091671F68359500B46E2A /* InvitadoDataSource.swift */,
 				E10091A81F6C1C6A00B46E2A /* SolicitudDataSource.swift */,
+				E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 				E10091921F6ACC9E00B46E2A /* Market.swift */,
 				E10091641F6834D900B46E2A /* Invitado.swift */,
 				E10091A61F6C177B00B46E2A /* Solicitude.swift */,
+				E1139DBD1F73227500E2AAE5 /* SolicitudPendiente.swift */,
 				E1224B181F535FDF002A183D /* Extensions.swift */,
 			);
 			name = Models;
@@ -496,7 +505,7 @@
 				E129B0721F6DBCA600809F1E /* InvitadoAddCell.swift */,
 				E129B0731F6DBCA600809F1E /* InvitadoAddCell.xib */,
 				E1A5A9361F7209F6003A9E0C /* SolicitudCell.swift */,
-				E1139DB91F72E1A700E2AAE5 /* SolicitudSegmentCell.swift */,
+				E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -710,6 +719,7 @@
 				E1A7C6E01F55C5FB00E4FC32 /* MarketCell.xib in Resources */,
 				E111E2CF1F5EEA36005B4EBD /* comunicado5.png in Resources */,
 				E111E2CD1F5EE7EA005B4EBD /* comunicado1.jpg in Resources */,
+				E1139DBC1F73222400E2AAE5 /* SolicitudPendiente.plist in Resources */,
 				E1224AF61F4F28A3002A183D /* reservaciones4.jpg in Resources */,
 				E100918F1F6ACADF00B46E2A /* marketplace4.jpg in Resources */,
 				E1FE0E681F5F02CD0040F68E /* mensaje2.jpg in Resources */,
@@ -880,6 +890,7 @@
 				E1879F971F62E25500AF63AA /* InvitadoCell.swift in Sources */,
 				E111E2C21F59A59D005B4EBD /* HomeCollectionViewCell.swift in Sources */,
 				E10091A31F6B1AC100B46E2A /* MarketDetailView.swift in Sources */,
+				E1139DBE1F73227500E2AAE5 /* SolicitudPendiente.swift in Sources */,
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E10091651F6834D900B46E2A /* Invitado.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */,
@@ -887,6 +898,7 @@
 				E10091931F6ACC9E00B46E2A /* Market.swift in Sources */,
 				E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */,
 				E1879F921F62D9B200AF63AA /* InvitadoCollectionViewController.swift in Sources */,
+				E1139DC01F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift in Sources */,
 				E1224B191F535FDF002A183D /* Extensions.swift in Sources */,
 				E10091951F6ADF4800B46E2A /* MarketDataSource.swift in Sources */,
 				E111E2BF1F59A56C005B4EBD /* HomeCollectionViewController.swift in Sources */,
@@ -897,11 +909,11 @@
 				E10091971F6AED1800B46E2A /* MarketDetailViewController.swift in Sources */,
 				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
 				E1A7C6BB1F54AA4300E4FC32 /* ComunicadoTableViewController.swift in Sources */,
-				E1139DBA1F72E1A700E2AAE5 /* SolicitudSegmentCell.swift in Sources */,
 				E100916D1F68A46900B46E2A /* InvitadosViewFlowLayout.swift in Sources */,
 				E1879F801F5F3E0A00AF63AA /* HomeHeaderCollectionReusableView.swift in Sources */,
 				E10091A91F6C1C6A00B46E2A /* SolicitudDataSource.swift in Sources */,
 				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
+				E1139DC41F73344E00E2AAE5 /* SolicitudReusableView.swift in Sources */,
 				E129B0741F6DBCA600809F1E /* InvitadoAddCell.swift in Sources */,
 				E111E2C91F5B91B2005B4EBD /* ReservacioneModel.swift in Sources */,
 				E10091681F68359500B46E2A /* InvitadoDataSource.swift in Sources */,

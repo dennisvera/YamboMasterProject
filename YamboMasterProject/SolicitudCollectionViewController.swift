@@ -10,10 +10,12 @@ import UIKit
 import Persei
 
 private let solicitudCellID = "SolicitudCellID"
-private let solicitudSegmentCellID = "SolicitudSegmentCellID"
+private let solicitudResusableID = "SolicitudResusableID"
 
 class SolicitudCollectionViewController: UICollectionViewController {
     fileprivate var solicitudDataSource = SolicitudDataSource()
+    fileprivate var solicitudPendienteDataSource = SolicitudPendienteDataSource()
+    fileprivate var solicitudReusableView = SolicitudReusableView()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
@@ -64,28 +66,46 @@ class SolicitudCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
+        switch solicitudReusableView.segmentedController.selectedSegmentIndex {
+        case 0:
+            return solicitudPendienteDataSource.count
+        case 1:
             return solicitudDataSource.count
-        } else if section == 1 {
-            return 1
+        default:
+            break
         }
+        
         return 0
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: solicitudResusableID, for: indexPath) as! SolicitudReusableView
+        return headerView
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudCellID, for: indexPath) as! SolicitudCell
-            
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudCellID, for: indexPath) as! SolicitudCell
+        
+        switch solicitudReusableView.segmentedController.selectedSegmentIndex {
+        case 0:
+            if let solicitud = solicitudPendienteDataSource.solicitudeForItemAtIndexPath(indexPath) {
+                cell.solicitudPendiente = solicitud
+            }
+            return cell
+        case 1:
             if let solicitud = solicitudDataSource.solicitudeForItemAtIndexPath(indexPath) {
                 cell.solicitud = solicitud
             }
             return cell
-            
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudSegmentCellID, for: indexPath) as! SolicitudSegmentCell
-            cell.solicitudLabel.text = "DONUT"
-            return cell
+        default:
+            break
         }
+        
+        return cell
+    }
+    
+    @IBAction func solicitudSegmentedAction(_ sender: Any) {
+        collectionView?.reloadData()
     }
 }
 

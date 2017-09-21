@@ -47,4 +47,20 @@ class SolicitudCell: UICollectionViewCell {
         }
     }
     
+    var solicitudPendiente: SolicitudPendiente? {
+        didSet {
+            if let solicitud = solicitudPendiente {
+                atendidaLabel.text = solicitud.atendida
+                solicitudLabel.text = solicitud.solicitud
+                solicitudNoteLabel.text = solicitud.solicitudNote
+                mensajeLabel.text = solicitud.mensaje
+                mensajeNoteLabel.text = solicitud.mensajeNote
+                fechaLabel.text = solicitud.fecha
+                fechaNoteLabel.text = solicitud.fechaNote
+                atendioLabel.text = solicitud.atendio
+                atendioNoteLabel.text = solicitud.atendioNote
+            }
+        }
+    }
+    
 }
