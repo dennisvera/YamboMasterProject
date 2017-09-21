@@ -9,6 +9,8 @@
 import UIKit
 import Persei
 
+private let pagoHeaderCellID = "PagoHeaderCellID"
+
 class PagoTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
@@ -16,6 +18,8 @@ class PagoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.separatorStyle = .none
         
         loadMenuIcons()
         loadMenu()
@@ -49,13 +53,25 @@ class PagoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoHeaderCellID, for: indexPath) as! PagoHeaderCell
+            cell.transaccionesLabel.text = "TRANSACCIONES A-402"
+            cell.nuevoPagoLabel.text = "NUEVO PAGO"
+            cell.nuevoPagoLabel.layer.cornerRadius = 20
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+            return cell
+        }
     }
     
 }

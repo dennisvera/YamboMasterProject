@@ -54,18 +54,17 @@ class ReservacionesTableViewController: UITableViewController {
         return dataSource.backgroundImages.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 122
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = Bundle.main.loadNibNamed("ReservacionesTableViewCell", owner: self, options: nil)?.first as! ReservacionesTableViewCell
         let image = UIImage(named: dataSource.backgroundImages[indexPath.row])
         cell.bkgImageView.image = image
         cell.titleLabel.text = dataSource.titles[indexPath.row]
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 122
     }
 }
 

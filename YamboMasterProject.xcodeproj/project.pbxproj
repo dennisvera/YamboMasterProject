@@ -49,6 +49,7 @@
 		E1139DC01F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */; };
 		E1139DC41F73344E00E2AAE5 /* SolicitudReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */; };
 		E1139DC61F74223300E2AAE5 /* PagoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DC51F74223200E2AAE5 /* PagoTableViewController.swift */; };
+		E1139DC81F7437EF00E2AAE5 /* PagoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1139DC71F7437EF00E2AAE5 /* PagoHeaderCell.swift */; };
 		E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224A9D1F4F117C002A183D /* AppDelegate.swift */; };
 		E1224AA31F4F117C002A183D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA11F4F117C002A183D /* Main.storyboard */; };
 		E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1224AA41F4F117C002A183D /* YamboMasterProject.xcdatamodeld */; };
@@ -171,6 +172,7 @@
 		E1139DBF1F7322C200E2AAE5 /* SolicitudPendienteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudPendienteDataSource.swift; sourceTree = "<group>"; };
 		E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudReusableView.swift; sourceTree = "<group>"; };
 		E1139DC51F74223200E2AAE5 /* PagoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagoTableViewController.swift; sourceTree = "<group>"; };
+		E1139DC71F7437EF00E2AAE5 /* PagoHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagoHeaderCell.swift; sourceTree = "<group>"; };
 		E1224A9A1F4F117C002A183D /* YamboMasterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamboMasterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224A9D1F4F117C002A183D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1224AA21F4F117C002A183D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				E129B0731F6DBCA600809F1E /* InvitadoAddCell.xib */,
 				E1A5A9361F7209F6003A9E0C /* SolicitudCell.swift */,
 				E1139DC31F73344E00E2AAE5 /* SolicitudReusableView.swift */,
+				E1139DC71F7437EF00E2AAE5 /* PagoHeaderCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				E10091A31F6B1AC100B46E2A /* MarketDetailView.swift in Sources */,
 				E1139DBE1F73227500E2AAE5 /* SolicitudPendiente.swift in Sources */,
 				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
+				E1139DC81F7437EF00E2AAE5 /* PagoHeaderCell.swift in Sources */,
 				E10091651F6834D900B46E2A /* Invitado.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */,
 				E1C2DEE41F701A8B0085374E /* MarketDetail2View.swift in Sources */,

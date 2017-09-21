@@ -53,8 +53,11 @@ class ComunicadoTableViewController: UITableViewController {
         return dataSource.subjects.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = Bundle.main.loadNibNamed("CommunicadosTableViewCell", owner: self, options: nil)?.first as! CommunicadosTableViewCell
         
         let image = UIImage(named: dataSource.images[indexPath.row])
@@ -63,10 +66,6 @@ class ComunicadoTableViewController: UITableViewController {
         cell.userNameLabel.text = dataSource.userName[indexPath.row]
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
 }
 

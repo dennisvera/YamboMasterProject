@@ -729,11 +729,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xUC-qz-V60">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PagoHeaderCellID" rowHeight="120" id="xUC-qz-V60" customClass="PagoHeaderCell" customModule="YamboMasterProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUC-qz-V60" id="Bcx-Qb-xlx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUEVO PAGO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QH-Qp-O9M">
+                                            <rect key="frame" x="47" y="62" width="280" height="40"/>
+                                            <color key="backgroundColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="CPV-ga-ghZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSACCIONES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-PG-oyg">
+                                            <rect key="frame" x="8" y="20" width="359" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="ibb-s9-PBE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HIQ-PG-oyg" firstAttribute="leading" secondItem="Bcx-Qb-xlx" secondAttribute="leading" constant="8" id="75L-j7-mqA"/>
+                                        <constraint firstAttribute="trailing" secondItem="HIQ-PG-oyg" secondAttribute="trailing" constant="8" id="8O2-bI-LWf"/>
+                                        <constraint firstItem="3QH-Qp-O9M" firstAttribute="top" secondItem="HIQ-PG-oyg" secondAttribute="bottom" constant="18" id="8VM-jx-K8G"/>
+                                        <constraint firstAttribute="trailing" secondItem="3QH-Qp-O9M" secondAttribute="trailing" constant="48" id="OCz-Gd-pYC"/>
+                                        <constraint firstItem="HIQ-PG-oyg" firstAttribute="top" secondItem="Bcx-Qb-xlx" secondAttribute="top" constant="20" id="ZeY-ij-aRj"/>
+                                        <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3QH-Qp-O9M" secondAttribute="bottom" constant="19.5" id="aqW-XX-JxZ"/>
+                                        <constraint firstItem="3QH-Qp-O9M" firstAttribute="leading" secondItem="Bcx-Qb-xlx" secondAttribute="leading" constant="47" id="sbL-lV-mjj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="nuevoPagoLabel" destination="3QH-Qp-O9M" id="jBm-UD-eUk"/>
+                                    <outlet property="transaccionesLabel" destination="HIQ-PG-oyg" id="pjZ-1j-iqr"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="awE-m8-w51">
+                                <rect key="frame" x="0.0" y="148" width="375" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="awE-m8-w51" id="L4I-UC-K13">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -754,7 +797,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8o-og-pJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2527" y="840"/>
+            <point key="canvasLocation" x="2525.5999999999999" y="839.73013493253382"/>
         </scene>
         <!--MENSAJE-->
         <scene sceneID="WE2-i4-cAV">
