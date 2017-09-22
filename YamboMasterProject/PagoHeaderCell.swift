@@ -11,17 +11,28 @@ import UIKit
 class PagoHeaderCell: UITableViewCell {
     @IBOutlet var transaccionesLabel: UILabel!
     @IBOutlet var nuevoPagoLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        nuevoPagoLabel.layer.cornerRadius = 10
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        nuevoPagoLabel.layer.cornerRadius = 10
     }
-
+    
+    override func prepareForReuse() {
+        transaccionesLabel.text = ""
+        nuevoPagoLabel.text = ""
+    }
+    
+    var pagoHeader: Pago? {
+        didSet {
+            if let pagoHeader = pagoHeader {
+                transaccionesLabel.text = pagoHeader.transacciones
+                nuevoPagoLabel.text = pagoHeader.nuevoPago
+            }
+        }
+    }
+    
 }

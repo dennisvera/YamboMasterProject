@@ -10,16 +10,17 @@ import UIKit
 import Persei
 
 private let pagoHeaderCellID = "PagoHeaderCellID"
+private let pagoPendienteCellID = "PagoPendienteCellID"
+private let pagoCellID = "PagoCellID"
 
 class PagoTableViewController: UITableViewController {
+    fileprivate var pagoDataSource = PagoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.separatorStyle = .none
         
         loadMenuIcons()
         loadMenu()
@@ -53,19 +54,42 @@ class PagoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        if indexPath.row == 0 {
+            return 104
+            
+        } else {
+            return 64
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: pagoHeaderCellID, for: indexPath) as! PagoHeaderCell
-            cell.transaccionesLabel.text = "TRANSACCIONES A-402"
-            cell.nuevoPagoLabel.text = "NUEVO PAGO"
-            cell.nuevoPagoLabel.layer.cornerRadius = 20
+            
+            if let pagoHeader = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.pagoHeader = pagoHeader
+            }
+            return cell
+            
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
+            
+            if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.hacerPagoLabel.layer.cornerRadius = 10
+                cell.hacerPago = hacerPago
+            }
+            return cell
+            
+        } else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
+            
+            if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.pago = pago
+            }
             return cell
             
         } else {

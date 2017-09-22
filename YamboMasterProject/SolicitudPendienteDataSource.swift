@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SolicitudPendienteDataSource {
     fileprivate var solicitudPendiente: [SolicitudPendiente] = []

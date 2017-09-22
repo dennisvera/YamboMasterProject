@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>transacciones</key>
+		<string>TRANSACCIONES A-420</string>
+		<key>nuevoPago</key>
+		<string>NUEVO PAGO</string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string></string>
+		<key>date</key>
+		<string></string>
+		<key>time</key>
+		<string></string>
+		<key>amount</key>
+		<string></string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string>HACER PAGO</string>
+		<key>subject</key>
+		<string>Mantenimiento Agosto</string>
+		<key>date</key>
+		<string></string>
+		<key>time</key>
+		<string></string>
+		<key>amount</key>
+		<string>$ 2,500.00</string>
+		<key>index</key>
+		<integer>1</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string>Mantenimiento Julio</string>
+		<key>date</key>
+		<string>Jul 12, 2017</string>
+		<key>time</key>
+		<string>17:50:01</string>
+		<key>amount</key>
+		<string>$ 2,500.00</string>
+		<key>index</key>
+		<integer>2</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string>HACER PAGO</string>
+		<key>subject</key>
+		<string>Reservación Asadores</string>
+		<key>date</key>
+		<string></string>
+		<key>time</key>
+		<string></string>
+		<key>amount</key>
+		<string>$ 300.00</string>
+		<key>index</key>
+		<integer>3</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string>Multa</string>
+		<key>date</key>
+		<string>Jul 12, 2017</string>
+		<key>time</key>
+		<string>08:29:35</string>
+		<key>amount</key>
+		<string>$ 1,450.00</string>
+		<key>index</key>
+		<integer>4</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string>Reservación Sálon Loungue</string>
+		<key>date</key>
+		<string>Jul 12, 2017</string>
+		<key>time</key>
+		<string>06:29:35</string>
+		<key>amount</key>
+		<string>$ 2,400.00</string>
+		<key>index</key>
+		<integer>5</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string>Mantenimiento Junio</string>
+		<key>date</key>
+		<string>Jul 12, 2017</string>
+		<key>time</key>
+		<string>08:29:35</string>
+		<key>amount</key>
+		<string>$ 2,500.00</string>
+		<key>index</key>
+		<integer>6</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+</array>
+</plist>
