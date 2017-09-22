@@ -114,10 +114,10 @@ class InvitadoDataSource {
     
     fileprivate func invitadosForSection(_ index: Int) -> [Invitado] {
         let section = sections[index]
-        let invitadoInSection = invitados.filter { (invitado: Invitado) -> Bool in
+        let invitadosInSection = invitados.filter { (invitado: Invitado) -> Bool in
             return invitado.section == section
         }
-        return invitadoInSection
+        return invitadosInSection
     }
     
 }

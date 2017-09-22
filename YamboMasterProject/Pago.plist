@@ -20,7 +20,7 @@
 		<key>index</key>
 		<integer>0</integer>
 		<key>section</key>
-		<string>section1</string>
+		<string>section0</string>
 	</dict>
 	<dict>
 		<key>transacciones</key>
@@ -60,7 +60,7 @@
 		<key>index</key>
 		<integer>2</integer>
 		<key>section</key>
-		<string>section1</string>
+		<string>section2</string>
 	</dict>
 	<dict>
 		<key>transacciones</key>
@@ -80,7 +80,7 @@
 		<key>index</key>
 		<integer>3</integer>
 		<key>section</key>
-		<string>section1</string>
+		<string>section3</string>
 	</dict>
 	<dict>
 		<key>transacciones</key>
@@ -100,7 +100,7 @@
 		<key>index</key>
 		<integer>4</integer>
 		<key>section</key>
-		<string>section1</string>
+		<string>section4</string>
 	</dict>
 	<dict>
 		<key>transacciones</key>
@@ -120,7 +120,7 @@
 		<key>index</key>
 		<integer>5</integer>
 		<key>section</key>
-		<string>section1</string>
+		<string>section4</string>
 	</dict>
 	<dict>
 		<key>transacciones</key>
@@ -140,7 +140,47 @@
 		<key>index</key>
 		<integer>6</integer>
 		<key>section</key>
-		<string>section1</string>
+		<string>section4</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string>Reservación Asadores</string>
+		<key>date</key>
+		<string>Jul 12, 2017</string>
+		<key>time</key>
+		<string>03:15:35</string>
+		<key>amount</key>
+		<string>$ 300.00</string>
+		<key>index</key>
+		<integer>7</integer>
+		<key>section</key>
+		<string>section4</string>
+	</dict>
+	<dict>
+		<key>transacciones</key>
+		<string></string>
+		<key>nuevoPago</key>
+		<string></string>
+		<key>hacerPago</key>
+		<string></string>
+		<key>subject</key>
+		<string>Mantenimiento Febrero</string>
+		<key>date</key>
+		<string>Feb 12, 2017</string>
+		<key>time</key>
+		<string>03:39:35</string>
+		<key>amount</key>
+		<string>$ 2,500.00</string>
+		<key>index</key>
+		<integer>8</integer>
+		<key>section</key>
+		<string>section4</string>
 	</dict>
 </array>
 </plist>

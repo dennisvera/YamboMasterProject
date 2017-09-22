@@ -50,16 +50,17 @@ class PagoTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return pagoDataSource.numberOfSections
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return pagoDataSource.numberOfPagosInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 104
+        if indexPath.section == 0 {
+            return 110
             
         } else {
             return 64
@@ -67,35 +68,51 @@ class PagoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: pagoHeaderCellID, for: indexPath) as! PagoHeaderCell
-            
-            if let pagoHeader = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                cell.pagoHeader = pagoHeader
-            }
-            return cell
-            
-        } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
-            
-            if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                cell.hacerPagoLabel.layer.cornerRadius = 10
-                cell.hacerPago = hacerPago
-            }
-            return cell
-            
-        } else if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
-            
-            if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                cell.pago = pago
-            }
-            return cell
-            
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
-            return cell
-        }
+        
+                if indexPath.section == 0 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoHeaderCellID, for: indexPath) as! PagoHeaderCell
+        
+                    if let pagoHeader = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                        cell.pagoHeader = pagoHeader
+                    }
+                    return cell
+        
+                } else if indexPath.section == 1 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
+        
+                    if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                        cell.hacerPago = hacerPago
+                    }
+                    return cell
+        
+                } else if indexPath.section == 2 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
+        
+                    if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                        cell.pago = pago
+                    }
+                    return cell
+        
+                } else if indexPath.section == 3 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
+                    
+                    if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                        cell.hacerPago = hacerPago
+                    }
+                    return cell
+                    
+                } else if indexPath.section == 4 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
+                    
+                    if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                        cell.pago = pago
+                    }
+                    return cell
+                    
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+                    return cell
+                }
     }
     
 }

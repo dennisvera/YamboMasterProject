@@ -729,11 +729,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PagoHeaderCellID" rowHeight="104" id="xUC-qz-V60" userLabel="Pago Header Cell" customClass="PagoHeaderCell" customModule="YamboMasterProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PagoHeaderCellID" rowHeight="110" id="xUC-qz-V60" userLabel="Pago Header Cell" customClass="PagoHeaderCell" customModule="YamboMasterProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUC-qz-V60" id="Bcx-Qb-xlx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nuevoPagoLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QH-Qp-O9M">
@@ -757,11 +757,11 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3QH-Qp-O9M" secondAttribute="bottom" constant="13.5" id="2m1-1K-1Gc"/>
                                         <constraint firstItem="HIQ-PG-oyg" firstAttribute="leading" secondItem="Bcx-Qb-xlx" secondAttribute="leading" constant="10" id="75L-j7-mqA"/>
                                         <constraint firstAttribute="trailing" secondItem="HIQ-PG-oyg" secondAttribute="trailing" constant="10" id="8O2-bI-LWf"/>
                                         <constraint firstItem="3QH-Qp-O9M" firstAttribute="top" secondItem="HIQ-PG-oyg" secondAttribute="bottom" constant="16" id="8VM-jx-K8G"/>
                                         <constraint firstAttribute="trailing" secondItem="3QH-Qp-O9M" secondAttribute="trailing" constant="48" id="OCz-Gd-pYC"/>
+                                        <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3QH-Qp-O9M" secondAttribute="bottom" constant="19.5" id="Vqk-rb-1VZ"/>
                                         <constraint firstItem="HIQ-PG-oyg" firstAttribute="top" secondItem="Bcx-Qb-xlx" secondAttribute="top" constant="20" id="ZeY-ij-aRj"/>
                                         <constraint firstItem="3QH-Qp-O9M" firstAttribute="leading" secondItem="Bcx-Qb-xlx" secondAttribute="leading" constant="47" id="sbL-lV-mjj"/>
                                     </constraints>
@@ -773,7 +773,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PagoPendienteCellID" rowHeight="64" id="awE-m8-w51" userLabel="Pago Pendiente Cell" customClass="PagoPendienteCell" customModule="YamboMasterProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="132" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="138" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="awE-m8-w51" id="L4I-UC-K13">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
@@ -799,7 +799,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="71N-9O-PWT"/>
                                                         <constraint firstAttribute="width" constant="120" id="UPI-Hg-MNb"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.66666666669999997" green="0.1058823529" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -827,7 +827,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PagoCellID" rowHeight="64" id="PjJ-9R-7vY" userLabel="Pago Cell" customClass="PagoCell" customModule="YamboMasterProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="196" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="202" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PjJ-9R-7vY" id="Ec0-iZ-5gX">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
@@ -840,16 +840,16 @@
                                                     <rect key="frame" x="0.0" y="5" width="90" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-oS-HDS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="21.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="90" id="Dib-31-P2C"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2Z-3v-KIJ">
-                                                            <rect key="frame" x="0.0" y="22.5" width="50.5" height="17.5"/>
+                                                            <rect key="frame" x="0.0" y="21.5" width="50.5" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -868,7 +868,7 @@
                                                                 <constraint firstAttribute="width" constant="120" id="05u-18-6LV"/>
                                                                 <constraint firstAttribute="height" constant="50" id="iLe-7g-9Sp"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                             <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
