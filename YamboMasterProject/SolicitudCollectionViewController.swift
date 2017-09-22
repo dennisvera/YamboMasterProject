@@ -69,9 +69,9 @@ class SolicitudCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if selectedSegment == 0 {
-            return solicitudPendienteDataSource.count
-        } else if selectedSegment == 1 {
             return solicitudDataSource.count
+        } else if selectedSegment == 1 {
+            return solicitudPendienteDataSource.count
         }
         
         return 0
@@ -86,14 +86,15 @@ class SolicitudCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: solicitudCellID, for: indexPath) as! SolicitudCell
         
         if selectedSegment == 0 {
-            if let solicitud = solicitudPendienteDataSource.solicitudeForItemAtIndexPath(indexPath) {
-                cell.solicitudPendiente = solicitud
+            if let solicitud = solicitudDataSource.solicitudeForItemAtIndexPath(indexPath) {
+                cell.solicitud = solicitud
             }
             return cell
             
         } else if selectedSegment == 1 {
-            if let solicitud = solicitudDataSource.solicitudeForItemAtIndexPath(indexPath) {
-                cell.solicitud = solicitud
+            if let solicitud = solicitudPendienteDataSource.solicitudeForItemAtIndexPath(indexPath) {
+                cell.atendidaLabel.textColor = .red
+                cell.solicitudPendiente = solicitud
             }
             return cell
         }
