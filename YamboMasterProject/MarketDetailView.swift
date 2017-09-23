@@ -23,7 +23,6 @@ class MarketDetailView: UIView {
     @IBOutlet var thumbImageView5: UIImageView!
     @IBOutlet var thumbImageView6: UIImageView!
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,15 +20,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKF-ng-rGK">
-                        <rect key="frame" x="110" y="30" width="255" height="16.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <rect key="frame" x="110" y="28.5" width="255" height="20.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-Ff-nk2">
-                        <rect key="frame" x="110" y="58.5" width="255" height="21.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/22/17" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYm-bR-xRv">
@@ -43,6 +38,12 @@
                             <constraint firstAttribute="width" constant="80" id="miP-CS-68T"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-Ff-nk2">
+                        <rect key="frame" x="110" y="59" width="255" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
@@ -50,12 +51,12 @@
                     <constraint firstAttribute="trailing" secondItem="gEk-Ff-nk2" secondAttribute="trailing" constant="10" id="7vo-nS-xKd"/>
                     <constraint firstAttribute="trailing" secondItem="aYm-bR-xRv" secondAttribute="trailing" constant="12" id="8ci-th-6Wy"/>
                     <constraint firstItem="aYm-bR-xRv" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-6" id="Bwg-h0-xQx"/>
+                    <constraint firstItem="aYm-bR-xRv" firstAttribute="top" secondItem="gEk-Ff-nk2" secondAttribute="bottom" constant="13" id="G9o-zP-4vs"/>
+                    <constraint firstItem="jKF-ng-rGK" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20.5" id="TTc-UM-yYu"/>
                     <constraint firstItem="jKF-ng-rGK" firstAttribute="leading" secondItem="5of-yX-I53" secondAttribute="trailing" constant="20" id="XJq-YL-ScO"/>
                     <constraint firstItem="5of-yX-I53" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="YFS-Hf-vmk"/>
-                    <constraint firstItem="aYm-bR-xRv" firstAttribute="top" secondItem="gEk-Ff-nk2" secondAttribute="bottom" constant="9" id="dfO-9d-rFK"/>
-                    <constraint firstItem="jKF-ng-rGK" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="fVh-xU-1fT"/>
-                    <constraint firstItem="gEk-Ff-nk2" firstAttribute="top" secondItem="jKF-ng-rGK" secondAttribute="bottom" constant="12" id="fze-dJ-zhL"/>
                     <constraint firstAttribute="trailing" secondItem="jKF-ng-rGK" secondAttribute="trailing" constant="10" id="pJk-xc-eiw"/>
+                    <constraint firstItem="gEk-Ff-nk2" firstAttribute="top" secondItem="jKF-ng-rGK" secondAttribute="bottom" constant="10" id="tiU-RJ-QSR"/>
                     <constraint firstItem="gEk-Ff-nk2" firstAttribute="leading" secondItem="5of-yX-I53" secondAttribute="trailing" constant="20" id="vSo-sG-Pjd"/>
                 </constraints>
             </tableViewCellContentView>

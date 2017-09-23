@@ -30,6 +30,7 @@ class PagoPendienteCell: UITableViewCell {
     var hacerPago: Pago? {
         didSet {
             if let hacerPago = hacerPago {
+                hacerPagoLabel.layer.cornerRadius = 3
                 hacerPagoLabel.text = hacerPago.hacerPago
                 subjectLabel.text = hacerPago.subject
                 amountLabel.text = hacerPago.amount

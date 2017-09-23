@@ -82,7 +82,7 @@ class MarketDetailViewController: UIViewController {
         marketDetailView.itemImageView.image = UIImage(named: thumbImage3)
     }
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBAction func contactarButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "MarketDetail2Segue", sender: sender)
     }
     

@@ -79,6 +79,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: solicitudResusableID, for: indexPath) as! SolicitudReusableView
+       
         return headerView
     }
     
@@ -93,7 +94,6 @@ class SolicitudCollectionViewController: UICollectionViewController {
             
         } else if selectedSegment == 1 {
             if let solicitud = solicitudPendienteDataSource.solicitudeForItemAtIndexPath(indexPath) {
-                cell.atendidaLabel.textColor = .red
                 cell.solicitudPendiente = solicitud
             }
             return cell
@@ -109,7 +109,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
         } else if sender.selectedSegmentIndex == 1 {
             selectedSegment = 1
         }
-        print("Semnted controller pressed")
+
         collectionView?.reloadData()
     }
 }

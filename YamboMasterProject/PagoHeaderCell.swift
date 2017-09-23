@@ -30,6 +30,7 @@ class PagoHeaderCell: UITableViewCell {
         didSet {
             if let pagoHeader = pagoHeader {
                 transaccionesLabel.text = pagoHeader.transacciones
+                nuevoPagoLabel.layer.cornerRadius = 3
                 nuevoPagoLabel.text = pagoHeader.nuevoPago
             }
         }
