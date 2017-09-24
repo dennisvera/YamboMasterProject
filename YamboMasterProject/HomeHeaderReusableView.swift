@@ -13,5 +13,21 @@ class HomeHeaderReusableView: UICollectionReusableView {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var verCalendarLabel: UILabel!
     
+    override func prepareForReuse() {
+        dayLabel.text = ""
+        dateLabel.text = ""
+        verCalendarLabel.text = ""
+    }
+    
+    var homeHeader: Home? {
+        didSet {
+            if let home = homeHeader {
+                dayLabel.text = home.day
+                dateLabel.text = home.date
+                verCalendarLabel.text = home.verCalendario
+            }
+        }
+    }
+    
         
 }

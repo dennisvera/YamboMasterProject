@@ -12,7 +12,7 @@ import Persei
 class MensajeTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
+    var menuModel = MenuDataSource()
     var dataSource = MensajeType()
     
     override func viewDidLoad() {

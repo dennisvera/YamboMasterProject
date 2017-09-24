@@ -56,7 +56,6 @@
 		E1224AAB1F4F117D002A183D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1224AA91F4F117D002A183D /* LaunchScreen.storyboard */; };
 		E1224AB61F4F117D002A183D /* YamboMasterProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AB51F4F117D002A183D /* YamboMasterProjectTests.swift */; };
 		E1224AC11F4F117D002A183D /* YamboMasterProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */; };
-		E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1224AD41F4F2783002A183D /* MenuModel.swift */; };
 		E1224AF31F4F28A3002A183D /* reservaciones1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AEE1F4F28A3002A183D /* reservaciones1.jpg */; };
 		E1224AF41F4F28A3002A183D /* reservaciones2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AEF1F4F28A3002A183D /* reservaciones2.jpg */; };
 		E1224AF51F4F28A3002A183D /* reservaciones3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1224AF01F4F28A3002A183D /* reservaciones3.jpg */; };
@@ -88,6 +87,11 @@
 		E1879FA91F62F0C000AF63AA /* invitado6.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879FA81F62F0C000AF63AA /* invitado6.png */; };
 		E18E13241F76FD2900A49B10 /* HomeHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E13231F76FD2900A49B10 /* HomeHeaderReusableView.swift */; };
 		E18E13261F77038900A49B10 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E13251F77038900A49B10 /* HomeCell.swift */; };
+		E18E13281F77157100A49B10 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E13271F77157100A49B10 /* Home.swift */; };
+		E18E132A1F77300100A49B10 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E13291F77300100A49B10 /* HomeDataSource.swift */; };
+		E18E132C1F7738E300A49B10 /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = E18E132B1F7738E300A49B10 /* Menu.plist */; };
+		E18E132E1F77391E00A49B10 /* Home.plist in Resources */ = {isa = PBXBuildFile; fileRef = E18E132D1F77391E00A49B10 /* Home.plist */; };
+		E18E13301F7804FE00A49B10 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E132F1F7804FE00A49B10 /* MenuDataSource.swift */; };
 		E1A5A9371F7209F6003A9E0C /* SolicitudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5A9361F7209F6003A9E0C /* SolicitudCell.swift */; };
 		E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */; };
 		E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */; };
@@ -188,7 +192,6 @@
 		E1224ABC1F4F117D002A183D /* YamboMasterProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamboMasterProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1224AC01F4F117D002A183D /* YamboMasterProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamboMasterProjectUITests.swift; sourceTree = "<group>"; };
 		E1224AC21F4F117D002A183D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1224AD41F4F2783002A183D /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		E1224AD81F4F280E002A183D /* TrendSansOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrendSansOne.otf; sourceTree = "<group>"; };
 		E1224AEE1F4F28A3002A183D /* reservaciones1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones1.jpg; sourceTree = "<group>"; };
 		E1224AEF1F4F28A3002A183D /* reservaciones2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reservaciones2.jpg; sourceTree = "<group>"; };
@@ -220,6 +223,11 @@
 		E1879FA81F62F0C000AF63AA /* invitado6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitado6.png; sourceTree = "<group>"; };
 		E18E13231F76FD2900A49B10 /* HomeHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderReusableView.swift; sourceTree = "<group>"; };
 		E18E13251F77038900A49B10 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		E18E13271F77157100A49B10 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E18E13291F77300100A49B10 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		E18E132B1F7738E300A49B10 /* Menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
+		E18E132D1F77391E00A49B10 /* Home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Home.plist; sourceTree = "<group>"; };
+		E18E132F1F7804FE00A49B10 /* MenuDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
 		E1A5A9361F7209F6003A9E0C /* SolicitudCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudCell.swift; sourceTree = "<group>"; };
 		E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje4.jpg; sourceTree = "<group>"; };
 		E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje5.jpg; sourceTree = "<group>"; };
@@ -294,6 +302,8 @@
 		E100915F1F68328C00B46E2A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E18E132B1F7738E300A49B10 /* Menu.plist */,
+				E18E132D1F77391E00A49B10 /* Home.plist */,
 				E10091621F68334600B46E2A /* Invitado.plist */,
 				E100916E1F6AC67B00B46E2A /* Market.plist */,
 				E10091A41F6C15D000B46E2A /* Solicitud.plist */,
@@ -306,6 +316,8 @@
 		E10091661F68355A00B46E2A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				E18E132F1F7804FE00A49B10 /* MenuDataSource.swift */,
+				E18E13291F77300100A49B10 /* HomeDataSource.swift */,
 				E10091941F6ADF4800B46E2A /* MarketDataSource.swift */,
 				E10091671F68359500B46E2A /* InvitadoDataSource.swift */,
 				E10091A81F6C1C6A00B46E2A /* SolicitudDataSource.swift */,
@@ -419,7 +431,7 @@
 		E1224AD31F4F271A002A183D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E1224AD41F4F2783002A183D /* MenuModel.swift */,
+				E18E13271F77157100A49B10 /* Home.swift */,
 				E111E2C41F5B8C01005B4EBD /* MensajeModel.swift */,
 				E111E2C61F5B8ECD005B4EBD /* ComunicadoModel.swift */,
 				E111E2C81F5B91B2005B4EBD /* ReservacioneModel.swift */,
@@ -693,6 +705,7 @@
 				E10091631F68334600B46E2A /* Invitado.plist in Resources */,
 				E1879F981F62E25500AF63AA /* InvitadoCell.xib in Resources */,
 				E1879FA31F62EFDB00AF63AA /* invitado3.png in Resources */,
+				E18E132C1F7738E300A49B10 /* Menu.plist in Resources */,
 				E1224AF41F4F28A3002A183D /* reservaciones2.jpg in Resources */,
 				E1A7C6B91F54A5CD00E4FC32 /* CommunicadosTableViewCell.xib in Resources */,
 				E10091871F6ACADE00B46E2A /* marketplace1-6.jpg in Resources */,
@@ -718,6 +731,7 @@
 				E1879F7B1F5F26A700AF63AA /* mensajeIcon.png in Resources */,
 				E1224AA81F4F117D002A183D /* Assets.xcassets in Resources */,
 				E1879F771F5F08C100AF63AA /* mensaje1.jpg in Resources */,
+				E18E132E1F77391E00A49B10 /* Home.plist in Resources */,
 				E10091881F6ACADE00B46E2A /* marketplace1-5.jpg in Resources */,
 				E1879F7D1F5F27B800AF63AA /* comunicadoIcon.png in Resources */,
 				E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */,
@@ -904,11 +918,11 @@
 				E1879F971F62E25500AF63AA /* InvitadoCell.swift in Sources */,
 				E10091A31F6B1AC100B46E2A /* MarketDetailView.swift in Sources */,
 				E1139DBE1F73227500E2AAE5 /* SolicitudPendiente.swift in Sources */,
-				E1224AD51F4F2783002A183D /* MenuModel.swift in Sources */,
 				E1139DC81F7437EF00E2AAE5 /* PagoHeaderCell.swift in Sources */,
 				E10091651F6834D900B46E2A /* Invitado.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */,
 				E1C2DEE41F701A8B0085374E /* MarketDetail2View.swift in Sources */,
+				E18E132A1F77300100A49B10 /* HomeDataSource.swift in Sources */,
 				E10091931F6ACC9E00B46E2A /* Market.swift in Sources */,
 				E111E2C71F5B8ECD005B4EBD /* ComunicadoModel.swift in Sources */,
 				E18E13241F76FD2900A49B10 /* HomeHeaderReusableView.swift in Sources */,
@@ -922,6 +936,7 @@
 				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,
 				E1879F841F60538600AF63AA /* SolicitudCollectionViewController.swift in Sources */,
 				E1224B041F5074E2002A183D /* MensajeTableViewController.swift in Sources */,
+				E18E13301F7804FE00A49B10 /* MenuDataSource.swift in Sources */,
 				E1224AFA1F4F3576002A183D /* ReservacionesTableViewController.swift in Sources */,
 				E10091971F6AED1800B46E2A /* MarketDetailViewController.swift in Sources */,
 				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
@@ -941,6 +956,7 @@
 				E111E2C51F5B8C01005B4EBD /* MensajeModel.swift in Sources */,
 				E1139DCA1F74818100E2AAE5 /* PagoPendienteCell.swift in Sources */,
 				E1A7C6B81F54A5CD00E4FC32 /* CommunicadosTableViewCell.swift in Sources */,
+				E18E13281F77157100A49B10 /* Home.swift in Sources */,
 				E1A5A9371F7209F6003A9E0C /* SolicitudCell.swift in Sources */,
 				E1DC1BB01F75568F007BACB1 /* PagoCell.swift in Sources */,
 				E1DC1BAE1F754005007BACB1 /* PagoDataSource.swift in Sources */,

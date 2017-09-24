@@ -12,7 +12,7 @@ import Persei
 class ReservacionesTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
+    var menuDataSource = MenuDataSource()
     var dataSource = ReservacioneType()
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class ReservacionesTableViewController: UITableViewController {
     }
     
     func loadMenuIcons() {
-        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+        for (IconName, name) in zip(menuDataSource.menuIcons, menuDataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
     }

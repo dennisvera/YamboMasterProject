@@ -16,7 +16,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
     fileprivate var invitadoDataSource = InvitadoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
+    var menuDataSource = MenuDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
     }
     
     func loadMenuIcons() {
-        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+        for (IconName, name) in zip(menuDataSource.menuIcons, menuDataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
     }

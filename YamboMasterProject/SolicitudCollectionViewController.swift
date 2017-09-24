@@ -18,7 +18,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
     fileprivate var solicitudReusableView = SolicitudReusableView()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
+    var menuDataSource = MenuDataSource()
     
     var selectedSegment = 0
     
@@ -31,7 +31,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
     }
     
     func loadMenuIcons() {
-        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+        for (IconName, name) in zip(menuDataSource.menuIcons, menuDataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
     }

@@ -13,4 +13,20 @@ class HomeCell: UICollectionViewCell {
     @IBOutlet var menuImageView: UIImageView!
     @IBOutlet var menuNameLabel: UILabel!
     
+    override func prepareForReuse() {
+        menuBackgroundView = nil
+        menuImageView.image = nil
+        menuNameLabel.text = ""
+    }
+    
+    var home: Home? {
+        didSet {
+            if let home = home {
+                menuBackgroundView.layer.cornerRadius = 10
+                menuImageView.image = UIImage(named: home.menuImage)
+                menuNameLabel.text = home.menuTitle
+            }
+        }
+    }
+    
 }

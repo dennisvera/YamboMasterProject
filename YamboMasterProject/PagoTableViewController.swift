@@ -17,7 +17,7 @@ class PagoTableViewController: UITableViewController {
     fileprivate var pagoDataSource = PagoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
+    var menuDataSource = MenuDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class PagoTableViewController: UITableViewController {
     }
     
     func loadMenuIcons() {
-        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+        for (IconName, name) in zip(menuDataSource.menuIcons, menuDataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
     }

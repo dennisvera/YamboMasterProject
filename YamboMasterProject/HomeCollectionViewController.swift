@@ -13,9 +13,10 @@ private let homeCellID = "HomeCellID"
 private let homeHeaderViewID = "HomeHeaderViewID"
 
 class HomeCollectionViewController: UICollectionViewController {
+    fileprivate var homeDataSource = HomeDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var dataSource = MenuType()
+    var menuDataSource = MenuDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     
     func loadMenuIcons() {
-        for (IconName, name) in zip(dataSource.menuIcons, dataSource.menuNames) {
+        for (IconName, name) in zip(menuDataSource.menuIcons, menuDataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
     }
@@ -46,23 +47,22 @@ class HomeCollectionViewController: UICollectionViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return homeDataSource.numberOfSections
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.homepageMenuNames.count
+        return homeDataSource.numberOfHomesInSection(section)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: homeHeaderViewID, for: indexPath) as! HomeHeaderReusableView
         
-        headerView.dateLabel?.text = dataSource.headerDate[indexPath.row]
-        headerView.dayLabel?.text = dataSource.headerDay[indexPath.row]
-        headerView.verCalendarLabel.text = "VER EN CALENDARIO "
+        if let homeHeader = homeDataSource.homeForItemAtIndexPath(indexPath) {
+             headerView.homeHeader = homeHeader
+        }
+        
         return headerView
         
     }
@@ -70,9 +70,9 @@ class HomeCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeCellID, for: indexPath) as! HomeCell
         
-        let image = UIImage(named: dataSource.homepageMenuIcons[indexPath.row])
-        cell.menuImageView.image = image
-        cell.menuNameLabel.text = dataSource.homepageMenuNames[indexPath.row]
+        if let home = homeDataSource.homeForItemAtIndexPath(indexPath) {
+            cell.home = home
+        }
         
         return cell
     }

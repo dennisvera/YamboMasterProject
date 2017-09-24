@@ -12,8 +12,8 @@ import Persei
 class ComunicadoTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var menuModel = MenuType()
     var dataSource = ComunicadoType()
+    var menuDataSource = MenuDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     func loadMenuIcons() {
-        for (IconName, name) in zip(menuModel.menuIcons, menuModel.menuNames) {
+        for (IconName, name) in zip(menuDataSource.menuIcons, menuDataSource.menuNames) {
             menuItems.append(MenuItem(name: name, image: UIImage(named: IconName)))
         }
     }
