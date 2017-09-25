@@ -20,6 +20,7 @@ class ComunicadoTableViewController: UITableViewController {
         
         loadMenuIcons()
         loadMenu()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMenuIcons() {

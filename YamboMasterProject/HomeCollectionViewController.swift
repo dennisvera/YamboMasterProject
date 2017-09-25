@@ -14,6 +14,7 @@ private let homeHeaderViewID = "HomeHeaderViewID"
 
 class HomeCollectionViewController: UICollectionViewController {
     fileprivate var homeDataSource = HomeDataSource()
+    fileprivate var menuDataSourceX = MenuDataSourceX()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuDataSource = MenuDataSource()
@@ -23,6 +24,7 @@ class HomeCollectionViewController: UICollectionViewController {
         
         loadMenuIcons()
         loadMenu()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMenuIcons() {

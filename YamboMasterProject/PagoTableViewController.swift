@@ -21,9 +21,10 @@ class PagoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         loadMenuIcons()
         loadMenu()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMenuIcons() {
@@ -114,7 +115,6 @@ class PagoTableViewController: UITableViewController {
                     return cell
                 }
     }
-    
 }
 
 // MARK: - MenuViewDelegate
@@ -152,7 +152,6 @@ extension PagoTableViewController: MenuViewDelegate {
         tableView.reloadData()
     }
 }
-
 
 
 

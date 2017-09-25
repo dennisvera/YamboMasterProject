@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Luis Alberto Ortega</string>
+		<key>image</key>
+		<string>mensaje1.jpg</string>
+		<key>message</key>
+		<string>Puede estar listo para hoy?</string>
+		<key>date</key>
+		<string>hace 2hr</string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Genaro Perez</string>
+		<key>image</key>
+		<string>mensaje2.jpg</string>
+		<key>message</key>
+		<string>Puede estar listo para hoy?</string>
+		<key>date</key>
+		<string>ayer</string>
+		<key>index</key>
+		<integer>1</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stephanie Marie Garcia</string>
+		<key>image</key>
+		<string>mensaje3.jpg</string>
+		<key>message</key>
+		<string>Puede estar listo para hoy?</string>
+		<key>date</key>
+		<string>27/08/17</string>
+		<key>index</key>
+		<integer>2</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Enerique Triverio</string>
+		<key>image</key>
+		<string>mensaje4.jpg</string>
+		<key>message</key>
+		<string>Puede estar listo para hoy?</string>
+		<key>date</key>
+		<string>05/07/17</string>
+		<key>index</key>
+		<integer>3</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Carlos Gama</string>
+		<key>image</key>
+		<string>mensaje5.jpg</string>
+		<key>message</key>
+		<string>Puede estar listo para hoy?</string>
+		<key>date</key>
+		<string>06/07/17</string>
+		<key>index</key>
+		<integer>4</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Isabel Moros</string>
+		<key>image</key>
+		<string>mensaje6.jpg</string>
+		<key>message</key>
+		<string>Puede estar listo para hoy?</string>
+		<key>date</key>
+		<string> 04/03/17</string>
+		<key>index</key>
+		<integer>5</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+</array>
+</plist>

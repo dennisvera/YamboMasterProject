@@ -20,6 +20,7 @@ class ReservacionesTableViewController: UITableViewController {
         
         loadMenuIcons()
         loadMenu()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMenuIcons() {

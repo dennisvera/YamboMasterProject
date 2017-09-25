@@ -9,17 +9,20 @@
 import UIKit
 import Persei
 
+private let mensajeCellID = "MensajeCellID"
+
 class MensajeTableViewController: UITableViewController {
+    fileprivate var mensajeDataSource = MensajeDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuDataSource()
-    var dataSource = MensajeType()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadMenuIcons()
         loadMenu()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMenuIcons() {
@@ -46,35 +49,25 @@ class MensajeTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return mensajeDataSource.numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.names.count
+        return mensajeDataSource.numberOfMensajesInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: mensajeCellID, for: indexPath) as! MensajeCell
         
-        let cell = Bundle.main.loadNibNamed("MensajesTableViewCell", owner: self, options: nil)?.first as! MensajesTableViewCell
-        
-        let image = UIImage(named: dataSource.profileImages[indexPath.row])
-        cell.imageView?.image = image
-        cell.imageView?.layer.cornerRadius = (image?.size.width)! / 2
-        cell.imageView?.layer.masksToBounds = true
-        cell.imageView?.clipsToBounds = true
-        
-        cell.nameLabel.text = dataSource.names[indexPath.row]
-        cell.messageLabel.text = dataSource.messages[indexPath.row]
-        cell.dateLabel.text = dataSource.dates[indexPath.row]
+        if let mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath) {
+            cell.mensaje = mensaje
+        }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
-    }
-    
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
     }
 }
 

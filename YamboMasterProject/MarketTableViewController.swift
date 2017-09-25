@@ -20,10 +20,11 @@ class MarketTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         loadNavigationBar()
         loadMenuIcons()
         loadMenu()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadNavigationBar() {

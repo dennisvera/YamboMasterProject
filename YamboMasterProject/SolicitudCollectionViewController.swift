@@ -28,6 +28,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
         loadMenuIcons()
         loadMenu()
         refreshController()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMenuIcons() {
@@ -79,7 +80,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: solicitudResusableID, for: indexPath) as! SolicitudReusableView
-       
+        
         return headerView
     }
     
@@ -109,7 +110,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
         } else if sender.selectedSegmentIndex == 1 {
             selectedSegment = 1
         }
-
+        
         collectionView?.reloadData()
     }
 }

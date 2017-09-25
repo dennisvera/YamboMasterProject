@@ -25,6 +25,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
         loadMenuIcons()
         loadMenu()
         refreshController()
+        self.navigationItem.loadRightBarButtonItem()
         //        addButton()
     }
     

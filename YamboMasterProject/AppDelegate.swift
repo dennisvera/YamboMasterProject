@@ -14,9 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         let appearance = UINavigationBar.appearance()
         appearance.titleTextAttributes = [
             NSFontAttributeName: UIFont(name: "TrendSansOne", size: 17)!,
@@ -25,7 +23,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-
-  
 }
 

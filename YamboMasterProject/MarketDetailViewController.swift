@@ -19,6 +19,7 @@ class MarketDetailViewController: UIViewController {
         
         loadMarketData()
         loadNavigationBar()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadNavigationBar() {

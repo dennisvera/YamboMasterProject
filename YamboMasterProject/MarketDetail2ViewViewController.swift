@@ -16,6 +16,7 @@ class MarketDetail2ViewViewController: UIViewController {
         super.viewDidLoad()
 
         loadMarketData()
+        self.navigationItem.loadRightBarButtonItem()
     }
     
     func loadMarketData() {
