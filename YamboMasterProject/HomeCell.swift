@@ -14,7 +14,6 @@ class HomeCell: UICollectionViewCell {
     @IBOutlet var menuNameLabel: UILabel!
     
     override func prepareForReuse() {
-        menuBackgroundView = nil
         menuImageView.image = nil
         menuNameLabel.text = ""
     }

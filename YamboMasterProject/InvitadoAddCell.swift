@@ -16,7 +16,6 @@ class InvitadoAddCell: UICollectionViewCell {
     let collection = InvitadoCollectionViewController()
     
     override func prepareForReuse() {
-        buttonBackgroundCell = nil
         newInvitadoLabel.text = ""
     }
     

@@ -53,9 +53,17 @@ class MensajeTableViewController: UITableViewController {
     
     func loadSearchController() {
         searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Buscar"
         definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.searchBarStyle = UISearchBarStyle.prominent
         tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.isTranslucent = false
+        searchController.searchBar.backgroundImage = UIImage()
+        
+        definesPresentationContext = true
     }
     
     // MARK: - Table view data source
