@@ -12,16 +12,20 @@ import Persei
 private let mensajeCellID = "MensajeCellID"
 
 class MensajeTableViewController: UITableViewController {
+    
     fileprivate var mensajeDataSource = MensajeDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuDataSource()
+    var filteredMensajes = [Mensaje]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadMenuIcons()
         loadMenu()
+        loadSearchController()
         self.navigationItem.loadRightBarButtonItem()
     }
     
@@ -47,20 +51,37 @@ class MensajeTableViewController: UITableViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
+    func loadSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return mensajeDataSource.numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredMensajes.count
+        }
+        
         return mensajeDataSource.numberOfMensajesInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: mensajeCellID, for: indexPath) as! MensajeCell
         
-        if let mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath) {
+        let mensaje: Mensaje
+        if isFiltering() {
+            mensaje = filteredMensajes[indexPath.row]
             cell.mensaje = mensaje
+        } else {
+            if let mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath) {
+                cell.mensaje = mensaje
+            }
         }
         
         return cell
@@ -68,6 +89,24 @@ class MensajeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
+    }
+    
+    // MARK: - Private instance methods
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredMensajes = mensajeDataSource.mensaje.filter({( mensaje : Mensaje) -> Bool in
+            return mensaje.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
     }
 }
 
@@ -106,6 +145,16 @@ extension MensajeTableViewController: MenuViewDelegate {
         tableView.reloadData()
     }
 }
+
+extension MensajeTableViewController: UISearchResultsUpdating {
+    
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+
 
 
 

@@ -10,7 +10,7 @@ import UIKit
 
 class MensajeDataSource {
     
-    fileprivate var mensaje: [Mensaje] = []
+    var mensaje: [Mensaje] = []
     fileprivate var sections: [String] = []
     
     var count: Int {
