@@ -10,6 +10,7 @@ import UIKit
 import Persei
 
 private let mensajeCellID = "MensajeCellID"
+private let mensajeDetailSegueID = "MensajeDetailSegueID"
 
 class MensajeTableViewController: UITableViewController {
     
@@ -26,7 +27,17 @@ class MensajeTableViewController: UITableViewController {
         loadMenuIcons()
         loadMenu()
         loadSearchController()
+        loadNavigationBar()
         self.navigationItem.loadRightBarButtonItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        searchController.isActive = false
+    }
+    
+    func loadNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = .yamboBlue
     }
     
     func loadMenuIcons() {
@@ -63,7 +74,7 @@ class MensajeTableViewController: UITableViewController {
         searchController.searchBar.isTranslucent = false
         searchController.searchBar.backgroundImage = UIImage()
         
-        definesPresentationContext = true
+        self.definesPresentationContext = true
     }
     
     // MARK: - Table view data source
@@ -99,7 +110,24 @@ class MensajeTableViewController: UITableViewController {
         return 110
     }
     
-    // MARK: - Private instance methods
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == mensajeDetailSegueID {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let mensaje: Mensaje
+                if isFiltering() {
+                    mensaje = filteredMensajes[indexPath.row]
+                } else {
+                    mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath)!
+                }
+                
+                let controller = segue.destination as! MensajeDetailViewController
+                controller.mensaje = mensaje
+            }
+        }
+    }
+    
+    // MARK: - SearchController instance methods
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }

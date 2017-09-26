@@ -24,7 +24,7 @@ class MarketDetailViewController: UIViewController {
     
     func loadNavigationBar() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.tintColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+        navigationController?.navigationBar.tintColor = .yamboBlue
     }
     
     func loadMarketData() {

@@ -104,6 +104,7 @@
 		E1B6BF371F79A43900E7912B /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BF361F79A43900E7912B /* Mensaje.swift */; };
 		E1B6BF391F79A56000E7912B /* MensajeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BF381F79A56000E7912B /* MensajeDataSource.swift */; };
 		E1B6BF3B1F79B15500E7912B /* MensajeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BF3A1F79B15500E7912B /* MensajeCell.swift */; };
+		E1B6BF3D1F7AC48800E7912B /* MensajeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BF3C1F7AC48800E7912B /* MensajeDetailViewController.swift */; };
 		E1C2DEE41F701A8B0085374E /* MarketDetail2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2DEE31F701A8B0085374E /* MarketDetail2View.swift */; };
 		E1C2DEE81F701B5D0085374E /* MarketDetail2ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */; };
 		E1DC1BAA1F753BB5007BACB1 /* Pago.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1DC1BA91F753BB5007BACB1 /* Pago.plist */; };
@@ -243,6 +244,7 @@
 		E1B6BF361F79A43900E7912B /* Mensaje.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		E1B6BF381F79A56000E7912B /* MensajeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensajeDataSource.swift; sourceTree = "<group>"; };
 		E1B6BF3A1F79B15500E7912B /* MensajeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensajeCell.swift; sourceTree = "<group>"; };
+		E1B6BF3C1F7AC48800E7912B /* MensajeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MensajeDetailViewController.swift; sourceTree = "<group>"; };
 		E1C2DEE31F701A8B0085374E /* MarketDetail2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetail2View.swift; sourceTree = "<group>"; };
 		E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetail2ViewViewController.swift; sourceTree = "<group>"; };
 		E1DC1BA91F753BB5007BACB1 /* Pago.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pago.plist; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			children = (
 				E111E2BE1F59A56C005B4EBD /* HomeCollectionViewController.swift */,
 				E1224B031F5074E2002A183D /* MensajeTableViewController.swift */,
+				E1B6BF3C1F7AC48800E7912B /* MensajeDetailViewController.swift */,
 				E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */,
 				E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */,
 				E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */,
@@ -949,6 +952,7 @@
 				E1224AA61F4F117D002A183D /* YamboMasterProject.xcdatamodeld in Sources */,
 				E1879F841F60538600AF63AA /* SolicitudCollectionViewController.swift in Sources */,
 				E1224B041F5074E2002A183D /* MensajeTableViewController.swift in Sources */,
+				E1B6BF3D1F7AC48800E7912B /* MensajeDetailViewController.swift in Sources */,
 				E18E13301F7804FE00A49B10 /* MenuDataSource.swift in Sources */,
 				E1224AFA1F4F3576002A183D /* ReservacionesTableViewController.swift in Sources */,
 				E10091971F6AED1800B46E2A /* MarketDetailViewController.swift in Sources */,
