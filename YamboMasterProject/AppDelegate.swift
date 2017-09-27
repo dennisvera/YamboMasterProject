@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let appearance = UINavigationBar.appearance()
         appearance.titleTextAttributes = [
-            NSFontAttributeName: UIFont(name: "TrendSansOne", size: 17)!,
-            NSForegroundColorAttributeName: UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+            NSAttributedStringKey.font: UIFont(name: "TrendSansOne", size: 17)!,
+            NSAttributedStringKey.foregroundColor: UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
         ]
         
         UINavigationBar.appearance().shadowImage = UIImage()

@@ -59,7 +59,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
         collectionView?.refreshControl = refreshControl
     }
     
-    func refreshControlDidFire() {
+    @objc func refreshControlDidFire() {
         collectionView?.refreshControl?.endRefreshing()
     }
     

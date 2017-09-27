@@ -62,7 +62,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
         collectionView?.refreshControl = refreshControl
     }
     
-    func refreshControlDidFire() {
+    @objc func refreshControlDidFire() {
         //        addButtonTapped(nil)
         collectionView?.refreshControl?.endRefreshing()
     }

@@ -90,7 +90,7 @@ open class MenuView: StickyHeaderView {
 
 public extension MenuView {
     
-    func frameOfItem(at index: Int) -> CGRect {
+    @objc func frameOfItem(at index: Int) -> CGRect {
         let indexPath = IndexPath(item: index, section: 0)
         let layoutAttributes = collectionLayout.layoutAttributesForItem(at: indexPath)!
         
