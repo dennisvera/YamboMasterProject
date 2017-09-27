@@ -8,7 +8,7 @@
 		<key>image</key>
 		<string>mensaje1.jpg</string>
 		<key>message</key>
-		<string>Puede estar listo para hoy?</string>
+		<string>mensaje1: Puede estar listo para hoy?</string>
 		<key>date</key>
 		<string>hace 2hr</string>
 		<key>index</key>
@@ -22,7 +22,7 @@
 		<key>image</key>
 		<string>mensaje2.jpg</string>
 		<key>message</key>
-		<string>Puede estar listo para hoy?</string>
+		<string>mensaje2: Puede estar listo para hoy?</string>
 		<key>date</key>
 		<string>ayer</string>
 		<key>index</key>

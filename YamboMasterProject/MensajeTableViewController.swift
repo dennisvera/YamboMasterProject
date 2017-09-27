@@ -96,6 +96,7 @@ class MensajeTableViewController: UITableViewController {
         let mensaje: Mensaje
         if isFiltering() {
             mensaje = filteredMensajes[indexPath.row]
+            print(mensaje)
             cell.mensaje = mensaje
         } else {
             if let mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath) {
@@ -137,9 +138,13 @@ class MensajeTableViewController: UITableViewController {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+    func filterContentForSearchText(_ searchText: String) {
         filteredMensajes = mensajeDataSource.mensaje.filter({( mensaje : Mensaje) -> Bool in
-            return mensaje.name.lowercased().contains(searchText.lowercased())
+            let name = mensaje.name.lowercased()
+            let date = mensaje.date.lowercased()
+            let message = mensaje.message.lowercased()
+            let doesSearchMatch = name + date + message
+            return doesSearchMatch.contains(searchText.lowercased())
         })
         
         tableView.reloadData()

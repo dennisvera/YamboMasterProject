@@ -62,7 +62,7 @@ class HomeCollectionViewController: UICollectionViewController {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: homeHeaderViewID, for: indexPath) as! HomeHeaderReusableView
         
         if let homeHeader = homeDataSource.homeForItemAtIndexPath(indexPath) {
-             headerView.homeHeader = homeHeader
+            headerView.homeHeader = homeHeader
         }
         
         return headerView
