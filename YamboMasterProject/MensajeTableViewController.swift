@@ -95,23 +95,6 @@ class MensajeTableViewController: UITableViewController {
         return 110
     }
     
-    // MARK: - Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == mensajeDetailSegueID {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let mensaje: Mensaje
-                if isFiltering() {
-                    mensaje = filteredMensajes[indexPath.row]
-                } else {
-                    mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath)!
-                }
-                
-                let controller = segue.destination as! MensajeDetailViewController
-                controller.mensaje = mensaje
-            }
-        }
-    }
-    
     // MARK: - SearchController + Instance Methods
     func loadSearchController() {
         searchController.searchResultsUpdater = self
@@ -147,6 +130,23 @@ class MensajeTableViewController: UITableViewController {
         })
         
         tableView.reloadData()
+    }
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == mensajeDetailSegueID {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let mensaje: Mensaje
+                if isFiltering() {
+                    mensaje = filteredMensajes[indexPath.row]
+                } else {
+                    mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath)!
+                }
+                
+                let controller = segue.destination as! MensajeDetailViewController
+                controller.mensaje = mensaje
+            }
+        }
     }
 }
 

@@ -134,14 +134,20 @@ class ComunicadoTableViewController: UITableViewController {
     
     // MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == comunicadoDetailSegueID,
-            let detailViewController = segue.destination as? ComunicadoDetailViewController,
-            let indexPath = self.tableView.indexPathForSelectedRow {
-            let comunicado = comunicadoDataSource.comunicadoForItemAtIndexPath(indexPath)
-            detailViewController.comunicado = comunicado
+        if segue.identifier == comunicadoDetailSegueID {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let comunicado: Comunicado
+                if isFiltering() {
+                    comunicado = filteredComunicados[indexPath.row]
+                } else {
+                    comunicado = comunicadoDataSource.comunicadoForItemAtIndexPath(indexPath)!
+                }
+                
+                let controller = segue.destination as! ComunicadoDetailViewController
+                controller.comunicado = comunicado
+            }
         }
     }
-    
 }
 
 // MARK: - MenuViewDelegate
