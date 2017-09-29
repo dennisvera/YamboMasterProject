@@ -88,8 +88,8 @@ class MarketTableViewController: UITableViewController {
         if segue.identifier == marketDetail1Segue,
             let detailViewController = segue.destination as? MarketDetailViewController,
             let indexPath = self.tableView.indexPathForSelectedRow {
-            let marketItem = marketDataSource.marketplaceForItemAtIndexPath(indexPath)
-            detailViewController.market = marketItem
+            let market = marketDataSource.marketplaceForItemAtIndexPath(indexPath)
+            detailViewController.market = market
         }
     }
 }

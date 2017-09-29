@@ -13,19 +13,25 @@ class Comunicado {
     var name: String
     var subject: String
     var image: String
+    var message: String
+    var date: String
+    var time: String
     var index: Int
     var section: String
     
-    init(name: String, subject: String, image: String,  index: Int, section: String) {
+    init(name: String, subject: String, message: String, date: String, time: String, image: String,  index: Int, section: String) {
         self.name = name
         self.subject = subject
         self.image = image
+        self.message = message
+        self.date = date
+        self.time = time
         self.index = index
         self.section = section
     }
     
     convenience init(copying comunicado: Comunicado) {
-        self.init(name: comunicado.name, subject: comunicado.subject, image: comunicado.image, index: comunicado.index, section: comunicado.section)
+        self.init(name: comunicado.name, subject: comunicado.subject, message: comunicado.message, date: comunicado.date, time: comunicado.time, image: comunicado.image, index: comunicado.index, section: comunicado.section)
     }
     
 }

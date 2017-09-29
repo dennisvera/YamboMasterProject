@@ -10,7 +10,7 @@ import UIKit
 
 class ComunicadoDataSource {
     
-    fileprivate var comunicado: [Comunicado] = []
+    var comunicado: [Comunicado] = []
     fileprivate var sections: [String] = []
     
     var count: Int {
@@ -79,10 +79,13 @@ class ComunicadoDataSource {
                     if let dict = item as? NSDictionary {
                         let name = dict["name"] as! String
                         let subject = dict["subject"] as! String
+                        let message = dict["message"] as! String
+                        let date = dict["date"] as! String
+                        let time = dict["time"] as! String
                         let image = dict["image"] as! String
                         let index = dict["index"] as! Int
                         let section = dict["section"] as! String
-                        let comunicado = Comunicado(name: name, subject: subject, image: image, index: index, section: section)
+                        let comunicado = Comunicado(name: name, subject: subject, message: message, date: date, time: time, image: image, index: index, section: section)
                         if !sections.contains(section) {
                             sections.append(section)
                         }

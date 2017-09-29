@@ -92,6 +92,7 @@
 		E1A2BC6C1F7D601D00152C57 /* Comunicado.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2BC6B1F7D601D00152C57 /* Comunicado.swift */; };
 		E1A2BC6F1F7D646500152C57 /* ComunicadoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2BC6E1F7D646500152C57 /* ComunicadoDataSource.swift */; };
 		E1A2BC701F7DE59300152C57 /* Comunicado.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A2BC6D1F7D641B00152C57 /* Comunicado.plist */; };
+		E1A2BC721F7EA42400152C57 /* ComunicadoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2BC711F7EA42400152C57 /* ComunicadoDetailViewController.swift */; };
 		E1A5A9371F7209F6003A9E0C /* SolicitudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5A9361F7209F6003A9E0C /* SolicitudCell.swift */; };
 		E1A7C6B31F54A39100E4FC32 /* mensaje4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */; };
 		E1A7C6B51F54A42E00E4FC32 /* mensaje5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */; };
@@ -233,6 +234,7 @@
 		E1A2BC6B1F7D601D00152C57 /* Comunicado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comunicado.swift; sourceTree = "<group>"; };
 		E1A2BC6D1F7D641B00152C57 /* Comunicado.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Comunicado.plist; sourceTree = "<group>"; };
 		E1A2BC6E1F7D646500152C57 /* ComunicadoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicadoDataSource.swift; sourceTree = "<group>"; };
+		E1A2BC711F7EA42400152C57 /* ComunicadoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicadoDetailViewController.swift; sourceTree = "<group>"; };
 		E1A5A9361F7209F6003A9E0C /* SolicitudCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolicitudCell.swift; sourceTree = "<group>"; };
 		E1A7C6B11F54A39100E4FC32 /* mensaje4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje4.jpg; sourceTree = "<group>"; };
 		E1A7C6B41F54A42E00E4FC32 /* mensaje5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mensaje5.jpg; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				E1224B031F5074E2002A183D /* MensajeTableViewController.swift */,
 				E1B6BF3C1F7AC48800E7912B /* MensajeDetailViewController.swift */,
 				E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */,
+				E1A2BC711F7EA42400152C57 /* ComunicadoDetailViewController.swift */,
 				E1224AF91F4F3576002A183D /* ReservacionesTableViewController.swift */,
 				E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */,
 				E10091961F6AED1800B46E2A /* MarketDetailViewController.swift */,
@@ -965,6 +968,7 @@
 				E1224A9E1F4F117C002A183D /* AppDelegate.swift in Sources */,
 				E1A7C6BB1F54AA4300E4FC32 /* ComunicadoTableViewController.swift in Sources */,
 				E100916D1F68A46900B46E2A /* InvitadosViewFlowLayout.swift in Sources */,
+				E1A2BC721F7EA42400152C57 /* ComunicadoDetailViewController.swift in Sources */,
 				E10091A91F6C1C6A00B46E2A /* SolicitudDataSource.swift in Sources */,
 				E1224B011F4F4636002A183D /* ReservacionesTableViewCell.swift in Sources */,
 				E1139DC41F73344E00E2AAE5 /* SolicitudReusableView.swift in Sources */,

@@ -9,6 +9,12 @@
 		<string>Luis Alberto Ortega — hace dos dias</string>
 		<key>subject</key>
 		<string>Reparaciones en el piso 17 de la torre D</string>
+		<key>date</key>
+		<string>29/08/17</string>
+		<key>time</key>
+		<string>10:01:14</string>
+		<key>message</key>
+		<string>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
 		<key>index</key>
 		<integer>0</integer>
 		<key>section</key>
@@ -18,9 +24,15 @@
 		<key>image</key>
 		<string>comunicado2.jpg</string>
 		<key>name</key>
-		<string>Luis Alberto Ortega — hace dos dias</string>
+		<string>Genaro Perez — hace dos dias</string>
 		<key>subject</key>
 		<string>Curso gratuito para todo los niños</string>
+		<key>date</key>
+		<string>22/10/17</string>
+		<key>time</key>
+		<string>08:21:00</string>
+		<key>message</key>
+		<string>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
 		<key>index</key>
 		<integer>1</integer>
 		<key>section</key>
@@ -30,9 +42,15 @@
 		<key>image</key>
 		<string>comunicado3.jpg</string>
 		<key>name</key>
-		<string>Luis Alberto Ortega — hace dos dias</string>
+		<string>Stephanie Marie Garcia — hace dos dias</string>
 		<key>subject</key>
 		<string>Se cerrarán las canchas de tenis por dos dias</string>
+		<key>date</key>
+		<string>29/08/17</string>
+		<key>time</key>
+		<string>12:11:23</string>
+		<key>message</key>
+		<string>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
 		<key>index</key>
 		<integer>2</integer>
 		<key>section</key>
@@ -42,9 +60,15 @@
 		<key>image</key>
 		<string>comunicado4.jpg</string>
 		<key>name</key>
-		<string>Luis Alberto Ortega — hace dos dias</string>
+		<string>Enrique Triverio — hace dos dias</string>
 		<key>subject</key>
 		<string>Inauguracion de la nueva torre en el Salón De Fiestas</string>
+		<key>date</key>
+		<string>10/02/17</string>
+		<key>time</key>
+		<string>04:14:05</string>
+		<key>message</key>
+		<string>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
 		<key>index</key>
 		<integer>3</integer>
 		<key>section</key>
@@ -54,9 +78,15 @@
 		<key>image</key>
 		<string>comunicado5.png</string>
 		<key>name</key>
-		<string>Luis Alberto Ortega — hace dos dias</string>
+		<string>Isabel Moros— hace dos dias</string>
 		<key>subject</key>
 		<string>Clases de spinning por impartirsen el residencial</string>
+		<key>date</key>
+		<string>29/03/17</string>
+		<key>time</key>
+		<string>05:33:12</string>
+		<key>message</key>
+		<string>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
 		<key>index</key>
 		<integer>4</integer>
 		<key>section</key>
@@ -69,6 +99,12 @@
 		<string>Luis Alberto Ortega — hace dos dias</string>
 		<key>subject</key>
 		<string>El cuarto de video se abre a las 2pm Lunes - Viernes</string>
+		<key>date</key>
+		<string>02/12/17</string>
+		<key>time</key>
+		<string>12:01:44</string>
+		<key>message</key>
+		<string>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
 		<key>index</key>
 		<integer>5</integer>
 		<key>section</key>

@@ -14,11 +14,11 @@ private let mensajeDetailSegueID = "MensajeDetailSegueID"
 
 class MensajeTableViewController: UITableViewController {
     
-    fileprivate var mensajeDataSource = MensajeDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuModel = MenuDataSource()
     var filteredMensajes = [Mensaje]()
+    fileprivate var mensajeDataSource = MensajeDataSource()
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -62,21 +62,6 @@ class MensajeTableViewController: UITableViewController {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
-    func loadSearchController() {
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Buscar"
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.searchBarStyle = UISearchBarStyle.prominent
-        tableView.tableHeaderView = searchController.searchBar
-        
-        searchController.searchBar.isTranslucent = false
-        searchController.searchBar.backgroundImage = UIImage()
-        
-        self.definesPresentationContext = true
-    }
-    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return mensajeDataSource.numberOfSections
@@ -85,9 +70,9 @@ class MensajeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
             return filteredMensajes.count
+        } else {
+            return mensajeDataSource.numberOfMensajesInSection(section)
         }
-        
-        return mensajeDataSource.numberOfMensajesInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,7 +81,6 @@ class MensajeTableViewController: UITableViewController {
         let mensaje: Mensaje
         if isFiltering() {
             mensaje = filteredMensajes[indexPath.row]
-            print(mensaje)
             cell.mensaje = mensaje
         } else {
             if let mensaje = mensajeDataSource.mensajeForItemAtIndexPath(indexPath) {
@@ -128,7 +112,22 @@ class MensajeTableViewController: UITableViewController {
         }
     }
     
-    // MARK: - SearchController instance methods
+    // MARK: - SearchController + Instance Methods
+    func loadSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Buscar"
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.searchBarStyle = UISearchBarStyle.prominent
+        tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.isTranslucent = false
+        searchController.searchBar.backgroundImage = UIImage()
+        
+        self.definesPresentationContext = true
+    }
+    
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }

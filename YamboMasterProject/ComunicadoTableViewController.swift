@@ -10,20 +10,35 @@ import UIKit
 import Persei
 
 private let comunicadoCellID = "ComunicadoCellID"
+private let comunicadoDetailSegueID = "ComunicadoDetailSegueID"
 
 class ComunicadoTableViewController: UITableViewController {
     
-    fileprivate var comunicadoDataSource = ComunicadoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuDataSource = MenuDataSource()
+    var filteredComunicados = [Comunicado]()
+    fileprivate var comunicadoDataSource = ComunicadoDataSource()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadMenuIcons()
         loadMenu()
+        loadSearchController()
+        loadNavigationBar()
         self.navigationItem.loadRightBarButtonItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        searchController.isActive = false
+    }
+    
+    func loadNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = .yamboBlue
     }
     
     func loadMenuIcons() {
@@ -54,14 +69,24 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comunicadoDataSource.numberOfComunicadosInSection(section)
+        if isFiltering() {
+            return filteredComunicados.count
+        } else {
+            return comunicadoDataSource.numberOfComunicadosInSection(section)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: comunicadoCellID, for: indexPath) as! ComunicadoCell
         
-        if let comunicado = comunicadoDataSource.comunicadoForItemAtIndexPath(indexPath) {
+        let comunicado: Comunicado
+        if isFiltering() {
+            comunicado = filteredComunicados[indexPath.row]
             cell.comunicado = comunicado
+        } else {
+            if let comunicado = comunicadoDataSource.comunicadoForItemAtIndexPath(indexPath) {
+                cell.comunicado = comunicado
+            }
         }
         
         return cell
@@ -70,6 +95,53 @@ class ComunicadoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    // MARK: - SearchController + Instance Methods
+    func loadSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Buscar"
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.searchBarStyle = UISearchBarStyle.prominent
+        tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.isTranslucent = false
+        searchController.searchBar.backgroundImage = UIImage()
+        
+        self.definesPresentationContext = true
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredComunicados = comunicadoDataSource.comunicado.filter({( comunicado : Comunicado) -> Bool in
+            let name = comunicado.name.lowercased()
+            let subject = comunicado.subject.lowercased()
+            let doesSearchMatch = name + subject
+            return doesSearchMatch.contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == comunicadoDetailSegueID,
+            let detailViewController = segue.destination as? ComunicadoDetailViewController,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let comunicado = comunicadoDataSource.comunicadoForItemAtIndexPath(indexPath)
+            detailViewController.comunicado = comunicado
+        }
+    }
+    
 }
 
 // MARK: - MenuViewDelegate
@@ -105,6 +177,14 @@ extension ComunicadoTableViewController: MenuViewDelegate {
         }
         
         tableView.reloadData()
+    }
+}
+
+extension ComunicadoTableViewController: UISearchResultsUpdating {
+    
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }
 

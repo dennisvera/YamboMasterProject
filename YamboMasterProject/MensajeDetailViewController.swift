@@ -11,6 +11,7 @@ import UIKit
 class MensajeDetailViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var profileImageView: UIImageView!
+    
     var mensaje: Mensaje?
     
     override func viewDidLoad() {
