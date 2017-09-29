@@ -9,10 +9,13 @@
 import UIKit
 import Persei
 
+private let comunicadoCellID = "ComunicadoCellID"
+
 class ComunicadoTableViewController: UITableViewController {
+    
+    fileprivate var comunicadoDataSource = ComunicadoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
-    var dataSource = ComunicadoType()
     var menuDataSource = MenuDataSource()
     
     override func viewDidLoad() {
@@ -47,26 +50,25 @@ class ComunicadoTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return comunicadoDataSource.numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.subjects.count
+        return comunicadoDataSource.numberOfComunicadosInSection(section)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: comunicadoCellID, for: indexPath) as! ComunicadoCell
+        
+        if let comunicado = comunicadoDataSource.comunicadoForItemAtIndexPath(indexPath) {
+            cell.comunicado = comunicado
+        }
+        
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("CommunicadosTableViewCell", owner: self, options: nil)?.first as! CommunicadosTableViewCell
-        
-        let image = UIImage(named: dataSource.images[indexPath.row])
-        cell.comunicadoImage.image = image
-        cell.subjectLabel.text = dataSource.subjects[indexPath.row]
-        cell.userNameLabel.text = dataSource.userName[indexPath.row]
-        
-        return cell
     }
 }
 

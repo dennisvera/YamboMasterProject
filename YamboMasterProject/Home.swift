@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class Home {
     
     var day: String
@@ -30,7 +29,7 @@ class Home {
     }
     
     convenience init(copying home: Home) {
-    self.init(day: home.day, date: home.date, verCalendario: home.verCalendario, menuImage: home.menuImage, menuTitle: home.menuTitle, index: home.index, section: home.section)
+        self.init(day: home.day, date: home.date, verCalendario: home.verCalendario, menuImage: home.menuImage, menuTitle: home.menuTitle, index: home.index, section: home.section)
     }
     
 }

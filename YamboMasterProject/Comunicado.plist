@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>image</key>
+		<string>comunicado1.jpg</string>
+		<key>name</key>
+		<string>Luis Alberto Ortega — hace dos dias</string>
+		<key>subject</key>
+		<string>Reparaciones en el piso 17 de la torre D</string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>comunicado2.jpg</string>
+		<key>name</key>
+		<string>Luis Alberto Ortega — hace dos dias</string>
+		<key>subject</key>
+		<string>Curso gratuito para todo los niños</string>
+		<key>index</key>
+		<integer>1</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>comunicado3.jpg</string>
+		<key>name</key>
+		<string>Luis Alberto Ortega — hace dos dias</string>
+		<key>subject</key>
+		<string>Se cerrarán las canchas de tenis por dos dias</string>
+		<key>index</key>
+		<integer>2</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>comunicado4.jpg</string>
+		<key>name</key>
+		<string>Luis Alberto Ortega — hace dos dias</string>
+		<key>subject</key>
+		<string>Inauguracion de la nueva torre en el Salón De Fiestas</string>
+		<key>index</key>
+		<integer>3</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>comunicado5.png</string>
+		<key>name</key>
+		<string>Luis Alberto Ortega — hace dos dias</string>
+		<key>subject</key>
+		<string>Clases de spinning por impartirsen el residencial</string>
+		<key>index</key>
+		<integer>4</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>comunicado6.jpg</string>
+		<key>name</key>
+		<string>Luis Alberto Ortega — hace dos dias</string>
+		<key>subject</key>
+		<string>El cuarto de video se abre a las 2pm Lunes - Viernes</string>
+		<key>index</key>
+		<integer>5</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+</array>
+</plist>

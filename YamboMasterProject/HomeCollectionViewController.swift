@@ -13,6 +13,7 @@ private let homeCellID = "HomeCellID"
 private let homeHeaderViewID = "HomeHeaderViewID"
 
 class HomeCollectionViewController: UICollectionViewController {
+    
     fileprivate var homeDataSource = HomeDataSource()
     fileprivate var menuDataSourceX = MenuDataSourceX()
     fileprivate var menu: MenuView!
