@@ -106,9 +106,9 @@ class SolicitudCollectionViewController: UICollectionViewController {
     @IBAction func solicitudSegmentedAction(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0 {
-            selectedSegment = 0
-        } else if sender.selectedSegmentIndex == 1 {
             selectedSegment = 1
+        } else if sender.selectedSegmentIndex == 1 {
+            selectedSegment = 0
         }
         
         collectionView?.reloadData()
