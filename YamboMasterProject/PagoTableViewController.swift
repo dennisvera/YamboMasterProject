@@ -21,7 +21,7 @@ class PagoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         loadMenuIcons()
         loadMenu()
         self.navigationItem.loadRightBarButtonItem()
@@ -52,7 +52,7 @@ class PagoTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return pagoDataSource.numberOfSections
-
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,50 +70,50 @@ class PagoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-                if indexPath.section == 0 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoHeaderCellID, for: indexPath) as! PagoHeaderCell
-        
-                    if let pagoHeader = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                        cell.pagoHeader = pagoHeader
-                    }
-                    return cell
-        
-                } else if indexPath.section == 1 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
-        
-                    if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                        cell.hacerPago = hacerPago
-                    }
-                    return cell
-        
-                } else if indexPath.section == 2 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
-        
-                    if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                        cell.pago = pago
-                    }
-                    return cell
-        
-                } else if indexPath.section == 3 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
-                    
-                    if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                        cell.hacerPago = hacerPago
-                    }
-                    return cell
-                    
-                } else if indexPath.section == 4 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
-                    
-                    if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
-                        cell.pago = pago
-                    }
-                    return cell
-                    
-                } else {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
-                    return cell
-                }
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoHeaderCellID, for: indexPath) as! PagoHeaderCell
+            
+            if let pagoHeader = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.pagoHeader = pagoHeader
+            }
+            return cell
+            
+        } else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
+            
+            if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.hacerPago = hacerPago
+            }
+            return cell
+            
+        } else if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
+            
+            if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.pago = pago
+            }
+            return cell
+            
+        } else if indexPath.section == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoPendienteCellID, for: indexPath) as! PagoPendienteCell
+            
+            if let hacerPago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.hacerPago = hacerPago
+            }
+            return cell
+            
+        } else if indexPath.section == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: pagoCellID, for: indexPath) as! PagoCell
+            
+            if let pago = pagoDataSource.pagoForItemAtIndexPath(indexPath) {
+                cell.pago = pago
+            }
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+            return cell
+        }
     }
 }
 
@@ -134,7 +134,7 @@ extension PagoTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacioneTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketID") as! MarketTableViewController

@@ -9,17 +9,10 @@
 import UIKit
 
 class PagoPendienteCell: UITableViewCell {
+    
     @IBOutlet var hacerPagoLabel: UILabel!
     @IBOutlet var subjectLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     override func prepareForReuse() {
         hacerPagoLabel.text = ""

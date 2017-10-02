@@ -9,19 +9,11 @@
 import UIKit
 
 class PagoCell: UITableViewCell {
+    
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var subjectLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
     
     override func prepareForReuse() {
         dateLabel.text = ""

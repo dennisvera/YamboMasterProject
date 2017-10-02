@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImageView {
+    
     func setRounded() {
         self.layoutSubviews()
         let radius = self.frame.height / 2
@@ -19,6 +20,7 @@ extension UIImageView {
 }
 
 extension UINavigationItem {
+    
     func loadRightBarButtonItem() {
         let button = UIButton.init(type: .custom)
         button.setImage(UIImage(named: "navBarProfileImage"), for: UIControlState.normal)
@@ -31,6 +33,7 @@ extension UINavigationItem {
 }
 
 extension UIColor {
+    
     static let yamboBabyGreen = UIColor(red: 244/255, green: 247/255, blue: 249/255, alpha: 1)
     static let yamboBlue = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
 }

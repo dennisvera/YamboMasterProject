@@ -112,7 +112,7 @@ extension MarketTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacioneTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             print("current controller, no segue needed")

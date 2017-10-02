@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeCell: UICollectionViewCell {
+    
     @IBOutlet var menuBackgroundView: UIView!
     @IBOutlet var menuImageView: UIImageView!
     @IBOutlet var menuNameLabel: UILabel!

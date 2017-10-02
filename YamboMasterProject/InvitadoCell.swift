@@ -1,8 +1,8 @@
 //
-//  InvitadoCollectionViewCell.swift
+//  InvitadoCell.swift
 //  YamboMasterProject
 //
-//  Created by Dennis Vera on 9/8/17.
+//  Created by Dennis Vera on 10/1/17.
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
@@ -16,10 +16,6 @@ class InvitadoCell: UICollectionViewCell {
     override func prepareForReuse() {
         profileImageView.image = nil
         nameLabel.text = ""
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
     }
     
     var invitado: Invitado? {

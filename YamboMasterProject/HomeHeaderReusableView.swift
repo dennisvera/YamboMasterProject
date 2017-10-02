@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeHeaderReusableView: UICollectionReusableView {
+    
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var verCalendarLabel: UILabel!

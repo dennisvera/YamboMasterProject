@@ -9,6 +9,7 @@
 import UIKit
 
 class MarketDataSource {
+    
     fileprivate var market: [Market] = []
     
     var count: Int {

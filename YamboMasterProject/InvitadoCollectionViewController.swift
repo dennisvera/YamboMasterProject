@@ -9,8 +9,8 @@
 import UIKit
 import Persei
 
-private let invitadoCell = "InvitadoCell"
-private let invitadoAddCell = "InvitadoAddCell"
+private let invitadoCellID = "InvitadoCellID"
+private let invitadoAddCellID = "InvitadoAddCellID"
 
 class InvitadoCollectionViewController: UICollectionViewController {
     fileprivate var invitadoDataSource = InvitadoDataSource()
@@ -21,17 +21,11 @@ class InvitadoCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadNibs()
         loadMenuIcons()
         loadMenu()
         refreshController()
         self.navigationItem.loadRightBarButtonItem()
         //        addButton()
-    }
-    
-    func loadNibs() {
-        collectionView?.register(UINib(nibName: invitadoCell, bundle: nil), forCellWithReuseIdentifier: invitadoCell)
-        collectionView?.register(UINib(nibName: invitadoAddCell, bundle: nil), forCellWithReuseIdentifier: invitadoAddCell)
     }
     
     func loadMenuIcons() {
@@ -67,33 +61,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
         collectionView?.refreshControl?.endRefreshing()
     }
     
-    //    fileprivate func addButton() {
-    //        let button = UIButton(type: .custom) as UIButton
-    //        button.backgroundColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
-    //        button.setImage(#imageLiteral(resourceName: "plusIcon"), for: .normal)
-    //        button.frame = CGRect(x: 147, y: 340, width: 80, height: 80)
-    //        button.layer.cornerRadius = 5
-    //        button.addTarget(self, action: #selector(addButtonTappedAction), for: .touchUpInside)
-    //        self.view.addSubview(button)
-    //    }
-    
-    func addButtonTappedAction(sender: UIButton!) {
-        //        let indexPath = invitadoDataSource.indexPathForNewRandomPark()
-        //
-        //        let layout = collectionViewLayout as! InvitadosViewFlowLayout
-        //        layout.appearingIndexPath = indexPath
-        //
-        //        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
-        //
-        //            self.collectionView!.insertItems(at: [indexPath as IndexPath])
-        //        }, completion: { (finished: Bool) -> Void in
-        //            layout.appearingIndexPath = nil
-        //        })
-        
-        //        print("Button Clicked")
-    }
-    
-    @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
+    @IBAction func addButtonTapped(_ sender: Any) {
         let indexPath = invitadoDataSource.indexPathForNewRandomPark()
         
         let layout = collectionViewLayout as! InvitadosViewFlowLayout
@@ -116,16 +84,17 @@ class InvitadoCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return invitadoDataSource.count
+            return invitadoDataSource.numberOfInvitadosInSection(section)
         } else if section == 1 {
             return 1
         }
+        
         return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: invitadoCell, for: indexPath) as! InvitadoCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: invitadoCellID, for: indexPath) as! InvitadoCell
             
             if let invitado = invitadoDataSource.invitadoForItemAtIndexPath(indexPath) {
                 cell.invitado = invitado
@@ -133,9 +102,10 @@ class InvitadoCollectionViewController: UICollectionViewController {
             return cell
             
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: invitadoAddCell, for: indexPath) as! InvitadoAddCell
-            cell.frame = CGRect(x: 135, y: 280, width: 90, height: 120)
-            cell.newInvitadoLabel.text = "Nuevo Invitado"
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: invitadoAddCellID, for: indexPath) as! InvitadoAddCell
+//            cell.frame = CGRect(x: 20, y: 40, width: 80, height: 110)
+            cell.nuevoInvitadoLabel.text = "Nuevo Invitado"
+            
             return cell
         }
     }
@@ -158,7 +128,7 @@ extension InvitadoCollectionViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ComunicadoID") as! ComunicadoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 3 {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacionesTableViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReservacioneID") as! ReservacioneTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         } else if menu.selectedIndex == 4 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MarketID") as! MarketTableViewController

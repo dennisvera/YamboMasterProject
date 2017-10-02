@@ -9,6 +9,7 @@
 import UIKit
 
 class ComunicadoCell: UITableViewCell {
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var subjectLabel: UILabel!
     @IBOutlet var comunicadoImageView: UIImageView!

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>image</key>
+		<string>reservaciones1.jpg</string>
+		<key>title</key>
+		<string>BOLICHE</string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>reservaciones2.jpg</string>
+		<key>title</key>
+		<string>TENIS</string>
+		<key>index</key>
+		<integer>1</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>reservaciones3.jpg</string>
+		<key>title</key>
+		<string>ALBERCA</string>
+		<key>index</key>
+		<integer>2</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>reservaciones4.jpg</string>
+		<key>title</key>
+		<string>CINE</string>
+		<key>index</key>
+		<integer>3</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>reservaciones5.jpg</string>
+		<key>title</key>
+		<string>ASADORES</string>
+		<key>index</key>
+		<integer>4</integer>
+		<key>section</key>
+		<string>section1</string>
+	</dict>
+</array>
+</plist>

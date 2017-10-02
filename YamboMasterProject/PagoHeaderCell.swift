@@ -9,17 +9,9 @@
 import UIKit
 
 class PagoHeaderCell: UITableViewCell {
+    
     @IBOutlet var transaccionesLabel: UILabel!
     @IBOutlet var nuevoPagoLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
     
     override func prepareForReuse() {
         transaccionesLabel.text = ""

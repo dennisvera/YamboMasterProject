@@ -9,6 +9,7 @@
 import UIKit
 
 class SolicitudCell: UICollectionViewCell {
+    
     @IBOutlet var atendidaLabel: UILabel!
     @IBOutlet var solicitudLabel: UILabel!
     @IBOutlet var solicitudNoteLabel: UILabel!
