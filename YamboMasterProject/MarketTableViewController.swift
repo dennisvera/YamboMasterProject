@@ -13,6 +13,7 @@ private let marketCellID = "MarketCell"
 private let marketDetail1Segue = "MarketDetail1Segue"
 
 class MarketTableViewController: UITableViewController {
+    
     fileprivate var marketDataSource = MarketDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()

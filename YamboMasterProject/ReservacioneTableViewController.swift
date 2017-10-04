@@ -12,6 +12,7 @@ import Persei
 private let reservacioneCellID = "ReservacioneCellID"
 
 class ReservacioneTableViewController: UITableViewController {
+    
     fileprivate var reservacioneDataSource = ReservacioneDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
@@ -68,7 +69,7 @@ class ReservacioneTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 122
     }
 }
 

@@ -9,6 +9,7 @@
 import UIKit
 
 class ComunicadoDetailViewController: UIViewController {
+    
     @IBOutlet var subjectLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!

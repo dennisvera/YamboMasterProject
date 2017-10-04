@@ -36,4 +36,30 @@ extension UIColor {
     
     static let yamboBabyGreen = UIColor(red: 244/255, green: 247/255, blue: 249/255, alpha: 1)
     static let yamboBlue = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+    static let aqua = UIColor(red: 0/255, green: 128/255, blue: 255/255, alpha: 1)
 }
+
+extension UILabel {
+    
+    func setRoundEdge() {
+        self.layer.borderWidth = 2.0
+        self.layer.cornerRadius = self.frame.width / 2
+        self.layer.borderColor = UIColor.white.cgColor
+        self.textColor = .white
+        self.layer.masksToBounds = true
+        self.clipsToBounds = true
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -67,6 +67,7 @@
 		E15FB48E1F828FBF003AEE34 /* ReservacionesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FB48D1F828FBF003AEE34 /* ReservacionesCell.swift */; };
 		E15FB4911F8292C3003AEE34 /* Reservacione.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FB4901F8292C3003AEE34 /* Reservacione.swift */; };
 		E15FB4931F82955E003AEE34 /* ReservacioneDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FB4921F82955E003AEE34 /* ReservacioneDataSource.swift */; };
+		E15FB4941F82B1B7003AEE34 /* Reservacione.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15FB48F1F829283003AEE34 /* Reservacione.plist */; };
 		E1879F771F5F08C100AF63AA /* mensaje1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1879F761F5F08C100AF63AA /* mensaje1.jpg */; };
 		E1879F791F5F14E700AF63AA /* mensaje6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1879F781F5F14E700AF63AA /* mensaje6.jpg */; };
 		E1879F7B1F5F26A700AF63AA /* mensajeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E1879F7A1F5F26A700AF63AA /* mensajeIcon.png */; };
@@ -351,6 +352,14 @@
 			name = Layout;
 			sourceTree = "<group>";
 		};
+		E11CA2BE1F85415E006245C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1224B181F535FDF002A183D /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E1224A911F4F117C002A183D = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +390,7 @@
 				E1224AD31F4F271A002A183D /* Models */,
 				E1879F821F60409600AF63AA /* Views */,
 				E1224ACE1F4F2398002A183D /* Controllers */,
+				E11CA2BE1F85415E006245C1 /* Extensions */,
 				E100916B1F68A3F900B46E2A /* Layout */,
 				E1224AD11F4F2692002A183D /* UI */,
 				E100915F1F68328C00B46E2A /* Data */,
@@ -459,7 +469,6 @@
 				E10091A61F6C177B00B46E2A /* Solicitude.swift */,
 				E1139DBD1F73227500E2AAE5 /* SolicitudPendiente.swift */,
 				E1DC1BAB1F753C71007BACB1 /* Pago.swift */,
-				E1224B181F535FDF002A183D /* Extensions.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -757,6 +766,7 @@
 				E111E2D31F5EEDD4005B4EBD /* comunicado4.jpg in Resources */,
 				E1879F791F5F14E700AF63AA /* mensaje6.jpg in Resources */,
 				E1879FA91F62F0C000AF63AA /* invitado6.png in Resources */,
+				E15FB4941F82B1B7003AEE34 /* Reservacione.plist in Resources */,
 				E100918E1F6ACADE00B46E2A /* marketplace3.jpg in Resources */,
 				E1A7C6E01F55C5FB00E4FC32 /* MarketCell.xib in Resources */,
 				E111E2CF1F5EEA36005B4EBD /* comunicado5.png in Resources */,

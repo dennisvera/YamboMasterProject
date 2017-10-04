@@ -9,6 +9,7 @@
 import UIKit
 
 class MarketDetail2ViewViewController: UIViewController {
+    
     @IBOutlet var marketDetail2View: MarketDetail2View!
     var market: Market?
 

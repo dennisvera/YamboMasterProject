@@ -13,6 +13,7 @@ private let solicitudCellID = "SolicitudCellID"
 private let solicitudResusableID = "SolicitudResusableID"
 
 class SolicitudCollectionViewController: UICollectionViewController {
+    
     fileprivate var solicitudDataSource = SolicitudDataSource()
     fileprivate var solicitudPendienteDataSource = SolicitudPendienteDataSource()
     fileprivate var solicitudReusableView = SolicitudReusableView()

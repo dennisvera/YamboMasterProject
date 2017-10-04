@@ -11,6 +11,7 @@ import UIKit
 private let marketDetail2Segue = "MarketDetail2Segue"
 
 class MarketDetailViewController: UIViewController {
+    
     @IBOutlet var marketDetailView: MarketDetailView!
     var market: Market?
     

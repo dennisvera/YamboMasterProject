@@ -13,6 +13,7 @@ private let invitadoCellID = "InvitadoCellID"
 private let invitadoAddCellID = "InvitadoAddCellID"
 
 class InvitadoCollectionViewController: UICollectionViewController {
+    
     fileprivate var invitadoDataSource = InvitadoDataSource()
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
