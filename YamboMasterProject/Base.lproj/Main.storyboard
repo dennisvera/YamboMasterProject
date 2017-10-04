@@ -1170,34 +1170,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="uXi-nu-8bE">
-                            <size key="itemSize" width="134" height="100"/>
+                            <size key="itemSize" width="138" height="100"/>
                             <size key="headerReferenceSize" width="50" height="104"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="40" minY="20" maxX="40" maxY="20"/>
+                            <inset key="sectionInset" minX="30" minY="20" maxX="30" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCellID" id="LXh-0r-Tmu" userLabel="Home Cell" customClass="HomeCell" customModule="YamboMasterProject" customModuleProvider="target">
-                                <rect key="frame" x="40" y="124" width="134" height="100"/>
+                                <rect key="frame" x="30" y="124" width="138" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="134" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-pJ-Ih6">
-                                            <rect key="frame" x="0.0" y="0.0" width="134" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pC5-9U-XBL">
-                                                    <rect key="frame" x="0.0" y="19" width="126" height="71"/>
+                                                    <rect key="frame" x="0.0" y="19" width="130" height="71"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-iA-ErM">
-                                                            <rect key="frame" x="38" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="40" y="0.0" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="lRR-M5-Jk1"/>
                                                                 <constraint firstAttribute="width" constant="50" id="xzR-3k-aGp"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MenuNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbx-yL-rnz">
-                                                            <rect key="frame" x="11.5" y="54" width="103" height="17"/>
+                                                            <rect key="frame" x="13.5" y="54" width="103" height="17"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -1205,13 +1205,13 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXC-MN-WYQ">
-                                                    <rect key="frame" x="104" y="6" width="24" height="24"/>
+                                                    <rect key="frame" x="106" y="8" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="2Pt-QV-X68"/>
                                                         <constraint firstAttribute="height" constant="24" id="EcF-rz-MCR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1220,9 +1220,9 @@
                                                 <constraint firstItem="pC5-9U-XBL" firstAttribute="top" secondItem="eFy-pJ-Ih6" secondAttribute="top" constant="19" id="0oz-qa-x5M"/>
                                                 <constraint firstAttribute="bottom" secondItem="pC5-9U-XBL" secondAttribute="bottom" constant="10" id="6QL-AG-mBi"/>
                                                 <constraint firstAttribute="trailing" secondItem="pC5-9U-XBL" secondAttribute="trailing" constant="8" id="C2t-EF-VjG"/>
-                                                <constraint firstItem="vXC-MN-WYQ" firstAttribute="top" secondItem="eFy-pJ-Ih6" secondAttribute="top" constant="6" id="DuC-G6-jRX"/>
+                                                <constraint firstItem="vXC-MN-WYQ" firstAttribute="top" secondItem="eFy-pJ-Ih6" secondAttribute="top" constant="8" id="DuC-G6-jRX"/>
                                                 <constraint firstItem="pC5-9U-XBL" firstAttribute="leading" secondItem="eFy-pJ-Ih6" secondAttribute="leading" id="Loz-iA-RcL"/>
-                                                <constraint firstAttribute="trailing" secondItem="vXC-MN-WYQ" secondAttribute="trailing" constant="6" id="Yc8-nW-gAr"/>
+                                                <constraint firstAttribute="trailing" secondItem="vXC-MN-WYQ" secondAttribute="trailing" constant="8" id="Yc8-nW-gAr"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -1245,37 +1245,46 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-g5-fJK">
-                                    <rect key="frame" x="127" y="10.5" width="122" height="83"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-g5-fJK">
+                                    <rect key="frame" x="127" y="10.5" width="0.0" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZp-pR-uuC">
-                                            <rect key="frame" x="5" y="0.0" width="112.5" height="33.5"/>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZp-pR-uuC">
+                                            <rect key="frame" x="5" y="0.0" width="112.5" height="0.0"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
                                             <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u07-nt-v71">
-                                            <rect key="frame" x="0.0" y="35.5" width="122" height="33.5"/>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u07-nt-v71">
+                                            <rect key="frame" x="0.0" y="0.0" width="122" height="0.0"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
                                             <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VerCalendarLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfQ-Yf-i1s">
-                                            <rect key="frame" x="23" y="71" width="76" height="12"/>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VerCalendarLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfQ-Yf-i1s">
+                                            <rect key="frame" x="23" y="0.0" width="76" height="0.0"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                                             <color key="textColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RqD-IJ-Bip">
+                                    <rect key="frame" x="132.5" y="24" width="110" height="70"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="9aD-3g-tTB"/>
+                                        <constraint firstAttribute="width" constant="110" id="T5x-XO-zKl"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="rgn-g5-fJK" firstAttribute="centerX" secondItem="VvT-3V-QOU" secondAttribute="centerX" id="fXs-cI-IK7"/>
-                                <constraint firstItem="rgn-g5-fJK" firstAttribute="centerY" secondItem="VvT-3V-QOU" secondAttribute="centerY" id="gB4-rD-lxM"/>
+                                <constraint firstItem="RqD-IJ-Bip" firstAttribute="top" secondItem="VvT-3V-QOU" secondAttribute="top" constant="24" id="S3h-0O-fcT"/>
+                                <constraint firstItem="RqD-IJ-Bip" firstAttribute="centerX" secondItem="VvT-3V-QOU" secondAttribute="centerX" id="iMD-eu-7qE"/>
                             </constraints>
                             <connections>
                                 <outlet property="dateLabel" destination="u07-nt-v71" id="vcq-DQ-LrR"/>
                                 <outlet property="dayLabel" destination="QZp-pR-uuC" id="Oa7-rQ-t89"/>
+                                <outlet property="logoImageView" destination="RqD-IJ-Bip" id="xwR-jZ-v2k"/>
                                 <outlet property="verCalendarLabel" destination="EfQ-Yf-i1s" id="cWJ-hF-dzC"/>
                             </connections>
                         </collectionReusableView>

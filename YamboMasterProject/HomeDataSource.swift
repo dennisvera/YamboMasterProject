@@ -80,9 +80,10 @@ class HomeDataSource {
                         let verCalendario = dict["verCalendario"] as! String
                         let menuImage = dict["menuImage"] as! String
                         let menuTitle = dict["menuTitle"] as! String
+                        let logo = dict["logo"] as! String
                         let index = dict["index"] as! Int
                         let section = dict["section"] as! String
-                        let home = Home(day: day, date: date, verCalendario: verCalendario, menuImage: menuImage, menuTitle: menuTitle, index: index, section: section)
+                        let home = Home(day: day, date: date, verCalendario: verCalendario, menuImage: menuImage, menuTitle: menuTitle, logo: logo, index: index, section: section)
                         if !sections.contains(section) {
                             sections.append(section)
                         }

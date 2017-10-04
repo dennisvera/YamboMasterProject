@@ -13,6 +13,7 @@ class HomeHeaderReusableView: UICollectionReusableView {
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var verCalendarLabel: UILabel!
+    @IBOutlet var logoImageView: UIImageView!
     
     override func prepareForReuse() {
         dayLabel.text = ""
@@ -23,9 +24,7 @@ class HomeHeaderReusableView: UICollectionReusableView {
     var homeHeader: Home? {
         didSet {
             if let home = homeHeader {
-                dayLabel.text = home.day
-                dateLabel.text = home.date
-                verCalendarLabel.text = home.verCalendario
+                logoImageView.image = UIImage(named: home.logo)
             }
         }
     }

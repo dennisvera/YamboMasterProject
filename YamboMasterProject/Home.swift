@@ -15,21 +15,23 @@ class Home {
     var verCalendario: String
     var menuImage: String
     var menuTitle: String
+    var logo: String
     var index: Int
     var section: String
     
-    init(day: String, date: String, verCalendario: String, menuImage: String, menuTitle: String, index: Int, section: String) {
+    init(day: String, date: String, verCalendario: String, menuImage: String, menuTitle: String, logo: String, index: Int, section: String) {
         self.day = day
         self.date = date
         self.verCalendario = verCalendario
         self.menuImage = menuImage
         self.menuTitle = menuTitle
+        self.logo = logo
         self.index = index
         self.section = section
     }
     
     convenience init(copying home: Home) {
-        self.init(day: home.day, date: home.date, verCalendario: home.verCalendario, menuImage: home.menuImage, menuTitle: home.menuTitle, index: home.index, section: home.section)
+        self.init(day: home.day, date: home.date, verCalendario: home.verCalendario, menuImage: home.menuImage, menuTitle: home.menuTitle, logo: home.logo, index: home.index, section: home.section)
     }
     
 }

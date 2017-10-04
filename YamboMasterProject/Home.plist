@@ -13,6 +13,8 @@
 		<string>menu_icon_1</string>
 		<key>menuTitle</key>
 		<string>MENSAJES</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>index</key>
 		<integer>0</integer>
 		<key>section</key>
@@ -27,6 +29,8 @@
 		<string>VER EN CALENDARIO</string>
 		<key>menuImage</key>
 		<string>menu_icon_2</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>menuTitle</key>
 		<string>COMUNICADOS</string>
 		<key>index</key>
@@ -45,6 +49,8 @@
 		<string>menu_icon_3</string>
 		<key>menuTitle</key>
 		<string>RESERVACIONES</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>index</key>
 		<integer>2</integer>
 		<key>section</key>
@@ -59,6 +65,8 @@
 		<string>VER EN CALENDARIO</string>
 		<key>menuImage</key>
 		<string>menu_icon_4</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>menuTitle</key>
 		<string>MARKETPLACE</string>
 		<key>index</key>
@@ -77,6 +85,8 @@
 		<string>menu_icon_5</string>
 		<key>menuTitle</key>
 		<string>INVITADOS</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>index</key>
 		<integer>4</integer>
 		<key>section</key>
@@ -93,29 +103,14 @@
 		<string>menu_icon_6</string>
 		<key>menuTitle</key>
 		<string>SOLICITUDES</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>index</key>
 		<integer>5</integer>
 		<key>section</key>
 		<string>section1</string>
 	</dict>
 	<dict>
-		<key>New item</key>
-		<dict>
-			<key>day</key>
-			<string>Miercoles</string>
-			<key>date</key>
-			<string>15 de Agosto</string>
-			<key>verCalendario</key>
-			<string>VER EN CALENDARIO</string>
-			<key>menuImage</key>
-			<string>menu_icon_7</string>
-			<key>menuTitle</key>
-			<string>PAGOS</string>
-			<key>index</key>
-			<integer>6</integer>
-			<key>section</key>
-			<string>section1</string>
-		</dict>
 		<key>day</key>
 		<string>Miercoles</string>
 		<key>date</key>
@@ -126,29 +121,14 @@
 		<string>menu_icon_7</string>
 		<key>menuTitle</key>
 		<string>PAGOS</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>index</key>
 		<integer>6</integer>
 		<key>section</key>
 		<string>section1</string>
 	</dict>
 	<dict>
-		<key>New item</key>
-		<dict>
-			<key>day</key>
-			<string>Miercoles</string>
-			<key>date</key>
-			<string>15 de Agosto</string>
-			<key>verCalendario</key>
-			<string>VER EN CALENDARIO</string>
-			<key>menuImage</key>
-			<string>menu_icon_7</string>
-			<key>menuTitle</key>
-			<string>PAGOS</string>
-			<key>index</key>
-			<integer>6</integer>
-			<key>section</key>
-			<string>section1</string>
-		</dict>
 		<key>day</key>
 		<string>Miercoles</string>
 		<key>date</key>
@@ -159,6 +139,8 @@
 		<string>menu_icon_8</string>
 		<key>menuTitle</key>
 		<string>DIRECTORIO</string>
+		<key>logo</key>
+		<string>gipcaLogo</string>
 		<key>index</key>
 		<integer>7</integer>
 		<key>section</key>

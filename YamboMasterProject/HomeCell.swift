@@ -21,12 +21,6 @@ class HomeCell: UICollectionViewCell {
         menuImageView.image = nil
     }
     
-    enum menu: String {
-        case mensaje = "MENSAJE"
-        case comunicado = "COMUNICADO"
-        case reservacione = "RESERVACIONES"
-    }
-    
     var home: Home? {
         didSet {
             if let home = home {
@@ -34,21 +28,52 @@ class HomeCell: UICollectionViewCell {
                 menuBackgroundView.layer.cornerRadius = 10
                 menuImageView.image = UIImage(named: home.menuImage)
                 
-                if home.menuTitle.contains("\(menu.mensaje)") {
+                if home.menuTitle == "MENSAJES" {
                     numberLabel.setRoundEdge()
                     numberLabel.backgroundColor = .orange
                     numberLabel.text = "1"
-                } else if home.menuTitle.contains("\(menu.comunicado)") {
+                } else if home.menuTitle == "COMUNICADOS" {
                     numberLabel.setRoundEdge()
                     numberLabel.backgroundColor = .aqua
                     numberLabel.text = "2"
-                } else if home.menuTitle.contains("\(menu.reservacione)") {
+                } else if home.menuTitle == "RESERVACIONES" {
                     numberLabel.setRoundEdge()
-                    numberLabel.backgroundColor = .red
-                    numberLabel.text = "\u{1F50A}"
+                    numberLabel.backgroundColor = .silver
+                    numberLabel.text = "\u{2713}"
+                } else if home.menuTitle == "MARKETPLACE" {
+                    numberLabel.setRoundEdge()
+                    numberLabel.backgroundColor = .silver
+                    numberLabel.text = "\u{2713}"
+                } else if home.menuTitle == "INVITADOS" {
+                    numberLabel.setRoundEdge()
+                    numberLabel.backgroundColor = .silver
+                    numberLabel.text = "\u{2713}"
+                } else if home.menuTitle == "SOLICITUDES" {
+                    numberLabel.setRoundEdge()
+                    numberLabel.backgroundColor = .aqua
+                    numberLabel.text = "\u{2713}"
+                } else if home.menuTitle == "PAGOS" {
+                    numberLabel.setRoundEdge()
+                    numberLabel.backgroundColor = .silver
+                    numberLabel.text = "\u{2713}"
+                } else if home.menuTitle == "DIRECTORIO" {
+                    numberLabel.setRoundEdge()
+                    numberLabel.backgroundColor = .orange
+                    numberLabel.text = "1"
                 }
             }
         }
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
