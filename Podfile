@@ -7,6 +7,7 @@ target 'YamboMasterProject' do
 
   # Pods for YamboMasterProject
     pod 'Persei', '~> 3.0'
+    pod 'JTAppleCalendar', '~> 7.0'
 
   target 'YamboMasterProjectTests' do
     inherit! :search_paths

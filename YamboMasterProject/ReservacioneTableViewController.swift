@@ -71,6 +71,16 @@ class ReservacioneTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 122
     }
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ReservacioneDetailSegueID",
+            let detailViewController = segue.destination as? ReservacioneDetailViewController,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let reservacione = reservacioneDataSource.reservacioneForItemAtIndexPath(indexPath)
+            detailViewController.reservacione = reservacione
+        }
+    }
 }
 
 

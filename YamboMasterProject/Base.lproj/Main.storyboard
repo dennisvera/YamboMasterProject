@@ -62,6 +62,7 @@
                                 <connections>
                                     <outlet property="bckgdImageView" destination="G3k-Vs-MCG" id="5S4-lN-HId"/>
                                     <outlet property="titleLabel" destination="l2f-nk-vh7" id="jWM-Fl-eN2"/>
+                                    <segue destination="naU-g5-2JG" kind="show" identifier="ReservacioneDetailSegueID" id="8yu-fq-Dw1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,6 +83,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohd-dC-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-332" y="1434.3328335832084"/>
+        </scene>
+        <!--RESERVACIONE DETAIL-->
+        <scene sceneID="QiU-rR-kSK">
+            <objects>
+                <viewController id="naU-g5-2JG" userLabel="RESERVACIONE DETAIL" customClass="ReservacioneDetailViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0pl-NC-MS5"/>
+                        <viewControllerLayoutGuide type="bottom" id="qR7-dc-OoI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WjF-cm-agZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UjE-jP-dTK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="IgM-ji-e3x"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yeg-Qf-h1P" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="0.0" y="128" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="mPb-91-dOF"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CBn-Qp-1fd">
+                                    <size key="itemSize" width="127" height="79"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReservacioneCalendarCellID" id="0Vf-4Y-Ymi" customClass="ReservacioneCalendarCell" customModule="YamboMasterProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-o4-WuW">
+                                                    <rect key="frame" x="42" y="29" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ugx-o4-WuW" firstAttribute="centerY" secondItem="0Vf-4Y-Ymi" secondAttribute="centerY" id="mkQ-uq-j0y"/>
+                                            <constraint firstItem="ugx-o4-WuW" firstAttribute="centerX" secondItem="0Vf-4Y-Ymi" secondAttribute="centerX" id="xz8-ue-fjh"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="ugx-o4-WuW" id="USR-b2-PZS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="naU-g5-2JG" id="FzI-9I-uAf"/>
+                                    <outlet property="ibCalendarDelegate" destination="naU-g5-2JG" id="BUc-ty-Qou"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yeg-Qf-h1P" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="45b-jv-PWc"/>
+                            <constraint firstAttribute="trailing" secondItem="yeg-Qf-h1P" secondAttribute="trailing" id="6Zh-F3-j2j"/>
+                            <constraint firstAttribute="trailing" secondItem="UjE-jP-dTK" secondAttribute="trailing" id="BED-2r-mRH"/>
+                            <constraint firstItem="UjE-jP-dTK" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="Kc2-LG-Ue3"/>
+                            <constraint firstItem="yeg-Qf-h1P" firstAttribute="top" secondItem="UjE-jP-dTK" secondAttribute="bottom" constant="8" id="jmp-hC-l31"/>
+                            <constraint firstItem="UjE-jP-dTK" firstAttribute="top" secondItem="WjF-cm-agZ" secondAttribute="top" id="zbZ-nd-hFc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reservacioneImageView" destination="UjE-jP-dTK" id="AxY-Gr-Pzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWW-Ue-V72" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432.80000000000001" y="1433.433283358321"/>
         </scene>
         <!--MARKET-->
         <scene sceneID="djl-kf-hov">

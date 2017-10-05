@@ -87,6 +87,8 @@
 		E18E132C1F7738E300A49B10 /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = E18E132B1F7738E300A49B10 /* Menu.plist */; };
 		E18E132E1F77391E00A49B10 /* Home.plist in Resources */ = {isa = PBXBuildFile; fileRef = E18E132D1F77391E00A49B10 /* Home.plist */; };
 		E18E13301F7804FE00A49B10 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E132F1F7804FE00A49B10 /* MenuDataSource.swift */; };
+		E1A1EA2B1F86C20800FE9134 /* ReservacioneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1EA2A1F86C20800FE9134 /* ReservacioneDetailViewController.swift */; };
+		E1A1EA2D1F86C73E00FE9134 /* ReservacioneCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1EA2C1F86C73E00FE9134 /* ReservacioneCalendarCell.swift */; };
 		E1A2BC6A1F7D5CDD00152C57 /* ComunicadoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2BC691F7D5CDD00152C57 /* ComunicadoCell.swift */; };
 		E1A2BC6C1F7D601D00152C57 /* Comunicado.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2BC6B1F7D601D00152C57 /* Comunicado.swift */; };
 		E1A2BC6F1F7D646500152C57 /* ComunicadoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2BC6E1F7D646500152C57 /* ComunicadoDataSource.swift */; };
@@ -228,6 +230,8 @@
 		E18E132B1F7738E300A49B10 /* Menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
 		E18E132D1F77391E00A49B10 /* Home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Home.plist; sourceTree = "<group>"; };
 		E18E132F1F7804FE00A49B10 /* MenuDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
+		E1A1EA2A1F86C20800FE9134 /* ReservacioneDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservacioneDetailViewController.swift; sourceTree = "<group>"; };
+		E1A1EA2C1F86C73E00FE9134 /* ReservacioneCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservacioneCalendarCell.swift; sourceTree = "<group>"; };
 		E1A2BC691F7D5CDD00152C57 /* ComunicadoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicadoCell.swift; sourceTree = "<group>"; };
 		E1A2BC6B1F7D601D00152C57 /* Comunicado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comunicado.swift; sourceTree = "<group>"; };
 		E1A2BC6D1F7D641B00152C57 /* Comunicado.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Comunicado.plist; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				E1A7C6BA1F54AA4300E4FC32 /* ComunicadoTableViewController.swift */,
 				E1A2BC711F7EA42400152C57 /* ComunicadoDetailViewController.swift */,
 				E1224AF91F4F3576002A183D /* ReservacioneTableViewController.swift */,
+				E1A1EA2A1F86C20800FE9134 /* ReservacioneDetailViewController.swift */,
 				E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */,
 				E10091961F6AED1800B46E2A /* MarketDetailViewController.swift */,
 				E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */,
@@ -545,6 +550,7 @@
 				E1B6BF3A1F79B15500E7912B /* MensajeCell.swift */,
 				E1A2BC691F7D5CDD00152C57 /* ComunicadoCell.swift */,
 				E15FB48D1F828FBF003AEE34 /* ReservacionesCell.swift */,
+				E1A1EA2C1F86C73E00FE9134 /* ReservacioneCalendarCell.swift */,
 				E1A7C6DD1F55C5FB00E4FC32 /* MarketCell.swift */,
 				E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */,
 				E10091A21F6B1AC100B46E2A /* MarketDetailView.swift */,
@@ -943,6 +949,7 @@
 				E10091A31F6B1AC100B46E2A /* MarketDetailView.swift in Sources */,
 				E1139DBE1F73227500E2AAE5 /* SolicitudPendiente.swift in Sources */,
 				E1139DC81F7437EF00E2AAE5 /* PagoHeaderCell.swift in Sources */,
+				E1A1EA2B1F86C20800FE9134 /* ReservacioneDetailViewController.swift in Sources */,
 				E10091651F6834D900B46E2A /* Invitado.swift in Sources */,
 				E1B6BF331F79488600E7912B /* MenuDataSourceX.swift in Sources */,
 				E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */,
@@ -983,6 +990,7 @@
 				E1A7C6DF1F55C5FB00E4FC32 /* MarketCell.swift in Sources */,
 				E1DC1BAC1F753C71007BACB1 /* Pago.swift in Sources */,
 				E10091A71F6C177B00B46E2A /* Solicitude.swift in Sources */,
+				E1A1EA2D1F86C73E00FE9134 /* ReservacioneCalendarCell.swift in Sources */,
 				E1139DCA1F74818100E2AAE5 /* PagoPendienteCell.swift in Sources */,
 				E1B6BF371F79A43900E7912B /* Mensaje.swift in Sources */,
 				E18E13281F77157100A49B10 /* Home.swift in Sources */,
