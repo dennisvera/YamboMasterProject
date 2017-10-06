@@ -12,5 +12,5 @@ import JTAppleCalendar
 class ReservacioneCalendarCell: JTAppleCell {
     
     @IBOutlet weak var dateLabel: UILabel!
-    
+    @IBOutlet weak var selectedView: UIView!
 }
