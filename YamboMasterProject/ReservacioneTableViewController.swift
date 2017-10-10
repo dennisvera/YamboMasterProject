@@ -23,7 +23,13 @@ class ReservacioneTableViewController: UITableViewController {
         
         loadMenuIcons()
         loadMenu()
+        loadNavigationBar()
         self.navigationItem.loadRightBarButtonItem()
+    }
+    
+    func loadNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = .yamboBlue
     }
     
     func loadMenuIcons() {
