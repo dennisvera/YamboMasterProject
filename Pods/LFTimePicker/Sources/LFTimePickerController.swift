@@ -42,6 +42,8 @@ public protocol LFTimePickerDelegate: class {
  */
 open class LFTimePickerController: UIViewController {
     
+    @IBOutlet var LFTimepickerView: UIView!
+    
     // MARK: - Variables
     open weak var delegate: LFTimePickerDelegate?
     var startTimes: [String] = []
@@ -109,7 +111,7 @@ open class LFTimePickerController: UIViewController {
         setupTables()
         setupDetailView()
         setupBottomDetail()
-        setupNavigationBar()
+//        setupNavigationBar()
         setupTime()
             
             alreadyLayout = true
@@ -117,24 +119,24 @@ open class LFTimePickerController: UIViewController {
     }
     
     // MARK: Setup
-    fileprivate func setupNavigationBar() {
-        
-        let saveButton = UIBarButtonItem(title: saveText, style: .plain, target: self, action: #selector(butSave))
-        saveButton.tintColor = .red
-        
-        let cancelButton = UIBarButtonItem(title: cancelText, style: .plain, target: self, action: #selector(butCancel))
-        cancelButton.tintColor = .red
-        
-        self.navigationItem.rightBarButtonItem = saveButton
-        self.navigationItem.leftBarButtonItem = cancelButton
-    }
+//    fileprivate func setupNavigationBar() {
+//
+//        let saveButton = UIBarButtonItem(title: saveText, style: .plain, target: self, action: #selector(butSave))
+//        saveButton.tintColor = .red
+//
+//        let cancelButton = UIBarButtonItem(title: cancelText, style: .plain, target: self, action: #selector(butCancel))
+//        cancelButton.tintColor = .red
+//
+//        self.navigationItem.rightBarButtonItem = saveButton
+//        self.navigationItem.leftBarButtonItem = cancelButton
+//    }
     
     fileprivate func setupTables() {
         
-        let frame1 = CGRect(x: 30, y: 0, width: 100, height: self.view.bounds.height)
+        let frame1 = CGRect(x: 28, y: 0, width: 100, height: self.view.bounds.height)
         leftTimeTable = UITableView(frame: frame1, style: .plain)
         
-        let frame2 = CGRect(x: self.view.frame.width - 100, y: 0, width: 100, height: self.view.bounds.height)
+        let frame2 = CGRect(x: self.view.frame.width - 92, y: 0, width: 100, height: self.view.bounds.height)
         
         rightTimeTable = UITableView(frame: frame2, style: .plain)
         
@@ -167,13 +169,13 @@ open class LFTimePickerController: UIViewController {
     
     fileprivate func setupDetailView() {
         
-        detailBackgroundView = UIView(frame: CGRect(x: 0, y: (self.view.bounds.height / 6) * 2, width: self.view.bounds.width, height: self.view.bounds.height / 4))
+        detailBackgroundView = UIView(frame: CGRect(x: 0, y: (self.view.bounds.height / 6) * 2, width: self.view.bounds.width, height: self.view.bounds.height / 6))
         detailBackgroundView.backgroundColor = .white
         
         lblLeftTimeSelected = UILabel(frame: CGRect(x: 20, y: detailBackgroundView.frame.height / 2, width: 110, height: detailBackgroundView.frame.height))
         lblLeftTimeSelected.center = CGPoint(x: 60, y: detailBackgroundView.frame.height / 2)
         
-        lblLeftTimeSelected.font = UIFont.systemFont(ofSize: 20)
+        lblLeftTimeSelected.font = UIFont.systemFont(ofSize: 22)
         lblLeftTimeSelected.textColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
         lblLeftTimeSelected.text = "00:00"
         lblLeftTimeSelected.textAlignment = .center
@@ -181,7 +183,7 @@ open class LFTimePickerController: UIViewController {
         lblRightTimeSelected = UILabel(frame: CGRect(x: detailBackgroundView.frame.width / 7 * 6 + 20, y: detailBackgroundView.frame.height / 2, width: 110, height: detailBackgroundView.frame.height))
         lblRightTimeSelected.center = CGPoint(x: detailBackgroundView.bounds.width - 60, y: detailBackgroundView.frame.height / 2)
         
-        lblRightTimeSelected.font = UIFont.systemFont(ofSize: 20)
+        lblRightTimeSelected.font = UIFont.systemFont(ofSize: 22)
         lblRightTimeSelected.textColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
         lblRightTimeSelected.text = "00:00"
         lblRightTimeSelected.textAlignment = .center
@@ -189,7 +191,7 @@ open class LFTimePickerController: UIViewController {
         detailBackgroundView.addSubview(lblLeftTimeSelected)
         detailBackgroundView.addSubview(lblRightTimeSelected)
         
-        let lblTo = UILabel(frame: CGRect(x: detailBackgroundView.frame.width / 2, y: detailBackgroundView.frame.height / 2, width: 24, height: 16))
+        let lblTo = UILabel(frame: CGRect(x: detailBackgroundView.frame.width / 2, y: detailBackgroundView.frame.height / 2, width: 20, height: 16))
         lblTo.textColor = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
         lblTo.font = UIFont.systemFont(ofSize: 14)
         lblTo.text = "TO"
@@ -203,15 +205,16 @@ open class LFTimePickerController: UIViewController {
     fileprivate func setupBottomDetail() {
         
         let bottomDetailMainBackground = UIView(frame: CGRect(x: 0, y: self.detailBackgroundView.frame.maxY, width: self.view.frame.width, height: 24))
-        bottomDetailMainBackground.backgroundColor = UIColor.gray
+        bottomDetailMainBackground.backgroundColor = UIColor(red: 40/255, green: 45/255, blue: 70/255, alpha: 1)
         
         let bottomDetailMainShade = UIView(frame: CGRect(x: 0, y: self.detailBackgroundView.frame.maxY, width: self.view.frame.width, height: 24))
-        bottomDetailMainShade.backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 0.6)
+        bottomDetailMainShade.backgroundColor = UIColor(red: 40/255, green: 45/255, blue: 70/255, alpha: 0.6)
         
         lblAMPM = UILabel(frame: CGRect(x: 20, y: bottomDetailMainShade.frame.height / 2, width: 110, height: bottomDetailMainShade.frame.height))
         lblAMPM.center = CGPoint(x: 60, y: bottomDetailMainShade.frame.height / 2)
         
         lblAMPM.font = UIFont.systemFont(ofSize: 10)
+        lblAMPM.textColor = .white
         lblAMPM.text = "AM"
         lblAMPM.textAlignment = .center
         
@@ -219,6 +222,7 @@ open class LFTimePickerController: UIViewController {
         lblAMPM2.center = CGPoint(x: bottomDetailMainShade.bounds.width - 60, y: bottomDetailMainShade.frame.height / 2)
         
         lblAMPM2.font = UIFont.systemFont(ofSize: 10)
+        lblAMPM2.textColor = .white
         lblAMPM2.text = "AM"
         lblAMPM2.textAlignment = .center
         
@@ -262,7 +266,7 @@ open class LFTimePickerController: UIViewController {
         
         var arr: [String] = []
         
-        for _ in 0...8 {
+        for _ in 0...2 {
             arr.append("")
         }
         
@@ -287,7 +291,7 @@ open class LFTimePickerController: UIViewController {
             }
         }
         
-        for _ in 0...8 {
+        for _ in 0...2 {
             arr.append("")
         }
         
