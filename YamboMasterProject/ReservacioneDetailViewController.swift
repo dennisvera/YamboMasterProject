@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+import LFTimePicker
 
 private let reservacioneCalendarCellID = "ReservacioneCalendarCellID"
 
@@ -18,12 +19,15 @@ class ReservacioneDetailViewController: UIViewController {
     @IBOutlet var yearLabel: UILabel!
     @IBOutlet var monthLabel: UILabel!
     
+    // MARK: - Variables
+    let timePicker = LFTimePickerController()
+    var reservacione: Reservacione?
+    
     let outsideMonthColor = UIColor.gray
     let monthColor = UIColor.yamboBlue
     let selectorMonthColor = UIColor.white
     let currentDateSelectedViewColor = UIColor.red
     
-    var reservacione: Reservacione?
     let formatter = DateFormatter()
     var numberOfRows = 1
     var testCalendar = Calendar.current
@@ -44,6 +48,9 @@ class ReservacioneDetailViewController: UIViewController {
         setupCalendarView()
         loadReservacioneData()
         self.navigationItem.loadRightBarButtonItem()
+        
+        timePicker.delegate = self
+        timePicker.timeType = .hour12
     }
     
     func loadReservacioneData() {
@@ -98,6 +105,7 @@ class ReservacioneDetailViewController: UIViewController {
     
 }
 
+// MARK: - JTAppleCalendarViewDataSource
 extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource {
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
@@ -120,6 +128,7 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource {
     }
 }
 
+// MARK: - JTAppleCalendarViewDelegate
 extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
@@ -145,6 +154,18 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         self.setupViewsOfCalendar(from: visibleDates)
+    }
+}
+
+// MARK: - LFTimePickerDelegate
+extension ReservacioneDetailViewController: LFTimePickerDelegate {
+    
+    func didPickTime(_ start: String, end: String) {
+        //        self.lblStartSelectedTime.text = start
+        //        self.lblFinishSelectedTime.text = end
+        
+        print(start)
+        print(end)
     }
 }
 

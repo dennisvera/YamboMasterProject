@@ -940,11 +940,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProject/Pods-YamboMasterProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/LFTimePicker/LFTimePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Persei/Persei.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LFTimePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Persei.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

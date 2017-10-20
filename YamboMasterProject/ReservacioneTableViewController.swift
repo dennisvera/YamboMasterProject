@@ -8,8 +8,10 @@
 
 import UIKit
 import Persei
+import LFTimePicker
 
 private let reservacioneCellID = "ReservacioneCellID"
+private let reservacioneDetailSegueID = "ReservacioneDetailSegueID"
 
 class ReservacioneTableViewController: UITableViewController {
     
@@ -17,7 +19,8 @@ class ReservacioneTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuDataSource = MenuDataSource()
-    
+    let timePicker = LFTimePickerController()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,7 +83,7 @@ class ReservacioneTableViewController: UITableViewController {
     
     // MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ReservacioneDetailSegueID",
+        if segue.identifier == reservacioneDetailSegueID,
             let detailViewController = segue.destination as? ReservacioneDetailViewController,
             let indexPath = self.tableView.indexPathForSelectedRow {
             let reservacione = reservacioneDataSource.reservacioneForItemAtIndexPath(indexPath)
@@ -94,7 +97,6 @@ class ReservacioneTableViewController: UITableViewController {
 extension ReservacioneTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         if menu.selectedIndex == 0 {
