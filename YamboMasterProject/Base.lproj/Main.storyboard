@@ -246,7 +246,7 @@
                                 </constraints>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iX-fN-YNQ">
-                                <rect key="frame" x="0.0" y="270" width="375" height="212"/>
+                                <rect key="frame" x="0.0" y="260" width="375" height="212"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="212" id="9eb-Ha-QIv"/>
                                 </constraints>
@@ -261,7 +261,7 @@
                             <constraint firstItem="UjE-jP-dTK" firstAttribute="top" secondItem="WjF-cm-agZ" secondAttribute="top" id="8MY-eD-BRf"/>
                             <constraint firstAttribute="trailing" secondItem="UjE-jP-dTK" secondAttribute="trailing" id="BED-2r-mRH"/>
                             <constraint firstItem="UjE-jP-dTK" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="Kc2-LG-Ue3"/>
-                            <constraint firstItem="5iX-fN-YNQ" firstAttribute="top" secondItem="ZN4-P6-kCD" secondAttribute="bottom" constant="10" id="Nvr-SR-Ilh"/>
+                            <constraint firstItem="5iX-fN-YNQ" firstAttribute="top" secondItem="ZN4-P6-kCD" secondAttribute="bottom" id="Nvr-SR-Ilh"/>
                             <constraint firstAttribute="trailing" secondItem="ZN4-P6-kCD" secondAttribute="trailing" id="TCp-32-apA"/>
                             <constraint firstItem="ZN4-P6-kCD" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="V7X-pM-veq"/>
                             <constraint firstItem="ZN4-P6-kCD" firstAttribute="top" secondItem="UjE-jP-dTK" secondAttribute="bottom" constant="10" id="Y7f-Em-jrZ"/>
