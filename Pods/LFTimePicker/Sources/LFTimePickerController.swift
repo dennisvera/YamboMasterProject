@@ -433,12 +433,12 @@ extension LFTimePickerController: UITableViewDelegate {
     /// Used to change AM from PM
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if leftTimeTable.visibleCells.count > 8 {
-            let isLeftAM = leftTimeTable.indexPathsForVisibleRows?.first?.row < 48 * 3
+        if leftTimeTable.visibleCells.count > 2 {
+            let isLeftAM = leftTimeTable.indexPathsForVisibleRows?.first?.row < 25
             self.lblAMPM.text = isLeftAM ? "AM" : "PM"
             
             
-            let text = leftTimeTable.visibleCells[8]
+            let text = leftTimeTable.visibleCells[2]
             if text.textLabel?.text != "" {
                 self.lblLeftTimeSelected.text = text.textLabel?.text
                 lastSelectedLeft = (text.textLabel?.text!)!
@@ -451,11 +451,11 @@ extension LFTimePickerController: UITableViewDelegate {
             self.lblLeftTimeSelected.text = "00:00"
         }
         
-        if rightTimeTable.visibleCells.count > 8 {
-            let isRightAM = rightTimeTable.indexPathsForVisibleRows?.first?.row < 48 * 3
+        if rightTimeTable.visibleCells.count > 2 {
+            let isRightAM = rightTimeTable.indexPathsForVisibleRows?.first?.row < 25
             self.lblAMPM2.text = isRightAM ? "AM" : "PM"
             
-            let text2 = rightTimeTable.visibleCells[8]
+            let text2 = rightTimeTable.visibleCells[2]
             
             if text2.textLabel?.text != "" {
                 self.lblRightTimeSelected.text = text2.textLabel?.text

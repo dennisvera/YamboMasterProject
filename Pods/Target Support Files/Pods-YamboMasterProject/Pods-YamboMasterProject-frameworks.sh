@@ -102,11 +102,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/ASHorizontalScrollView/ASHorizontalScrollView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LFTimePicker/LFTimePicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Persei/Persei.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/ASHorizontalScrollView/ASHorizontalScrollView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LFTimePicker/LFTimePicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Persei/Persei.framework"

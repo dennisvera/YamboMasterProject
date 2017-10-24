@@ -245,27 +245,27 @@
                                     <constraint firstAttribute="height" constant="110" id="0Qb-UH-XUZ"/>
                                 </constraints>
                             </stackView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iX-fN-YNQ">
-                                <rect key="frame" x="0.0" y="260" width="375" height="212"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpk-Ac-Lma">
+                                <rect key="frame" x="0.0" y="268" width="375" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="212" id="9eb-Ha-QIv"/>
+                                    <constraint firstAttribute="height" constant="60" id="wK8-kg-eGL"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Nnt-cC-F0t" kind="embed" identifier="" id="mXQ-Ih-NMs"/>
+                                    <segue destination="Tco-Oo-J7h" kind="embed" id="9wP-fg-G4h"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5iX-fN-YNQ" secondAttribute="trailing" id="11W-ed-cR2"/>
                             <constraint firstItem="UjE-jP-dTK" firstAttribute="top" secondItem="WjF-cm-agZ" secondAttribute="top" id="8MY-eD-BRf"/>
                             <constraint firstAttribute="trailing" secondItem="UjE-jP-dTK" secondAttribute="trailing" id="BED-2r-mRH"/>
+                            <constraint firstItem="gpk-Ac-Lma" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="G7Z-4G-tms"/>
                             <constraint firstItem="UjE-jP-dTK" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="Kc2-LG-Ue3"/>
-                            <constraint firstItem="5iX-fN-YNQ" firstAttribute="top" secondItem="ZN4-P6-kCD" secondAttribute="bottom" id="Nvr-SR-Ilh"/>
                             <constraint firstAttribute="trailing" secondItem="ZN4-P6-kCD" secondAttribute="trailing" id="TCp-32-apA"/>
                             <constraint firstItem="ZN4-P6-kCD" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="V7X-pM-veq"/>
                             <constraint firstItem="ZN4-P6-kCD" firstAttribute="top" secondItem="UjE-jP-dTK" secondAttribute="bottom" constant="10" id="Y7f-Em-jrZ"/>
-                            <constraint firstItem="5iX-fN-YNQ" firstAttribute="leading" secondItem="WjF-cm-agZ" secondAttribute="leading" id="um8-Rc-RMv"/>
+                            <constraint firstAttribute="trailing" secondItem="gpk-Ac-Lma" secondAttribute="trailing" id="dWW-IC-TKF"/>
+                            <constraint firstItem="gpk-Ac-Lma" firstAttribute="top" secondItem="ZN4-P6-kCD" secondAttribute="bottom" constant="8" id="imF-fM-wTQ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1699,22 +1699,19 @@
             </objects>
             <point key="canvasLocation" x="496.80000000000001" y="-585.1574212893554"/>
         </scene>
-        <!--Time Picker Controller-->
-        <scene sceneID="9Ql-Ce-Cle">
+        <!--Reservacione Time View Controller-->
+        <scene sceneID="BHp-xZ-uAb">
             <objects>
-                <viewController id="Nnt-cC-F0t" customClass="LFTimePickerController" customModule="LFTimePicker" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L21-eh-HmD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjH-z3-T9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Tco-Oo-J7h" customClass="ReservacioneTimeViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JR6-T2-Bj3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="LFTimepickerView" destination="L21-eh-HmD" id="126-xc-RsG"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="29l-6w-SEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="1223"/>
+            <point key="canvasLocation" x="1153" y="1161"/>
         </scene>
     </scenes>
     <resources>
