@@ -131,6 +131,11 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource {
 // MARK: - JTAppleCalendarViewDelegate
 extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
     
+    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+      print(date)
+    }
+    
+    
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: reservacioneCalendarCellID, for: indexPath) as! ReservacioneCalendarCell
         

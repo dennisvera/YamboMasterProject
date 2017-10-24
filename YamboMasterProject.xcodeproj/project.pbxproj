@@ -101,7 +101,6 @@
 		E1A7C6DC1F55BE5B00E4FC32 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */; };
 		E1A7C6DF1F55C5FB00E4FC32 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C6DD1F55C5FB00E4FC32 /* MarketCell.swift */; };
 		E1A7C6E01F55C5FB00E4FC32 /* MarketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */; };
-		E1B4DF291F9E526F005C4625 /* ReservacioneTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF281F9E526F005C4625 /* ReservacioneTimeViewController.swift */; };
 		E1B6BF311F79476600E7912B /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BF301F79476600E7912B /* Menu.swift */; };
 		E1B6BF331F79488600E7912B /* MenuDataSourceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BF321F79488600E7912B /* MenuDataSourceX.swift */; };
 		E1B6BF351F79A23A00E7912B /* Mensaje.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1B6BF341F79A23A00E7912B /* Mensaje.plist */; };
@@ -245,7 +244,6 @@
 		E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
 		E1A7C6DD1F55C5FB00E4FC32 /* MarketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
 		E1A7C6DE1F55C5FB00E4FC32 /* MarketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketCell.xib; sourceTree = "<group>"; };
-		E1B4DF281F9E526F005C4625 /* ReservacioneTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservacioneTimeViewController.swift; sourceTree = "<group>"; };
 		E1B6BF301F79476600E7912B /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E1B6BF321F79488600E7912B /* MenuDataSourceX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDataSourceX.swift; sourceTree = "<group>"; };
 		E1B6BF341F79A23A00E7912B /* Mensaje.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mensaje.plist; sourceTree = "<group>"; };
@@ -435,7 +433,6 @@
 				E1A2BC711F7EA42400152C57 /* ComunicadoDetailViewController.swift */,
 				E1224AF91F4F3576002A183D /* ReservacioneTableViewController.swift */,
 				E1A1EA2A1F86C20800FE9134 /* ReservacioneDetailViewController.swift */,
-				E1B4DF281F9E526F005C4625 /* ReservacioneTimeViewController.swift */,
 				E1A7C6DB1F55BE5B00E4FC32 /* MarketTableViewController.swift */,
 				E10091961F6AED1800B46E2A /* MarketDetailViewController.swift */,
 				E1C2DEE71F701B5D0085374E /* MarketDetail2ViewViewController.swift */,
@@ -942,14 +939,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YamboMasterProject/Pods-YamboMasterProject-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ASHorizontalScrollView/ASHorizontalScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/LFTimePicker/LFTimePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Persei/Persei.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASHorizontalScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LFTimePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Persei.framework",
@@ -1020,7 +1015,6 @@
 				E1DC1BB01F75568F007BACB1 /* PagoCell.swift in Sources */,
 				E1DC1BAE1F754005007BACB1 /* PagoDataSource.swift in Sources */,
 				E15FB48A1F815816003AEE34 /* InvitadoCell.swift in Sources */,
-				E1B4DF291F9E526F005C4625 /* ReservacioneTimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1503,7 +1503,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4e-Lh-Ihl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496.80000000000001" y="-1916.4917541229386"/>
+            <point key="canvasLocation" x="-1354" y="752"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-X1-bYI">
@@ -1523,7 +1523,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoF-Ft-XOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="-1916"/>
+            <point key="canvasLocation" x="-2209" y="752"/>
         </scene>
         <!--COMUNICADO-->
         <scene sceneID="jaC-dH-ltN">
@@ -1699,17 +1699,21 @@
             </objects>
             <point key="canvasLocation" x="496.80000000000001" y="-585.1574212893554"/>
         </scene>
-        <!--Reservacione Time View Controller-->
+        <!--View Controller-->
         <scene sceneID="BHp-xZ-uAb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LjH-z3-T9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Tco-Oo-J7h" customClass="ReservacioneTimeViewController" customModule="YamboMasterProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tco-Oo-J7h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fqP-7X-uJN"/>
+                        <viewControllerLayoutGuide type="bottom" id="GQg-Sc-QOI"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JR6-T2-Bj3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjH-z3-T9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153" y="1161"/>
         </scene>

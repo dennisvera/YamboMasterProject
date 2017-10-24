@@ -9,7 +9,6 @@ target 'YamboMasterProject' do
     pod 'Persei', '~> 3.0'
     pod 'JTAppleCalendar', '~> 7.0'
     pod 'LFTimePicker'
-    pod 'ASHorizontalScrollView', '~> 1.5.1'
 
   target 'YamboMasterProjectTests' do
     inherit! :search_paths
