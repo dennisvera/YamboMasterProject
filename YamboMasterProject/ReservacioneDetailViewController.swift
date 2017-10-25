@@ -8,7 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
-import LFTimePicker
+import MVHorizontalPicker
 
 private let reservacioneCalendarCellID = "ReservacioneCalendarCellID"
 
@@ -19,8 +19,10 @@ class ReservacioneDetailViewController: UIViewController {
     @IBOutlet var yearLabel: UILabel!
     @IBOutlet var monthLabel: UILabel!
     
+    @IBOutlet var timeSlotLabel: UILabel!
+    @IBOutlet var picker: MVHorizontalPicker!
+    
     // MARK: - Variables
-    let timePicker = LFTimePickerController()
     var reservacione: Reservacione?
     
     let outsideMonthColor = UIColor.gray
@@ -45,17 +47,26 @@ class ReservacioneDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        picker.titles =  [ "10a - 11a", "11a - 12p", "12p - 1p", "1p - 2p", "2p - 3p", "3p - 4p", "4p - 5p", "5p - 6p", "6p - 7p", "7p - 8p", "8p - 9p", "9p - 10p", "10p - 11p" ]
+
         setupCalendarView()
         loadReservacioneData()
+        updateTimeSlotLabel()
         self.navigationItem.loadRightBarButtonItem()
-        
-        timePicker.delegate = self
-        timePicker.timeType = .hour12
     }
     
     func loadReservacioneData() {
         guard let image = reservacione?.image else {return}
         reservacioneImageView.image = UIImage(named: image)
+    }
+    
+    @IBAction func pickerValueChanged(sender: AnyObject) {
+        updateTimeSlotLabel()
+    }
+    
+    func updateTimeSlotLabel() {
+        timeSlotLabel.text = picker.titles[picker.selectedItemIndex]
+        //print("index: \(picker.selectedItemIndex), title: \(title)")
     }
     
     func setupCalendarView() {
@@ -162,17 +173,6 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
     }
 }
 
-// MARK: - LFTimePickerDelegate
-extension ReservacioneDetailViewController: LFTimePickerDelegate {
-    
-    func didPickTime(_ start: String, end: String) {
-        //        self.lblStartSelectedTime.text = start
-        //        self.lblFinishSelectedTime.text = end
-        
-        print(start)
-        print(end)
-    }
-}
 
 
 

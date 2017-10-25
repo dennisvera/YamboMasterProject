@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double LFTimePickerVersionNumber;
-FOUNDATION_EXPORT const unsigned char LFTimePickerVersionString[];
+FOUNDATION_EXPORT double MVHorizontalPickerVersionNumber;
+FOUNDATION_EXPORT const unsigned char MVHorizontalPickerVersionString[];
 

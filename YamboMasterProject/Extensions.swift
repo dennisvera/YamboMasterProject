@@ -36,6 +36,7 @@ extension UIColor {
     
     static let yamboBabyGreen = UIColor(red: 244/255, green: 247/255, blue: 249/255, alpha: 1)
     static let yamboBlue = UIColor(red: 40/255, green: 45/255, blue: 84/255, alpha: 1)
+    static let yamboLightBlue = UIColor(red: 72/255, green: 81/255, blue: 145/255, alpha: 1)
     static let aqua = UIColor(red: 0/255, green: 128/255, blue: 255/255, alpha: 1)
     static let silver = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
 }

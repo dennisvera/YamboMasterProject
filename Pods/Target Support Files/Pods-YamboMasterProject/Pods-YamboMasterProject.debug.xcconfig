@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JTAppleCalendar" "$PODS_CONFIGURATION_BUILD_DIR/LFTimePicker" "$PODS_CONFIGURATION_BUILD_DIR/Persei"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JTAppleCalendar" "$PODS_CONFIGURATION_BUILD_DIR/MVHorizontalPicker" "$PODS_CONFIGURATION_BUILD_DIR/Persei"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/JTAppleCalendar/JTAppleCalendar.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/LFTimePicker/LFTimePicker.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Persei/Persei.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "JTAppleCalendar" -framework "LFTimePicker" -framework "Persei"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/JTAppleCalendar/JTAppleCalendar.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MVHorizontalPicker/MVHorizontalPicker.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Persei/Persei.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "JTAppleCalendar" -framework "MVHorizontalPicker" -framework "Persei"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

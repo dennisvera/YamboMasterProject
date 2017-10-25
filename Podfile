@@ -8,7 +8,7 @@ target 'YamboMasterProject' do
   # Pods for YamboMasterProject
     pod 'Persei', '~> 3.0'
     pod 'JTAppleCalendar', '~> 7.0'
-    pod 'LFTimePicker'
+    pod 'MVHorizontalPicker'
 
   target 'YamboMasterProjectTests' do
     inherit! :search_paths

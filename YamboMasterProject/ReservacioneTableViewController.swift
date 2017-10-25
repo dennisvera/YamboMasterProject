@@ -8,7 +8,6 @@
 
 import UIKit
 import Persei
-import LFTimePicker
 
 private let reservacioneCellID = "ReservacioneCellID"
 private let reservacioneDetailSegueID = "ReservacioneDetailSegueID"
@@ -19,7 +18,6 @@ class ReservacioneTableViewController: UITableViewController {
     fileprivate var menu: MenuView!
     var menuItems = [MenuItem]()
     var menuDataSource = MenuDataSource()
-    let timePicker = LFTimePickerController()
         
     override func viewDidLoad() {
         super.viewDidLoad()
