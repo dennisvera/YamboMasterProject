@@ -18,6 +18,7 @@ class ReservacioneDetailViewController: UIViewController {
     @IBOutlet var calendarView: JTAppleCalendarView!
     @IBOutlet var yearLabel: UILabel!
     @IBOutlet var monthLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     @IBOutlet var timeSlotLabel: UILabel!
     @IBOutlet var picker: MVHorizontalPicker!
@@ -47,8 +48,12 @@ class ReservacioneDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        picker.titles =  [ "10a - 11a", "11a - 12p", "12p - 1p", "1p - 2p", "2p - 3p", "3p - 4p", "4p - 5p", "5p - 6p", "6p - 7p", "7p - 8p", "8p - 9p", "9p - 10p", "10p - 11p" ]
-
+        // MARK: - Time Picker variables
+        picker.titles = [ "10a - 11a", "11a - 12p", "12p - 1p", "1p - 2p", "2p - 3p", "3p - 4p", "4p - 5p", "5p - 6p", "6p - 7p", "7p - 8p", "8p - 9p", "9p - 10p", "10p - 11p" ]
+        picker.tintColor = .yamboBlue
+        picker.font = UIFont(name: "HHelveticaNeue-Bold", size: 16)
+        picker.itemWidth = 125
+        
         setupCalendarView()
         loadReservacioneData()
         updateTimeSlotLabel()
@@ -114,6 +119,14 @@ class ReservacioneDetailViewController: UIViewController {
         }
     }
     
+    func convertDateFormater(_ date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss z"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return  dateFormatter.string(from: date!)
+    }
+    
 }
 
 // MARK: - JTAppleCalendarViewDataSource
@@ -125,7 +138,7 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource {
         formatter.locale = Calendar.current.locale
         
         let startDate = formatter.date(from: "2017 01 01")!
-        let endDate = formatter.date(from: "2017 12 31")!
+        let endDate = formatter.date(from: "2018 12 31")!
         
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
@@ -161,6 +174,11 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
+        
+        let jtDate = "\(date)"
+        let date = convertDateFormater(jtDate)
+        dateLabel.text = date
+        print(date)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

@@ -34,12 +34,6 @@ class MVPickerTriangleIndicator: UIView {
         path.addLine(to: CGPoint(x: width, y: 0))
         path.addLine(to: CGPoint(x: 0, y: 0))
         
-        
-////        CGPathMoveToPoint(path, nil, 0, 0)
-////        CGPathAddLineToPoint(path, nil, width/2, height)
-//        CGPathAddLineToPoint(path, nil, width, 0)
-//        CGPathAddLineToPoint(path, nil, 0, 0)
-        
         triangleShape.frame = self.bounds
         triangleShape.path = path
         triangleShape.lineWidth = 1.0
