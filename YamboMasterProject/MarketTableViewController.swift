@@ -51,11 +51,13 @@ class MarketTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -85,6 +87,7 @@ class MarketTableViewController: UITableViewController {
     }
     
     // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == marketDetail1Segue,
             let detailViewController = segue.destination as? MarketDetailViewController,
@@ -97,6 +100,7 @@ class MarketTableViewController: UITableViewController {
 
 
 // MARK: - MenuViewDelegate
+
 extension MarketTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {

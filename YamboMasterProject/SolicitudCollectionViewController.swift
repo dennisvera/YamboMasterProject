@@ -50,6 +50,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
@@ -65,6 +66,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
     }
     
     // MARK: UICollectionViewDataSource
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -118,6 +120,7 @@ class SolicitudCollectionViewController: UICollectionViewController {
 
 
 // MARK: - MenuViewDelegate
+
 extension SolicitudCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {

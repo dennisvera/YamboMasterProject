@@ -58,11 +58,13 @@ class MensajeTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return mensajeDataSource.numberOfSections
     }
@@ -96,6 +98,7 @@ class MensajeTableViewController: UITableViewController {
     }
     
     // MARK: - SearchController + Instance Methods
+    
     func loadSearchController() {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "Buscar"
@@ -133,6 +136,7 @@ class MensajeTableViewController: UITableViewController {
     }
     
     // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == mensajeDetailSegueID {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -150,13 +154,14 @@ class MensajeTableViewController: UITableViewController {
     }
 }
 
-// MARK: - MenuViewDelegate
+//// MARK: - MenuViewDelegate
+
 extension MensajeTableViewController: MenuViewDelegate {
-    
+
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
-        
+
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
+
         if menu.selectedIndex == 0 {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeID") as! HomeCollectionViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -181,14 +186,15 @@ extension MensajeTableViewController: MenuViewDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagoID") as! PagoTableViewController
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
-        
+
         tableView.reloadData()
     }
 }
 
+// MARK: - UISearchResultsUpdating Delegate
+
 extension MensajeTableViewController: UISearchResultsUpdating {
     
-    // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }

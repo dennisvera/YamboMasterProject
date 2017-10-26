@@ -46,11 +46,13 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: UICollectionViewDataSource
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return homeDataSource.numberOfSections
     }
@@ -82,6 +84,7 @@ class HomeCollectionViewController: UICollectionViewController {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension HomeCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -114,6 +117,7 @@ extension HomeCollectionViewController {
 }
 
 // MARK: - MenuViewDelegate
+
 extension HomeCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {

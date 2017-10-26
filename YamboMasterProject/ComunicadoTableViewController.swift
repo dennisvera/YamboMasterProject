@@ -59,11 +59,13 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return comunicadoDataSource.numberOfSections
     }
@@ -97,6 +99,7 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     // MARK: - SearchController + Instance Methods
+    
     func loadSearchController() {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "Buscar"
@@ -133,6 +136,7 @@ class ComunicadoTableViewController: UITableViewController {
     }
     
     // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == comunicadoDetailSegueID {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -151,6 +155,7 @@ class ComunicadoTableViewController: UITableViewController {
 }
 
 // MARK: - MenuViewDelegate
+
 extension ComunicadoTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
@@ -186,9 +191,10 @@ extension ComunicadoTableViewController: MenuViewDelegate {
     }
 }
 
+// MARK: - UISearchResultsUpdating Delegate
+
 extension ComunicadoTableViewController: UISearchResultsUpdating {
     
-    // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }

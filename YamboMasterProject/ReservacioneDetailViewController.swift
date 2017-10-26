@@ -71,7 +71,6 @@ class ReservacioneDetailViewController: UIViewController {
     
     func updateTimeSlotLabel() {
         timeSlotLabel.text = picker.titles[picker.selectedItemIndex]
-        //print("index: \(picker.selectedItemIndex), title: \(title)")
     }
     
     func setupCalendarView() {
@@ -130,6 +129,7 @@ class ReservacioneDetailViewController: UIViewController {
 }
 
 // MARK: - JTAppleCalendarViewDataSource
+
 extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource {
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
@@ -153,6 +153,7 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource {
 }
 
 // MARK: - JTAppleCalendarViewDelegate
+
 extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
@@ -178,7 +179,7 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDelegate  {
         let jtDate = "\(date)"
         let date = convertDateFormater(jtDate)
         dateLabel.text = date
-        print(date)
+        print("Date selected: \(date)")
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

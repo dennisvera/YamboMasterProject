@@ -89,6 +89,7 @@ class MarketDetailViewController: UIViewController {
     }
     
     // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == marketDetail2Segue {
             let detailViewController = segue.destination as? MarketDetail2ViewViewController

@@ -51,6 +51,7 @@ class ReservacioneTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
@@ -80,6 +81,7 @@ class ReservacioneTableViewController: UITableViewController {
     }
     
     // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == reservacioneDetailSegueID,
             let detailViewController = segue.destination as? ReservacioneDetailViewController,
@@ -92,6 +94,7 @@ class ReservacioneTableViewController: UITableViewController {
 
 
 // MARK: - MenuViewDelegate
+
 extension ReservacioneTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {

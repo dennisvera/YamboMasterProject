@@ -47,6 +47,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
@@ -79,6 +80,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
     }
     
     // MARK: UICollectionViewDataSource
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -113,6 +115,7 @@ class InvitadoCollectionViewController: UICollectionViewController {
 }
 
 // MARK: - MenuViewDelegate
+
 extension InvitadoCollectionViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {
