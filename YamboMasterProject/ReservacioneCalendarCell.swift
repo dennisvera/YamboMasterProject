@@ -13,4 +13,9 @@ class ReservacioneCalendarCell: JTAppleCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedView: UIView!
+    
+    override func prepareForReuse() {
+        dateLabel.text = ""
+    }
+    
 }
