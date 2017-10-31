@@ -117,12 +117,9 @@ class ReservacioneDetailViewController: UIViewController {
         
         if todaysDateString == monthDateString {
             cell.dateLabel.textColor = .lightGray
-        } else if cellState.dateBelongsTo != .thisMonth {
-            cell.dateLabel.textColor = .gray
         } else {
             cell.dateLabel.textColor = cellState.isSelected ? .white : .yamboBlue
         }
-        
     }
     
     //    func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
@@ -141,7 +138,7 @@ class ReservacioneDetailViewController: UIViewController {
     //    }
     
     func handleCellVisibility(cell: ReservacioneCalendarCell, cellState: CellState) {
-        cell.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
+            cell.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
     }
     
     func handleCellSelection(cell: ReservacioneCalendarCell, cellState: CellState) {
@@ -175,11 +172,7 @@ extension ReservacioneDetailViewController: JTAppleCalendarViewDataSource, JTApp
         
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
-                                                 numberOfRows: numberOfRows,
-                                                 generateInDates: generateInDates,
-                                                 generateOutDates: generateOutDates,
-                                                 firstDayOfWeek: firstDayOfWeek,
-                                                 hasStrictBoundaries: hasStrictBoundaries)
+                                                 numberOfRows: numberOfRows)
         return parameters
     }
     
