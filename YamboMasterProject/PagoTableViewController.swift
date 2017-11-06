@@ -46,11 +46,13 @@ class PagoTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction fileprivate func switchMenu() {
         menu.setRevealed(!menu.revealed, animated: true)
     }
     
     // MARK: - Table view data source
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return pagoDataSource.numberOfSections
         
@@ -119,6 +121,7 @@ class PagoTableViewController: UITableViewController {
 }
 
 // MARK: - MenuViewDelegate
+
 extension PagoTableViewController: MenuViewDelegate {
     
     func menu(_ menu: MenuView, didSelectItemAt index: Int) {

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - UIImageView Round Edges
+
 extension UIImageView {
     
     func setRounded() {
@@ -18,6 +20,8 @@ extension UIImageView {
         self.layer.masksToBounds = true
     }
 }
+
+// MARK: - UINavigationItem Bar Button
 
 extension UINavigationItem {
     
@@ -32,6 +36,8 @@ extension UINavigationItem {
     }
 }
 
+// MARK: - UIColor App Theme
+
 extension UIColor {
     
     static let yamboBabyGreen = UIColor(red: 244/255, green: 247/255, blue: 249/255, alpha: 1)
@@ -40,6 +46,8 @@ extension UIColor {
     static let aqua = UIColor(red: 0/255, green: 128/255, blue: 255/255, alpha: 1)
     static let silver = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
 }
+
+// MARK: - UILabel Round Edges
 
 extension UILabel {
     

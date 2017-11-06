@@ -138,7 +138,7 @@ class ReservacioneDetailViewController: UIViewController {
     //    }
     
     func handleCellVisibility(cell: ReservacioneCalendarCell, cellState: CellState) {
-            cell.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
+        cell.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
     }
     
     func handleCellSelection(cell: ReservacioneCalendarCell, cellState: CellState) {

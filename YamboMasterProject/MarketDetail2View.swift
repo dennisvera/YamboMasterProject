@@ -18,7 +18,7 @@ class MarketDetail2View: UIView {
     @IBOutlet var thumbImageView5: UIImageView!
     @IBOutlet var thumbImageView6: UIImageView!
     @IBOutlet var mensajeSegmentController: UISegmentedControl!
- 
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
